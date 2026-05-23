@@ -12,94 +12,101 @@
 :root{--red:#e50000;--red-dark:#b30000;--black:#080808;--dark:#111;--card:#161616;--card2:#1c1c1c;--border:rgba(229,0,0,0.18);--text:#ddd;--muted:#666;--white:#fff;--nav-w:80px;--nav-w-exp:260px}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Outfit',sans-serif;background:var(--black);color:var(--text);overflow-x:hidden;padding-left:var(--nav-w)}
+body{font-family:'Outfit',sans-serif;background:var(--black);color:var(--text);overflow-x:hidden;padding-top:70px}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--black)}::-webkit-scrollbar-thumb{background:var(--red)}
 a{text-decoration:none;color:inherit}
 
-/* ===== LEFT SIDEBAR NAV ===== */
+/* ===== TOP NAVBAR (MODERN) ===== */
 .leftnav{
-  position:fixed;top:0;left:0;bottom:0;
-  width:var(--nav-w);
-  background:var(--dark);
-  border-right:1px solid var(--border);
-  z-index:500;
-  display:flex;flex-direction:column;
-  align-items:center;
-  padding:28px 0;
-  transition:width .4s cubic-bezier(.23,1,.32,1);
-  overflow:hidden;
+  position:fixed;top:0;left:0;right:0;
+  height:70px;background:var(--dark);border-bottom:1px solid var(--border);
+  z-index:500;display:flex;align-items:center;justify-content:space-between;
+  padding:0 70px;transition:all .3s ease;
 }
-.leftnav:hover{width:var(--nav-w-exp)}
-.leftnav:hover .nav-label{opacity:1;transform:translateX(0)}
-.leftnav:hover .nav-logo-text{opacity:1}
-.leftnav:hover .nav-logo-img{margin-right:10px}
+.leftnav.scrolled{background:rgba(17,17,17,.95);backdrop-filter:blur(10px)}
 
 /* Logo area */
 .nav-logo-wrap{
-  display:flex;align-items:center;justify-content:center;
-  width:100%;padding:0 20px;margin-bottom:40px;
-  min-height:50px;overflow:hidden;white-space:nowrap;
+  display:flex;align-items:center;justify-content:flex-start;
+  flex-shrink:0;
 }
-.nav-logo-img{height:38px;flex-shrink:0;transition:margin .4s}
+.nav-logo-img{height:32px;flex-shrink:0;transition:all .3s}
 .nav-logo-text{
-  font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.15em;
-  color:var(--red);opacity:0;transition:opacity .3s .1s;white-space:nowrap;
+  font-family:'Bebas Neue',sans-serif;font-size:.9rem;letter-spacing:.15em;
+  color:var(--red);opacity:1;transition:opacity .3s;white-space:nowrap;margin-left:12px;
 }
 
-/* Nav links */
-.nav-links{flex:1;display:flex;flex-direction:column;gap:4px;width:100%;padding:0 12px}
+/* Nav links - horizontal */
+.nav-links{flex:1;display:flex;gap:2px;justify-content:center;align-items:center;padding:0 40px}
 .nav-link{
-  display:flex;align-items:center;gap:14px;
-  padding:13px 14px;border-radius:6px;
+  display:flex;align-items:center;gap:6px;
+  padding:8px 16px;border-radius:4px;
   color:var(--muted);transition:.3s;
   position:relative;overflow:hidden;cursor:pointer;
-  white-space:nowrap;
+  white-space:nowrap;font-size:.8rem;letter-spacing:.05em;
 }
-.nav-link i{font-size:1rem;flex-shrink:0;width:20px;text-align:center;transition:color .3s}
+.nav-link i{font-size:.85rem;flex-shrink:0}
 .nav-label{
-  font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
-  opacity:0;transform:translateX(-8px);transition:opacity .3s .05s,transform .3s .05s;
+  font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;font-weight:600;
+  opacity:1;transform:translateX(0);transition:all .3s;
 }
-.nav-link:hover,.nav-link.active{color:var(--white);background:rgba(229,0,0,.08)}
+.nav-link:hover,.nav-link.active{color:var(--white);background:rgba(229,0,0,.1)}
 .nav-link:hover i,.nav-link.active i{color:var(--red)}
 .nav-link::before{
-  content:'';position:absolute;left:0;top:0;bottom:0;
-  width:2px;background:var(--red);
-  transform:scaleY(0);transition:transform .3s;transform-origin:bottom;
+  content:'';position:absolute;bottom:0;left:0;right:0;
+  height:2px;background:var(--red);
+  transform:scaleX(0);transition:transform .3s;transform-origin:right;
 }
-.nav-link:hover::before,.nav-link.active::before{transform:scaleY(1)}
+.nav-link:hover::before,.nav-link.active::before{transform:scaleX(1);transform-origin:left}
 
-/* Tooltip on non-expanded */
-.nav-link[data-tip]{position:relative}
-
-/* Bottom socials */
+/* Bottom socials - moved to right side */
 .nav-bottom{
-  width:100%;padding:0 12px 8px;
-  display:flex;flex-direction:column;gap:8px;
-  border-top:1px solid rgba(255,255,255,.05);
-  padding-top:16px;margin-top:8px;
+  display:flex;gap:12px;
+  border-left:1px solid rgba(255,255,255,.05);
+  padding-left:20px;
+  margin-left:auto;
 }
 .nav-social{
-  display:flex;align-items:center;gap:14px;
-  padding:9px 14px;border-radius:6px;
+  display:flex;align-items:center;gap:6px;
+  padding:6px 12px;border-radius:4px;
   color:var(--muted);transition:.3s;cursor:pointer;
-  white-space:nowrap;
+  white-space:nowrap;font-size:.75rem;
 }
-.nav-social i{font-size:.85rem;flex-shrink:0;width:20px;text-align:center}
+.nav-social i{font-size:.8rem;flex-shrink:0}
 .nav-social-label{
-  font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
-  opacity:0;transform:translateX(-8px);transition:opacity .3s .05s,transform .3s .05s;
+  font-size:.65rem;letter-spacing:.05em;text-transform:uppercase;
+  opacity:1;transition:all .3s;
 }
-.leftnav:hover .nav-social-label{opacity:1;transform:translateX(0)}
-.nav-social:hover{color:var(--red)}
+.nav-social:hover{color:var(--red);background:rgba(229,0,0,.08)}
 
-/* Mobile toggle */
+/* Mobile menu button */
 .nav-mob-toggle{
-  display:none;position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
-  z-index:600;width:52px;height:52px;border-radius:50%;
-  background:var(--red);border:none;cursor:pointer;
-  display:none;align-items:center;justify-content:center;color:var(--white);font-size:1.1rem;
-  box-shadow:0 4px 20px rgba(229,0,0,.4);
+  display:none;position:relative;
+  width:40px;height:40px;border-radius:4px;
+  background:transparent;border:1px solid rgba(255,255,255,.1);cursor:pointer;
+  display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  color:var(--white);
+}
+.nav-mob-toggle span{width:20px;height:1.5px;background:currentColor;display:block;transition:.3s}
+
+/* Mobile responsiveness */
+@media(max-width:1200px){
+  .leftnav{padding:0 40px}
+  .nav-links{gap:0;padding:0 20px}
+  .nav-link{padding:8px 12px;font-size:.75rem}
+}
+
+@media(max-width:768px){
+  .leftnav{padding:0 20px;justify-content:space-between}
+  .nav-logo-text{display:none}
+  .nav-logo-img{height:28px}
+  .nav-links{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--dark);border-bottom:1px solid var(--border);gap:0;padding:10px 0;z-index:499}
+  .nav-links.active{display:flex}
+  .nav-link{padding:12px 20px;width:100%;border-radius:0}
+  .nav-bottom{display:none;position:absolute;top:70px;left:0;right:0;border:none;padding:10px 20px 20px;border-bottom:1px solid var(--border);background:var(--dark);flex-direction:column;gap:8px;margin:0}
+  .nav-bottom.active{display:flex}
+  .nav-mob-toggle{display:flex!important;margin-left:auto}
+  body{padding-top:70px}
 }
 
 /* ===== SECTIONS ===== */
@@ -110,7 +117,7 @@ h2.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,
 h2.section-title span{color:var(--red)}
 
 /* ===== HERO ===== */
-.hero{min-height:100vh;display:flex;align-items:center;padding:140px 70px 80px;overflow:hidden}
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 70px 80px;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 45%,rgba(229,0,0,.09) 0%,transparent 60%);pointer-events:none}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(229,0,0,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(229,0,0,.03) 1px,transparent 1px);background-size:55px 55px;mask-image:radial-gradient(ellipse at center,black 20%,transparent 75%);pointer-events:none}
 .hero-inner{position:relative;z-index:2;width:100%;display:flex;align-items:center;justify-content:space-between;gap:60px}
@@ -352,7 +359,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
     <a href="https://wa.me/21620832737" target="_blank" class="nav-social">
       <i class="fab fa-whatsapp"></i><span class="nav-social-label">WhatsApp</span>
     </a>
-    <a href="http://aljane.kesug.com/cv%20haythem/cv.pdf" target="_blank" class="nav-social" style="color:var(--red)">
+    <a href="/CV_Haythem_Aljane.pdf" download class="nav-social" style="color:var(--red)">
       <i class="fas fa-download"></i><span class="nav-social-label" style="color:var(--red)">Download CV</span>
     </a>
   </div>
@@ -367,10 +374,10 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
       <div class="hero-tag"><span class="hero-dot"></span>Available for Freelance</div>
       <h1>HAYTHEM<br><span class="red">ALJANE</span></h1>
       <div class="hero-typed-wrap">I am a <span id="typed-text"></span><span class="cursor-blink">|</span></div>
-      <p class="hero-desc">Web Developer & Community Manager from Tataouine, Tunisia — blending technical expertise with leadership and social engagement to build impactful digital experiences.</p>
+      <p class="hero-desc">Web Developer & Marketing Manager from Tataouine, Tunisia — blending technical expertise with leadership and strategic marketing to build impactful digital experiences.</p>
       <div class="hero-btns">
         <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i>Get in Touch</a>
-        <a href="http://aljane.kesug.com/cv%20haythem/cv.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-download"></i>Download CV</a>
+        <a href="/CV_Haythem_Aljane.pdf" download class="btn btn-outline"><i class="fas fa-download"></i>Download CV</a>
       </div>
       <div class="hero-stats">
         <div class="hero-stat"><h3>3+</h3><p>Years Active</p></div>
@@ -394,11 +401,11 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   <h2 class="section-title">About <span>Me</span></h2>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>Graduated as a <strong>Web Developer and Community Manager</strong>, I bring a strong mix of technical expertise, leadership, and social engagement. Through my academic background and practical experiences, I have developed solid skills in web design, development, and digital communication.</p>
+      <p>Graduated as a <strong>Web Developer and Marketing Manager</strong>, I bring a strong mix of technical expertise, leadership, and strategic communication. Through my academic background and practical experiences, I have developed solid skills in web design, development, and digital marketing.</p>
       <p>My journey with <strong>AIESEC</strong> and other social initiatives has strengthened my teamwork, adaptability, and leadership abilities. With hard skills in technology and soft skills in collaboration and problem-solving, I am motivated to contribute to impactful projects and continuously grow.</p>
       <div class="about-info-grid">
         <div class="about-info-item"><div class="label">Name</div><div class="value">Haythem Aljane</div></div>
-        <div class="about-info-item"><div class="label">Date of Birth</div><div class="value">31 December 2000</div></div>
+        <div class="about-info-item"><div class="label">Date of Birth</div><div class="value">30 December 2000</div></div>
         <div class="about-info-item"><div class="label">Location</div><div class="value">Tataouine, Tunisia</div></div>
         <div class="about-info-item"><div class="label">Freelance</div><div class="value" style="color:var(--red)">Available ✓</div></div>
         <div class="about-info-item"><div class="label">Languages</div><div class="value">AR · EN · FR · IT</div></div>
@@ -583,7 +590,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
 
 <script>
 // TYPING
-const words=['Web Designer','Web Developer','UI/UX Designer','Graphic Designer','Community Manager'];
+const words=['Web Designer','Web Developer','UI/UX Designer','Graphic Designer','Marketing Manager'];
 let wi=0,ci=0,del=false;
 const el=document.getElementById('typed-text');
 function type(){
@@ -687,6 +694,50 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 document.getElementById('projectModal').addEventListener('click', e => { if (e.target.id === 'projectModal') closeModal(); });
+
+// MODERN NAVBAR FUNCTIONALITY
+const navbar = document.querySelector('.leftnav');
+const toggleBtn = document.querySelector('.nav-mob-toggle');
+const navLinks = document.querySelector('.nav-links');
+const navBottom = document.querySelector('.nav-bottom');
+
+// Scroll effect
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+// Mobile menu toggle
+if (toggleBtn) {
+  toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    navBottom.classList.toggle('active');
+  });
+
+  // Close menu when clicking on a link
+  document.querySelectorAll('.nav-link, .nav-social').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      navBottom.classList.remove('active');
+    });
+  });
+}
+
+// Active link highlighting
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+    const target = link.getAttribute('href');
+    if (target && target.startsWith('#')) {
+      document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
 </script>
 </body>
 </html>

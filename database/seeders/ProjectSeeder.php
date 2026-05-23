@@ -103,6 +103,17 @@ class ProjectSeeder extends Seeder
                 'featured' => false,
                 'order' => 9,
             ],
+            [
+                'title' => 'MBS - Recruitment & HR Services',
+                'description' => 'Professional HR and recruitment platform serving Egypt & GCC region with visa processing and staffing solutions.',
+                'details' => 'Multi Business Services (MBS) is a licensed recruitment firm established in 2007. Services include talent acquisition, visa processing, workspace solutions, and outsourcing. Serving petroleum, construction, healthcare, technology, and retail industries across the Middle East.',
+                'url' => 'https://mbs.com.eg/',
+                'github_url' => null,
+                'technologies' => ['WordPress', 'PHP', 'MySQL', 'WooCommerce'],
+                'category' => 'wordpress',
+                'featured' => true,
+                'order' => 10,
+            ],
         ];
 
         $titles = array_column($projects, 'title');
