@@ -318,8 +318,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
 <!-- ===== LEFT SIDEBAR NAV ===== -->
 <aside class="leftnav" id="leftnav">
   <div class="nav-logo-wrap">
-    <img class="nav-logo-img" src="{{ asset('images/profile.jpg') }}" alt="Haythem Aljane">
-    <span class="nav-logo-text">HAYTHEM</span>
+    <img class="nav-logo-img" src="{{ asset('logo.png') }}" alt="Aljane Haythem Logo" style="height:50px;object-fit:contain">
   </div>
 
   <div class="nav-links">
@@ -581,7 +580,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <div class="footer-logo"><img src="{{ asset('images/profile.jpg') }}" alt="Haythem" style="height:36px;border-radius:50%"></div>
+  <div class="footer-logo"><img src="{{ asset('logo.png') }}" alt="Aljane Haythem" style="height:40px;object-fit:contain"></div>
   <div class="footer-copy">© {{ date('Y') }} <span>Haythem Aljane</span> · All rights reserved · Built with ❤️ in Tunisia</div>
   <div class="footer-links">
     <a href="#hero">Home</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
