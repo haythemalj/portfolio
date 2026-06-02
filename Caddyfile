@@ -1,12 +1,12 @@
 {
-  debug
+	debug
 }
 
 :{$PORT} {
-  root * ./public
-  file_server
-  try_files {path} /index.php
-  php
+	root * ./public
+	file_server
+	try_files {path} /index.php
+	php
 }
 
 
