@@ -1,12 +1,7 @@
-{
-	debug
-}
-
 :{$PORT} {
-	root * ./public
-	file_server
-	try_files {path} /index.php
+	root * /app/public
 	php
+	file_server
 }
 
 
