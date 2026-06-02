@@ -2,21 +2,11 @@
   debug
 }
 
-# Railway/FrankenPHP typically sets $PORT (container listens here)
 :{$PORT} {
-  # Laravel docroot
   root * ./public
-
-  # Static assets first
   file_server
-
-  # Route everything else to Laravel
   try_files {path} /index.php
-
-  php {
-    # Ensure the correct front controller is executed
-    index index.php
-  }
+  php
 }
 
 
