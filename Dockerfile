@@ -4,5 +4,7 @@ RUN docker-php-ext-install pdo pdo_mysql
 
 WORKDIR /app
 COPY . .
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]
+ENTRYPOINT ["/entrypoint.sh"]
