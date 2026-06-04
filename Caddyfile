@@ -1,0 +1,10 @@
+{
+  debug
+}
+
+0.0.0.0:80 {
+  root * ./public
+  file_server
+  try_files {path} /index.php
+  php
+}
