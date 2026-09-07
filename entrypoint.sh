@@ -6,6 +6,9 @@ PORT=${PORT:-8000}
 # Send container errors to Render's log stream instead of the ephemeral
 # application log file.
 export LOG_CHANNEL=stderr
+if [ -n "${RENDER_EXTERNAL_URL:-}" ]; then
+    export APP_URL="$RENDER_EXTERNAL_URL"
+fi
 
 # The free demo can start even when an invalid placeholder APP_KEY was saved
 # in Render. A configured valid key is preserved across restarts.
