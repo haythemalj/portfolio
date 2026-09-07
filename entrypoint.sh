@@ -3,6 +3,10 @@ set -e
 
 PORT=${PORT:-8000}
 
+# Send container errors to Render's log stream instead of the ephemeral
+# application log file.
+export LOG_CHANNEL=stderr
+
 # Keep the free Render demo usable even if the old placeholder MySQL
 # variables are still present in the service environment.
 if [ "${DB_HOST:-}" = "your-database-host" ]; then
