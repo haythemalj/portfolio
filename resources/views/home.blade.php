@@ -289,19 +289,23 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   body{padding-left:0;padding-bottom:70px}
   .leftnav{
     width:100%;height:60px;top:auto;bottom:0;left:0;right:0;
-    flex-direction:row;padding:0 16px;
+    flex-direction:row;padding:0 4px;
     border-right:none;border-top:1px solid var(--border);
     justify-content:space-around;align-items:center;
     overflow:visible;
   }
   .leftnav:hover{width:100%}
   .nav-logo-wrap{display:none}
-  .nav-links{flex-direction:row;gap:0;padding:0;justify-content:space-around;width:auto}
+  .nav-links{
+    display:flex!important;position:static;flex:1;flex-direction:row;gap:0;padding:0 2px;
+    justify-content:space-between;width:100%;min-width:0;overflow-x:auto;scrollbar-width:none;
+  }
+  .nav-links::-webkit-scrollbar{display:none}
   .nav-label{display:none}
-  .nav-link{padding:10px 14px;border-radius:8px}
+  .nav-link{flex:0 0 42px;padding:10px 8px;border-radius:8px;justify-content:center}
   .nav-link::before{display:none}
   .nav-link i{font-size:1.1rem;width:auto}
-  .nav-bottom{display:none}
+  .nav-bottom{display:none!important}
   section{padding:80px 24px}
   .hero{padding:60px 24px 80px}
   .hero-inner{flex-direction:column-reverse}
@@ -311,16 +315,32 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   footer{flex-direction:column;text-align:center;padding:30px 24px}
   .footer-links{justify-content:center}
 }
+
+@media(max-width:600px){
+  section{padding:72px 16px}
+  .hero{padding:54px 16px 72px;min-height:calc(100vh - 60px)}
+  .hero h1{font-size:clamp(3.6rem,18vw,5.5rem)}
+  .hero-tag{font-size:.62rem;letter-spacing:.12em;padding:6px 10px}
+  .hero-desc{font-size:.9rem;line-height:1.65;margin-bottom:28px}
+  .hero-btns{gap:10px}
+  .btn{width:100%;justify-content:center;padding:13px 18px}
+  .hero-stats{gap:24px;margin-top:34px}
+  .hero-stat h3{font-size:2.3rem}
+  h2.section-title{font-size:clamp(2.3rem,12vw,3.5rem);margin-bottom:36px}
+  .about-info-grid{grid-template-columns:1fr}
+  .projects-grid,.certs-grid,.leadership-grid,.services-grid{grid-template-columns:1fr}
+  .project-body,.lead-card,.service-card{padding:20px}
+  .contact-item{padding:14px 16px}
+  .contact-item-value{font-size:.8rem;overflow-wrap:anywhere}
+  footer{padding:26px 16px}
+  .footer-copy{line-height:1.6}
+}
 </style>
 </head>
 <body>
 
 <!-- ===== LEFT SIDEBAR NAV ===== -->
 <aside class="leftnav" id="leftnav">
-  <div class="nav-logo-wrap">
-    <img class="nav-logo-img" src="{{ asset('logo.png') }}" alt="Aljane Haythem Logo" style="height:50px;object-fit:contain">
-  </div>
-
   <div class="nav-links">
     <a href="#hero" class="nav-link active" data-section="hero">
       <i class="fas fa-house"></i><span class="nav-label">Home</span>
@@ -580,7 +600,6 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <div class="footer-logo"><img src="{{ asset('logo.png') }}" alt="Aljane Haythem" style="height:40px;object-fit:contain"></div>
   <div class="footer-copy">© {{ date('Y') }} <span>Haythem Aljane</span> · All rights reserved · Built with ❤️ in Tunisia</div>
   <div class="footer-links">
     <a href="#hero">Home</a><a href="#projects">Projects</a><a href="#contact">Contact</a>

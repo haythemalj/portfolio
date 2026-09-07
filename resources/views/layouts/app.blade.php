@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,6 @@
     <meta name="description" content="Haythem Aljane - Web Developer, UI/UX Designer & Community Leader from Tunisia">
     <meta name="keywords" content="web development, UI/UX, portfolio, freelance, Laravel, React, Tunisia">
     <meta name="author" content="Haythem Aljane">
-    <link rel="shortcut icon" type="image/png" href="{{ asset('images/logo02.png') }}">
     <title>@yield('title', config('app.name', 'Haythem Aljane'))</title>
 
     <!-- External links -->

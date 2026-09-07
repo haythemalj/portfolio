@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,6 @@
     <meta name="description" content="Haythem Aljane - Web Developer, Graphic Designer & Community Leader">
     <meta name="keywords" content="web development, design, portfolio, freelance, Tunisia">
     <meta name="author" content="Haythem Aljane">
-    <link rel="shortcut icon" type="image/png" href="/public/images/logo02.png">
     <title>{{ config('app.name', 'Haythem Aljane Portfolio') }} - Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

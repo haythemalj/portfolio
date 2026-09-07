@@ -1,6 +1,5 @@
 <!-- navbar -->
 <header>
-    <a href="{{ route('landing') }}" class="logo"><span>H</span>aythem<span>.</span></a>
     <div class="menuToggle" onclick="toggleMenu();">
         <span></span>
         <span></span>
