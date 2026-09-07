@@ -6,7 +6,12 @@ PORT=${PORT:-8000}
 # Send container errors to Render's log stream instead of the ephemeral
 # application log file.
 export LOG_CHANNEL=stderr
-export APP_DEBUG=true
+
+# The free demo can start even when an invalid placeholder APP_KEY was saved
+# in Render. A configured valid key is preserved across restarts.
+if ! php -r '$key = getenv("APP_KEY"); if (strncmp($key, "base64:", 7) === 0) { $key = base64_decode(substr($key, 7), true); } exit(in_array(strlen((string) $key), [16, 32], true) ? 0 : 1);'; then
+    export APP_KEY="base64:$(php -r 'echo base64_encode(random_bytes(32));')"
+fi
 
 # Keep the free Render demo usable even if the old placeholder MySQL
 # variables are still present in the service environment.
