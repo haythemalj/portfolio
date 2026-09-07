@@ -52,6 +52,23 @@ In Railway Dashboard:
 - Add: `APP_ENV=production`
 - Add: `DATABASE_URL` (auto-generated)
 
+### Free Render Demo
+
+For a free public demo without an external database, deploy the Docker service
+on Render and set:
+
+```env
+DB_CONNECTION=sqlite
+DB_DATABASE=/app/database/database.sqlite
+SESSION_DRIVER=file
+CACHE_DRIVER=file
+QUEUE_CONNECTION=sync
+```
+
+The container creates the SQLite database, runs migrations, and seeds the
+portfolio projects on startup. Render's free filesystem is ephemeral, so
+admin edits and database changes can be lost after a redeploy or restart.
+
 #### 5️⃣ Add Custom Domain
 1. In Railway Dashboard
 2. Go to Settings → Domain
