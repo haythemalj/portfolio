@@ -228,7 +228,7 @@
                 <div class="hero-stat"><h3>3+</h3><p>Years Active</p></div>
                 <div class="hero-stat"><h3>10+</h3><p>Websites</p></div>
                 <div class="hero-stat"><h3>400+</h3><p>Design Works</p></div>
-                <div class="hero-stat"><h3>4</h3><p>Languages</p></div>
+                <div class="hero-stat"><h3>3</h3><p>Languages</p></div>
             </div>
         </div>
         <div class="hero-img-wrap">
@@ -283,7 +283,7 @@
             </div>
             <div style="border-left:2px solid var(--red); padding-left:20px">
                 <h4 style="color:var(--white); margin-bottom:5px">Languages</h4>
-                <p style="color:var(--muted); font-size:.9rem">Arabic (Native) • English (Advanced) • French (Advanced) • Italian (Basic)</p>
+                <p style="color:var(--muted); font-size:.9rem">Arabic (Native) • English (Advanced) • French (Advanced)</p>
             </div>
         </div>
     </div>

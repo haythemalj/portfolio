@@ -15,8 +15,7 @@
     <ul class="navigation">
         <li><a href="{{ route('landing') }}" onclick="toggleMenu();">Home</a></li>
         <li><a href="{{ route('landing') }}#about" onclick="toggleMenu();">About</a></li>
-        <li><a href="{{ route('portfolio.index') }}" onclick="toggleMenu();">Portfolio</a></li>
-        <li><a href="{{ route('blog.index') }}" onclick="toggleMenu();">Blog</a></li>
+        <li><a href="{{ route('landing') }}#projects" onclick="toggleMenu();">Portfolio</a></li>
         <li><a href="{{ route('landing') }}#contact" onclick="toggleMenu();">Contact</a></li>
     </ul>
     <div class="navigation2">
@@ -34,8 +33,8 @@
                     </i>
                 </button>
                 <div class="dropdown">
-                    @if (Auth::user()->name == "useradmin")
-                        <a href="/home">Dashboard</a>
+                    @if (Auth::user()->name === config('portfolio.admin_name'))
+                        <a href="{{ route('admin.dashboard') }}">Dashboard</a>
                     @endif
                     <a href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

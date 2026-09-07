@@ -21,6 +21,25 @@ header {
   height: 10vh;
 }
 
+@media (max-width: 1200px) {
+  header {
+    padding: 2rem 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1.5rem 2rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+}
+
 header .logo {
   color: #111;
   font-weight: 700;
@@ -108,6 +127,24 @@ header .navigation2 li a:hover {
   padding: 2.5rem 11rem;
 }
 
+@media (max-width: 1200px) {
+  .page-content {
+    padding: 2rem 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-content {
+    padding: 1rem;
+  }
+}
+
 .about-box {
   margin-top: -4.5%;
   letter-spacing: 2px;
@@ -118,6 +155,7 @@ header .navigation2 li a:hover {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .rowabout .col50about1 {
@@ -128,6 +166,28 @@ header .navigation2 li a:hover {
 .rowabout .col50about2 {
   position: relative;
   width: 70%;
+}
+
+@media (max-width: 768px) {
+  .rowabout {
+    flex-direction: column;
+  }
+
+  .rowabout .col50about1 {
+    width: 100%;
+  }
+
+  .rowabout .col50about2 {
+    width: 100%;
+  }
+
+  .rowabout .col50about1 h2 {
+    font-size: 2rem;
+  }
+
+  .rowabout .col50about1 h3 {
+    font-size: 1.2rem;
+  }
 }
 
 .rowabout .col50about1 h2 {

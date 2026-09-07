@@ -12,8 +12,7 @@
                 <h3>Quick <span>Links</span></h3>
                 <ul class="social-link2">
                     <li><a href="{{ route('landing') }}"><i class="fa fa-home"><p>Home</p></i></a></li>
-                    <li><a href="{{ route('portfolio.index') }}"><i class="fa fa-folder"><p>Portfolio</p></i></a></li>
-                    <li><a href="{{ route('blog.index') }}"><i class="fa fa-blog"><p>Blog</p></i></a></li>
+                    <li><a href="{{ route('landing') }}#projects"><i class="fa fa-folder"><p>Portfolio</p></i></a></li>
                     <li><a href="{{ route('landing') }}#contact"><i class="fa fa-envelope"><p>Contact</p></i></a></li>
                 </ul>
             </div>

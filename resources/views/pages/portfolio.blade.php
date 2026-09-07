@@ -131,7 +131,7 @@ h2.section-title span{color:var(--red)}
         <div class="about-info-item"><div class="label">Date of Birth</div><div class="value">31 December 2000</div></div>
         <div class="about-info-item"><div class="label">Location</div><div class="value">Tataouine, Tunisia</div></div>
         <div class="about-info-item"><div class="label">Freelance</div><div class="value" style="color:var(--red)">Available ✓</div></div>
-        <div class="about-info-item"><div class="label">Languages</div><div class="value">AR · EN · FR · IT</div></div>
+        <div class="about-info-item"><div class="label">Languages</div><div class="value">AR · EN · FR</div></div>
         <div class="about-info-item"><div class="label">Email</div><div class="value" style="font-size:.76rem">aljanehaythem23@gmail.com</div></div>
       </div>
     </div>

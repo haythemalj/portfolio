@@ -94,7 +94,7 @@ class AddPortfolioSectionsSeeder extends Seeder
             ['label' => 'Projects Completed', 'value' => '10+', 'icon' => 'fas fa-folder', 'order' => 1],
             ['label' => 'Design Works', 'value' => '400+', 'icon' => 'fas fa-palette', 'order' => 2],
             ['label' => 'Years Experience', 'value' => '3+', 'icon' => 'fas fa-calendar', 'order' => 3],
-            ['label' => 'Languages', 'value' => '4', 'icon' => 'fas fa-globe', 'order' => 4],
+            ['label' => 'Languages', 'value' => '3', 'icon' => 'fas fa-globe', 'order' => 4],
             ['label' => 'Team Members Led', 'value' => '40+', 'icon' => 'fas fa-people-group', 'order' => 5],
             ['label' => 'Client Satisfaction', 'value' => '100%', 'icon' => 'fas fa-star', 'order' => 6],
         ]);
