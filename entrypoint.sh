@@ -6,6 +6,7 @@ PORT=${PORT:-8000}
 # Send container errors to Render's log stream instead of the ephemeral
 # application log file.
 export LOG_CHANNEL=stderr
+export APP_DEBUG=true
 
 # Keep the free Render demo usable even if the old placeholder MySQL
 # variables are still present in the service environment.
