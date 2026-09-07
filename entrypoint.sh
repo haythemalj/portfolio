@@ -3,6 +3,13 @@ set -e
 
 PORT=${PORT:-8000}
 
+# Keep the free Render demo usable even if the old placeholder MySQL
+# variables are still present in the service environment.
+if [ "${DB_HOST:-}" = "your-database-host" ]; then
+    export DB_CONNECTION=sqlite
+    export DB_DATABASE=/app/database/database.sqlite
+fi
+
 if [ "${DB_CONNECTION:-mysql}" = "sqlite" ]; then
     DB_PATH=${DB_DATABASE:-/app/database/database.sqlite}
     mkdir -p "$(dirname "$DB_PATH")"
