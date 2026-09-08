@@ -360,6 +360,10 @@ h2.section-title span{color:var(--red)}
 .project-tech span{font-size:.62rem;padding:3px 8px;border-radius:999px;background:rgba(229,0,0,.07);color:var(--red);border:1px solid rgba(229,0,0,.15);letter-spacing:.05em;text-transform:uppercase}
 .project-link{font-size:.75rem;color:var(--red);letter-spacing:.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;transition:gap .3s}
 .project-link:hover{gap:10px}
+.resume-card{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:28px 32px;background:linear-gradient(120deg,rgba(229,0,0,.12),rgba(255,255,255,.03));border:1px solid rgba(229,0,0,.2);border-radius:18px}
+.resume-card h3{font-size:1.35rem;color:var(--white);margin-bottom:8px}
+.resume-card p{color:var(--muted);font-size:.88rem;line-height:1.6}
+@media(max-width:640px){.resume-card{align-items:flex-start;flex-direction:column;padding:24px}}
 
 /* ===== CERTIFICATES ===== */
 .certs{background:var(--black)}
@@ -641,6 +645,18 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
         <div class="timeline-item"><div class="tl-date">Tunisian Scout</div><div class="tl-title">Community Leader</div><div class="tl-desc">Active member and community leader in the Tunisian Scouts movement.</div></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== RESUME ===== -->
+<section class="resume" id="resume">
+  <div class="section-label">Professional Profile</div>
+  <div class="resume-card reveal">
+    <div>
+      <h3>Ready to review my experience?</h3>
+      <p>Download my latest CV for a clear overview of my education, technical skills, projects, and leadership experience.</p>
+    </div>
+    <a href="/CV_Haythem_Aljane.pdf" download class="btn btn-primary"><i class="fas fa-file-arrow-down"></i>Download CV</a>
   </div>
 </section>
 
