@@ -343,6 +343,14 @@ h2.section-title span{color:var(--red)}
 .project-card:hover{transform:translateY(-6px);border-color:var(--border);box-shadow:0 24px 60px rgba(0,0,0,.35)}
 .project-card.hidden{display:none}
 .project-thumb{height:170px;background:linear-gradient(135deg,#191919 0%,#222 100%);display:flex;align-items:center;justify-content:center;position:relative}
+.project-visual{position:absolute;inset:0;overflow:hidden;display:flex;align-items:flex-end;padding:22px;background:linear-gradient(135deg,#241010,#101010 58%,#351010)}
+.project-visual::before,.project-visual::after{content:'';position:absolute;border:1px solid rgba(255,255,255,.12);transform:rotate(-18deg);border-radius:14px}
+.project-visual::before{width:180px;height:120px;right:-35px;top:-28px;background:rgba(229,0,0,.14);box-shadow:-28px 28px 0 rgba(255,255,255,.04)}
+.project-visual::after{width:120px;height:80px;left:-34px;bottom:-28px;background:rgba(255,255,255,.04)}
+.project-visual-label{position:relative;z-index:1;max-width:72%;font-size:.72rem;line-height:1.3;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.86);font-weight:600}
+.project-visual.ai{background:linear-gradient(135deg,#17112d,#101018 58%,#241044)}
+.project-visual.design{background:linear-gradient(135deg,#2b1515,#111 58%,#51200f)}
+.project-visual.wordpress{background:linear-gradient(135deg,#101e2b,#101010 58%,#123d4a)}
 .project-thumb-icon{font-size:2.5rem;color:rgba(229,0,0,.28)}
 .project-thumb-label{position:absolute;top:12px;right:12px;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(229,0,0,.12);color:var(--red);border:1px solid rgba(229,0,0,.25)}
 .project-body{padding:24px}

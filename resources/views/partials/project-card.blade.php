@@ -16,7 +16,9 @@
         @if($project->image)
             <img src="{{ $project->image }}" alt="{{ $project->title }}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
         @else
-            <i class="fas {{ $icons[$category] ?? 'fa-laptop-code' }} project-thumb-icon"></i>
+            <div class="project-visual {{ $category }}">
+                <span class="project-visual-label">{{ $project->title }}</span>
+            </div>
         @endif
         <span class="project-thumb-label">{{ $labels[$category] ?? 'Project' }}</span>
     </div>
