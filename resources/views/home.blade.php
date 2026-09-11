@@ -373,6 +373,7 @@ h2.section-title span{color:var(--red)}
 .cert-card:hover{border-color:var(--border);transform:translateY(-3px)}
 .cert-icon{width:34px;height:34px;background:rgba(229,0,0,.1);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--red);font-size:.85rem}
 .cert-name{font-size:.84rem;font-weight:600;color:var(--white);line-height:1.4}
+.cert-name small{display:block;margin-top:4px;font-size:.68rem;font-weight:400;color:var(--muted);line-height:1.3}
 
 /* ===== LEADERSHIP ===== */
 .leadership{background:var(--dark)}
@@ -638,6 +639,8 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
     <div class="reveal">
       <div class="exp-col-title">Experience & Leadership</div>
       <div class="timeline">
+        <div class="timeline-item"><div class="tl-date">Sep 2025 – Mar 2026 · Chemek Brothers</div><div class="tl-title">Web Designer (UI/UX) & E-commerce Developer</div><div class="tl-org">Sousse, Tunisia</div><div class="tl-desc">Designed modern UI/UX interfaces, improved user experience, developed and managed e-commerce websites, and created digital assets aligned with marketing goals.</div></div>
+        <div class="timeline-item"><div class="tl-date">Feb 2025 – Jun 2025 · Top Niveau</div><div class="tl-title">Web Development Intern</div><div class="tl-org">Monastir, Tunisia</div><div class="tl-desc">Worked in the technical department on a dynamic web application for connected smart glasses, applying web development skills to a real product project.</div></div>
         <div class="timeline-item"><div class="tl-date">2024 · International Internship</div><div class="tl-title">MBS Cairo, Egypt</div><div class="tl-desc">Professional internship with international exposure in Egypt.</div></div>
         <div class="timeline-item"><div class="tl-date">3+ Years · Freelance</div><div class="tl-title">Graphic Designer & Web Developer</div><div class="tl-desc">400+ posters and videos · 10+ websites for various clients and industries.</div></div>
         <div class="timeline-item"><div class="tl-date">AIESEC in Tunisia – Monastir</div><div class="tl-title">Sales VP · Data Specialist · Team Leader</div><div class="tl-desc">Managed B2B & B2C sales across Tunisia · Supported 100+ exchange participants from 12 countries · OC Sales VP at Youth Speak Forum 2025 · Data & Sales Specialist IGT Tunisia (500+ participants).</div></div>
@@ -711,16 +714,18 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   <div class="section-label">Credentials</div>
   <h2 class="section-title">My <span>Certificates</span></h2>
   <div class="certs-grid reveal">
-    <div class="cert-card"><div class="cert-icon"><i class="fas fa-language"></i></div><div class="cert-name">Imperial English B1</div></div>
+    <div class="cert-card"><div class="cert-icon"><i class="fas fa-language"></i></div><div class="cert-name">General English – Intermediate (CEFR B2)<small>Imperial English UK · 2025</small></div></div>
+    <div class="cert-card"><div class="cert-icon"><i class="fas fa-pen-ruler"></i></div><div class="cert-name">UI/UX Design Professional Training<small>Media Training · 2026</small></div></div>
+    <div class="cert-card"><div class="cert-icon"><i class="fab fa-wordpress"></i></div><div class="cert-name">WordPress Professional Training<small>Media Training · 2026</small></div></div>
     <div class="cert-card"><div class="cert-icon"><i class="fas fa-code"></i></div><div class="cert-name">HTML & CSS</div></div>
     <div class="cert-card"><div class="cert-icon"><i class="fas fa-file-word"></i></div><div class="cert-name">Microsoft Office</div></div>
     <div class="cert-card"><div class="cert-icon"><i class="fas fa-image"></i></div><div class="cert-name">Photoshop</div></div>
-    <div class="cert-card"><div class="cert-icon"><i class="fas fa-pen-ruler"></i></div><div class="cert-name">UX / UI Design</div></div>
+    <div class="cert-card"><div class="cert-icon"><i class="fas fa-pen-ruler"></i></div><div class="cert-name">UX / UI Design<small>Marwen Salah</small></div></div>
     <div class="cert-card"><div class="cert-icon"><i class="fas fa-people-group"></i></div><div class="cert-name">Soft Skills</div></div>
-    <div class="cert-card"><div class="cert-icon"><i class="fas fa-network-wired"></i></div><div class="cert-name">Informatical Network</div></div>
+    <div class="cert-card"><div class="cert-icon"><i class="fas fa-network-wired"></i></div><div class="cert-name">Computer Networks & Simulation<small>Media Training</small></div></div>
     <div class="cert-card"><div class="cert-icon"><i class="fas fa-trophy"></i></div><div class="cert-name">Hackathon</div></div>
-    <div class="cert-card"><div class="cert-icon"><i class="fas fa-brain"></i></div><div class="cert-name">Artificial Intelligence</div></div>
-    <div class="cert-card"><div class="cert-icon"><i class="fas fa-globe"></i></div><div class="cert-name">AIESEC International</div></div>
+    <div class="cert-card"><div class="cert-icon"><i class="fas fa-brain"></i></div><div class="cert-name">Artificial Intelligence<small>Media Training</small></div></div>
+    <div class="cert-card"><div class="cert-icon"><i class="fas fa-globe"></i></div><div class="cert-name">AIESEC Membership & Leadership<small>AIESEC in Monastir</small></div></div>
   </div>
 </section>
 
