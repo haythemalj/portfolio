@@ -374,6 +374,12 @@ h2.section-title span{color:var(--red)}
 .cert-icon{width:34px;height:34px;background:rgba(229,0,0,.1);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--red);font-size:.85rem}
 .cert-name{font-size:.84rem;font-weight:600;color:var(--white);line-height:1.4}
 .cert-name small{display:block;margin-top:4px;font-size:.68rem;font-weight:400;color:var(--muted);line-height:1.3}
+.cert-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px}
+.cert-gallery-card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:8px;overflow:hidden}
+.cert-gallery-card img{width:100%;height:170px;object-fit:cover;background:#f4f4f4}
+.cert-gallery-body{padding:16px}
+.cert-gallery-title{font-size:.82rem;font-weight:600;color:var(--white);margin-bottom:8px}
+.cert-gallery-link{font-size:.7rem;color:var(--red);letter-spacing:.08em;text-transform:uppercase}
 
 /* ===== LEADERSHIP ===== */
 .leadership{background:var(--dark)}
@@ -637,16 +643,12 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
       </div>
     </div>
     <div class="reveal">
-      <div class="exp-col-title">Experience & Leadership</div>
+      <div class="exp-col-title">Professional Experience</div>
       <div class="timeline">
         <div class="timeline-item"><div class="tl-date">Sep 2025 – Mar 2026 · Chemek Brothers</div><div class="tl-title">Web Designer (UI/UX) & E-commerce Developer</div><div class="tl-org">Sousse, Tunisia</div><div class="tl-desc">Designed modern UI/UX interfaces, improved user experience, developed and managed e-commerce websites, and created digital assets aligned with marketing goals.</div></div>
         <div class="timeline-item"><div class="tl-date">Feb 2025 – Jun 2025 · Top Niveau</div><div class="tl-title">Web Development Intern</div><div class="tl-org">Monastir, Tunisia</div><div class="tl-desc">Worked in the technical department on a dynamic web application for connected smart glasses, applying web development skills to a real product project.</div></div>
         <div class="timeline-item"><div class="tl-date">2024 · International Internship</div><div class="tl-title">MBS Cairo, Egypt</div><div class="tl-desc">Professional internship with international exposure in Egypt.</div></div>
         <div class="timeline-item"><div class="tl-date">3+ Years · Freelance</div><div class="tl-title">Graphic Designer & Web Developer</div><div class="tl-desc">400+ posters and videos · 10+ websites for various clients and industries.</div></div>
-        <div class="timeline-item"><div class="tl-date">AIESEC in Tunisia – Monastir</div><div class="tl-title">Sales VP · Data Specialist · Team Leader</div><div class="tl-desc">Managed B2B & B2C sales across Tunisia · Supported 100+ exchange participants from 12 countries · OC Sales VP at Youth Speak Forum 2025 · Data & Sales Specialist IGT Tunisia (500+ participants).</div></div>
-        <div class="timeline-item"><div class="tl-date">Tunivisions of ISIMM</div><div class="tl-title">President → VP → Member</div><div class="tl-desc">Led a 40-student team running workshops and training sessions across Monastir and Tunisia.</div></div>
-        <div class="timeline-item"><div class="tl-date">JCI Junior</div><div class="tl-title">Financial Responsible</div><div class="tl-desc">Managed cash flow and financial planning for the Junior Chamber International.</div></div>
-        <div class="timeline-item"><div class="tl-date">Tunisian Scout</div><div class="tl-title">Community Leader</div><div class="tl-desc">Active member and community leader in the Tunisian Scouts movement.</div></div>
       </div>
     </div>
   </div>
@@ -726,6 +728,26 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
     <div class="cert-card"><div class="cert-icon"><i class="fas fa-trophy"></i></div><div class="cert-name">Hackathon</div></div>
     <div class="cert-card"><div class="cert-icon"><i class="fas fa-brain"></i></div><div class="cert-name">Artificial Intelligence<small>Media Training</small></div></div>
     <div class="cert-card"><div class="cert-icon"><i class="fas fa-globe"></i></div><div class="cert-name">AIESEC Membership & Leadership<small>AIESEC in Monastir</small></div></div>
+  </div>
+  <div class="cert-gallery reveal">
+    <a class="cert-gallery-card" href="/images/certificates/english-b2.jpeg" target="_blank" rel="noopener">
+      <img src="/images/certificates/english-b2.jpeg" alt="General English B2 certificate">
+      <div class="cert-gallery-body"><div class="cert-gallery-title">General English B2</div><span class="cert-gallery-link">View certificate</span></div>
+    </a>
+    <a class="cert-gallery-card" href="/images/certificates/ux-ui.jpeg" target="_blank" rel="noopener">
+      <img src="/images/certificates/ux-ui.jpeg" alt="UI/UX Design certificate">
+      <div class="cert-gallery-body"><div class="cert-gallery-title">UI/UX Design</div><span class="cert-gallery-link">View certificate</span></div>
+    </a>
+    <a class="cert-gallery-card" href="/images/certificates/wordpress.jpeg" target="_blank" rel="noopener">
+      <img src="/images/certificates/wordpress.jpeg" alt="WordPress certificate">
+      <div class="cert-gallery-body"><div class="cert-gallery-title">WordPress</div><span class="cert-gallery-link">View certificate</span></div>
+    </a>
+    <a class="cert-gallery-card" href="/images/certificates/artificial-intelligence.pdf" target="_blank" rel="noopener">
+      <div class="cert-gallery-body"><div class="cert-gallery-title">Artificial Intelligence</div><span class="cert-gallery-link">Open certificate PDF</span></div>
+    </a>
+    <a class="cert-gallery-card" href="/images/certificates/computer-networks-simulation.pdf" target="_blank" rel="noopener">
+      <div class="cert-gallery-body"><div class="cert-gallery-title">Computer Networks & Simulation</div><span class="cert-gallery-link">Open certificate PDF</span></div>
+    </a>
   </div>
 </section>
 
