@@ -369,13 +369,7 @@ h2.section-title span{color:var(--red)}
 /* ===== CERTIFICATES ===== */
 .certs{background:var(--black)}
 .cert-intro{max-width:620px;color:var(--muted);font-size:.9rem;line-height:1.8;margin-bottom:30px}
-.certs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.cert-card{padding:22px;background:linear-gradient(145deg,var(--card),rgba(22,22,22,.55));border:1px solid rgba(255,255,255,.07);border-radius:12px;display:flex;align-items:flex-start;gap:14px;transition:.3s;min-height:118px}
-.cert-card:hover{border-color:rgba(229,0,0,.45);transform:translateY(-3px);box-shadow:0 16px 35px rgba(0,0,0,.2)}
-.cert-icon{width:38px;height:38px;background:rgba(229,0,0,.1);border:1px solid rgba(229,0,0,.2);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--red);font-size:.9rem}
-.cert-name{font-size:.86rem;font-weight:600;color:var(--white);line-height:1.45}
-.cert-name small{display:block;margin-top:7px;font-size:.68rem;font-weight:400;color:var(--muted);line-height:1.4}
-.cert-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:34px}
+.cert-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:10px}
 .cert-gallery-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden;transition:.3s}
 .cert-gallery-card:hover{border-color:rgba(229,0,0,.45);transform:translateY(-3px)}
 .cert-gallery-card img{width:100%;height:180px;object-fit:cover;background:#f4f4f4}
@@ -384,8 +378,8 @@ h2.section-title span{color:var(--red)}
 .cert-gallery-body{padding:17px}
 .cert-gallery-title{font-size:.84rem;font-weight:600;color:var(--white);margin-bottom:8px}
 .cert-gallery-link{font-size:.68rem;color:var(--red);letter-spacing:.1em;text-transform:uppercase}
-@media(max-width:900px){.certs-grid,.cert-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.certs-grid,.cert-gallery{grid-template-columns:1fr}}
+@media(max-width:900px){.cert-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.cert-gallery{grid-template-columns:1fr}}
 
 /* ===== LEADERSHIP ===== */
 .leadership{background:var(--dark)}
@@ -721,34 +715,29 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
 <section class="certs" id="certs">
   <div class="section-label">Credentials</div>
   <h2 class="section-title">My <span>Certificates</span></h2>
-  <p class="cert-intro">A focused selection of verified training and professional credentials supporting my work in web development, design, artificial intelligence, networking, and communication.</p>
-  <div class="certs-grid reveal">
-    <div class="cert-card"><div class="cert-icon"><i class="fas fa-language"></i></div><div class="cert-name">General English – Intermediate (CEFR B2)<small>Imperial English UK · 2025</small></div></div>
-    <div class="cert-card"><div class="cert-icon"><i class="fas fa-pen-ruler"></i></div><div class="cert-name">UI/UX Design Professional Training<small>Media Training · 2026</small></div></div>
-    <div class="cert-card"><div class="cert-icon"><i class="fab fa-wordpress"></i></div><div class="cert-name">WordPress Professional Training<small>Media Training · 2026</small></div></div>
-    <div class="cert-card"><div class="cert-icon"><i class="fas fa-network-wired"></i></div><div class="cert-name">Computer Networks & Simulation<small>Media Training</small></div></div>
-    <div class="cert-card"><div class="cert-icon"><i class="fas fa-brain"></i></div><div class="cert-name">Artificial Intelligence<small>Media Training</small></div></div>
-    <div class="cert-card"><div class="cert-icon"><i class="fas fa-users"></i></div><div class="cert-name">AIESEC Membership & Leadership<small>AIESEC in Monastir · 2024–2025</small></div></div>
-  </div>
+  <p class="cert-intro">Verified certificates and professional training documents. Each credential appears once with its supporting document, issuer, and date where available.</p>
   <div class="cert-gallery reveal">
     <a class="cert-gallery-card" href="/images/certificates/english-b2.jpeg" target="_blank" rel="noopener">
-      <img src="/images/certificates/english-b2.jpeg" alt="General English B2 certificate">
-      <div class="cert-gallery-body"><div class="cert-gallery-title">General English B2</div><span class="cert-gallery-link">View certificate</span></div>
+      <img src="/images/certificates/english-b2.jpeg" alt="General English B2 certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">General English – Intermediate (CEFR B2)</div><span class="cert-gallery-link">Imperial English UK · 2025 · View</span></div>
     </a>
     <a class="cert-gallery-card" href="/images/certificates/ux-ui.jpeg" target="_blank" rel="noopener">
-      <img src="/images/certificates/ux-ui.jpeg" alt="UI/UX Design certificate">
-      <div class="cert-gallery-body"><div class="cert-gallery-title">UI/UX Design</div><span class="cert-gallery-link">View certificate</span></div>
+      <img src="/images/certificates/ux-ui.jpeg" alt="UI/UX Design certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">UI/UX Design Professional Training</div><span class="cert-gallery-link">Media Training · 2026 · View</span></div>
     </a>
     <a class="cert-gallery-card" href="/images/certificates/wordpress.jpeg" target="_blank" rel="noopener">
-      <img src="/images/certificates/wordpress.jpeg" alt="WordPress certificate">
-      <div class="cert-gallery-body"><div class="cert-gallery-title">WordPress</div><span class="cert-gallery-link">View certificate</span></div>
+      <img src="/images/certificates/wordpress.jpeg" alt="WordPress certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">WordPress Professional Training</div><span class="cert-gallery-link">Media Training · 2026 · View</span></div>
     </a>
     <a class="cert-gallery-card document" href="/images/certificates/artificial-intelligence.pdf" target="_blank" rel="noopener">
-      <div class="cert-gallery-body"><div class="cert-gallery-title">Artificial Intelligence</div><span class="cert-gallery-link">Open certificate PDF</span></div>
+      <div class="cert-gallery-body"><div class="cert-gallery-title">Artificial Intelligence</div><span class="cert-gallery-link">Media Training · Open PDF</span></div>
     </a>
     <a class="cert-gallery-card document" href="/images/certificates/computer-networks-simulation.pdf" target="_blank" rel="noopener">
-      <div class="cert-gallery-body"><div class="cert-gallery-title">Computer Networks & Simulation</div><span class="cert-gallery-link">Open certificate PDF</span></div>
+      <div class="cert-gallery-body"><div class="cert-gallery-title">Computer Networks & Simulation</div><span class="cert-gallery-link">Media Training · Open PDF</span></div>
     </a>
+    <a class="cert-gallery-card document" href="/images/certificates/web-development-hawdaoui.pdf" target="_blank" rel="noopener"><div class="cert-gallery-body"><div class="cert-gallery-title">Web Development</div><span class="cert-gallery-link">Hawdaoui Academy · Open PDF</span></div></a>
+    <a class="cert-gallery-card document" href="/images/certificates/ux-ui-training.pdf" target="_blank" rel="noopener"><div class="cert-gallery-body"><div class="cert-gallery-title">UX/UI Design Training</div><span class="cert-gallery-link">Marwen Salah · Open PDF</span></div></a>
+    <a class="cert-gallery-card document" href="/images/certificates/arduino-training.pdf" target="_blank" rel="noopener"><div class="cert-gallery-body"><div class="cert-gallery-title">Arduino Training & Workshop</div><span class="cert-gallery-link">GNR ISIMM · Open PDF</span></div></a>
+    <a class="cert-gallery-card document" href="/images/certificates/stm32-training.pdf" target="_blank" rel="noopener"><div class="cert-gallery-body"><div class="cert-gallery-title">STM32 Training</div><span class="cert-gallery-link">GNR ISIMM · Open PDF</span></div></a>
+    <a class="cert-gallery-card document" href="/images/certificates/emotional-intelligence.pdf" target="_blank" rel="noopener"><div class="cert-gallery-body"><div class="cert-gallery-title">Emotional Intelligence</div><span class="cert-gallery-link">Salah Chrait · Open PDF</span></div></a>
+    <a class="cert-gallery-card document" href="/images/certificates/aiesec-membership.pdf" target="_blank" rel="noopener"><div class="cert-gallery-body"><div class="cert-gallery-title">AIESEC Membership</div><span class="cert-gallery-link">AIESEC in Monastir · 2024–2025 · Open PDF</span></div></a>
   </div>
 </section>
 
