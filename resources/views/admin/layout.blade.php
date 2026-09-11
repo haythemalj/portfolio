@@ -33,6 +33,8 @@
         <div>
             <a href="{{ route('landing') }}">← Portfolio Site</a>
             <a href="{{ route('admin.projects.index') }}">Projects</a>
+            <a href="{{ route('admin.messages.index') }}">Messages</a>
+            <a href="{{ route('admin.account.edit') }}">Security</a>
         </div>
         <div>
             <span style="color:var(--muted);margin-right:12px">{{ auth()->user()->name }}</span>

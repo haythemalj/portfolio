@@ -305,6 +305,15 @@
                 <span class="icon"><i class="fa-solid fa-box-archive"></i></span>
             </div>
         </div>
+
+        <div class="stat-card" style="--stat-color:#c084fc;">
+            <div class="label">Unread Messages</div>
+            <div class="value">{{ $stats['unread_messages'] }}</div>
+            <div class="meta">
+                <span>Contact requests</span>
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            </div>
+        </div>
     </div>
 
     <div class="content-grid">
@@ -333,6 +342,8 @@
             <div class="quick-actions">
                 <a href="{{ route('admin.projects.create') }}" class="primary">Add new project</a>
                 <a href="{{ route('admin.projects.index') }}">Manage projects</a>
+                <a href="{{ route('admin.messages.index') }}">Read contact messages</a>
+                <a href="{{ route('admin.account.edit') }}">Change dashboard password</a>
                 <a href="{{ route('landing') }}">Open portfolio</a>
             </div>
         </div>

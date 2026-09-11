@@ -76,7 +76,7 @@ class ProjectAdminController extends Controller
             'details' => 'nullable|string',
             'url' => 'nullable|string|max:500',
             'github_url' => 'nullable|string|max:500',
-            'category' => 'nullable|in:web,design,ai',
+            'category' => 'nullable|in:web,design,ai,wordpress',
             'order' => 'nullable|integer|min:0',
             'featured' => 'nullable|boolean',
         ]);

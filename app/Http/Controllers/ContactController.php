@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ContactMessageMail;
+use App\Models\ContactMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 class ContactController extends Controller
 {
@@ -24,22 +26,32 @@ class ContactController extends Controller
             throw $e;
         }
 
+        ContactMessage::create($validated);
+
+        $mailSent = true;
+
         try {
             Mail::to(config('portfolio.contact_email'))
                 ->send(new ContactMessageMail($validated));
         } catch (\Exception $e) {
-            if ($request->expectsJson()) {
-                return response()->json([
-                    'message' => 'Email could not be sent. Configure SMTP in .env (Gmail app password).',
-                ], 500);
-            }
-            return back()->withErrors(['email' => 'Could not send message. Check mail configuration.']);
+            $mailSent = false;
+            Log::warning('Contact message was saved, but email delivery failed.', [
+                'recipient' => config('portfolio.contact_email'),
+                'error' => $e->getMessage(),
+            ]);
         }
 
-        if ($request->expectsJson()) {
-            return response()->json(['success' => true, 'message' => 'Message sent successfully.']);
+        if ($request->expectsJson() || $request->ajax()) {
+            return response()->json([
+                'success' => true,
+                'message' => $mailSent
+                    ? 'Message sent successfully.'
+                    : 'Message saved successfully. Email delivery is not configured yet.',
+            ]);
         }
 
-        return back()->with('contact_success', 'Message sent successfully.');
+        return back()->with('contact_success', $mailSent
+            ? 'Message sent successfully.'
+            : 'Message saved successfully. Email delivery is not configured yet.');
     }
 }

@@ -1,7 +1,7 @@
 @php
     $category = $project->category ?? 'web';
     $icons = ['ai' => 'fa-brain', 'design' => 'fa-palette', 'web' => 'fa-laptop-code'];
-    $labels = ['ai' => 'AI / Tech', 'design' => 'Design', 'web' => 'Web Dev'];
+    $labels = ['ai' => 'AI / Tech', 'design' => 'Design', 'web' => 'Web Dev', 'wordpress' => 'WordPress'];
     $techStr = is_array($project->technologies) ? implode(',', $project->technologies) : '';
 @endphp
 <div class="project-card reveal" data-cat="{{ $category }}"
@@ -32,10 +32,15 @@
                 @endforeach
             </div>
         @endif
-        @if($project->url)
-            <a href="{{ $project->url }}" target="_blank" rel="noopener" class="project-link" onclick="event.stopPropagation()">View Live <i class="fas fa-arrow-right"></i></a>
-        @elseif($project->github_url)
-            <a href="{{ $project->github_url }}" target="_blank" rel="noopener" class="project-link" onclick="event.stopPropagation()">GitHub <i class="fab fa-github"></i></a>
+        @if($project->url || $project->github_url)
+            <div class="project-links">
+                @if($project->url)
+                    <a href="{{ $project->url }}" target="_blank" rel="noopener" class="project-link" onclick="event.stopPropagation()">View Live <i class="fas fa-arrow-right"></i></a>
+                @endif
+                @if($project->github_url)
+                    <a href="{{ $project->github_url }}" target="_blank" rel="noopener" class="project-link" onclick="event.stopPropagation()">GitHub <i class="fab fa-github"></i></a>
+                @endif
+            </div>
         @else
             <span class="project-link">View details <i class="fas fa-arrow-right"></i></span>
         @endif

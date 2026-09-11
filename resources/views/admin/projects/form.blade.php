@@ -32,6 +32,7 @@
             <option value="web" {{ old('category', $project->category ?? 'web') === 'web' ? 'selected' : '' }}>Web Dev</option>
             <option value="design" {{ old('category', $project->category) === 'design' ? 'selected' : '' }}>Design</option>
             <option value="ai" {{ old('category', $project->category) === 'ai' ? 'selected' : '' }}>AI / Tech</option>
+            <option value="wordpress" {{ old('category', $project->category) === 'wordpress' ? 'selected' : '' }}>WordPress</option>
         </select>
     </div>
 

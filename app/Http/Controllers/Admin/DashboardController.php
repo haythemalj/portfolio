@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
+use App\Models\ContactMessage;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -27,6 +28,7 @@ class DashboardController extends Controller
             'featured_projects' => Project::where('featured', true)->count(),
             'active_projects' => Project::where('active', true)->count(),
             'inactive_projects' => Project::where('active', false)->count(),
+            'unread_messages' => ContactMessage::whereNull('read_at')->count(),
         ];
 
         // Get projects by technology

@@ -358,6 +358,7 @@ h2.section-title span{color:var(--red)}
 .project-desc{font-size:.82rem;color:var(--muted);line-height:1.7;margin-bottom:16px}
 .project-tech{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
 .project-tech span{font-size:.62rem;padding:3px 8px;border-radius:999px;background:rgba(229,0,0,.07);color:var(--red);border:1px solid rgba(229,0,0,.15);letter-spacing:.05em;text-transform:uppercase}
+.project-links{display:flex;flex-wrap:wrap;gap:10px}
 .project-link{font-size:.75rem;color:var(--red);letter-spacing:.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;transition:gap .3s}
 .project-link:hover{gap:10px}
 .resume-card{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:28px 32px;background:linear-gradient(120deg,rgba(229,0,0,.12),rgba(255,255,255,.03));border:1px solid rgba(229,0,0,.2);border-radius:18px}
