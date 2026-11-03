@@ -21,10 +21,10 @@ class ProjectSeeder extends Seeder
         $projects = [
             [
                 'title' => 'Smart Glasses & Vision AI Platform',
-                'description' => 'Graduation project combining AI-powered smart glasses with a focused e-commerce experience.',
-                'details' => 'Designed and developed with React JS, Laravel, OpenCV, and YOLO V8. The platform brings together product detection, online purchasing, and an administrative dashboard.',
+                'description' => 'Smart-glasses concept exploring accessible object and text assistance through a browser-based simulation.',
+                'details' => 'This portfolio demo presents scripted examples of obstacle, text, object, and color cues. It does not analyze a live camera feed, connect to physical glasses, or run real-time AI inference. The original project combines React JS, Laravel, OpenCV, and YOLO V8.',
                 'image' => '/images/projects/smart-glasses.png',
-                'url' => null,
+                'url' => '/demos/visinova-smart-glasses/',
                 'github_url' => null,
                 'technologies' => ['React JS', 'Laravel', 'OpenCV', 'YOLO V8', 'Tailwind'],
                 'category' => 'ai',
