@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title">
+  <title id="title">Makhlouf Rent Car live demo</title>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#111a24"/>
+      <stop offset="1" stop-color="#253b4a"/>
+    </linearGradient>
+    <linearGradient id="paint" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafb"/>
+      <stop offset="1" stop-color="#b9c5cb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <circle cx="1010" cy="125" r="238" fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="2"/>
+  <circle cx="1010" cy="125" r="175" fill="none" stroke="#ffffff" stroke-opacity=".1" stroke-width="2"/>
+  <text x="82" y="108" fill="#c8ed70" font-family="Arial,sans-serif" font-size="26" font-weight="700">MAKHLOUF RENT CAR</text>
+  <text x="82" y="160" fill="#a9b9c3" font-family="Arial,sans-serif" font-size="19" letter-spacing="5">MONASTIR / TUNISIE</text>
+  <text x="78" y="286" fill="#ffffff" font-family="Arial,sans-serif" font-size="66" font-weight="700">La route vous attend.</text>
+  <text x="82" y="347" fill="#c8ed70" font-family="Arial,sans-serif" font-size="58" font-weight="700">Choisissez la vôtre.</text>
+  <rect x="83" y="400" width="216" height="62" rx="8" fill="#c8ed70"/>
+  <text x="116" y="439" fill="#111a24" font-family="Arial,sans-serif" font-size="19" font-weight="700">VOIR LES VÉHICULES</text>
+  <ellipse cx="802" cy="570" rx="315" ry="30" fill="#05090d" opacity=".55"/>
+  <path d="M520 492l34-111c12-37 39-62 80-75l126-42c34-11 71-17 108-17h132c42 0 72 16 97 50l75 97 68 28c25 10 38 32 38 63v38c0 19-14 33-35 33h-40c-8-66-106-66-115 0H714c-8-66-106-66-115 0h-52c-23 0-38-15-38-35v-27c0-16 3-29 11-42z" fill="url(#paint)" stroke="#83919a" stroke-width="6" transform="translate(-65 -105) scale(.82)"/>
+  <path d="M569 366l75-29c21-7 45-11 70-11h42v72H538z" fill="#344b5a"/>
+  <path d="M780 326h40c23 0 39 9 55 29l40 43H780z" fill="#344b5a"/>
+  <circle cx="599" cy="483" r="51" fill="#101a22"/><circle cx="599" cy="483" r="28" fill="#aebbc2"/><circle cx="599" cy="483" r="11" fill="#64737d"/>
+  <circle cx="853" cy="483" r="51" fill="#101a22"/><circle cx="853" cy="483" r="28" fill="#aebbc2"/><circle cx="853" cy="483" r="11" fill="#64737d"/>
+</svg>

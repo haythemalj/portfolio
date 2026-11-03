@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title">
+  <title id="title">Marketday concept storefront</title>
+  <rect width="1200" height="700" fill="#f8f6f1"/>
+  <rect width="1200" height="42" fill="#536c47"/>
+  <text x="390" y="29" fill="#ffffff" font-family="Arial,sans-serif" font-size="17" letter-spacing="2">THOUGHTFUL GOODS FOR EVERYDAY LIVING</text>
+  <text x="70" y="115" fill="#252c26" font-family="Arial,sans-serif" font-size="42" font-weight="700">marketday<tspan fill="#ca6c3d">.</tspan></text>
+  <text x="80" y="215" fill="#ca6c3d" font-family="Arial,sans-serif" font-size="18" letter-spacing="5">SMALL BATCH / BIG HEART</text>
+  <text x="76" y="310" fill="#252c26" font-family="Georgia,serif" font-size="80">Good things,</text>
+  <text x="76" y="395" fill="#252c26" font-family="Georgia,serif" font-size="80">made well.</text>
+  <text x="80" y="455" fill="#777d74" font-family="Arial,sans-serif" font-size="22">Well-made essentials from independent makers.</text>
+  <rect x="80" y="505" width="205" height="60" rx="3" fill="#252c26"/>
+  <text x="115" y="544" fill="#ffffff" font-family="Arial,sans-serif" font-size="20" font-weight="700">SHOP THE EDIT</text>
+  <rect x="700" y="110" width="445" height="500" fill="#e6d5bd"/>
+  <circle cx="1080" cy="150" r="145" fill="#be7550"/>
+  <path d="M820 285h205l-23 260H843z" fill="#f8f2e7"/>
+  <path d="M875 285c0-70 90-70 90 0" fill="none" stroke="#f8f2e7" stroke-width="17"/>
+  <text x="855" y="400" fill="#536c47" font-family="Georgia,serif" font-size="35">marketday</text>
+  <text x="880" y="432" fill="#252c26" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">OBJECTS FOR LIVING</text>
+  <circle cx="925" cy="485" r="22" fill="#d1dba7"/>
+</svg>

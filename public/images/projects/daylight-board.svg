@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title">
+  <title id="title">Daylight task board concept</title>
+  <rect width="1200" height="700" fill="#f5f6f3"/>
+  <rect x="0" y="0" width="205" height="700" fill="#ffffff"/>
+  <text x="38" y="68" fill="#27302a" font-family="Arial,sans-serif" font-size="32" font-weight="700">daylight<tspan fill="#5d8065">.</tspan></text>
+  <rect x="25" y="110" width="155" height="48" rx="8" fill="#e7eee6"/>
+  <text x="52" y="142" fill="#5d8065" font-family="Arial,sans-serif" font-size="20" font-weight="700">My tasks</text>
+  <text x="265" y="78" fill="#7b847e" font-family="Arial,sans-serif" font-size="17">TUESDAY, 3 NOVEMBER</text>
+  <text x="260" y="150" fill="#27302a" font-family="Arial,sans-serif" font-size="50" font-weight="700">Good morning, Alex</text>
+  <rect x="955" y="105" width="190" height="58" rx="8" fill="#5d8065"/>
+  <text x="987" y="143" fill="#ffffff" font-family="Arial,sans-serif" font-size="19" font-weight="700">+ ADD A TASK</text>
+  <rect x="260" y="195" width="260" height="100" rx="9" fill="#ffffff" stroke="#e5e9e3"/>
+  <rect x="540" y="195" width="260" height="100" rx="9" fill="#ffffff" stroke="#e5e9e3"/>
+  <rect x="820" y="195" width="325" height="100" rx="9" fill="#ffffff" stroke="#e5e9e3"/>
+  <text x="285" y="232" fill="#7b847e" font-family="Arial,sans-serif" font-size="17">OPEN TASKS</text>
+  <text x="285" y="275" fill="#27302a" font-family="Arial,sans-serif" font-size="38" font-weight="700">04</text>
+  <text x="565" y="232" fill="#7b847e" font-family="Arial,sans-serif" font-size="17">COMPLETED</text>
+  <text x="565" y="275" fill="#27302a" font-family="Arial,sans-serif" font-size="38" font-weight="700">01</text>
+  <text x="845" y="232" fill="#7b847e" font-family="Arial,sans-serif" font-size="17">TODAY'S FOCUS</text>
+  <text x="845" y="275" fill="#27302a" font-family="Arial,sans-serif" font-size="38" font-weight="700">2.5h</text>
+  <text x="265" y="354" fill="#27302a" font-family="Arial,sans-serif" font-size="23" font-weight="700">My task board</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="260" y="380" width="270" height="270" rx="10" fill="#edf0eb"/>
+    <rect x="550" y="380" width="270" height="270" rx="10" fill="#edf0eb"/>
+    <rect x="840" y="380" width="305" height="270" rx="10" fill="#edf0eb"/>
+    <text x="280" y="416" fill="#27302a" font-size="17" font-weight="700">TO DO</text>
+    <text x="570" y="416" fill="#27302a" font-size="17" font-weight="700">IN PROGRESS</text>
+    <text x="860" y="416" fill="#27302a" font-size="17" font-weight="700">DONE</text>
+    <rect x="278" y="435" width="234" height="78" rx="8" fill="#ffffff"/>
+    <rect x="278" y="525" width="234" height="78" rx="8" fill="#ffffff"/>
+    <rect x="568" y="435" width="234" height="78" rx="8" fill="#ffffff"/>
+    <rect x="568" y="525" width="234" height="78" rx="8" fill="#ffffff"/>
+    <rect x="858" y="435" width="267" height="78" rx="8" fill="#ffffff"/>
+    <text x="295" y="470" fill="#27302a" font-size="16" font-weight="700">Plan next week</text>
+    <text x="295" y="494" fill="#7b847e" font-size="13">Choose three outcomes</text>
+    <text x="295" y="560" fill="#27302a" font-size="16" font-weight="700">Collect references</text>
+    <text x="295" y="584" fill="#7b847e" font-size="13">Save examples for the concept</text>
+    <text x="585" y="470" fill="#27302a" font-size="16" font-weight="700">Review homepage</text>
+    <text x="585" y="494" fill="#7b847e" font-size="13">Check mobile navigation</text>
+    <text x="585" y="560" fill="#27302a" font-size="16" font-weight="700">Write introduction</text>
+    <text x="585" y="584" fill="#7b847e" font-size="13">Keep it clear and useful</text>
+    <text x="875" y="470" fill="#27302a" font-size="16" font-weight="700">Send project update</text>
+    <text x="875" y="494" fill="#7b847e" font-size="13">Share progress and next steps</text>
+  </g>
+</svg>

@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<title>Haythem Aljane | Web Designer & Developer</title>
+<meta name="description" content="Haythem Aljane is a Web UI/UX Designer and E-commerce Developer based in Tunis, Tunisia. Explore selected web, design, and e-commerce work.">
+<title>Haythem Aljane | Web UI/UX Designer & E-commerce Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -309,6 +310,10 @@ h2.section-title span{color:var(--red)}
 .about-info-item .label{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:4px}
 .about-info-item .value{font-size:.88rem;color:var(--white);font-weight:500}
 .skills-title{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
+.skill-groups{display:grid;gap:12px}
+.skill-group{padding:15px 18px;background:var(--card);border:1px solid rgba(255,255,255,.05);border-radius:4px}
+.skill-group h3{font-size:.86rem;color:var(--white);font-weight:600;margin-bottom:5px}
+.skill-group p{font-size:.77rem;line-height:1.6;color:var(--muted);margin:0}
 .skill-bar-wrap{margin-bottom:22px}
 .skill-bar-top{display:flex;justify-content:space-between;margin-bottom:8px}
 .skill-name{font-size:.85rem;font-weight:500;color:var(--text)}
@@ -558,7 +563,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
     <a href="https://github.com/haythemalj" target="_blank" class="nav-social" title="GitHub" aria-label="GitHub">
       <i class="fab fa-github"></i><span class="nav-social-label">GitHub</span>
     </a>
-    <a href="https://wa.me/21620832737" target="_blank" class="nav-social" title="WhatsApp" aria-label="WhatsApp">
+    <a href="https://wa.me/21620832439" target="_blank" rel="noopener" class="nav-social" title="WhatsApp" aria-label="WhatsApp">
       <i class="fab fa-whatsapp"></i><span class="nav-social-label">WhatsApp</span>
     </a>
     <a href="/CV_Haythem_Aljane.pdf" download class="nav-social" style="color:var(--red)" aria-label="Download CV">
@@ -574,18 +579,18 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   <div class="hero-grid"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-tag"><span class="hero-dot"></span>Available for Freelance</div>
+      <div class="hero-tag"><span class="hero-dot"></span>Open to Web & UI/UX Opportunities</div>
       <h1>HAYTHEM<br><span class="red">ALJANE</span></h1>
       <div class="hero-typed-wrap">I am a <span id="typed-text"></span><span class="cursor-blink">|</span></div>
-      <p class="hero-desc">Web Developer & Marketing Manager from Tataouine, Tunisia — blending technical expertise with leadership and strategic marketing to build impactful digital experiences.</p>
+      <p class="hero-desc">Web UI/UX Designer and E-commerce Developer based in Tunis, Tunisia. I combine interface design, web development, and marketing skills to create useful digital experiences.</p>
       <div class="hero-btns">
         <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i>Get in Touch</a>
         <a href="/CV_Haythem_Aljane.pdf" download class="btn btn-outline"><i class="fas fa-download"></i>Download CV</a>
       </div>
       <div class="hero-stats">
-        <div class="hero-stat"><h3>3+</h3><p>Years Active</p></div>
-        <div class="hero-stat"><h3>10+</h3><p>Websites</p></div>
-        <div class="hero-stat"><h3>400+</h3><p>Design Works</p></div>
+        <div class="hero-stat"><h3>UI/UX</h3><p>Interface Design</p></div>
+        <div class="hero-stat"><h3>Web</h3><p>Development</p></div>
+        <div class="hero-stat"><h3>Shop</h3><p>E-commerce</p></div>
         <div class="hero-stat"><h3>3</h3><p>Languages</p></div>
       </div>
     </div>
@@ -604,27 +609,26 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   <h2 class="section-title">About <span>Me</span></h2>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>Graduated as a <strong>Web Developer and Marketing Manager</strong>, I bring a strong mix of technical expertise, leadership, and strategic communication. Through my academic background and practical experiences, I have developed solid skills in web design, development, and digital marketing.</p>
-      <p>My journey with <strong>AIESEC</strong> and other social initiatives has strengthened my teamwork, adaptability, and leadership abilities. With hard skills in technology and soft skills in collaboration and problem-solving, I am motivated to contribute to impactful projects and continuously grow.</p>
+      <p>I am a <strong>Web UI/UX Designer and E-commerce Developer</strong> with a BTS in Marketing and Multimedia. My experience combines interface design, web development, e-commerce content, and digital creative work.</p>
+      <p>I enjoy working with design and marketing teams to turn user needs into clear digital experiences. I bring a collaborative approach, problem-solving skills, and a strong interest in building practical products.</p>
       <div class="about-info-grid">
         <div class="about-info-item"><div class="label">Name</div><div class="value">Haythem Aljane</div></div>
-        <div class="about-info-item"><div class="label">Date of Birth</div><div class="value">30 December 2000</div></div>
-        <div class="about-info-item"><div class="label">Location</div><div class="value">Tataouine, Tunisia</div></div>
-        <div class="about-info-item"><div class="label">Freelance</div><div class="value" style="color:var(--red)">Available ✓</div></div>
+        <div class="about-info-item"><div class="label">Location</div><div class="value">El Omrane Supérieur, Tunis</div></div>
+        <div class="about-info-item"><div class="label">Status</div><div class="value" style="color:var(--red)">Open to Opportunities</div></div>
         <div class="about-info-item"><div class="label">Languages</div><div class="value">AR · EN · FR</div></div>
-        <div class="about-info-item"><div class="label">Email</div><div class="value" style="font-size:.76rem">aljanehaythem23@gmail.com</div></div>
+        <div class="about-info-item"><div class="label">Email</div><div class="value" style="font-size:.76rem">haythemaljane1@outlook.fr</div></div>
       </div>
     </div>
     <div class="about-right reveal">
-      <div class="skills-title">Technical Skills</div>
-      <div class="skill-bar-wrap"><div class="skill-bar-top"><span class="skill-name">HTML5 / CSS3</span><span class="skill-pct">95%</span></div><div class="skill-track"><div class="skill-fill" data-width="95"></div></div></div>
-      <div class="skill-bar-wrap"><div class="skill-bar-top"><span class="skill-name">UI / UX Design</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-fill" data-width="90"></div></div></div>
-      <div class="skill-bar-wrap"><div class="skill-bar-top"><span class="skill-name">JavaScript / React JS</span><span class="skill-pct">85%</span></div><div class="skill-track"><div class="skill-fill" data-width="85"></div></div></div>
-      <div class="skill-bar-wrap"><div class="skill-bar-top"><span class="skill-name">Adobe Suite (PS · PR · AI · AE)</span><span class="skill-pct">80%</span></div><div class="skill-track"><div class="skill-fill" data-width="80"></div></div></div>
-      <div class="skill-bar-wrap"><div class="skill-bar-top"><span class="skill-name">PHP / Laravel / Node JS</span><span class="skill-pct">75%</span></div><div class="skill-track"><div class="skill-fill" data-width="75"></div></div></div>
-      <div class="skill-bar-wrap"><div class="skill-bar-top"><span class="skill-name">Python / OpenCV / YOLO</span><span class="skill-pct">65%</span></div><div class="skill-track"><div class="skill-fill" data-width="65"></div></div></div>
+      <div class="skills-title">Skills from my CV</div>
+      <div class="skill-groups">
+        <div class="skill-group"><h3>Web Development</h3><p>Build and maintain responsive web applications and e-commerce websites.</p></div>
+        <div class="skill-group"><h3>UI/UX & Digital Design</h3><p>User-centered interfaces, design thinking, wireframes, prototyping, and visual content.</p></div>
+        <div class="skill-group"><h3>E-commerce & Marketing</h3><p>Website management, product and content integration, and B2B/B2C communication.</p></div>
+        <div class="skill-group"><h3>Embedded & Connected Projects</h3><p>Arduino UNO, STM32, Android Studio, and Proteus (ISIS).</p></div>
+      </div>
       <div class="tech-tags">
-        <span class="tech-tag">WordPress</span><span class="tech-tag">MySQL</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">Arduino</span><span class="tech-tag">Android Studio</span><span class="tech-tag">CapCut</span><span class="tech-tag">Google Workspace</span><span class="tech-tag">B2B / B2C</span>
+        <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span><span class="tech-tag">PHP</span><span class="tech-tag">Laravel</span><span class="tech-tag">React.js</span><span class="tech-tag">Node.js</span><span class="tech-tag">Python</span><span class="tech-tag">Java</span><span class="tech-tag">MySQL</span><span class="tech-tag">WordPress</span><span class="tech-tag">Photoshop</span><span class="tech-tag">Illustrator</span><span class="tech-tag">After Effects</span><span class="tech-tag">Premiere Pro</span><span class="tech-tag">CapCut</span><span class="tech-tag">Google Workspace</span>
       </div>
     </div>
   </div>
@@ -645,10 +649,8 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
     <div class="reveal">
       <div class="exp-col-title">Professional Experience</div>
       <div class="timeline">
-        <div class="timeline-item"><div class="tl-date">Sep 2025 – Mar 2026 · Chemek Brothers</div><div class="tl-title">Web Designer (UI/UX) & E-commerce Developer</div><div class="tl-org">Sousse, Tunisia</div><div class="tl-desc">Designed modern UI/UX interfaces, improved user experience, developed and managed e-commerce websites, and created digital assets aligned with marketing goals.</div></div>
-        <div class="timeline-item"><div class="tl-date">Feb 2025 – Jun 2025 · Top Niveau</div><div class="tl-title">Web Development Intern</div><div class="tl-org">Monastir, Tunisia</div><div class="tl-desc">Worked in the technical department on a dynamic web application for connected smart glasses, applying web development skills to a real product project.</div></div>
-        <div class="timeline-item"><div class="tl-date">2024 · International Internship</div><div class="tl-title">MBS Cairo, Egypt</div><div class="tl-desc">Professional internship with international exposure in Egypt.</div></div>
-        <div class="timeline-item"><div class="tl-date">3+ Years · Freelance</div><div class="tl-title">Graphic Designer & Web Developer</div><div class="tl-desc">400+ posters and videos · 10+ websites for various clients and industries.</div></div>
+        <div class="timeline-item"><div class="tl-date">Sep 2025 – Mar 2026 · Chemek Brothers Advertising Agency</div><div class="tl-title">Web UI/UX Designer & E-commerce Developer</div><div class="tl-org">Sousse, Tunisia</div><div class="tl-desc">Designed user-friendly interfaces, improved navigation, developed and maintained e-commerce websites, integrated content and products, and created marketing-aligned digital assets.</div></div>
+        <div class="timeline-item"><div class="tl-date">Feb 2025 – Jun 2025 · Top Niveau Training Center</div><div class="tl-title">Web Development Intern</div><div class="tl-org">Monastir, Tunisia</div><div class="tl-desc">Contributed to web development work and applied development skills in a professional training environment.</div></div>
       </div>
     </div>
   </div>
@@ -690,24 +692,24 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   <div class="section-label">What I Offer</div>
   <h2 class="section-title">Services & <span>Solutions</span></h2>
   <div class="services-grid reveal">
-    <div class="service-card"><i class="fas fa-code"></i><h3>Web Development</h3><p>Full-stack apps with Laravel, React, and modern frameworks. Responsive for all devices.</p></div>
-    <div class="service-card"><i class="fas fa-paint-brush"></i><h3>UI/UX Design</h3><p>User-centered designs, wireframes, prototypes, and complete design systems.</p></div>
-    <div class="service-card"><i class="fas fa-mobile-alt"></i><h3>Mobile & PWA</h3><p>Mobile-first designs and progressive web apps for seamless experiences.</p></div>
-    <div class="service-card"><i class="fas fa-brain"></i><h3>AI Integration</h3><p>Computer vision, OpenCV, YOLO, and smart features for innovative products.</p></div>
-    <div class="service-card"><i class="fas fa-film"></i><h3>Video & Motion</h3><p>Motion graphics, video editing, and animated content — 400+ design works.</p></div>
-    <div class="service-card"><i class="fas fa-palette"></i><h3>Branding</h3><p>Logo design, brand guidelines, and visual identity for businesses and clubs.</p></div>
+    <div class="service-card"><i class="fas fa-code"></i><h3>Web Development</h3><p>Responsive websites and web applications using modern web technologies.</p></div>
+    <div class="service-card"><i class="fas fa-paint-brush"></i><h3>UI/UX Design</h3><p>User-centered interfaces, wireframes, prototypes, and design thinking.</p></div>
+    <div class="service-card"><i class="fas fa-store"></i><h3>E-commerce</h3><p>Online storefront development, product content integration, and platform management.</p></div>
+    <div class="service-card"><i class="fas fa-brain"></i><h3>WordPress</h3><p>Website setup, content updates, and responsive presentation with WordPress.</p></div>
+    <div class="service-card"><i class="fas fa-film"></i><h3>Digital Creative</h3><p>Visual assets, graphic design, and video editing for digital communication.</p></div>
+    <div class="service-card"><i class="fas fa-palette"></i><h3>Marketing Support</h3><p>Digital content and B2B/B2C communication informed by a marketing background.</p></div>
   </div>
 </section>
 
 <!-- ===== STATS ===== -->
 <section class="stats-section" id="stats">
   <div class="stats-grid reveal">
-    <div class="stat-item"><h3>10+</h3><p>Websites Built</p></div>
-    <div class="stat-item"><h3>400+</h3><p>Design Works</p></div>
-    <div class="stat-item"><h3>3+</h3><p>Years Experience</p></div>
-    <div class="stat-item"><h3>3</h3><p>Languages</p></div>
-    <div class="stat-item"><h3>40+</h3><p>Team Members Led</p></div>
-    <div class="stat-item"><h3>100%</h3><p>Client Focus</p></div>
+    <div class="stat-item"><h3>UI/UX</h3><p>User-centered design</p></div>
+    <div class="stat-item"><h3>Web</h3><p>Application development</p></div>
+    <div class="stat-item"><h3>Shop</h3><p>E-commerce solutions</p></div>
+    <div class="stat-item"><h3>CMS</h3><p>WordPress</p></div>
+    <div class="stat-item"><h3>Creative</h3><p>Visual and digital content</p></div>
+    <div class="stat-item"><h3>3</h3><p>Languages: Arabic, French, English</p></div>
   </div>
 </section>
 
@@ -746,7 +748,8 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   <div class="section-label">Community</div>
   <h2 class="section-title">Leadership & <span>Engagement</span></h2>
   <div class="leadership-grid">
-    <div class="lead-card reveal"><div class="lead-org">AIESEC in Tunisia</div><div class="lead-role">Sales VP · Data Specialist · Team Leader</div><div class="lead-desc">Managed B2B & B2C sales across Tunisia, supported 100+ international participants from 12 countries, and led global talent programs.</div></div>
+    <div class="lead-card reveal"><div class="lead-org">AIESEC in Ruspina · Monastir</div><div class="lead-role">Team Leader – Incoming Global Talent (iGT) · Oct 2024–Oct 2025</div><div class="lead-desc">Led an Incoming Global Talent team and supported international exchange activities.</div></div>
+    <div class="lead-card reveal"><div class="lead-org">AIESEC Ruspina · Monastir</div><div class="lead-role">International Volunteer – Skill Up Project · Aug–Sep 2024</div><div class="lead-desc">Contributed as an international volunteer to the Skill Up project.</div></div>
     <div class="lead-card reveal"><div class="lead-org">Tunivisions of ISIMM</div><div class="lead-role">President → VP → Member</div><div class="lead-desc">Led 40 students to deliver workshops and seminars across Monastir and Tunisia.</div></div>
     <div class="lead-card reveal"><div class="lead-org">JCI Junior</div><div class="lead-role">Financial Responsible</div><div class="lead-desc">Managed cash flow and financial planning for the Junior Chamber International.</div></div>
     <div class="lead-card reveal"><div class="lead-org">Tunisian Scout</div><div class="lead-role">Community Leader</div><div class="lead-desc">Active member and community leader in the Tunisian Scouts movement.</div></div>
@@ -760,16 +763,16 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   <h2 class="section-title">Contact <span>Me</span></h2>
   <div class="contact-grid">
     <div class="reveal">
-      <p class="contact-intro">Looking to collaborate on impactful projects or need a freelance web designer? Let's build something great together.</p>
-      <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-phone"></i></div><div><div class="contact-item-label">Phone / WhatsApp</div><div class="contact-item-value"><a href="https://wa.me/21620832737" style="color:inherit">+216 20 832 737</a></div></div></div>
-      <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-envelope"></i></div><div><div class="contact-item-label">Email</div><div class="contact-item-value"><a href="mailto:aljanehaythem23@gmail.com" style="color:inherit">aljanehaythem23@gmail.com</a></div></div></div>
-      <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-location-dot"></i></div><div><div class="contact-item-label">Location</div><div class="contact-item-value">Tataouine, Tunisia</div></div></div>
+      <p class="contact-intro">Open to opportunities in web UI/UX design, e-commerce development, and digital projects. Let’s create useful experiences together.</p>
+      <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-phone"></i></div><div><div class="contact-item-label">Phone / WhatsApp</div><div class="contact-item-value"><a href="https://wa.me/21620832439" style="color:inherit">+216 20 832 439</a></div></div></div>
+      <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-envelope"></i></div><div><div class="contact-item-label">Email</div><div class="contact-item-value"><a href="mailto:haythemaljane1@outlook.fr" style="color:inherit">haythemaljane1@outlook.fr</a></div></div></div>
+      <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-location-dot"></i></div><div><div class="contact-item-label">Location</div><div class="contact-item-value">El Omrane Supérieur, Tunis, Tunisia</div></div></div>
       <div class="contact-socials">
         <a href="https://www.facebook.com/haythem.aljane" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://github.com/haythemalj" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://www.instagram.com/haythem_alj" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/aljane-haythem-077713193/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://wa.me/21620832737" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/21620832439" class="social-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
     <div class="reveal">
@@ -812,7 +815,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
 
 <script>
 // TYPING
-const words=['Web Designer','Web Developer','UI/UX Designer','Graphic Designer','Marketing Manager'];
+const words=['Web UI/UX Designer','E-commerce Developer','Web Developer','Digital Designer'];
 let wi=0,ci=0,del=false;
 const el=document.getElementById('typed-text');
 function type(){
