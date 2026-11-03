@@ -33,9 +33,10 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'title' => 'Smart Water Management Robot',
-                'description' => 'Award-winning IoT concept created to encourage more responsible water use in Tunisia.',
-                'details' => 'Built around Arduino hardware with a React and Node.js control panel, supported by a complete product marketing strategy. The project won the 2023 hackathon.',
-                'url' => null,
+                'description' => 'Interactive dashboard simulation for the Smart Water Management Robot concept, with reservoir, pump, automatic-mode, and threshold controls.',
+                'details' => 'This browser demo simulates sensor readings and pump behavior to explain the Arduino/IoT concept. It is not connected to the physical robot, does not transmit sensor data, and cannot control real equipment. The project was presented at a 2023 hackathon.',
+                'image' => '/images/projects/smart-water-robot.svg',
+                'url' => '/demos/smart-water-robot/',
                 'github_url' => null,
                 'technologies' => ['Arduino', 'React JS', 'Node JS', 'Robot'],
                 'category' => 'ai',
