@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YOLO Vision Detection API — Interactive Demo</title>
+<meta name="description" content="Simulated demo of a YOLO object-detection REST API: send a sample scene, receive bounding boxes and JSON.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0f0d;--card:#10171a;--line:#1e2a2e;--acc:#39ff88;--acc2:#5ad1ff;--warn:#ffb347;--text:#e6f1ec;--muted:#7f9690}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Space Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+code,pre,.mono{font-family:'JetBrains Mono',monospace}
+.demo-bar{background:#05090a;color:#9fb5ad;font-size:13px;padding:8px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.demo-bar a{color:var(--acc);text-decoration:none}
+header{padding:50px 6vw 30px}
+.tag{display:inline-block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);padding:5px 12px;border-radius:999px}
+h1{font-size:clamp(32px,5vw,58px);margin:16px 0 10px;line-height:1.05}
+header p{color:var(--muted);max-width:720px;font-size:17px}
+main{padding:20px 6vw 60px;display:grid;grid-template-columns:1.3fr 1fr;gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.card h3{font-size:15px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:14px}
+.scenes{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.scenes button,.run{border:1px solid var(--line);background:#0c1316;color:var(--text);padding:9px 14px;border-radius:8px;cursor:pointer;font:500 14px 'Space Grotesk'}
+.scenes button.on{border-color:var(--acc);color:var(--acc)}
+.run{background:var(--acc);color:#04210f;font-weight:700;padding:12px 20px}
+.run:disabled{opacity:.5;cursor:wait}
+.view{position:relative;border-radius:12px;overflow:hidden;background:#0c1316;aspect-ratio:16/9}
+.view svg{width:100%;height:100%;display:block}
+.box{position:absolute;border:2px solid var(--acc);border-radius:4px;opacity:0;transform:scale(1.1);transition:.35s}
+.box.show{opacity:1;transform:none}
+.box span{position:absolute;left:-2px;top:-24px;background:var(--acc);color:#04210f;font:600 12px 'JetBrains Mono';padding:3px 6px;border-radius:4px 4px 0 0;white-space:nowrap}
+.box.c2{border-color:var(--acc2)}.box.c2 span{background:var(--acc2);color:#03202c}
+.box.c3{border-color:var(--warn)}.box.c3 span{background:var(--warn);color:#2a1700}
+.scan{position:absolute;left:0;right:0;height:2px;background:var(--acc);box-shadow:0 0 16px var(--acc);top:0;display:none}
+.scan.on{display:block;animation:scan 1.4s linear}
+@keyframes scan{to{top:100%}}
+.ctrl{display:flex;gap:14px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.ctrl label{font-size:13px;color:var(--muted)}input[type=range]{accent-color:var(--acc)}
+pre{background:#070c0e;border:1px solid var(--line);border-radius:10px;padding:16px;font-size:12.5px;line-height:1.55;overflow:auto;max-height:420px;color:#c9e3d8}
+.k{color:var(--acc2)}.s{color:var(--acc)}.n{color:var(--warn)}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.metrics div{background:#070c0e;border:1px solid var(--line);border-radius:10px;padding:12px}
+.metrics b{display:block;font-size:22px;color:var(--acc)}.metrics small{color:var(--muted);font-size:12px}
+.endpoints{margin-top:16px;font-size:13px}
+.endpoints div{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
+.m{color:var(--acc);font-weight:600;width:52px}
+footer{padding:24px 6vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:900px){main{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="demo-bar"><span>Portfolio demo · YOLO Vision API — detections are simulated client-side to illustrate the API's response format. No model runs in the browser.</span><a href="/#projects">← Back to portfolio</a></div>
+<header><span class="tag">Computer vision · REST API</span><h1>YOLO Vision Detection API</h1><p>A FastAPI service wrapping a YOLOv8 model: upload an image, get back labelled bounding boxes with confidence scores as JSON. This page simulates a request/response round-trip on sample scenes.</p></header>
+<main>
+  <div class="card"><h3>Playground</h3>
+    <div class="scenes" id="scenes"><button class="on" data-s="street">Street scene</button><button data-s="desk">Office desk</button><button data-s="kitchen">Kitchen</button></div>
+    <div class="view" id="view"><svg id="scene" viewBox="0 0 640 360"></svg><div class="scan" id="scan"></div><div id="boxes"></div></div>
+    <div class="ctrl"><button class="run" id="run">POST /v1/detect</button><label>Confidence threshold <span id="thv" class="mono">0.50</span></label><input type="range" id="th" min="0.1" max="0.9" step="0.05" value="0.5"><label id="lat" class="mono"></label></div>
+  </div>
+  <div class="card"><h3>Response</h3>
+    <div class="metrics"><div><b id="m1">—</b><small>Objects detected</small></div><div><b id="m2">—</b><small>Inference (ms)</small></div><div><b id="m3">—</b><small>Model</small></div></div>
+    <pre id="out">// Click "POST /v1/detect" to run a request</pre>
+    <div class="endpoints"><div><span class="m">POST</span><code>/v1/detect</code><span style="color:var(--muted)">multipart image → detections[]</span></div><div><span class="m">POST</span><code>/v1/detect/batch</code><span style="color:var(--muted)">up to 16 images</span></div><div><span class="m">GET</span><code>/v1/models</code><span style="color:var(--muted)">available weights &amp; classes</span></div><div><span class="m">GET</span><code>/health</code><span style="color:var(--muted)">liveness probe</span></div></div>
+  </div>
+</main>
+<footer><span>Python · FastAPI · Ultralytics YOLOv8 · OpenCV · Docker</span><span>Built by Haythem Aljane</span></footer>
+<script>
+const scenes={
+ street:{bg:'<rect width="640" height="360" fill="#1b2430"/><rect y="250" width="640" height="110" fill="#2b3340"/><rect y="255" width="640" height="4" fill="#d9d9d9" opacity=".4"/><rect x="60" y="60" width="140" height="190" fill="#34404f"/><rect x="420" y="40" width="180" height="210" fill="#3b4656"/><rect x="100" y="270" width="150" height="60" rx="10" fill="#c93b3b"/><circle cx="130" cy="332" r="14" fill="#111"/><circle cx="220" cy="332" r="14" fill="#111"/><rect x="330" y="230" width="22" height="70" rx="8" fill="#e0b080"/><circle cx="341" cy="222" r="11" fill="#e0b080"/><rect x="520" y="200" width="18" height="100" fill="#777"/><rect x="505" y="190" width="48" height="26" rx="4" fill="#e74c3c"/>',
+   det:[{l:'car',c:.94,x:95,y:262,w:160,h:85,k:''},{l:'person',c:.88,x:322,y:208,w:38,h:96,k:'c2'},{l:'traffic light',c:.71,x:500,y:186,w:58,h:118,k:'c3'},{l:'bicycle',c:.42,x:240,y:280,w:70,h:50,k:'c3'}]},
+ desk:{bg:'<rect width="640" height="360" fill="#2a2522"/><rect y="200" width="640" height="160" fill="#6b4f3a"/><rect x="200" y="90" width="240" height="140" rx="6" fill="#111"/><rect x="210" y="100" width="220" height="120" fill="#2d6cdf"/><rect x="300" y="230" width="40" height="14" fill="#222"/><rect x="180" y="250" width="280" height="22" rx="6" fill="#333"/><rect x="500" y="230" width="60" height="40" rx="6" fill="#eee"/><circle cx="530" cy="250" r="12" fill="#5a3b22"/><rect x="80" y="235" width="70" height="40" rx="8" fill="#eaeaea"/><rect x="60" y="130" width="60" height="100" fill="#3b7d4f"/>',
+   det:[{l:'tv',c:.91,x:198,y:88,w:244,h:144,k:''},{l:'keyboard',c:.86,x:178,y:248,w:284,h:26,k:'c2'},{l:'cup',c:.79,x:498,y:228,w:64,h:44,k:'c3'},{l:'mouse',c:.63,x:78,y:233,w:74,h:44,k:'c3'},{l:'potted plant',c:.55,x:58,y:128,w:64,h:104,k:'c2'}]},
+ kitchen:{bg:'<rect width="640" height="360" fill="#ece6dc"/><rect y="220" width="640" height="140" fill="#cfc3b2"/><rect x="40" y="60" width="200" height="160" fill="#bfd8d2"/><rect x="300" y="150" width="120" height="80" rx="6" fill="#999"/><rect x="310" y="160" width="100" height="60" fill="#444"/><circle cx="120" cy="250" r="30" fill="#e1a33b"/><circle cx="160" cy="245" r="22" fill="#d84a3a"/><rect x="470" y="180" width="110" height="60" rx="30" fill="#f4f4f4"/><rect x="510" y="150" width="30" height="40" fill="#777"/>',
+   det:[{l:'microwave',c:.93,x:298,y:148,w:124,h:84,k:''},{l:'orange',c:.84,x:88,y:218,w:64,h:64,k:'c3'},{l:'apple',c:.77,x:136,y:221,w:46,h:46,k:'c3'},{l:'sink',c:.58,x:468,y:150,w:114,h:92,k:'c2'}]}};
+let cur='street';const $=s=>document.querySelector(s);
+function draw(){$('#scene').innerHTML=scenes[cur].bg;$('#boxes').innerHTML='';$('#out').textContent='// Click "POST /v1/detect" to run a request';['m1','m2','m3'].forEach(i=>$('#'+i).textContent='—');$('#lat').textContent=''}
+document.querySelectorAll('#scenes button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#scenes button').forEach(x=>x.classList.remove('on'));b.classList.add('on');cur=b.dataset.s;draw()});
+$('#th').oninput=e=>$('#thv').textContent=(+e.target.value).toFixed(2);
+$('#run').onclick=()=>{const th=+$('#th').value,btn=$('#run');btn.disabled=true;$('#boxes').innerHTML='';$('#scan').classList.remove('on');void $('#scan').offsetWidth;$('#scan').classList.add('on');const t0=performance.now();
+ setTimeout(()=>{const v=$('#view').getBoundingClientRect(),sx=v.width/640,sy=v.height/360;const dets=scenes[cur].det.filter(d=>d.c>=th);const ms=Math.round(18+Math.random()*14);
+  dets.forEach((d,i)=>{const el=document.createElement('div');el.className='box '+d.k;el.style.cssText=`left:${d.x*sx}px;top:${d.y*sy}px;width:${d.w*sx}px;height:${d.h*sy}px`;el.innerHTML=`<span>${d.l} ${d.c.toFixed(2)}</span>`;$('#boxes').appendChild(el);setTimeout(()=>el.classList.add('show'),80*i)});
+  const json={request_id:'req_'+Math.random().toString(36).slice(2,10),model:'yolov8n',image:{width:640,height:360},threshold:th,inference_ms:ms,detections:dets.map(d=>({label:d.l,confidence:d.c,bbox:{x:d.x,y:d.y,w:d.w,h:d.h}}))};
+  $('#out').innerHTML=JSON.stringify(json,null,2).replace(/"([^"]+)":/g,'<span class="k">"$1"</span>:').replace(/: "([^"]*)"/g,': <span class="s">"$1"</span>').replace(/: ([0-9.]+)/g,': <span class="n">$1</span>');
+  $('#m1').textContent=dets.length;$('#m2').textContent=ms;$('#m3').textContent='yolov8n';$('#lat').textContent='200 OK · '+Math.round(performance.now()-t0)+' ms round-trip';btn.disabled=false},1400)};
+draw();addEventListener('resize',()=>{if($('#boxes').children.length)$('#run').click()});
+</script>
+</body>
+</html>

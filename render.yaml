@@ -1,0 +1,52 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+# Deploys the portfolio as a Docker web service with a persistent Postgres database,
+# so admin edits and contact messages survive redeploys.
+services:
+  - type: web
+    name: haythem-portfolio
+    runtime: docker
+    plan: free            # upgrade to "starter" to stop the free-tier sleep (slow first load)
+    healthCheckPath: /
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_KEY
+        generateValue: true
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DATABASE_URL
+        fromDatabase:
+          name: haythem-portfolio-db
+          property: connectionString
+      - key: SESSION_SECURE_COOKIE
+        value: "true"
+      - key: ADMIN_EMAIL
+        sync: false       # set in the Render dashboard
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: CONTACT_EMAIL
+        sync: false
+      - key: MAIL_MAILER
+        value: smtp
+      - key: MAIL_HOST
+        value: smtp.gmail.com
+      - key: MAIL_PORT
+        value: "587"
+      - key: MAIL_ENCRYPTION
+        value: tls
+      - key: MAIL_USERNAME
+        sync: false
+      - key: MAIL_PASSWORD
+        sync: false
+      - key: MAIL_FROM_ADDRESS
+        sync: false
+
+databases:
+  - name: haythem-portfolio-db
+    plan: free            # free Postgres expires after 90 days; "basic-256mb" is the paid tier
+    databaseName: portfolio
+    user: portfolio

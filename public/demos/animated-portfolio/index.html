@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Developer Portfolio — Demo</title>
+<meta name="description" content="Motion-driven developer portfolio demo: typewriter hero, scroll reveals, animated skill bars and a magnetic cursor.">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06060a;--text:#f2f2f7;--muted:#8d8d9d;--a:#7c5cff;--b:#00e5c3;--c:#ff4fa3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;overflow-x:hidden;cursor:none}
+h1,h2,h3,.logo{font-family:Unbounded,sans-serif}
+.demo-bar{position:relative;z-index:5;background:#0e0e16;color:#9c9cb0;font-size:13px;padding:8px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.demo-bar a{color:var(--b);text-decoration:none}
+.cursor{position:fixed;width:14px;height:14px;border-radius:50%;background:var(--b);pointer-events:none;z-index:99;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .2s,height .2s}
+.cursor.big{width:60px;height:60px}
+.bg{position:fixed;inset:0;z-index:0;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.45;animation:float 14s ease-in-out infinite alternate}
+.o1{width:520px;height:520px;background:var(--a);top:-150px;left:-100px}
+.o2{width:420px;height:420px;background:var(--c);bottom:-120px;right:-80px;animation-delay:-5s}
+.o3{width:300px;height:300px;background:var(--b);top:40%;left:55%;animation-delay:-9s}
+@keyframes float{to{transform:translate(60px,80px) scale(1.15)}}
+nav,header,section,footer{position:relative;z-index:1}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6vw}
+.logo{font-weight:900;font-size:20px}.logo span{color:var(--b)}
+nav ul{display:flex;gap:26px;list-style:none}nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500}nav a:hover{color:#fff}
+header{min-height:82vh;display:flex;flex-direction:column;justify-content:center;padding:40px 6vw}
+.hi{color:var(--b);font-size:14px;letter-spacing:.3em;text-transform:uppercase;animation:up .8s .2s both}
+h1{font-size:clamp(40px,8vw,112px);line-height:.95;font-weight:900;margin:18px 0;animation:up .8s .4s both}
+h1 .grad{background:linear-gradient(90deg,var(--a),var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200%;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:200%}}
+.type{font-size:clamp(18px,2.6vw,30px);color:var(--muted);height:1.5em;animation:up .8s .6s both}
+.type b{color:#fff;font-weight:500;border-right:2px solid var(--b);padding-right:4px;animation:blink 1s step-end infinite}
+@keyframes blink{50%{border-color:transparent}}
+.cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;animation:up .8s .8s both}
+.btn{padding:15px 28px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;background:#fff;color:#000;transition:.3s}
+.btn.o{background:transparent;color:#fff;border:1px solid #333}.btn:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(124,92,255,.35)}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+section{padding:90px 6vw}
+h2{font-size:clamp(28px,4vw,48px);margin-bottom:40px}h2 span{color:var(--muted);font-size:.5em;display:block;letter-spacing:.3em;text-transform:uppercase;margin-bottom:12px;font-family:Inter;font-weight:500}
+.reveal{opacity:0;transform:translateY(40px);transition:.8s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px 50px}
+.sk{display:flex;flex-direction:column;gap:8px}.sk div{display:flex;justify-content:space-between;font-size:14px}
+.bar{height:6px;background:#1b1b26;border-radius:999px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--b));border-radius:999px;transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+.in .bar i{width:var(--w)}
+.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.w{position:relative;border-radius:22px;padding:30px;min-height:260px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#0f0f17;border:1px solid #1d1d29;transition:.4s;text-decoration:none;color:#fff}
+.w::before{content:'';position:absolute;inset:-40%;background:conic-gradient(from 0deg,var(--a),var(--b),var(--c),var(--a));opacity:0;transition:.5s;animation:spin 8s linear infinite}
+.w::after{content:'';position:absolute;inset:1px;background:#0f0f17;border-radius:21px}
+.w:hover::before{opacity:.8}.w:hover{transform:translateY(-8px)}
+.w>*{position:relative;z-index:1}.w small{color:var(--b);font-size:12px;letter-spacing:.2em;text-transform:uppercase}.w h3{font-size:22px;margin:8px 0}.w p{color:var(--muted);font-size:14px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.marquee{overflow:hidden;border-top:1px solid #1d1d29;border-bottom:1px solid #1d1d29;padding:18px 0;white-space:nowrap}
+.marquee div{display:inline-block;animation:mq 22s linear infinite;font-family:Unbounded;font-size:22px;color:#2a2a3a}
+.marquee b{color:var(--muted);margin:0 24px;font-weight:500}
+@keyframes mq{to{transform:translateX(-50%)}}
+.contact{text-align:center}.contact a.mail{font-family:Unbounded;font-size:clamp(22px,4vw,54px);color:#fff;text-decoration:none;background:linear-gradient(90deg,var(--b),var(--a));background-size:0 3px;background-repeat:no-repeat;background-position:0 100%;transition:.5s}
+.contact a.mail:hover{background-size:100% 3px}
+footer{padding:26px 6vw;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid #1d1d29}
+@media(max-width:760px){nav ul{display:none}body{cursor:auto}.cursor{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="cursor" id="cur"></div>
+<div class="bg"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<div class="demo-bar"><span>Portfolio demo · Animated Developer Portfolio — a motion-focused template concept.</span><a href="/#projects">← Back to portfolio</a></div>
+<nav><div class="logo">HA<span>.</span></div><ul><li><a href="#skills">Skills</a></li><li><a href="#work">Work</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<header><p class="hi">Hello, I'm Haythem</p><h1>Front-end<br><span class="grad">in motion.</span></h1><p class="type">I build <b id="tw"></b></p><div class="cta"><a class="btn" href="#work">View work</a><a class="btn o" href="#contact">Get in touch</a></div></header>
+<div class="marquee"><div><b>Laravel</b>·<b>React</b>·<b>Tailwind</b>·<b>WordPress</b>·<b>Figma</b>·<b>GSAP</b>·<b>UI/UX</b>·<b>Laravel</b>·<b>React</b>·<b>Tailwind</b>·<b>WordPress</b>·<b>Figma</b>·<b>GSAP</b>·<b>UI/UX</b>·</div></div>
+<section id="skills" class="reveal"><h2><span>Toolkit</span>Skills &amp; stack</h2><div class="skills">
+  <div class="sk"><div><span>HTML / CSS / JavaScript</span><span>95%</span></div><div class="bar"><i style="--w:95%"></i></div></div>
+  <div class="sk"><div><span>React &amp; modern front-end</span><span>85%</span></div><div class="bar"><i style="--w:85%"></i></div></div>
+  <div class="sk"><div><span>Laravel / PHP</span><span>88%</span></div><div class="bar"><i style="--w:88%"></i></div></div>
+  <div class="sk"><div><span>UI/UX design (Figma)</span><span>90%</span></div><div class="bar"><i style="--w:90%"></i></div></div>
+  <div class="sk"><div><span>WordPress / WooCommerce</span><span>92%</span></div><div class="bar"><i style="--w:92%"></i></div></div>
+  <div class="sk"><div><span>Motion &amp; animation</span><span>80%</span></div><div class="bar"><i style="--w:80%"></i></div></div>
+</div></section>
+<section id="work" class="reveal"><h2><span>Selected</span>Featured work</h2><div class="works">
+  <a class="w" href="/demos/visinova-smart-glasses/"><small>AI · Hardware</small><h3>Smart Glasses Platform</h3><p>Vision-assist wearable with a live simulation dashboard.</p></a>
+  <a class="w" href="/demos/react-store/"><small>React</small><h3>Nova Store</h3><p>Interactive storefront with cart, filters and checkout flow.</p></a>
+  <a class="w" href="/demos/makhlouf-rent-car/"><small>Web</small><h3>Makhlouf Rent Car</h3><p>Car rental website with fleet browsing and booking UI.</p></a>
+</div></section>
+<section id="contact" class="reveal contact"><h2><span>Say hi</span>Let's build something</h2><a class="mail" href="/#contact">Contact me →</a></section>
+<footer><span>Animated portfolio concept · HTML, CSS, vanilla JS</span><span>Designed &amp; built by Haythem Aljane</span></footer>
+<script>
+const words=['fast, animated interfaces.','Laravel back-ends.','pixel-perfect UI.','brands that move.'];let wi=0,ci=0,del=false;const tw=document.getElementById('tw');
+(function type(){const w=words[wi];tw.textContent=w.slice(0,ci);if(!del&&ci<w.length){ci++;setTimeout(type,55)}else if(!del){del=true;setTimeout(type,1500)}else if(ci>0){ci--;setTimeout(type,28)}else{del=false;wi=(wi+1)%words.length;setTimeout(type,300)}})();
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.15});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const cur=document.getElementById('cur');addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});document.querySelectorAll('a,button').forEach(a=>{a.onmouseenter=()=>cur.classList.add('big');a.onmouseleave=()=>cur.classList.remove('big')});
+</script>
+</body>
+</html>

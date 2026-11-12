@@ -64,8 +64,8 @@ php artisan serve
 
 #### Admin Panel (if needed)
 - **Login URL:** `http://localhost/Portfolio/public/login`
-- **Admin Username:** `admin`
-- **Password:** `password`
+- **Admin Email:** the `ADMIN_EMAIL` you set in your environment
+- **Password:** the `ADMIN_PASSWORD` you set in your environment (never commit it)
 - Manage projects from: `/admin/projects`
 
 ---

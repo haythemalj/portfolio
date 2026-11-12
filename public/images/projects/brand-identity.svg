@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="t">
+  <title id="t">Brand Identity Systems</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6f1e8"/><stop offset="1" stop-color="#e9dfd0"/></linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <text x="80" y="110" font-family="Georgia,serif" font-size="20" fill="#9a6b3c" letter-spacing="6">BRAND IDENTITY SYSTEMS</text>
+  <text x="80" y="200" font-family="Georgia,serif" font-size="70" fill="#1c1a17">Logos, color,</text>
+  <text x="80" y="280" font-family="Georgia,serif" font-size="70" fill="#1c1a17">type &amp; guidelines.</text>
+  <text x="80" y="340" font-family="Arial,sans-serif" font-size="22" fill="#6b625a">Consistent identity kits for campaigns, clubs and digital-first brands.</text>
+  <!-- color system -->
+  <g>
+    <rect x="80" y="400" width="90" height="90" rx="12" fill="#1c1a17"/>
+    <rect x="185" y="400" width="90" height="90" rx="12" fill="#9a6b3c"/>
+    <rect x="290" y="400" width="90" height="90" rx="12" fill="#d9b48f"/>
+    <rect x="395" y="400" width="90" height="90" rx="12" fill="#2f5d50"/>
+    <rect x="500" y="400" width="90" height="90" rx="12" fill="#fff" stroke="#d6cbbb"/>
+    <g font-family="Arial,sans-serif" font-size="13" fill="#6b625a">
+      <text x="80" y="515">#1C1A17</text><text x="185" y="515">#9A6B3C</text><text x="290" y="515">#D9B48F</text><text x="395" y="515">#2F5D50</text><text x="500" y="515">#FFFFFF</text>
+    </g>
+  </g>
+  <!-- logo marks -->
+  <g transform="translate(760 120)">
+    <rect width="360" height="200" rx="18" fill="#1c1a17"/>
+    <circle cx="90" cy="100" r="46" fill="none" stroke="#d9b48f" stroke-width="10"/>
+    <path d="M90 54v92" stroke="#d9b48f" stroke-width="10"/>
+    <text x="160" y="92" font-family="Georgia,serif" font-size="34" fill="#f6f1e8">Olivea</text>
+    <text x="160" y="124" font-family="Arial,sans-serif" font-size="14" fill="#d9b48f" letter-spacing="4">ORGANIC SKINCARE</text>
+  </g>
+  <g transform="translate(760 350)">
+    <rect width="360" height="200" rx="18" fill="#fff" stroke="#d6cbbb"/>
+    <polygon points="60,140 100,60 140,140" fill="#2f5d50"/>
+    <polygon points="100,140 130,80 160,140" fill="#9a6b3c" opacity=".85"/>
+    <text x="185" y="100" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#1c1a17">NORTHPEAK</text>
+    <text x="185" y="130" font-family="Arial,sans-serif" font-size="14" fill="#6b625a" letter-spacing="4">OUTDOOR CO.</text>
+  </g>
+  <text x="80" y="640" font-family="Arial,sans-serif" font-size="16" fill="#9a8f82">Illustrator · Photoshop · Brand guidelines · Typography systems</text>
+</svg>

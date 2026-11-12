@@ -2,8 +2,8 @@ FROM php:8.2-alpine
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-RUN apk add --no-cache sqlite-dev unzip
-RUN docker-php-ext-install pdo pdo_mysql pdo_sqlite
+RUN apk add --no-cache sqlite-dev postgresql-dev unzip
+RUN docker-php-ext-install pdo pdo_mysql pdo_sqlite pdo_pgsql
 
 WORKDIR /app
 COPY . .
