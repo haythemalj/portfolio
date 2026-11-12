@@ -25,6 +25,15 @@ header p{color:var(--muted);max-width:640px;font-size:17px}
 .piece p{color:var(--muted);font-size:15px;margin-bottom:14px}
 .tags{display:flex;gap:8px;flex-wrap:wrap}
 .tags span{border:1px solid #2a2636;padding:6px 14px;border-radius:999px;font-size:12px}
+.posters{padding:40px 6vw 70px;border-top:1px solid var(--line)}
+.posters h2{font-size:clamp(26px,3.4vw,42px);margin:10px 0 8px}
+.posters>p{color:var(--muted);max-width:640px;margin-bottom:28px}
+.wall{columns:3;column-gap:18px}
+.wall figure{break-inside:avoid;margin:0 0 18px;background:#16131f;border-radius:14px;overflow:hidden}
+.wall img{width:100%;display:block;cursor:zoom-in}
+.wall figcaption{padding:12px 16px 16px;font-size:13px;color:var(--muted)}
+.wall figcaption b{display:block;color:var(--text);font-size:15px;margin-bottom:2px}
+@media(max-width:900px){.wall{columns:2}}@media(max-width:560px){.wall{columns:1}}
 .lb{position:fixed;inset:0;background:rgba(5,4,10,.94);display:none;place-items:center;z-index:50;padding:20px;cursor:zoom-out}
 .lb.on{display:grid}.lb img{max-width:94vw;max-height:90vh;border-radius:12px}
 footer{padding:26px 6vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
@@ -33,7 +42,7 @@ footer{padding:26px 6vw;border-top:1px solid var(--line);color:var(--muted);font
 </head>
 <body>
 <div class="bar"><span>Graphic design work by Haythem Aljane</span><a href="/#projects">← Back to portfolio</a></div>
-<header><p class="eyebrow">Graphic design</p><h1>Images &amp; interfaces.</h1><p>Selected pieces made in Photoshop and Adobe XD. Click an image to view it larger.</p></header>
+<header><p class="eyebrow">Graphic design</p><h1>Images &amp; interfaces.</h1><p>Photo manipulation, event posters and interface layouts made in Photoshop and Adobe XD. Click an image to view it larger.</p></header>
 
 <section class="piece">
   <img src="img/shoe-house.jpg" alt="Photo manipulation: a child walking along a boardwalk towards a giant red sneaker turned into a house, in a mountain meadow at sunset" data-zoom>
@@ -48,6 +57,21 @@ footer{padding:26px 6vw;border-top:1px solid var(--line);color:var(--muted);font
   <div><small>Interface design</small><h2>Personal portfolio UI</h2>
     <p>An early layout for a personal portfolio site, designed in Adobe XD: hero section with a call to action, navigation, and a profile block on a curved purple background.</p>
     <div class="tags"><span>Adobe XD</span><span>UI design</span><span>Web layout</span></div></div>
+</section>
+
+<section class="posters">
+  <small class="eyebrow">Event posters</small>
+  <h2>Posters &amp; social visuals</h2>
+  <p>Promotional visuals designed in Photoshop for the Tunivisions ISIMM student club and StudoZone: parties, camps, trainings and study events.</p>
+  <div class="wall">
+    <figure><img src="img/alfa-party.jpg" alt="Alfa Party poster: DJ and performers in neon colours on a purple background, with date, prices and venue" data-zoom><figcaption><b>Alfa Party</b>Party poster · Tunivisions ISIMM</figcaption></figure>
+    <figure><img src="img/beni-mtir-camp.jpg" alt="Beni Mtir Camp poster: tents under a night sky with dates, price and what is included" data-zoom><figcaption><b>Beni Mtir Camp</b>Camping trip announcement · Tunivisions ISIMM</figcaption></figure>
+    <figure><img src="img/salon-revision.jpg" alt="Salon de Révision poster: an open book floating in a dark library, with pricing by duration" data-zoom><figcaption><b>Salon de Révision</b>Study-space poster · Tunivisions</figcaption></figure>
+    <figure><img src="img/uiux-formation.jpg" alt="UI/UX Design Formation poster in red and grey with the trainer's portrait, date, place and price" data-zoom><figcaption><b>UI/UX Design Formation</b>Training poster · StudoZone</figcaption></figure>
+    <figure><img src="img/be-perfect.jpg" alt="Be Perfect event banner with a two-day programme of conferences, trainings and workshops" data-zoom><figcaption><b>Be Perfect</b>Two-day event programme · Tunivisions ISMM × ISIMM</figcaption></figure>
+    <figure><img src="img/torei-gnewi.jpg" alt="Torei Gnewi poster: performers over red and teal mandala patterns with gold lettering" data-zoom><figcaption><b>Torei Gnewi</b>Music night poster · Tunivisions</figcaption></figure>
+    <figure><img src="img/camping-layout.jpg" alt="Website layout for a camping destinations site with hero image, feature cards and destination grid" data-zoom><figcaption><b>Camping website layout</b>Web page design · Adobe XD</figcaption></figure>
+  </div>
 </section>
 
 <div class="lb" id="lb"><img id="lbi" alt=""></div>

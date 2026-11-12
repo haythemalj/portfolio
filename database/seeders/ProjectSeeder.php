@@ -69,8 +69,8 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'title' => 'Graphic Design Portfolio',
-                'description' => 'Graphic design work in Photoshop and Adobe XD, including a surreal photo manipulation and a portfolio interface design.',
-                'details' => 'Shoe House is a Photoshop composite that blends several photos into one scene with matched lighting, painted shadows, and colour grading. The portfolio UI is an early interface layout designed in Adobe XD.',
+                'description' => 'Event posters for the Tunivisions student club and StudoZone, a surreal photo manipulation, and interface layouts.',
+                'details' => 'Posters and social visuals for parties, camps, trainings, and study events, designed in Photoshop. Shoe House is a Photoshop composite that blends several photos into one scene with matched lighting, painted shadows, and colour grading. The portfolio UI is an early interface layout designed in Adobe XD.',
                 'image' => '/images/projects/graphic-design-real.jpg',
                 'url' => '/demos/graphic-design/',
                 'github_url' => null,
