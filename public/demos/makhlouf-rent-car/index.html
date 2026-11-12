@@ -1,123 +1,1916 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<!--[if IE 7]><html
+class="ie ie7" lang=fr-FR>
+<![endif]-->
+<!--[if IE 8]><html
+class="ie ie8" lang=fr-FR>
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang=fr-FR>
+<!--<![endif]-->
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111a24">
-  <meta name="description" content="Découvrez la sélection de véhicules Makhlouf Rent Car à Monastir et préparez une demande de location.">
-  <title>Makhlouf Rent Car | Location à Monastir</title>
-  <style>
-    :root{--ink:#17212b;--navy:#111a24;--navy2:#1d2b37;--muted:#75818a;--paper:#f4f6f7;--white:#fff;--line:#e4e9ec;--lime:#c8ed70;--orange:#eb8b52;--radius:16px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 Arial,sans-serif}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
-    .topbar{background:var(--navy);color:#eaf0f3;font-size:.78rem}.top-inner{min-height:38px;display:flex;justify-content:space-between;align-items:center;gap:14px}.topbar a{color:var(--lime);font-weight:bold}.nav{height:78px;background:white;border-bottom:1px solid var(--line);display:flex;align-items:center}.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{display:flex;align-items:center;gap:11px;font-size:1.04rem;line-height:1.05;font-weight:800;letter-spacing:-.03em}.brandmark{width:39px;height:39px;border-radius:12px;background:var(--navy);color:var(--lime);display:grid;place-items:center;font-weight:900;letter-spacing:-.1em}.brand small{display:block;color:var(--muted);font-size:.62rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;margin-top:5px}.links{display:flex;gap:27px;color:#58646c;font-size:.83rem;font-weight:600}.links a:hover{color:#4d6c29}.nav-call{border:1px solid var(--line);padding:10px 15px;border-radius:8px;font-size:.82rem;font-weight:bold}.nav-call:hover{border-color:var(--ink);background:var(--navy);color:white}.menu{display:none;border:0;background:none;color:var(--ink);font-size:1.2rem}
-    .hero{background:var(--navy);color:white;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:570px;height:570px;right:-150px;top:-270px;border:1px solid #ffffff20;border-radius:50%;box-shadow:0 0 0 65px #ffffff08,0 0 0 130px #ffffff05}.hero-inner{position:relative;z-index:1;min-height:490px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:44px;padding-top:55px;padding-bottom:90px}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--lime);font-size:.68rem;letter-spacing:.17em;font-weight:800;text-transform:uppercase}.eyebrow:before{content:"";width:25px;height:2px;background:var(--lime)}.hero h1{font-size:clamp(2.8rem,5.5vw,5.5rem);line-height:.98;letter-spacing:-.065em;margin:19px 0}.hero h1 span{color:var(--lime)}.hero-copy{max-width:510px;color:#bec8ce;font-size:1.02rem}.hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:26px}.button{min-height:46px;padding:0 18px;border:0;border-radius:7px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:.82rem;cursor:pointer;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px)}.button.primary{background:var(--lime);color:var(--navy)}.button.ghost{color:white;border:1px solid #ffffff40;background:transparent}.hero-visual{position:relative;min-height:305px;display:grid;place-items:center}.hero-visual:before{content:"";position:absolute;inset:10% 3%;background:radial-gradient(ellipse,#344957 0,#223340 42%,transparent 72%)}.hero-car{position:relative;width:min(100%,520px);height:auto;filter:drop-shadow(0 26px 28px #0007)}.hero-note{position:absolute;right:3%;bottom:4%;padding:12px 15px;background:#ffffff13;border:1px solid #ffffff25;border-radius:10px;color:#d9e3e7;font-size:.74rem;backdrop-filter:blur(8px)}
-    .booking-strip{position:relative;z-index:2;margin-top:-47px}.booking{display:grid;grid-template-columns:1fr 1fr 1fr 1.15fr auto;gap:10px;align-items:end;background:white;border:1px solid var(--line);box-shadow:0 15px 44px #15202a12;border-radius:12px;padding:18px}.field{min-width:0}.field label{display:block;font-size:.65rem;letter-spacing:.09em;text-transform:uppercase;font-weight:800;color:#718087;margin:0 0 7px}.field input,.field select{width:100%;height:44px;padding:0 10px;background:#f8f9fa;border:1px solid #e5e9ec;border-radius:6px;color:var(--ink);font-size:.78rem}.booking .button{width:100%}
-    .section{padding:80px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:26px}.section-label{color:#5d7c34;text-transform:uppercase;font-size:.66rem;font-weight:800;letter-spacing:.15em}.section-head h2{font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.055em;line-height:1.05;margin:10px 0 0}.section-head p{max-width:370px;color:var(--muted);font-size:.85rem;margin:0}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.filter{border:1px solid #dfe5e7;background:transparent;color:#66737b;border-radius:99px;padding:8px 14px;font-size:.75rem;font-weight:700;cursor:pointer}.filter.active,.filter:hover{background:var(--navy);border-color:var(--navy);color:white}.cars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.car-card{background:white;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s}.car-card:hover{transform:translateY(-4px);box-shadow:0 14px 34px #15202a14}.car-card[hidden]{display:none}.car-art{height:185px;display:grid;place-items:center;background:linear-gradient(145deg,#eef2ef,#e4e9e9);position:relative;overflow:hidden}.car-art:before{content:"";position:absolute;width:210px;height:210px;border-radius:50%;background:#dce7d4;right:-50px;top:-110px}.car-art:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;border:1px solid #ffffffbb;right:-17px;top:-80px}.car-svg{width:88%;max-width:300px;position:relative;z-index:1;filter:drop-shadow(0 11px 9px #202d3a26)}.car-art.orange{background:linear-gradient(145deg,#f5ede7,#eadfd5)}.car-art.orange:before{background:#f2ded0}.car-art.blue{background:linear-gradient(145deg,#eaf0f3,#dce6eb)}.car-art.blue:before{background:#d3e2e8}.car-art.dark{background:linear-gradient(145deg,#e7e9eb,#d9dde1)}.car-art.dark:before{background:#cbd2d7}.car-info{padding:16px}.car-meta{display:flex;justify-content:space-between;align-items:center;gap:8px}.car-info h3{margin:0;font-size:1rem;letter-spacing:-.025em}.badge{background:#eff4e5;color:#58742f;border-radius:99px;padding:4px 8px;font-size:.62rem;font-weight:800;white-space:nowrap}.car-info p{margin:9px 0 14px;color:var(--muted);font-size:.78rem}.car-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #eef0f1;padding-top:12px}.quote{font-size:.72rem;color:#59676d}.select-car{border:0;background:transparent;color:#506d2d;font-weight:800;font-size:.76rem;cursor:pointer}.select-car:hover{text-decoration:underline}
-    .why{background:#e8ede8}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{padding:23px;background:#f8faf8;border:1px solid #dce4dc;border-radius:12px}.feature-icon{width:38px;height:38px;border-radius:10px;background:#e3edcc;color:#536f31;display:grid;place-items:center;font-size:1.02rem;font-weight:900}.feature h3{font-size:.98rem;margin:15px 0 6px}.feature p{font-size:.78rem;color:var(--muted);margin:0}
-    .request-section{background:white}.request-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:45px;align-items:start}.request-copy h2{font-size:2.35rem;letter-spacing:-.055em;line-height:1.05;margin:11px 0}.request-copy p{color:var(--muted);font-size:.86rem}.contact-lines{margin-top:22px;display:grid;gap:11px;font-size:.82rem}.contact-lines a{font-weight:bold}.request-form{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#f7f8f7;border:1px solid var(--line);border-radius:12px;padding:20px}.request-form .field.full{grid-column:1/-1}.request-form .field input,.request-form .field select{background:white}.request-form .button{grid-column:1/-1;justify-self:start}.privacy{grid-column:1/-1;color:var(--muted);font-size:.68rem;margin:-3px 0 0}.result{grid-column:1/-1;background:#edf5dd;border:1px solid #d5e8ae;border-radius:8px;padding:13px;font-size:.78rem;color:#435b28;display:none}.result.show{display:block}.result a{display:inline-flex;margin-top:8px;color:#263c18;font-weight:800;text-decoration:underline}
-    footer{background:var(--navy);color:#c6d0d5;padding:30px 0;font-size:.75rem}.footer-inner{display:flex;justify-content:space-between;gap:18px;align-items:center}.footer-brand{color:white;font-weight:800}.footer-note{max-width:530px;text-align:right;color:#9eabb2}
-    @media(max-width:900px){.hero-inner{grid-template-columns:1fr 1fr;gap:20px}.booking{grid-template-columns:repeat(2,1fr)}.cars{grid-template-columns:repeat(2,minmax(0,1fr))}.request-layout{gap:25px}}
-    @media(max-width:640px){.wrap{width:calc(100% - 30px)}.top-inner{justify-content:center}.top-inner span:first-child{display:none}.nav{height:66px}.links{display:none;position:absolute;z-index:4;top:104px;left:0;right:0;background:white;padding:18px 22px;flex-direction:column;gap:16px;border-bottom:1px solid var(--line)}.links.open{display:flex}.nav-call{display:none}.menu{display:block}.hero-inner{grid-template-columns:1fr;min-height:auto;padding-top:56px;padding-bottom:88px}.hero h1{font-size:clamp(2.8rem,13vw,4.2rem)}.hero-visual{min-height:210px;margin-top:0}.hero-note{right:0;bottom:-4px}.booking-strip{margin-top:-55px}.booking{grid-template-columns:1fr 1fr;padding:13px}.booking .field:first-child{grid-column:1/-1}.booking .button{grid-column:1/-1}.section{padding:62px 0}.section-head{display:block}.section-head p{margin-top:12px}.cars{grid-template-columns:1fr}.car-art{height:200px}.features{grid-template-columns:1fr}.request-layout{grid-template-columns:1fr;gap:20px}.request-form{grid-template-columns:1fr}.request-form .field.full,.request-form .button,.privacy,.result{grid-column:1}.request-form .button{width:100%}.footer-inner{display:block}.footer-note{text-align:left;margin-top:10px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
-  </style>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width">
+    <link rel=profile href=http://gmpg.org/xfn/11>
+    <link rel=pingback href=https://www.tunisia-rent-car.tn/xmlrpc.php>
+    <link type=text/css media=all href=wp-content/cache/autoptimize/css/autoptimize_74b2cdf3e13f8b8f23d9c46c5234220e.css rel=stylesheet>
+    <link rel="icon" href="wp-content/uploads/2019/09/logo-makhlou-f.png" type="image/x-icon">
+    <title>Makhlouf Rent Car</title>
+    <link rel=dns-prefetch href=//unpkg.com>
+    <link rel=dns-prefetch href=//cdn.rawgit.com>
+    <link rel=dns-prefetch href=//www.google.com>
+    <link rel=dns-prefetch href=//s.w.org>
+    <link href=https://sp-ao.shortpixel.ai rel=preconnect>
+    
+    <script>
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/",
+            "svgExt": ".svg",
+            "source": {
+                "concatemoji": "https:\/\/www.tunisia-rent-car.tn\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.20"
+            }
+        };
+        ! function(e, a, t) {
+            var n, r, o, i = a.createElement("canvas"),
+                p = i.getContext && i.getContext("2d");
+
+            function s(e, t) {
+                var a = String.fromCharCode;
+                p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0);
+                e = i.toDataURL();
+                return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL()
+            }
+
+            function c(e) {
+                var t = a.createElement("script");
+                t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
+            }
+            for (o = Array("flag", "emoji"), t.supports = {
+                    everything: !0,
+                    everythingExceptFlag: !0
+                }, r = 0; r < o.length; r++) t.supports[o[r]] = function(e) {
+                if (!p || !p.fillText) return !1;
+                switch (p.textBaseline = "top", p.font = "600 32px Arial", e) {
+                    case "flag":
+                        return s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) ? !1 : !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]);
+                    case "emoji":
+                        return !s([55357, 56424, 55356, 57342, 8205, 55358, 56605, 8205, 55357, 56424, 55356, 57340], [55357, 56424, 55356, 57342, 8203, 55358, 56605, 8203, 55357, 56424, 55356, 57340])
+                }
+                return !1
+            }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]);
+            t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function() {
+                t.DOMReady = !0
+            }, t.supports.everything || (n = function() {
+                t.readyCallback()
+            }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function() {
+                "complete" === a.readyState && t.readyCallback()
+            })), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji), c(n.wpemoji)))
+        }(window, document, window._wpemojiSettings);
+    </script>
+    <link rel=stylesheet id=popup-maker-site-css href='wp-content/cache/autoptimize/css/autoptimize_single_4c4c2ee21e96c482b14475f261d59a82.css' type=text/css media=all>
+    <script src=wp-content/cache/minify/6ff7f.js></script>
+    <script>
+        var cnArgs = {
+            "ajaxurl": "https:\/\/www.tunisia-rent-car.tn\/wp-admin\/admin-ajax.php",
+            "hideEffect": "fade",
+            "onScroll": "no",
+            "onScrollOffset": "100",
+            "cookieName": "cookie_notice_accepted",
+            "cookieValue": "true",
+            "cookieTime": "2592000",
+            "cookiePath": "\/",
+            "cookieDomain": "",
+            "redirection": "",
+            "cache": "1",
+            "refuse": "no",
+            "revoke_cookies": "0",
+            "revoke_cookies_opt": "automatic",
+            "secure": "1"
+        };
+    </script>
+    <link rel=https://api.w.org/ href=https://www.tunisia-rent-car.tn/wp-json>
+    <link rel=EditURI type=application/rsd+xml title=RSD href=https://www.tunisia-rent-car.tn/xmlrpc.php?rsd>
+    <link rel=wlwmanifest type=application/wlwmanifest+xml href=https://www.tunisia-rent-car.tn/wp-includes/wlwmanifest.xml>
+    <meta name=generator content="WordPress 5.2.20">
+    <link rel=shortlink href=https://www.tunisia-rent-car.tn>
+    <link rel=alternate type=application/json+oembed href="https://www.tunisia-rent-car.tn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.tunisia-rent-car.tn%2Fvoitures%2Fseat-leon%2F">
+    <link rel=alternate type=text/xml+oembed href="https://www.tunisia-rent-car.tn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.tunisia-rent-car.tn%2Fvoitures%2Fseat-leon%2F&#038;format=xml">
+    <script type=application/ld+json>
+        {
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "tunisia-rent-car",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "complexe ribat N°14 monastir",
+                "addressLocality": "Monastir",
+                "addressRegion": "Tunisie",
+                "postalCode": "5000"
+            },
+            "image": "https://www.tunisia-rent-car.tn/wp-content/uploads/2019/04/logo-makhlou-f.png",
+            "telePhone": "+216 24239634",
+            "url": "www.tunisia-rent-car.tn"
+        }
+    </script>
+    <meta name=generator content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+    <!--[if lte IE 9]><link
+rel=stylesheet type=text/css href=https://www.tunisia-rent-car.tn/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css media=screen><![endif]-->
+    <link rel=canonical href=https://www.tunisia-rent-car.tn>
+    <meta name=twitter:image content=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/04/622e5d49-b4c2-43d9-89e8-e3b9bb026414.jpg>
+    <meta name=twitter:card content=summary>
+    <meta name=twitter:domain content="Makhlouf- Location Voiture Monastir">
+    <meta name=twitter:description content="Location voiture Tunisie avec Makhlouf Rent Car® : Agence de location de voiture en Tunisie propose la location de voiture à l&#039;aéroport Tunis Carthage &amp; aéroport Habib bourguiba ✔️  Location voiture Monastir ✔️  Location Voiture Hammamet ✔️  Location Voiture Sousse ">
+    <meta name=twitter:title content="Makhlouf Rent Car®| Location voiture Monastir ✔️  Transfert aéroport Monastir ">
+    <meta property=og:image content=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/04/622e5d49-b4c2-43d9-89e8-e3b9bb026414.jpg>
+    <meta property=og:site_name content="Makhlouf- Location Voiture Monastir">
+    <meta property=og:description content="Location voiture Tunisie avec Makhlouf Rent Car® : Agence de location de voiture en Tunisie propose la location de voiture à l&#039;aéroport Tunis Carthage &amp; aéroport Habib bourguiba ✔️  Location voiture Monastir ✔️  Location Voiture Hammamet ✔️  Location Voiture Sousse ">
+    <meta property=og:url content=https://www.tunisia-rent-car.tn>
+    <meta property=og:type content=website>
+    <meta property=og:title content="Makhlouf Rent Car®| Location voiture Monastir ✔️  Transfert aéroport Monastir ">
+    <meta name=description content="Location voiture Tunisie avec Makhlouf Rent Car® : Agence de location de voiture en Tunisie propose la location de voiture à l&#039;aéroport Tunis Carthage &amp; aéroport Habib bourguiba ✔️  Location voiture Monastir ✔️  Location Voiture Hammamet ✔️  Location Voiture Sousse ">
+    <meta name=title content="Makhlouf Rent Car®| Location voiture Monastir ✔️  Transfert aéroport Monastir ">
+    <noscript><style>.wpb_animate_when_almost_visible{opacity:1}</style></noscript>
+    <script>
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
 </head>
+
 <body>
-  <div class="topbar"><div class="wrap top-inner"><span>Votre mobilité, en toute simplicité</span><span>Monastir · <a href="tel:+21624239634">+216 24 239 634</a> · Lun–Sam, 08:00–18:00</span></div></div>
-  <header class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="#" aria-label="Makhlouf Rent Car, accueil"><span class="brandmark">MR</span><span>Makhlouf Rent Car<small>Location à Monastir</small></span></a>
-      <nav class="links" id="navlinks" aria-label="Navigation principale"><a href="#vehicules">Nos véhicules</a><a href="#services">Nos services</a><a href="#contact">Contact</a></nav>
-      <a class="nav-call" href="tel:+21624239634">Appeler l'agence</a>
-      <button class="menu" id="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
-    </div>
-  </header>
-  <main>
-    <section class="hero">
-      <div class="wrap hero-inner">
-        <div>
-          <div class="eyebrow">Monastir · Tunisie</div>
-          <h1>La route vous attend.<br><span>Choisissez la vôtre.</span></h1>
-          <p class="hero-copy">Une voiture adaptée à votre séjour, votre rythme et votre destination. Parcourez les modèles et préparez une demande de location en quelques étapes.</p>
-          <div class="hero-actions"><a class="button primary" href="#vehicules">Voir les véhicules <span aria-hidden="true">→</span></a><a class="button ghost" href="#contact">Préparer une demande</a></div>
+    <div class=preloader>
+        <div class=preloader-spinner>
+            <div class=loader-content>
+                <noscript><img
+src=wp-content/uploads/2019/09/logo-makhlou-f.png></noscript><img src=wp-content/uploads/2019/09/logo-makhlou-f.png></div>
         </div>
-        <div class="hero-visual" aria-label="Illustration d'une voiture de location">
-          <svg class="hero-car" viewBox="0 0 620 300" role="img" aria-labelledby="hero-car-title">
-            <title id="hero-car-title">Voiture compacte illustrée</title>
-            <defs><linearGradient id="heroPaint" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#f8fafb"/><stop offset="1" stop-color="#b9c5cb"/></linearGradient></defs>
-            <ellipse cx="314" cy="250" rx="240" ry="25" fill="#060b10" opacity=".38"/>
-            <path d="M92 205l20-67c7-23 23-38 48-46l77-26c21-7 44-11 67-11h83c26 0 44 10 60 31l46 59 42 17c16 7 24 20 24 39v26c0 12-9 21-22 21h-25c-5-42-68-42-73 0H212c-5-42-68-42-73 0h-32c-14 0-23-9-23-22v-16c0-13 2-22 8-29z" fill="url(#heroPaint)" stroke="#81909a" stroke-width="4"/>
-            <path d="M176 111l66-24c18-6 39-10 61-10h31v71H149z" fill="#314653"/>
-            <path d="M351 77h34c20 0 34 8 48 25l35 46H351z" fill="#314653"/>
-            <path d="M104 181h405" stroke="#71808a" stroke-width="4" opacity=".55"/>
-            <path d="M91 183l-11 26h43v-30z" fill="#eb8b52"/>
-            <path d="M526 174l29 13v19h-35z" fill="#e7f2c9"/>
-            <circle cx="176" cy="225" r="37" fill="#17212b"/><circle cx="176" cy="225" r="20" fill="#aebbc2"/><circle cx="176" cy="225" r="8" fill="#64737d"/>
-            <circle cx="476" cy="225" r="37" fill="#17212b"/><circle cx="476" cy="225" r="20" fill="#aebbc2"/><circle cx="476" cy="225" r="8" fill="#64737d"/>
-            <path d="M258 175h74" stroke="#fff" stroke-width="4" opacity=".55"/>
-          </svg>
-          <div class="hero-note">Une sélection pour vos trajets en Tunisie</div>
-        </div>
-      </div>
-    </section>
-    <div class="wrap booking-strip">
-      <form class="booking" id="quickForm">
-        <div class="field"><label for="quickCar">Véhicule</label><select id="quickCar"><option value="">Choisir un modèle</option><option>Renault Clio 4</option><option>Skoda Fabia</option><option>Kia Picanto automatique</option><option>Kia Rio</option><option>Dacia</option><option>Seat Ibiza</option><option>Toyota Yaris 2019</option><option>Hyundai i20</option><option>Seat Leon</option></select></div>
-        <div class="field"><label for="quickStart">Date de prise</label><input id="quickStart" type="date" required></div>
-        <div class="field"><label for="quickEnd">Date de retour</label><input id="quickEnd" type="date" required></div>
-        <div class="field"><label for="quickPlace">Lieu de prise</label><select id="quickPlace"><option>Monastir</option><option>Aéroport de Monastir</option><option>À préciser</option></select></div>
-        <button class="button primary" type="submit">Continuer <span aria-hidden="true">→</span></button>
-      </form>
     </div>
-    <section class="section wrap" id="vehicules">
-      <div class="section-head"><div><div class="section-label">La sélection</div><h2>Le bon modèle pour votre trajet.</h2></div><p>Choisissez une voiture pour votre séjour, puis préparez une demande avec vos dates. Les disponibilités et tarifs sont confirmés par l'agence.</p></div>
-      <div class="filters" role="group" aria-label="Filtrer les véhicules"><button type="button" class="filter active" data-filter="all">Tous les modèles</button><button type="button" class="filter" data-filter="compact">Citadines</button><button type="button" class="filter" data-filter="automatic">Boîte automatique</button></div>
-      <div class="cars">
-        <article class="car-card" data-type="compact"><div class="car-art"><svg class="car-svg" viewBox="0 0 360 150" role="img" aria-label="Illustration Renault Clio 4"><path d="M31 102l16-40c5-13 15-22 31-26l47-13c12-4 25-6 39-6h50c17 0 28 7 39 20l29 35 29 11c11 4 17 13 17 25v10c0 8-6 13-14 13h-19a25 25 0 0 0-49 0H110a25 25 0 0 0-49 0H41c-9 0-14-6-14-14v-5c0-4 1-7 4-10z" fill="#eb8b52" stroke="#374652" stroke-width="3"/><path d="M77 58l41-12c11-3 23-5 36-5h19v32H67zM181 41h20c13 0 22 5 31 16l18 16h-69z" fill="#344b5a"/><circle cx="86" cy="119" r="20" fill="#17212b"/><circle cx="86" cy="119" r="10" fill="#bdc8ce"/><circle cx="287" cy="119" r="20" fill="#17212b"/><circle cx="287" cy="119" r="10" fill="#bdc8ce"/></svg></div><div class="car-info"><div class="car-meta"><h3>Renault Clio 4</h3><span class="badge">Citadine</span></div><p>Un format pratique pour vos déplacements en ville et sur la côte.</p><div class="car-bottom"><span class="quote">Tarif sur demande</span><button class="select-car" type="button" data-car="Renault Clio 4">Choisir →</button></div></div></article>
-        <article class="car-card" data-type="compact"><div class="car-art blue"><svg class="car-svg" viewBox="0 0 360 150" role="img" aria-label="Illustration Skoda Fabia"><path d="M31 102l16-40c5-13 15-22 31-26l47-13c12-4 25-6 39-6h50c17 0 28 7 39 20l29 35 29 11c11 4 17 13 17 25v10c0 8-6 13-14 13h-19a25 25 0 0 0-49 0H110a25 25 0 0 0-49 0H41c-9 0-14-6-14-14v-5c0-4 1-7 4-10z" fill="#56859a" stroke="#374652" stroke-width="3"/><path d="M77 58l41-12c11-3 23-5 36-5h19v32H67zM181 41h20c13 0 22 5 31 16l18 16h-69z" fill="#344b5a"/><circle cx="86" cy="119" r="20" fill="#17212b"/><circle cx="86" cy="119" r="10" fill="#bdc8ce"/><circle cx="287" cy="119" r="20" fill="#17212b"/><circle cx="287" cy="119" r="10" fill="#bdc8ce"/></svg></div><div class="car-info"><div class="car-meta"><h3>Skoda Fabia</h3><span class="badge">Citadine</span></div><p>Un choix compact pour vos trajets quotidiens et vos escapades.</p><div class="car-bottom"><span class="quote">Tarif sur demande</span><button class="select-car" type="button" data-car="Skoda Fabia">Choisir →</button></div></div></article>
-        <article class="car-card" data-type="compact automatic"><div class="car-art orange"><svg class="car-svg" viewBox="0 0 360 150" role="img" aria-label="Illustration Kia Picanto"><path d="M31 102l16-40c5-13 15-22 31-26l47-13c12-4 25-6 39-6h50c17 0 28 7 39 20l29 35 29 11c11 4 17 13 17 25v10c0 8-6 13-14 13h-19a25 25 0 0 0-49 0H110a25 25 0 0 0-49 0H41c-9 0-14-6-14-14v-5c0-4 1-7 4-10z" fill="#6a9b69" stroke="#374652" stroke-width="3"/><path d="M77 58l41-12c11-3 23-5 36-5h19v32H67zM181 41h20c13 0 22 5 31 16l18 16h-69z" fill="#344b5a"/><circle cx="86" cy="119" r="20" fill="#17212b"/><circle cx="86" cy="119" r="10" fill="#bdc8ce"/><circle cx="287" cy="119" r="20" fill="#17212b"/><circle cx="287" cy="119" r="10" fill="#bdc8ce"/></svg></div><div class="car-info"><div class="car-meta"><h3>Kia Picanto</h3><span class="badge">Automatique</span></div><p>Format facile à prendre en main, avec boîte automatique.</p><div class="car-bottom"><span class="quote">Tarif sur demande</span><button class="select-car" type="button" data-car="Kia Picanto automatique">Choisir →</button></div></div></article>
-        <article class="car-card" data-type="compact"><div class="car-art dark"><svg class="car-svg" viewBox="0 0 360 150" role="img" aria-label="Illustration Kia Rio"><path d="M31 102l16-40c5-13 15-22 31-26l47-13c12-4 25-6 39-6h50c17 0 28 7 39 20l29 35 29 11c11 4 17 13 17 25v10c0 8-6 13-14 13h-19a25 25 0 0 0-49 0H110a25 25 0 0 0-49 0H41c-9 0-14-6-14-14v-5c0-4 1-7 4-10z" fill="#c6cdd0" stroke="#374652" stroke-width="3"/><path d="M77 58l41-12c11-3 23-5 36-5h19v32H67zM181 41h20c13 0 22 5 31 16l18 16h-69z" fill="#344b5a"/><circle cx="86" cy="119" r="20" fill="#17212b"/><circle cx="86" cy="119" r="10" fill="#bdc8ce"/><circle cx="287" cy="119" r="20" fill="#17212b"/><circle cx="287" cy="119" r="10" fill="#bdc8ce"/></svg></div><div class="car-info"><div class="car-meta"><h3>Kia Rio</h3><span class="badge">Confort</span></div><p>Un modèle polyvalent pour explorer Monastir et ses environs.</p><div class="car-bottom"><span class="quote">Tarif sur demande</span><button class="select-car" type="button" data-car="Kia Rio">Choisir →</button></div></div></article>
-        <article class="car-card" data-type=""><div class="car-art orange"><svg class="car-svg" viewBox="0 0 360 150" role="img" aria-label="Illustration véhicule Dacia"><path d="M31 102l16-40c5-13 15-22 31-26l47-13c12-4 25-6 39-6h50c17 0 28 7 39 20l29 35 29 11c11 4 17 13 17 25v10c0 8-6 13-14 13h-19a25 25 0 0 0-49 0H110a25 25 0 0 0-49 0H41c-9 0-14-6-14-14v-5c0-4 1-7 4-10z" fill="#b77e55" stroke="#374652" stroke-width="3"/><path d="M77 58l41-12c11-3 23-5 36-5h19v32H67zM181 41h20c13 0 22 5 31 16l18 16h-69z" fill="#344b5a"/><circle cx="86" cy="119" r="20" fill="#17212b"/><circle cx="86" cy="119" r="10" fill="#bdc8ce"/><circle cx="287" cy="119" r="20" fill="#17212b"/><circle cx="287" cy="119" r="10" fill="#bdc8ce"/></svg></div><div class="car-info"><div class="car-meta"><h3>Dacia</h3><span class="badge">Modèle à confirmer</span></div><p>Le modèle exact est à confirmer directement auprès de l'agence.</p><div class="car-bottom"><span class="quote">Tarif sur demande</span><button class="select-car" type="button" data-car="Dacia">Choisir →</button></div></div></article>
-        <article class="car-card" data-type="compact"><div class="car-art blue"><svg class="car-svg" viewBox="0 0 360 150" role="img" aria-label="Illustration Seat Ibiza"><path d="M31 102l16-40c5-13 15-22 31-26l47-13c12-4 25-6 39-6h50c17 0 28 7 39 20l29 35 29 11c11 4 17 13 17 25v10c0 8-6 13-14 13h-19a25 25 0 0 0-49 0H110a25 25 0 0 0-49 0H41c-9 0-14-6-14-14v-5c0-4 1-7 4-10z" fill="#e7e9eb" stroke="#374652" stroke-width="3"/><path d="M77 58l41-12c11-3 23-5 36-5h19v32H67zM181 41h20c13 0 22 5 31 16l18 16h-69z" fill="#344b5a"/><circle cx="86" cy="119" r="20" fill="#17212b"/><circle cx="86" cy="119" r="10" fill="#bdc8ce"/><circle cx="287" cy="119" r="20" fill="#17212b"/><circle cx="287" cy="119" r="10" fill="#bdc8ce"/></svg></div><div class="car-info"><div class="car-meta"><h3>Seat Ibiza</h3><span class="badge">Citadine</span></div><p>Une voiture compacte pour circuler facilement pendant votre séjour.</p><div class="car-bottom"><span class="quote">Tarif sur demande</span><button class="select-car" type="button" data-car="Seat Ibiza">Choisir →</button></div></div></article>
-        <article class="car-card" data-type="compact"><div class="car-art"><svg class="car-svg" viewBox="0 0 360 150" role="img" aria-label="Illustration Toyota Yaris 2019"><path d="M31 102l16-40c5-13 15-22 31-26l47-13c12-4 25-6 39-6h50c17 0 28 7 39 20l29 35 29 11c11 4 17 13 17 25v10c0 8-6 13-14 13h-19a25 25 0 0 0-49 0H110a25 25 0 0 0-49 0H41c-9 0-14-6-14-14v-5c0-4 1-7 4-10z" fill="#d6e0a6" stroke="#374652" stroke-width="3"/><path d="M77 58l41-12c11-3 23-5 36-5h19v32H67zM181 41h20c13 0 22 5 31 16l18 16h-69z" fill="#344b5a"/><circle cx="86" cy="119" r="20" fill="#17212b"/><circle cx="86" cy="119" r="10" fill="#bdc8ce"/><circle cx="287" cy="119" r="20" fill="#17212b"/><circle cx="287" cy="119" r="10" fill="#bdc8ce"/></svg></div><div class="car-info"><div class="car-meta"><h3>Toyota Yaris 2019</h3><span class="badge">Compacte</span></div><p>Un modèle compact listé dans la sélection de véhicules.</p><div class="car-bottom"><span class="quote">Tarif sur demande</span><button class="select-car" type="button" data-car="Toyota Yaris 2019">Choisir →</button></div></div></article>
-        <article class="car-card" data-type="compact"><div class="car-art orange"><svg class="car-svg" viewBox="0 0 360 150" role="img" aria-label="Illustration Hyundai i20"><path d="M31 102l16-40c5-13 15-22 31-26l47-13c12-4 25-6 39-6h50c17 0 28 7 39 20l29 35 29 11c11 4 17 13 17 25v10c0 8-6 13-14 13h-19a25 25 0 0 0-49 0H110a25 25 0 0 0-49 0H41c-9 0-14-6-14-14v-5c0-4 1-7 4-10z" fill="#56859a" stroke="#374652" stroke-width="3"/><path d="M77 58l41-12c11-3 23-5 36-5h19v32H67zM181 41h20c13 0 22 5 31 16l18 16h-69z" fill="#344b5a"/><circle cx="86" cy="119" r="20" fill="#17212b"/><circle cx="86" cy="119" r="10" fill="#bdc8ce"/><circle cx="287" cy="119" r="20" fill="#17212b"/><circle cx="287" cy="119" r="10" fill="#bdc8ce"/></svg></div><div class="car-info"><div class="car-meta"><h3>Hyundai i20</h3><span class="badge">Compacte</span></div><p>Une option pratique à sélectionner selon vos dates et besoins.</p><div class="car-bottom"><span class="quote">Tarif sur demande</span><button class="select-car" type="button" data-car="Hyundai i20">Choisir →</button></div></div></article>
-        <article class="car-card" data-type=""><div class="car-art dark"><svg class="car-svg" viewBox="0 0 360 150" role="img" aria-label="Illustration Seat Leon"><path d="M31 102l16-40c5-13 15-22 31-26l47-13c12-4 25-6 39-6h50c17 0 28 7 39 20l29 35 29 11c11 4 17 13 17 25v10c0 8-6 13-14 13h-19a25 25 0 0 0-49 0H110a25 25 0 0 0-49 0H41c-9 0-14-6-14-14v-5c0-4 1-7 4-10z" fill="#263847" stroke="#131d24" stroke-width="3"/><path d="M77 58l41-12c11-3 23-5 36-5h19v32H67zM181 41h20c13 0 22 5 31 16l18 16h-69z" fill="#9bb3c0"/><circle cx="86" cy="119" r="20" fill="#17212b"/><circle cx="86" cy="119" r="10" fill="#bdc8ce"/><circle cx="287" cy="119" r="20" fill="#17212b"/><circle cx="287" cy="119" r="10" fill="#bdc8ce"/></svg></div><div class="car-info"><div class="car-meta"><h3>Seat Leon</h3><span class="badge">Berline</span></div><p>Un format berline pour vos déplacements et sorties en région.</p><div class="car-bottom"><span class="quote">Tarif sur demande</span><button class="select-car" type="button" data-car="Seat Leon">Choisir →</button></div></div></article>
-      </div>
+    <header id=header-area class=fixed-top>
+        <div id=header-top class="d-none d-xl-block">
+            <div class=container>
+                <div class=row>
+                    <div class="col-lg-4 text-left">
+                        <i class="fa fa-map-marker"></i> complexe ribat N°14 monastir</div>
+                    <div class="col-lg-4 text-center">
+                        <i class="fa fa-mobile"></i> +216 24239634</div>
+                    <div class="col-lg-4 text-center">
+                        <i class="fa fa-clock-o"></i> Lun-Sam 08.00 - 18.00</div>
+                </div>
+            </div>
+        </div>
+        <div id=header-bottom>
+            <div class=container>
+                <div class=row>
+                    <div class="col-lg-2 col-md-3">
+                        <a href=https://www.tunisia-rent-car.tn class=logo>
+<noscript><img
+src=wp-content/uploads/2019/09/logo-makhlou-f.png alt=JSOFT></noscript><img
+src=wp-content/uploads/2019/09/logo-makhlou-f.png alt=JSOFT>
+</a></div>
+                    <div class="col-lg-10  col-md-9 d-none d-lg-block ">
+                        <nav class="mainmenu alignright">
+                            <div class=menu-menu_1-container>
+                                <ul id=menu-menu_1 class=menu>
+                                    <li itemscope=itemscope itemtype=https://www.schema.org/SiteNavigationElement id=menu-item-55 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-53 current_page_item menu-item-55"><a title=Accueil href=https://www.tunisia-rent-car.tn/ itemprop=url>Accueil</a></li>
+                                    <li itemscope=itemscope itemtype=https://www.schema.org/SiteNavigationElement id=menu-item-73 class="menu-item menu-item-type-taxonomy menu-item-object-type menu-item-73"><a title=Seat href=https://www.tunisia-rent-car.tn/type/seat/ itemprop=url>Seat</a></li>
+                                    <li itemscope=itemscope itemtype=https://www.schema.org/SiteNavigationElement id=menu-item-72 class="menu-item menu-item-type-taxonomy menu-item-object-type menu-item-72"><a title=Peugeot href=https://www.tunisia-rent-car.tn/type/peugeot/ itemprop=url>Peugeot</a></li>
+                                    <li itemscope=itemscope itemtype=https://www.schema.org/SiteNavigationElement id=menu-item-71 class="menu-item menu-item-type-taxonomy menu-item-object-type menu-item-71"><a title=Dacia href=https://www.tunisia-rent-car.tn/type/dacia/ itemprop=url>Dacia</a></li>
+                                    <li itemscope=itemscope itemtype=https://www.schema.org/SiteNavigationElement id=menu-item-70 class="menu-item menu-item-type-taxonomy menu-item-object-type menu-item-70"><a title=Polo href=https://www.tunisia-rent-car.tn/type/polo/ itemprop=url>Polo</a></li>
+                                    <li itemscope=itemscope itemtype=https://www.schema.org/SiteNavigationElement id=menu-item-69 class="menu-item menu-item-type-taxonomy menu-item-object-type menu-item-69"><a title=Renault href=https://www.tunisia-rent-car.tn/type/renault/ itemprop=url>Renault</a></li>
+                                    <li itemscope=itemscope itemtype=https://www.schema.org/SiteNavigationElement id=menu-item-141 class="menu-item menu-item-type-taxonomy menu-item-object-type menu-item-141"><a title=Kia href=https://www.tunisia-rent-car.tn/type/kia/ itemprop=url>Kia</a></li>
+                                    <li itemscope=itemscope itemtype=https://www.schema.org/SiteNavigationElement id=menu-item-107 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a title=tarif href=https://www.tunisia-rent-car.tn/tarif-location-voiture/ itemprop=url>tarif</a></li>
+                                    <li itemscope=itemscope itemtype=https://www.schema.org/SiteNavigationElement id=menu-item-68 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a title=Blog href=https://www.tunisia-rent-car.tn/blog/ itemprop=url>Blog</a></li>
+                                    <li itemscope=itemscope itemtype=https://www.schema.org/SiteNavigationElement id=menu-item-59 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a title=Contact href=https://www.tunisia-rent-car.tn/contact/ itemprop=url>Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class=rating-score style=display:none;>
+        <div class=rotation style=display:none;>
+            <span>
+<i
+class="fa fa-star"></i><i
+class="fa fa-star"></i><i
+class="fa fa-star"></i><i
+class="fa fa-star"></i><i
+class="fa fa-star-o"></i>  </span>
+            <span>( 4.02 / 5                            )
+</span></div>
+    </div>
+    <div itemscope itemtype=https://schema.org/LocalBusiness style=display:none;>
+        <div class itemprop=aggregateRating itemscope itemtype=http://schema.org/AggregateRating style=display:none;>
+            <meta itemprop=ratingValue content=4.02>
+            <meta itemprop=reviewCount content=35>
+        </div>
+        <span itemprop=name style=display:none;> Makhlouf- Location Voiture Monastir</span>
+        <span itemprop=address style=display:none; itemscope itemtype=http://schema.org/PostalAddress>
+<span
+itemprop=streetAddress style=display:none;>complexe ribat N°14 monastir</span>
+        <span itemprop=postalCode style=display:none;>5000</span>
+        </span>
+        <span itemprop=telephone style=display:none;>+216 24239634</span>
+        <noscript><img
+style=display:none  itemprop=image class=display-none src=wp-content/uploads/2019/09/logo-makhlou-f.png alt=Accueil></noscript><img style=display:none itemprop=image class='lazyload display-none' src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E'
+            data-src=wp-content/uploads/2019/09/logo-makhlou-f.png alt=Accueil></div>
+    <section id=slider-area>
+        <div class="single-slide-item ">
+            <div class=container>
+                <div class=row>
+                    <div class="col-lg-5 col-md-7">
+                        <div role=form class=wpcf7 id=wpcf7-f8-o2 lang=fr-FR dir=ltr>
+                            <div class=screen-reader-response></div>
+                            <form action=/#wpcf7-f8-o2 method=post class=wpcf7-form novalidate=novalidate>
+                                <div style="display: none;">
+                                    <input type=hidden name=_wpcf7 value=8>
+                                    <input type=hidden name=_wpcf7_version value=4.9.2>
+                                    <input type=hidden name=_wpcf7_locale value=fr_FR>
+                                    <input type=hidden name=_wpcf7_unit_tag value=wpcf7-f8-o2>
+                                    <input type=hidden name=_wpcf7_container_post value=0></div>
+                                <p>
+                                    <div class=book-a-car>
+                                        <div class="pickup-location book-item">
+                                            <div class=row>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                    <p>Nom:</p>
+                                                    <input type=text name=nom class="custom-select form-control" id=nom placeholder=nom></div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                    <p>Prénom:</p>
+                                                    <input type=text name=prenom class="custom-select form-control" id=prenom placeholder=Prénom></div>
+                                            </div>
+                                        </div>
+                                        <div class="pickup-location book-item">
+                                            <p>Téléphone:</p>
+                                            <input type=text class="custom-select form-control" name=telephone id=telephone placeholder=telephone></div>
+                                        <div class="choose-car-type book-item">
+                                            <p>Choisir voiture:</p>
+                                            <select id=type_voiture class=custom-select name=type_voiture><option
+selected value="Transfert aéroport Monastir">Transfert aéroport Monastir</option><option
+value="Voiture Avec Chauffeur à Monastir">Voiture Avec Chauffeur à Monastir</option><option
+value="Location voiture à Monastir  &#8211; Renault Clio 4">Location voiture à Monastir  &#8211; Renault Clio 4</option><option
+value="Location voiture à Monastir  &#8211; SKODA FABIA">Location voiture à Monastir  &#8211; SKODA FABIA</option><option
+value="Kia &#8211; Picanto Boite Auto">Kia &#8211; Picanto Boite Auto</option><option
+value="Kia Rio">Kia Rio</option><option
+value=Dacia>Dacia</option><option
+value="seat ibiza">seat ibiza</option><option
+value="Toyota Yaris 2019">Toyota Yaris 2019</option><option
+value="hyundai i20">hyundai i20</option><option
+value="seat leon">seat leon</option>
+</select></div>
+                                        <div class="pick-up-date book-item">
+                                            <p>Date de prise:</p>
+                                            <div class=row>
+                                                <div class="form-group col-md-8 col-sm-8 col-7">
+                                                    <input type=text name=startDate id=startDate placeholder=Prise value="19 06 24"></div>
+                                                <div class="col-md-4 col-sm-4 col-5" style="
+margin-left: -18px;">
+                                                    <div class=" form-group  clockpicker gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group" style="width: 145%;">
+                                                        <input type=text name=heure_prise class="form-control custom-select" value=00:00>
+                                                        <span class="input-group-append1 input-group-addon">
+<i
+class="fa fa-clock-o clock" aria-hidden=true></i>
+</span></div>
+                                                </div>
+                                            </div>
+                                            <div class=return-car>
+                                                <p>Date de remise:</p>
+                                                <div class=row>
+                                                    <div class="form-group col-md-8 col-sm-8 col-7">
+                                                        <input type="text " name=endDate id=endDate placeholder=Remise value="20 06 24"></div>
+                                                    <div class=" form-group col-md-4 col-sm-4 col-5" style="margin-left: -18px;">
+                                                        <div class=" form-group  clockpicker gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group" style="width: 145%;">
+                                                            <input type=text name=heure_remise class="form-control custom-select" value=00:00>
+                                                            <span class="input-group-append1 input-group-addon">
+<i
+class="fa fa-clock-o clock" aria-hidden=true></i>
+</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </p>
+                                <div class=wpcf7-form-control-wrap>
+                                    <div data-sitekey=6Lfwt5IUAAAAAJFaLGv5XYe1vme518dvx4DukvBB class="wpcf7-form-control g-recaptcha wpcf7-recaptcha"></div>
+                                    <noscript><div
+style="width: 302px; height: 422px;"><div
+style="width: 302px; height: 422px; position: relative;"><div
+style="width: 302px; height: 422px; position: absolute;">
+<iframe
+src="https://www.google.com/recaptcha/api/fallback?k=6Lfwt5IUAAAAAJFaLGv5XYe1vme518dvx4DukvBB" frameborder=0 scrolling=no style="width: 302px; height:422px; border-style: none;">
+</iframe></div><div
+style="width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;"><textarea id=g-recaptcha-response name=g-recaptcha-response class=g-recaptcha-response style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;">
+				</textarea></div></div></div>
+</noscript></div>
+                                <p>
+                                    <div class="book-button text-center">
+                                        <button type=submit class=book-now-btn id=envoyer> <i
+class="fa fa-refresh fa-spin refresh"></i> Envoyer</button></div>
+                                    </div>
+                                </p>
+                                <input type=hidden class=wpcf7-pum value='{"closepopup":true,"closedelay":0,"openpopup":false,"openpopup_id":0}'>
+                                <div class="wpcf7-response-output wpcf7-display-none"></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-5 text-right">
+                        <div class=display-table>
+                            <div class=display-table-cell>
+                                ?>
+                                <div class=slider-right-text>
+                                    <h1>Location de voiture en Tunisie : Makhlouf Rent Car</h1>
+                                    <p></p>
+                                    <style>
+                                        .single-slide-item {
+                                            background-image: url("wp-content/uploads/2019/02/shutterstock_616012901.jpg")
+                                        }
+                                    </style>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="section why" id="services">
-      <div class="wrap"><div class="section-head"><div><div class="section-label">Un service de proximité</div><h2>Partez l'esprit léger.</h2></div><p>Un point de contact local à Monastir pour préparer votre demande et choisir le modèle adapté à votre séjour.</p></div>
-        <div class="features"><article class="feature"><div class="feature-icon" aria-hidden="true">01</div><h3>Un choix de modèles</h3><p>Des citadines et véhicules de différents formats à sélectionner selon votre trajet.</p></article><article class="feature"><div class="feature-icon" aria-hidden="true">02</div><h3>Demande personnalisée</h3><p>Indiquez les dates, le véhicule et le lieu souhaités pour échanger avec l'agence.</p></article><article class="feature"><div class="feature-icon" aria-hidden="true">03</div><h3>Contact direct</h3><p>Appelez l'agence pour vérifier les disponibilités et obtenir les informations à jour.</p></article></div>
-      </div>
+    <section id=about-area class=section-padding>
+        <div class=container>
+            <div class=row>
+                <div class=col-lg-12>
+                    <div class="section-title  text-center">
+                        <h2>Accueil</h2>
+                        <span class=title-line><i
+class="fa fa-car"></i></span></div>
+                </div>
+            </div>
+            <div class=row>
+                <div class=col-lg-12>
+                    <div class=display-table>
+                        <div class=display-table-cell>
+                            <div class=about-content>
+                                <p>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                        <figure class="wpb_wrapper vc_figure">
+                                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><noscript><img
+class="vc_single_image-img " src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture04-min.png width=232 height=135 alt=Capture04-min title=Capture04-min></noscript><img class="lazyload vc_single_image-img " src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20232%20135%22%3E%3C/svg%3E'
+                                                                    data-src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture04-min.png width=232 height=135 alt=Capture04-min title=Capture04-min></div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                        <figure class="wpb_wrapper vc_figure">
+                                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><noscript><img
+class="vc_single_image-img " src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture03-min.png width=232 height=139 alt=Capture03-min title=Capture03-min></noscript><img class="lazyload vc_single_image-img " src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20232%20139%22%3E%3C/svg%3E'
+                                                                    data-src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture03-min.png width=232 height=139 alt=Capture03-min title=Capture03-min></div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                        <figure class="wpb_wrapper vc_figure">
+                                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><noscript><img
+class="vc_single_image-img " src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture02-min.png width=236 height=141 alt=Capture02-min title=Capture02-min></noscript><img class="lazyload vc_single_image-img " src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20236%20141%22%3E%3C/svg%3E'
+                                                                    data-src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture02-min.png width=236 height=141 alt=Capture02-min title=Capture02-min></div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                        <figure class="wpb_wrapper vc_figure">
+                                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><noscript><img
+class="vc_single_image-img " src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture01-min.png width=233 height=139 alt=Capture01-min title=Capture01-min></noscript><img class="lazyload vc_single_image-img " src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20233%20139%22%3E%3C/svg%3E'
+                                                                    data-src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture01-min.png width=233 height=139 alt=Capture01-min title=Capture01-min></div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="wpb_column vc_column_container vc_col-sm-6">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                        <figure class="wpb_wrapper vc_figure">
+                                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><noscript><img
+class="vc_single_image-img " src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Captureb-500x250-min.png width=500 height=250 alt=Captureb-500x250-min title=Captureb-500x250-min></noscript><img class="lazyload vc_single_image-img " src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20500%20250%22%3E%3C/svg%3E'
+                                                                    data-src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Captureb-500x250-min.png width=500 height=250 alt=Captureb-500x250-min title=Captureb-500x250-min></div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wpb_column vc_column_container vc_col-sm-6">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                        <figure class="wpb_wrapper vc_figure">
+                                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><noscript><img
+class="vc_single_image-img " src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capturea-500x250-min.png width=500 height=250 alt=Capturea-500x250-min title=Capturea-500x250-min></noscript><img class="lazyload vc_single_image-img " src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20500%20250%22%3E%3C/svg%3E'
+                                                                    data-src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capturea-500x250-min.png width=500 height=250 alt=Capturea-500x250-min title=Capturea-500x250-min></div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="text_bloc1 wpb_column vc_column_container vc_col-sm-6">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="wpb_text_column wpb_content_element  vc_custom_1567964191494">
+                                                        <div class=wpb_wrapper>
+                                                            <p><span style="font-weight: 400;"><a
+href=https://www.tunisia-rent-car.tn/><strong>Makhlouf Rent Car</strong></a> est l’entreprise de </span><span style="font-weight: 400;">location voiture</span><span style="font-weight: 400;"> la plus abordable en Tunisie. Quels que soient vos besoins, une </span>
+                                                                <span
+                                                                    style="font-weight: 400;">voiture avec chauffeur</span><span style="font-weight: 400;"> ou une location à longue durée, vous trouverez chez nous des choix divers. Nous vous offrons un service de location voiture pas cher qui vous aidera à économiser de l’argent et à vous amuser lors de votre promenade.</span></p>
+                                                            <p><span style="font-weight: 400;">Vous pouvez d’ailleurs jeter un œil sur notre </span><b>tarif location voiture</b><span style="font-weight: 400;">, vous ne serez pas déçus parce que nous offrons les meilleurs prix à la portée de tout le monde. Visitez notre site pour avoir une idée sur notre gamme de voitures et le </span><b>tarif</b>                                                                <b>location voiture</b><span style="font-weight: 400;"> de chaque modèle. Vous serez certainement satisfaits.</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wpb_column vc_column_container vc_col-sm-6">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class=vc_empty_space style="height: 32px"><span class=vc_empty_space_inner></span></div>
+                                                    <div class="wpb_single_image wpb_content_element vc_align_right">
+                                                        <figure class="wpb_wrapper vc_figure">
+                                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><noscript><img
+class="vc_single_image-img " src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Agence-Makhlouf.jpg width=500 height=350 alt=Agence-Makhlouf title=Agence-Makhlouf></noscript><img class="lazyload vc_single_image-img " src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20500%20350%22%3E%3C/svg%3E'
+                                                                    data-src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Agence-Makhlouf.jpg width=500 height=350 alt=Agence-Makhlouf title=Agence-Makhlouf></div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class=vc_empty_space style="height: 32px"><span class=vc_empty_space_inner></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="wpb_column vc_column_container vc_col-sm-6">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class=vc_empty_space style="height: 32px"><span class=vc_empty_space_inner></span></div>
+                                                    <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                        <figure class="wpb_wrapper vc_figure">
+                                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><noscript><img
+class="vc_single_image-img " src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Makhlouf-Agence.jpg width=500 height=350 alt=Makhlouf-Agence title=Makhlouf-Agence></noscript><img class="lazyload vc_single_image-img " src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20500%20350%22%3E%3C/svg%3E'
+                                                                    data-src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Makhlouf-Agence.jpg width=500 height=350 alt=Makhlouf-Agence title=Makhlouf-Agence></div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text_bloc1 wpb_column vc_column_container vc_col-sm-6">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="wpb_text_column wpb_content_element  vc_custom_1567964239262">
+                                                        <div class=wpb_wrapper>
+                                                            <h2><b>Exclusivement des prix bas!</b></h2>
+                                                            <p><span style="font-weight: 400;">Nous sommes en mesure de proposer les tarifs les plus bas et des options gratuites à Monastir. Nous vous proposerons les meilleures offres possibles à des prix très intéressants afin que vous puissiez choisir la voiture que vous souhaitez chez <a
+href=https://www.location-voiture-monastir.online/><strong>Makhlouf Rent Car</strong></a> .</span></p>
+                                                            <h2><b>L&#8217;expertise locale!</b></h2>
+                                                            <p><span style="font-weight: 400;">Nous estimons que tout le monde a le droit aux vacances et location de voiture idéales. Pour cette raison nous avons sélectionne des Voitures aimables et Rentable (qualité/Prix) , </span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class=vc_empty_space style="height: 64px"><span class=vc_empty_space_inner></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                        <figure class="wpb_wrapper vc_figure">
+                                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><noscript><img
+class="vc_single_image-img " src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture4-250x170-min.png width=250 height=170 alt=Capture4-250x170-min title=Capture4-250x170-min></noscript><img class="lazyload vc_single_image-img " src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20250%20170%22%3E%3C/svg%3E'
+                                                                    data-src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture4-250x170-min.png width=250 height=170 alt=Capture4-250x170-min title=Capture4-250x170-min></div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                        <figure class="wpb_wrapper vc_figure">
+                                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><noscript><img
+class="vc_single_image-img " src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture3-250x159-min.png width=250 height=159 alt=Capture3-250x159-min title=Capture3-250x159-min></noscript><img class="lazyload vc_single_image-img " src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20250%20159%22%3E%3C/svg%3E'
+                                                                    data-src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture3-250x159-min.png width=250 height=159 alt=Capture3-250x159-min title=Capture3-250x159-min></div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                        <figure class="wpb_wrapper vc_figure">
+                                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><noscript><img
+class="vc_single_image-img " src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture2-250x168-min.png width=250 height=168 alt=Capture2-250x168-min title=Capture2-250x168-min></noscript><img class="lazyload vc_single_image-img " src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20250%20168%22%3E%3C/svg%3E'
+                                                                    data-src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture2-250x168-min.png width=250 height=168 alt=Capture2-250x168-min title=Capture2-250x168-min></div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wpb_column vc_column_container vc_col-sm-3">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                        <figure class="wpb_wrapper vc_figure">
+                                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><noscript><img
+class="vc_single_image-img " src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture-250x161-min.png width=250 height=161 alt=Capture-250x161-min title=Capture-250x161-min></noscript><img class="lazyload vc_single_image-img " src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20250%20161%22%3E%3C/svg%3E'
+                                                                    data-src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/08/Capture-250x161-min.png width=250 height=161 alt=Capture-250x161-min title=Capture-250x161-min></div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="text_bloc1 wpb_column vc_column_container vc_col-sm-4">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="vc_icon_element vc_icon_element-outer vc_custom_1567420488001 color_icon vc_icon_element-align-center">
+                                                        <div class="vc_icon_element-inner vc_icon_element-color-custom vc_icon_element-size-lg vc_icon_element-style- vc_icon_element-background-color-grey">
+                                                            <span class="vc_icon_element-icon fa fa-check" style="color: important"></span></div>
+                                                    </div>
+                                                    <div class="wpb_text_column wpb_content_element  vc_custom_1567420657126 test3">
+                                                        <div class=wpb_wrapper>
+                                                            <h4 style="text-align: center;"><strong>Qualité </strong></h4>
+                                                            <h4 style="text-align: center;"><strong>de service</strong></h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text_bloc1 wpb_column vc_column_container vc_col-sm-4">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="vc_icon_element vc_icon_element-outer vc_custom_1567768418374 color_icon vc_icon_element-align-center">
+                                                        <div class="vc_icon_element-inner vc_icon_element-color-custom vc_icon_element-size-lg vc_icon_element-style- vc_icon_element-background-color-grey">
+                                                            <span class="vc_icon_element-icon fa fa-map-marker" style="color: important"></span></div>
+                                                    </div>
+                                                    <div class="wpb_text_column wpb_content_element  vc_custom_1567767492245 test3">
+                                                        <div class=wpb_wrapper>
+                                                            <h4 style="text-align: center;"><strong>Voitures neuves &amp; prix compétitifs</strong></h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text_bloc1 wpb_column vc_column_container vc_col-sm-4">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="vc_icon_element vc_icon_element-outer vc_custom_1567768431804 color_icon vc_icon_element-align-center">
+                                                        <div class="vc_icon_element-inner vc_icon_element-color-custom vc_icon_element-size-lg vc_icon_element-style- vc_icon_element-background-color-grey">
+                                                            <span class="vc_icon_element-icon fa fa-taxi" style="color: important"></span></div>
+                                                    </div>
+                                                    <div class="wpb_text_column wpb_content_element  vc_custom_1567767502577 test3">
+                                                        <div class=wpb_wrapper>
+                                                            <h4 class="title" style="text-align: center;"><strong>Présence dans 3 aéroport en Tunisie</strong></h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class=vc_empty_space style="height: 64px"><span class=vc_empty_space_inner></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="text_bloc1 wpb_column vc_column_container vc_col-sm-4">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="vc_icon_element vc_icon_element-outer vc_custom_1567768447040 color_icon vc_icon_element-align-center">
+                                                        <div class="vc_icon_element-inner vc_icon_element-color-custom vc_icon_element-size-lg vc_icon_element-style- vc_icon_element-background-color-grey">
+                                                            <span class="vc_icon_element-icon fa fa-life-ring" style="color: important"></span></div>
+                                                    </div>
+                                                    <div class="wpb_text_column wpb_content_element  vc_custom_1567767546786">
+                                                        <div class=wpb_wrapper>
+                                                            <h4 style="text-align: center;">Top des modèles en location</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text_bloc1 wpb_column vc_column_container vc_col-sm-4">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="vc_icon_element vc_icon_element-outer vc_custom_1567768459830 color_icon vc_icon_element-align-center">
+                                                        <div class="vc_icon_element-inner vc_icon_element-color-custom vc_icon_element-size-lg vc_icon_element-style- vc_icon_element-background-color-grey">
+                                                            <span class="vc_icon_element-icon fa fa-bath" style="color: important"></span></div>
+                                                    </div>
+                                                    <div class="wpb_text_column wpb_content_element  vc_custom_1567767539794 test3">
+                                                        <div class=wpb_wrapper>
+                                                            <h4 style="text-align: center;"><strong>Lavage </strong></h4>
+                                                            <h4 style="text-align: center;"><strong>voiture</strong></h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text_bloc1 wpb_column vc_column_container vc_col-sm-4">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="vc_icon_element vc_icon_element-outer vc_custom_1567768476782 color_icon vc_icon_element-align-center">
+                                                        <div class="vc_icon_element-inner vc_icon_element-color-custom vc_icon_element-size-lg vc_icon_element-style- vc_icon_element-background-color-grey">
+                                                            <span class="vc_icon_element-icon fa fa-phone" style="color: important"></span></div>
+                                                    </div>
+                                                    <div class="wpb_text_column wpb_content_element  vc_custom_1567767528571 test3">
+                                                        <div class=wpb_wrapper>
+                                                            <h4 style="text-align: center;"><strong>Appel </strong></h4>
+                                                            <h4 style="text-align: center;"><strong>chauffeur</strong></h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="text_bloc1 wpb_column vc_column_container vc_col-sm-12">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="wpb_text_column wpb_content_element  vc_custom_1567964030195">
+                                                        <div class=wpb_wrapper>
+                                                            <div class="vc_row wpb_row vc_row-fluid">
+                                                                <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                    <div class="vc_column-inner ">
+                                                                        <div class=wpb_wrapper>
+                                                                            <div class="wpb_text_column wpb_content_element ">
+                                                                                <div class=wpb_wrapper>
+                                                                                    <h2><b>Location voiture à Tunis</b></h2>
+                                                                                    <p>Tunis allie la beauté de plages de sable blanc à un riche passé très marquant pour l’histoire de la Tunisie. Votre séjour en location de voiture à Tunis devient plus simple
+                                                                                        avec <strong>Makhlouf Rent Car</strong> . Prenez la route de la mer et de ses plages sablonneuses, prenez le temps confortablement de visiter la vieille ville de Tunis,
+                                                                                        le Ribat de Tunis en voiture compacte, en berline ou en voiture de location de luxe.</p>
+                                                                                    <h2><b>Location voiture aéroport Tunis</b></h2>
+                                                                                    <p>Avant de venir ou sur place à Tunis, vous pourrez disposer de votre voiture à l’aéroport de Tunis. A Tunis aéroport, un représentant de l’agence de location de voitures <strong>Makhlouf Rent Car</strong> vous
+                                                                                        attendra pour louer votre véhicule. Pour votre location de voiture à l’aéroport de Tunis, vous pourrez opter pour une location de voiture en courte durée ou en longue
+                                                                                        durée. Si vous ne connaissez pas encore votre date d’arrivée à Tunis, ce n’est pas un souci. Vous pouvez louer la voiture de votre choix à tout moment, et vous pouvez
+                                                                                        également si vous le souhaitez avoir un devis approximatif de votre location de voiture à Tunis lorsque vos dates sont encore incertaines.</p>
+                                                                                    <p>Visite d’affaires, envie d’un périple tout au long du Sahel tunisien seul ou en famille, Makhlouf Rent Car  Tunis propose une large gamme de voitures de location. Location
+                                                                                        de voiture pas cher à Tunis ou location plus chic, vous pourrez profiter d’un véhicule récent pour parcourir Tunis ou établir la ville de naissance d’Habib Bourguiba
+                                                                                        comme point de départ d’une visite de Sousse en voiture de location ou encore visiter la belle ville de Mahdia.</p>
+                                                                                    <h2><b>En voiture, que visiter à Tunis ?</b></h2>
+                                                                                    <p>Vous pouvez récupérer votre voiture à Tunis soit :</p>
+                                                                                    <ul>
+                                                                                        <li>A votre arrivée à l’aéroport de Tunis, un agent sera à votre attente avec une pancarte de Makhlouf Rent Car .</li>
+                                                                                        <li>– Ou à votre lieu d’hébergement à Tunis, la livraison est gratuite.</li>
+                                                                                    </ul>
+                                                                                    <p>Plusieurs lieux et monuments sont à visiter à Tunis, de même votre location de voiture à Tunis vous permettra de faire des excursions ou un autotour vers les villes voisines
+                                                                                        telles que Sousse, Mahdia, Hammamet.</p>
+                                                                                    <p>Sur demande nous vous fournissons un GPS qui fonctionne parfaitement en Tunisie. Il vous fera découvrir les différents monuments de Tunis, vous montre le chemin pour accéder
+                                                                                        aux centres d’intérêt à Tunis et vous guidera pour aller vers les villes voisines, à titre d’exemple, voici les points d’intérêt que vous allez découvrir à Tunis sur
+                                                                                        notre GPS :</p>
+                                                                                    <ul>
+                                                                                        <li>Attractions touristiques : Ribat de Tunis, Medina Tunis</li>
+                                                                                        <li>Monuments historiques : Mosquées.</li>
+                                                                                        <li>Musées : Musée de costume traditionnel.</li>
+                                                                                        <li>Aussi les restaurants, hôtels, stations services, plages …</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="vc_row wpb_row vc_row-fluid">
+                                                                <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                                    <div class="vc_column-inner ">
+                                                                        <div class=wpb_wrapper>
+                                                                            <div class="wpb_text_column wpb_content_element ">
+                                                                                <div class=wpb_wrapper>
+                                                                                    <h2><strong>Découvrir La Tunisie avec une voiture de location</strong></h2>
+                                                                                    <p>Se rendre aisément dans ces lieux historiques en ayant recours à une location de voiture à Tunis est devenu indispensable. Quoi de plus facile que d’avoir son propre véhicule
+                                                                                        et pouvoir se rendre où bon vous semble ? C’est le service que vous offre l’agence de <strong>location de voiture Tunisie</strong><strong>Makhlouf Rent Car</strong> .
+                                                                                        Également un comparateur de prix, Makhlouf Rent Car  met à votre disposition de nombreux véhicules idéals pour vos itinéraires, au meilleur rapport qualité-prix.</p>
+                                                                                    <p>Le véhicule reste encore aujourd’hui un moyen de déplacement fortement apprécié par les touristes. Effectivement, il donne un sentiment de liberté, et c’est pratique pour
+                                                                                        visiter une ville comme Tunisie. De la citadine abordable au monospace familial, l’équipe de <strong>Makhlouf Rent Car</strong> vous trouvera la voiture correspondant
+                                                                                        à vos besoins à un tarif défiant toute concurrence.</p>
+                                                                                    <p>Comme Tunisie compte de nombreux sites à visiter, allant des sites historiques cultes aux plages rocheuses, aucun d’eux n’est à rater. Rendez-vous donc sur le site : <strong>tunisia-rent-car.tn</strong> et
+                                                                                        réservez dès maintenant la voiture adaptée à vos déplacements au meilleur prix du marché.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class=vc_empty_space style="height: 32px"><span class=vc_empty_space_inner></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="text_bloc1 wpb_column vc_column_container vc_col-sm-4">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="evc-icon-with-text evc-shortcode color_icon icon1 evc-iwt-icon-top">
+                                                        <div class=evc-iwt-icon-holder>
+                                                            <span class="evc-iwt-icon fa fa-car" style="font-size: 40px;color: #dd4242"></span></div>
+                                                        <div class=evc-iwt-content>
+                                                            <p class=evc-iwt-title>
+                                                                20 voitures disponibles</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text_bloc1 wpb_column vc_column_container vc_col-sm-4">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="evc-icon-with-text evc-shortcode color_icon icon1 evc-iwt-icon-top">
+                                                        <div class=evc-iwt-icon-holder>
+                                                            <span class="evc-iwt-icon fa fa-university" style="font-size: 40px;color: #dd4242"></span></div>
+                                                        <div class=evc-iwt-content>
+                                                            <p class=evc-iwt-title>
+                                                                3 agences de location</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text_bloc1 wpb_column vc_column_container vc_col-sm-4">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="evc-icon-with-text evc-shortcode color_icon icon1 evc-iwt-icon-top">
+                                                        <div class=evc-iwt-icon-holder>
+                                                            <span class="evc-iwt-icon fa fa-smile-o" style="font-size: 40px;color: #dd4242"></span></div>
+                                                        <div class=evc-iwt-content>
+                                                            <p class=evc-iwt-title>
+                                                                +500 clients satisfaits</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class=vc_empty_space style="height: 32px"><span class=vc_empty_space_inner></span></div>
+                                                    <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_border_width_2 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_black  color_icon"><span class="vc_sep_holder vc_sep_holder_l"><span
+class=vc_sep_line></span></span><span class="vc_sep_holder vc_sep_holder_r"><span
+class=vc_sep_line></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="text_bloc1 wpb_column vc_column_container vc_col-sm-12">
+                                            <div class="vc_column-inner vc_custom_1567964298551">
+                                                <div class=wpb_wrapper>
+                                                    <div class="wpb_text_column wpb_content_element  vc_custom_1568653798488">
+                                                        <div class=wpb_wrapper>
+                                                            <h2><strong>FAQ :Autres questions posées</strong></h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_row wpb_row vc_row-fluid">
+                                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                                            <div class="vc_column-inner ">
+                                                <div class=wpb_wrapper>
+                                                    <div class="vc_toggle vc_toggle_default vc_toggle_color_default  vc_toggle_size_md">
+                                                        <div class=vc_toggle_title>
+                                                            <h3 style="text-align: left;font-family:Abril Fatface;font-weight:400;font-style:normal" class="vc_custom_heading">? Combien coûte une voiture de location à Tunis ?</h3><i class=vc_toggle_icon></i></div>
+                                                        <div class=vc_toggle_content>
+                                                            <p>Une voiture de location à Tunis coûte en moyenne 48 € par jour.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vc_toggle vc_toggle_default vc_toggle_color_default  vc_toggle_size_md">
+                                                        <div class=vc_toggle_title>
+                                                            <h3 style="text-align: left;font-family:Abril Fatface;font-weight:400;font-style:normal" class="vc_custom_heading">? Quelle est la catégorie de voiture la plus populaire à Tunis ?</h3><i class=vc_toggle_icon></i></div>
+                                                        <div class=vc_toggle_content>
+                                                            <p>Compacte (Ford Focus ou similaire) est la catégorie de voiture la plus réservée à Tunis.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vc_toggle vc_toggle_default vc_toggle_color_default  vc_toggle_size_md">
+                                                        <div class=vc_toggle_title>
+                                                            <h3 style="text-align: left;font-family:Abril Fatface;font-weight:400;font-style:normal" class="vc_custom_heading">? Quelle est la meilleure agence de location de voitures à Tunis ?</h3><i class=vc_toggle_icon></i></div>
+                                                        <div class=vc_toggle_content>
+                                                            <p>Selon les notes et les avis d&#8217;utilisateurs sur google, la meilleures agences de location de voitures à Tunis ( Makhlouf Rent Car®) avis 5/5</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vc_toggle vc_toggle_default vc_toggle_color_default  vc_toggle_size_md">
+                                                        <div class=vc_toggle_title>
+                                                            <h3 style="text-align: left;font-family:Abril Fatface;font-weight:400;font-style:normal" class="vc_custom_heading">Quelles sont les conditions pour louer une voiture ?</h3><i class=vc_toggle_icon></i></div>
+                                                        <div class=vc_toggle_content>
+                                                            <p>Être âgé de 21 ans au minimum. Sachez que <b>pour</b> les moins de 25 ans, une assurance jeune conducteur est obligatoire. Détenir un permis de conduire valide depuis au moins 12 mois et correspondant
+                                                                au type de véhicule loué</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vc_toggle vc_toggle_default vc_toggle_color_default  vc_toggle_size_md">
+                                                        <div class=vc_toggle_title>
+                                                            <h3 style="text-align: left;font-family:Abril Fatface;font-weight:400;font-style:normal" class="vc_custom_heading">Comment fonctionne la location longue durée ?</h3><i class=vc_toggle_icon></i></div>
+                                                        <div class=vc_toggle_content>
+                                                            <p>La location longue durée (<b>LLD</b>) est un type de location. Elle offre la possibilité à un particulier de conduire une voiture neuve sans pour autant se ruiner. Le principe est simple : vous
+                                                                louez un véhicule sur une période allant de 1 à 5 ans pour un kilométrage déterminé</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vc_toggle vc_toggle_default vc_toggle_color_default  vc_toggle_size_md">
+                                                        <div class=vc_toggle_title>
+                                                            <h3 style="text-align: left;font-family:Abril Fatface;font-weight:400;font-style:normal" class="vc_custom_heading">Est-ce qu'un jeune conducteur peut louer une voiture ?</h3><i class=vc_toggle_icon></i></div>
+                                                        <div class=vc_toggle_content>
+                                                            <p>Chez Makhlouf Rent Car, vous pouvez <b>louer une voiture</b> ou une camionnette lorsque vous ne disposez pas du nombre minimum d&#8217;année de détention de <b>permis</b>. Pour cela, vous devrez
+                                                                vous acquitter d&#8217;un supplément <b>jeune conducteur</b> lors de votre réservation de <b>voiture</b> ou lors de la prise en charge du véhicule en agence</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vc_toggle vc_toggle_default vc_toggle_color_default  vc_toggle_size_md">
+                                                        <div class=vc_toggle_title>
+                                                            <h3 style="text-align: left;font-family:Abril Fatface;font-weight:400;font-style:normal" class="vc_custom_heading">Quel prix pour une location de voiture ?</h3><i class=vc_toggle_icon></i></div>
+                                                        <div class=vc_toggle_content>
+                                                            <div class=d9FyLd><b>Prix location voiture</b> : attention aux écarts !</div>
+                                                            <p><span class=e24Kjd>En fonction de l&#8217;agence de <b>location</b> et <b>du</b> type de véhicule, les <b>prix</b> peuvent aller <b>du</b> simple <b>au</b> double. Concernant les tarifs, il faut compter en moyenne 35 € <b>par</b> jour <b>pour</b> une <b>voiture</b> de catégorie <b>A</b>, également appelée « économique »</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="section request-section" id="contact">
-      <div class="wrap request-layout">
-        <div class="request-copy"><div class="section-label">Votre demande</div><h2>Prêt à prendre la route ?</h2><p>Préparez votre demande de location. Elle s'ouvrira dans WhatsApp afin que vous puissiez vérifier et envoyer le message à l'agence.</p><div class="contact-lines"><a href="tel:+21624239634">+216 24 239 634</a><span>Complexe Ribat N°14, Monastir 5000</span><span>Lundi–samedi · 08:00–18:00</span></div></div>
-        <form class="request-form" id="requestForm">
-          <div class="field"><label for="fullName">Votre nom</label><input id="fullName" name="name" autocomplete="name" required maxlength="80" placeholder="Nom et prénom"></div>
-          <div class="field"><label for="phone">Votre téléphone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="30" placeholder="+216 ..."></div>
-          <div class="field"><label for="carSelect">Véhicule souhaité</label><select id="carSelect" name="car" required><option value="">Choisir un modèle</option><option>Renault Clio 4</option><option>Skoda Fabia</option><option>Kia Picanto automatique</option><option>Kia Rio</option><option>Dacia</option><option>Seat Ibiza</option><option>Toyota Yaris 2019</option><option>Hyundai i20</option><option>Seat Leon</option></select></div>
-          <div class="field"><label for="pickup">Lieu de prise en charge</label><select id="pickup" name="pickup"><option>Monastir</option><option>Aéroport de Monastir</option><option>À préciser</option></select></div>
-          <div class="field"><label for="startDate">Date de prise</label><input id="startDate" name="start" type="date" required></div>
-          <div class="field"><label for="returnDate">Date de retour</label><input id="returnDate" name="return" type="date" required></div>
-          <p class="privacy">Aucune donnée n'est enregistrée sur ce site démo. Le message est préparé pour WhatsApp et ne sera envoyé qu'après votre confirmation.</p>
-          <button class="button primary" type="submit">Préparer ma demande WhatsApp <span aria-hidden="true">→</span></button>
-          <div class="result" id="result" role="status" aria-live="polite"></div>
-        </form>
-      </div>
+    <section id=choose-car class=section-padding>
+        <div class=container>
+            <div class=row>
+                <div class=col-lg-12>
+                    <div class="section-title  text-center">
+                        <p>Choisir votre voiture</p>
+                        <span class=title-line><i
+class="fa fa-car"></i></span></div>
+                </div>
+            </div>
+            <div class=row>
+                <div class=col-lg-12>
+                    <div class=choose-content-wrap>
+                        <ul class="nav nav-tabs" id=myTab role=tablist>
+                            <li class=nav-item>
+                                <a class="nav-link active" id=home-tab data-toggle=tab href=#popular_cars role=tab aria-selected=true>Voitures populaires</a></li>
+                            <li class=nav-item>
+                                <a class=nav-link id=profile-tab data-toggle=tab href=#newest_cars role=tab aria-selected=false>Nouvelles voitures</a></li>
+                        </ul>
+                        <div class=tab-content id=myTabContent>
+                            <div class="tab-pane fade show active" id=popular_cars role=tabpanel aria-labelledby=home-tab>
+                                <div class=popular-cars-wrap>
+                                    <div class="popucar-menu text-center">
+                                        <a href=# data-filter=* class=active>all</a>
+                                        <a href=# data-filter=.clio>clio</a>
+                                        <a href=# data-filter=.dacia>dacia</a>
+                                        <a href=# data-filter=.hyundai>hyundai</a>
+                                        <a href=# data-filter=.kia>kia</a>
+                                        <a href=# data-filter=.seat>seat</a>
+                                        <a href=# data-filter=.skoda-fabia>skoda-fabia</a>
+                                        <a href=# data-filter=.toyota>toyota</a>
+                                        <a href=# data-filter=.transfert-aeroport-monastir>transfert-aeroport-monastir</a>
+                                        <a href=# data-filter=.voiture-avec-chauffeur>voiture-avec-chauffeur</a></div>
+                                    <div class="row popular-car-gird">
+                                        <div class="col-lg-4 col-md-6 transfert-aeroport-monastir">
+                                            <div class=single-popular-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/11/voiture_avec_chauffeur.jpg>
+<noscript><img
+src=wp-content/uploads/2019/11/voiture_avec_chauffeur-350x218.jpg alt=JSOFT></noscript><img
+src=wp-content/uploads/2019/11/voiture_avec_chauffeur-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/transfert-aeroport-monastir/>Transfert aéroport Monastir</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> </span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2017</a>
+                                                        <a href=#>manual</a>
+                                                        <a class=btn_tarifs href=https://www.tunisia-rent-car.tn/voitures/transfert-aeroport-monastir/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 voiture-avec-chauffeur">
+                                            <div class=single-popular-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/11/Article10.jpg>
+<noscript><img
+src=wp-content/uploads/2019/11/Article10-350x218.jpg alt=JSOFT></noscript><img
+src=wp-content/uploads/2019/11/Article10-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/voiture-avec-chauffeur/>Voiture Avec Chauffeur à Monastir</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> </span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2017</a>
+                                                        <a href=#>manual</a>
+                                                        <a class=btn_tarifs href=https://www.tunisia-rent-car.tn/voitures/voiture-avec-chauffeur/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 clio">
+                                            <div class=single-popular-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/07/renault-clio-4-nouvelle-intens-20190410085825-343418-IMG_7644-xl.jpg>
+<noscript><img
+src=wp-content/uploads/2019/07/renault-clio-4-nouvelle-intens-20190410085825-343418-IMG_7644-xl-350x218.jpg alt=JSOFT></noscript><img
+src=wp-content/uploads/2019/07/renault-clio-4-nouvelle-intens-20190410085825-343418-IMG_7644-xl-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/location-voiture-a-monastir-renault-clio-4/>Location voiture à Monastir &#8211; Renault Clio 4</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 99 DT/Jour</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2017</a>
+                                                        <a href=#>manual</a>
+                                                        <a class=btn_tarifs href=https://www.tunisia-rent-car.tn/voitures/location-voiture-a-monastir-renault-clio-4/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 skoda-fabia">
+                                            <div class=single-popular-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/07/S1-Video-Skoda-Fabia-3-Caradisiac-vous-la-presente-en-detail-et-en-exclusivite-332274.jpg>
+<noscript><img
+src=wp-content/uploads/2019/07/S1-Video-Skoda-Fabia-3-Caradisiac-vous-la-presente-en-detail-et-en-exclusivite-332274-350x218.jpg alt=JSOFT></noscript><img
+src=wp-content/uploads/2019/07/S1-Video-Skoda-Fabia-3-Caradisiac-vous-la-presente-en-detail-et-en-exclusivite-332274-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/location-voiture-a-monastir-skoda-fabia/>Location voiture à Monastir &#8211; SKODA FABIA</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 89 DT / J</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2017</a>
+                                                        <a href=#>manual</a>
+                                                        <a class=btn_tarifs href=https://www.tunisia-rent-car.tn/voitures/location-voiture-a-monastir-skoda-fabia/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 kia">
+                                            <div class=single-popular-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/04/1200_800_d1cb6c6694f03452eb19e616.jpg>
+<noscript><img
+src=wp-content/uploads/2019/04/1200_800_d1cb6c6694f03452eb19e616-350x218.jpg alt=JSOFT></noscript><img
+src=wp-content/uploads/2019/04/1200_800_d1cb6c6694f03452eb19e616-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/location-voiture-kia-picanto/>Kia &#8211; Picanto Boite Auto</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 89 DT / J</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2017</a>
+                                                        <a href=#>manual</a>
+                                                        <a class=btn_tarifs href=https://www.tunisia-rent-car.tn/voitures/location-voiture-kia-picanto/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 kia">
+                                            <div class=single-popular-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/17KiaRio15drWhiFR1_800.jpg>
+<noscript><img
+src=wp-content/uploads/2019/02/17KiaRio15drWhiFR1_800-350x218.jpg alt=JSOFT></noscript><img
+src=wp-content/uploads/2019/02/17KiaRio15drWhiFR1_800-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/kia-rio/>Kia Rio</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 70 Dt/jour</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2017</a>
+                                                        <a href=#>manual</a>
+                                                        <a class=btn_tarifs href=https://www.tunisia-rent-car.tn/voitures/kia-rio/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 dacia">
+                                            <div class=single-popular-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/17DacSanAmb5drBluFL1_800.jpg>
+<noscript><img
+src=wp-content/uploads/2019/02/17DacSanAmb5drBluFL1_800-350x218.jpg alt=JSOFT></noscript><img
+src=wp-content/uploads/2019/02/17DacSanAmb5drBluFL1_800-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/dacia/>Dacia</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 50 DT/jour</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2017</a>
+                                                        <a href=#>manual</a>
+                                                        <a class=btn_tarifs href=https://www.tunisia-rent-car.tn/voitures/dacia/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 seat">
+                                            <div class=single-popular-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/38105.jpg>
+<noscript><img
+src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/38105-350x218.jpg alt=JSOFT></noscript><img
+src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/38105-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/seat-ibiza/>seat ibiza</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 70 Dt/jour</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2017</a>
+                                                        <a href=#>manual</a>
+                                                        <a class=btn_tarifs href=https://www.tunisia-rent-car.tn/voitures/seat-ibiza/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 toyota">
+                                            <div class=single-popular-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/maxresdefault.jpg>
+<noscript><img
+src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/maxresdefault-350x218.jpg alt=JSOFT></noscript><img
+src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/maxresdefault-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/toyota-yaris-2019/>Toyota Yaris 2019</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 70 Dt/jour</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2017</a>
+                                                        <a href=#>manual</a>
+                                                        <a class=btn_tarifs href=https://www.tunisia-rent-car.tn/voitures/toyota-yaris-2019/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 hyundai">
+                                            <div class=single-popular-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/highlight_select_view_3.jpg>
+<noscript><img
+src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/highlight_select_view_3-350x218.jpg alt=JSOFT></noscript><img
+src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/highlight_select_view_3-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/hyundai-i20/>hyundai i20</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 59 DT/jour</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2017</a>
+                                                        <a href=#>manual</a>
+                                                        <a class=btn_tarifs href=https://www.tunisia-rent-car.tn/voitures/hyundai-i20/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 seat">
+                                            <div class=single-popular-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/seat_17leonstfres3fb_angularfront.png>
+<noscript><img
+src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/seat_17leonstfres3fb_angularfront-350x218.png alt=JSOFT></noscript><img
+src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/seat_17leonstfres3fb_angularfront-350x218.png alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/seat-leon/>seat leon</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 70 DT/jour</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2017</a>
+                                                        <a href=#>manual</a>
+                                                        <a class=btn_tarifs href=https://www.tunisia-rent-car.tn/voitures/seat-leon/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id=newest_cars role=tabpanel aria-labelledby=profile-tab>
+                                <div class=popular-cars-wrap>
+                                    <div class="newcar-menu text-center">
+                                        <a href=# data-filter=.on class=active>all</a>
+                                        <a href=# data-filter=.on.clio>clio</a>
+                                        <a href=# data-filter=.on.dacia>dacia</a>
+                                        <a href=# data-filter=.on.hyundai>hyundai</a>
+                                        <a href=# data-filter=.on.kia>kia</a>
+                                        <a href=# data-filter=.on.seat>seat</a>
+                                        <a href=# data-filter=.on.skoda-fabia>skoda-fabia</a>
+                                        <a href=# data-filter=.on.toyota>toyota</a>
+                                        <a href=# data-filter=.on.transfert-aeroport-monastir>transfert-aeroport-monastir</a>
+                                        <a href=# data-filter=.on.voiture-avec-chauffeur>voiture-avec-chauffeur</a></div>
+                                    <div class="row newest-car-gird">
+                                        <div class="col-lg-4 col-md-6 on clio">
+                                            <div class=single-new-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/07/renault-clio-4-nouvelle-intens-20190410085825-343418-IMG_7644-xl.jpg>
+<noscript><img
+src=wp-content/uploads/2019/07/renault-clio-4-nouvelle-intens-20190410085825-343418-IMG_7644-xl-350x218.jpg alt=JSOFT></noscript><img
+src=wp-content/uploads/2019/07/renault-clio-4-nouvelle-intens-20190410085825-343418-IMG_7644-xl-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/location-voiture-a-monastir-renault-clio-4/>Location voiture à Monastir &#8211; Renault Clio 4</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 99 DT/Jour</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2018</a>
+                                                        <a href=#>Auto</a>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/location-voiture-a-monastir-renault-clio-4/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 on skoda-fabia">
+                                            <div class=single-new-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/07/S1-Video-Skoda-Fabia-3-Caradisiac-vous-la-presente-en-detail-et-en-exclusivite-332274.jpg>
+<noscript><img
+src=wp-content/uploads/2019/07/S1-Video-Skoda-Fabia-3-Caradisiac-vous-la-presente-en-detail-et-en-exclusivite-332274-350x218.jpg alt=JSOFT></noscript><img
+src=wp-content/uploads/2019/07/S1-Video-Skoda-Fabia-3-Caradisiac-vous-la-presente-en-detail-et-en-exclusivite-332274-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/location-voiture-a-monastir-skoda-fabia/>Location voiture à Monastir &#8211; SKODA FABIA</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 89 DT / J</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2018</a>
+                                                        <a href=#>Auto</a>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/location-voiture-a-monastir-skoda-fabia/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 on kia">
+                                            <div class=single-new-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/04/1200_800_d1cb6c6694f03452eb19e616.jpg>
+<noscript><img
+src=wp-content/uploads/2019/04/1200_800_d1cb6c6694f03452eb19e616-350x218.jpg alt=JSOFT></noscript><img
+src=wp-content/uploads/2019/04/1200_800_d1cb6c6694f03452eb19e616-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/location-voiture-kia-picanto/>Kia &#8211; Picanto Boite Auto</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 89 DT / J</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2018</a>
+                                                        <a href=#>Auto</a>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/location-voiture-kia-picanto/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 on kia">
+                                            <div class=single-new-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/17KiaRio15drWhiFR1_800.jpg>
+<noscript><img
+src=wp-content/uploads/2019/02/17KiaRio15drWhiFR1_800-350x218.jpg alt=JSOFT></noscript><img
+src=wp-content/uploads/2019/02/17KiaRio15drWhiFR1_800-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/kia-rio/>Kia Rio</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 70 Dt/jour</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2018</a>
+                                                        <a href=#>Auto</a>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/kia-rio/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 on toyota">
+                                            <div class=single-new-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/maxresdefault.jpg>
+<noscript><img
+src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/maxresdefault-350x218.jpg alt=JSOFT></noscript><img
+src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/maxresdefault-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/toyota-yaris-2019/>Toyota Yaris 2019</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 70 Dt/jour</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2018</a>
+                                                        <a href=#>Auto</a>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/toyota-yaris-2019/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 on hyundai">
+                                            <div class=single-new-car>
+                                                <div class=p-car-thumbnails>
+                                                    <a class=car-hover href=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/highlight_select_view_3.jpg>
+<noscript><img
+src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/highlight_select_view_3-350x218.jpg alt=JSOFT></noscript><img
+src=https://www.tunisia-rent-car.tn/wp-content/uploads/2019/02/highlight_select_view_3-350x218.jpg alt=JSOFT>
+</a></div>
+                                                <div class=p-car-content>
+                                                    <h3>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/hyundai-i20/>hyundai i20</a>
+                                                        <span class=price><i
+class="fa fa-tag"></i> 59 DT/jour</span></h3>
+                                                    <div class=p-car-feature>
+                                                        <a href=#>2018</a>
+                                                        <a href=#>Auto</a>
+                                                        <a href=https://www.tunisia-rent-car.tn/voitures/hyundai-i20/>Consulter</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
-  <footer><div class="wrap footer-inner"><span class="footer-brand">Makhlouf Rent Car · Monastir</span><span class="footer-note">Démo portfolio reconstruite à partir des informations du projet. Les disponibilités et conditions sont à confirmer auprès de l'agence.</span></div></footer>
-  <script>
-    const nav=document.getElementById('navlinks'),menu=document.getElementById('menu');
-    menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
-    nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');}));
-    document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(filter=>filter.classList.remove('active'));button.classList.add('active');document.querySelectorAll('.car-card').forEach(card=>{card.hidden=button.dataset.filter!=='all'&&!card.dataset.type.split(' ').includes(button.dataset.filter);});}));
-    document.querySelectorAll('.select-car').forEach(button=>button.addEventListener('click',()=>{document.getElementById('carSelect').value=button.dataset.car;document.getElementById('contact').scrollIntoView({behavior:'smooth'});}));
-    const today=new Date(),dateValue=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10),dateInputs=[document.getElementById('quickStart'),document.getElementById('quickEnd'),document.getElementById('startDate'),document.getElementById('returnDate')];
-    dateInputs.forEach(input=>input.min=dateValue);
-    function linkReturnDate(start,end){end.min=start.value||dateValue;if(end.value&&start.value&&end.value<start.value)end.value=start.value;}
-    [['quickStart','quickEnd'],['startDate','returnDate']].forEach(([startId,endId])=>{const start=document.getElementById(startId),end=document.getElementById(endId);start.addEventListener('change',()=>linkReturnDate(start,end));});
-    document.getElementById('quickForm').addEventListener('submit',event=>{event.preventDefault();const car=document.getElementById('quickCar').value;if(car)document.getElementById('carSelect').value=car;document.getElementById('startDate').value=document.getElementById('quickStart').value;document.getElementById('returnDate').value=document.getElementById('quickEnd').value;document.getElementById('pickup').value=document.getElementById('quickPlace').value;document.getElementById('contact').scrollIntoView({behavior:'smooth'});document.getElementById('fullName').focus({preventScroll:true});});
-    document.getElementById('requestForm').addEventListener('submit',event=>{event.preventDefault();const form=event.currentTarget;if(!form.reportValidity())return;const data=new FormData(form),text=['Bonjour Makhlouf Rent Car, je souhaite demander des informations pour une location.','Nom : '+data.get('name'),'Téléphone : '+data.get('phone'),'Véhicule : '+data.get('car'),'Lieu de prise : '+data.get('pickup'),'Date de prise : '+data.get('start'),'Date de retour : '+data.get('return')].join('\n'),url='https://wa.me/21624239634?text='+encodeURIComponent(text),result=document.getElementById('result');result.innerHTML='Votre demande est prête. Vérifiez les informations, puis ouvrez WhatsApp pour l’envoyer.<br><a href="'+url+'" target="_blank" rel="noopener">Ouvrir WhatsApp et vérifier le message →</a>';result.classList.add('show');});
-  </script>
+    <div id=partner-area>
+        <div class=container-fluid>
+            <div class=row>
+                <div class="col-lg-12 text-center">
+                    <div class=partner-content-wrap>
+                        <div class=single-partner>
+                            <div class=display-table>
+                                <div class=display-table-cell>
+                                    <noscript><img
+src=wp-content/uploads/2019/04/Capturel.png alt=JSOFT></noscript><img src=wp-content/uploads/2019/04/Capturel.png
+                                        alt=JSOFT></div>
+                            </div>
+                        </div>
+                        <div class=single-partner>
+                            <div class=display-table>
+                                <div class=display-table-cell>
+                                    <noscript><img
+src=wp-content/uploads/2019/04/aeroport-tunisie-229x218.png alt=JSOFT></noscript><img src=wp-content/uploads/2019/04/aeroport-tunisie-229x218.png
+                                        alt=JSOFT></div>
+                            </div>
+                        </div>
+                        <div class=single-partner>
+                            <div class=display-table>
+                                <div class=display-table-cell>
+                                    <noscript><img
+src=wp-content/uploads/2019/04/plein-essence.png alt=JSOFT></noscript><img src=wp-content/uploads/2019/04/plein-essence.png
+                                        alt=JSOFT></div>
+                            </div>
+                        </div>
+                        <div class=single-partner>
+                            <div class=display-table>
+                                <div class=display-table-cell>
+                                    <noscript><img
+src=wp-content/uploads/2019/04/siege-auto.png alt=JSOFT></noscript><img src=wp-content/uploads/2019/04/siege-auto.png
+                                        alt=JSOFT></div>
+                            </div>
+                        </div>
+                        <div class=single-partner>
+                            <div class=display-table>
+                                <div class=display-table-cell>
+                                    <noscript><img
+src=wp-content/uploads/2019/04/gps.png alt=JSOFT></noscript><img src=wp-content/uploads/2019/04/gps.png
+                                        alt=JSOFT></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <section id=tips-article-area class=section-padding>
+        <div class=container>
+            <div class=row>
+                <div class=col-lg-12>
+                    <div class="section-title  text-center">
+                        <p>Nos articles</p>
+                        <span class=title-line><i
+class="fa fa-car"></i></span></div>
+                </div>
+            </div>
+            <div class=row>
+                <div class=col-lg-12>
+                    <article class=single-article>
+                        <div class=row>
+                            <div class=col-lg-5>
+                                <div class=article-thumb>
+                                    <a href=https://www.tunisia-rent-car.tn/la-location-de-voitures-68-entreprises-menacees-de-faillite/><noscript><img
+src=wp-content/uploads/2020/07/شلل-تام-في-قطاع-كراء-السيارات-و-68-شركة-مهدّدة-بالإفلاس-446x297.jpg alt=JSOFT></noscript><img src=wp-content/uploads/2020/07/شلل-تام-في-قطاع-كراء-السيارات-و-68-شركة-مهدّدة-بالإفلاس-446x297.jpg
+                                        alt=JSOFT></a>
+                                </div>
+                            </div>
+                            <div class=col-lg-7>
+                                <div class=display-table>
+                                    <div class=display-table-cell>
+                                        <div class=article-body>
+                                            <h3><a href=https://www.tunisia-rent-car.tn/la-location-de-voitures-68-entreprises-menacees-de-faillite/>la location de voitures : 68 entreprises menacées de faillite</a>
+                                            </h3>
+                                            <div class=article-date>25 <span class=month>jan</span></div>
+                                            <p>
+                                                <p>Le président de la Chambre nationale des sociétés de location d&#8217;automobiles, Habib Muawi, a confirmé que le secteur était complètement paralysé par la pandémie de Corona, le nombre de sociétés de location
+                                                    de voitures ayant diminué de plus de 92%. Dans une déclaration faite aujourd&#8217;hui à Al-Jawhara FM, en marge d&#8217;un colloque national sur «les [&hellip;]</p>
+                                            </p><a href=https://www.tunisia-rent-car.tn/la-location-de-voitures-68-entreprises-menacees-de-faillite/ class=readmore-btn>Read More <i
+class="fa fa-long-arrow-right"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class=col-lg-12>
+                    <article class="single-article middle">
+                        <div class=row>
+                            <div class="col-lg-5 d-xl-none">
+                                <div class=article-thumb>
+                                    <noscript><img
+src=wp-content/uploads/2019/04/Location-de-vehicule.jpg alt=JSOFT></noscript><img src=wp-content/uploads/2019/04/Location-de-vehicule.jpg alt=JSOFT></div>
+                            </div>
+                            <div class=col-lg-7>
+                                <div class=display-table>
+                                    <div class=display-table-cell>
+                                        <div class=article-body>
+                                            <h3><a href=https://www.tunisia-rent-car.tn/location-de-vehicule-la-reglementation-applicable/>Location de véhicule : la réglementation applicable462</a>
+                                            </h3>
+                                            <div class=article-date>14<span class=month>feb</span></div>
+                                            <p>
+                                                <p>Vous pouvez louer un Voiture soit auprès d’une agence soit sur un site internet dédié. Comment procéder ? Avant la location Comparez les points suivants : les conditions de location du Voiture  (ancienneté
+                                                    du permis de conduire, mode de paiement, dépôt de garantie, avance sur location, frais de carburant, etc.) ; les conditions d’assurance (de [&hellip;]</p>
+                                            </p><a href=https://www.tunisia-rent-car.tn/location-de-vehicule-la-reglementation-applicable/ class=readmore-btn>Read More <i
+class="fa fa-long-arrow-right"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 d-none d-xl-block">
+                                <div class=article-thumb>
+                                    <a href=https://www.tunisia-rent-car.tn/location-de-vehicule-la-reglementation-applicable/> <noscript><img
+src=wp-content/uploads/2019/04/Location-de-vehicule.jpg alt=JSOFT></noscript><img src=wp-content/uploads/2019/04/Location-de-vehicule.jpg alt=JSOFT>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class=col-lg-12>
+                    <article class=single-article>
+                        <div class=row>
+                            <div class=col-lg-5>
+                                <div class=article-thumb>
+                                    <a href=https://www.tunisia-rent-car.tn/pour-quoi-choisir-makhlouf-rent-car/><noscript><img
+src=wp-content/uploads/2019/02/1e20bfcd-9652-4ca0-a373-c3148fbe5030-446x297.jpg alt=JSOFT></noscript><img src=wp-content/uploads/2019/02/1e20bfcd-9652-4ca0-a373-c3148fbe5030-446x297.jpg alt=JSOFT></a>
+                                </div>
+                            </div>
+                            <div class=col-lg-7>
+                                <div class=display-table>
+                                    <div class=display-table-cell>
+                                        <div class=article-body>
+                                            <h3><a href=https://www.tunisia-rent-car.tn/pour-quoi-choisir-makhlouf-rent-car/>Pour Quoi choisir Makhlouf rent car</a>
+                                            </h3>
+                                            <div class=article-date>25 <span class=month>jan</span></div>
+                                            <p>
+                                                <p>Des prix attractifs pour votre location de voiture  Réservation simple en 3 étapes : recherche, sélection et réservation Nous nous proposons à la location que des véhicules récents et fiables. Prise et réception
+                                                    rapide des véhicules sur nos agences ou aéroports. Large gammes de voitures, utilitaires et monospaces. Nous sommes engagés à respecter notre charte qualité Makhlouf [&hellip;]</p>
+                                            </p><a href=https://www.tunisia-rent-car.tn/pour-quoi-choisir-makhlouf-rent-car/ class=readmore-btn>Read More <i
+class="fa fa-long-arrow-right"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class=col-lg-12>
+                    <article class="single-article middle">
+                        <div class=row>
+                            <div class="col-lg-5 d-xl-none">
+                                <div class=article-thumb>
+                                    <noscript><img
+src=wp-content/uploads/2019/02/4d08ec17-7211-4101-90ae-3bac66166607-446x297.jpg alt=JSOFT></noscript><img src=wp-content/uploads/2019/02/4d08ec17-7211-4101-90ae-3bac66166607-446x297.jpg
+                                        alt=JSOFT></div>
+                            </div>
+                            <div class=col-lg-7>
+                                <div class=display-table>
+                                    <div class=display-table-cell>
+                                        <div class=article-body>
+                                            <h3><a href=https://www.tunisia-rent-car.tn/location-voiture-chez-makhlouf-rent-car/>Location voiture chez makhlouf rent car 88</a>
+                                            </h3>
+                                            <div class=article-date>14<span class=month>feb</span></div>
+                                            <p>
+                                                <p>Quand vous visitez notre site web « Tunisia Rent Car », vous allez trouver une large gamme de voitures diversifiée. Vous pouvez choisir celle qui vous convient avec le meilleur prix de location voiture pas
+                                                    cher en Tunisie. Nous sommes à votre disposition pour la location voiture dans plusieurs gouvernera , Tunis, Hammamet, Nabeul, Monastir, Sousse,Mahdia  etc. [&hellip;]</p>
+                                            </p><a href=https://www.tunisia-rent-car.tn/location-voiture-chez-makhlouf-rent-car/ class=readmore-btn>Read More <i
+class="fa fa-long-arrow-right"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 d-none d-xl-block">
+                                <div class=article-thumb>
+                                    <a href=https://www.tunisia-rent-car.tn/location-voiture-chez-makhlouf-rent-car/> <noscript><img
+src=wp-content/uploads/2019/02/4d08ec17-7211-4101-90ae-3bac66166607-446x297.jpg alt=JSOFT></noscript><img src=wp-content/uploads/2019/02/4d08ec17-7211-4101-90ae-3bac66166607-446x297.jpg alt=JSOFT>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id=footer-area>
+        <div class=footer-widget-area>
+            <div class=container>
+                <div class=row>
+                    <div class="col-lg-4 col-md-6">
+                        <div class=single-footer-widget>
+                            <p class=single-footer-widget1>A propos de nous</p>
+                            <div class=widget-body>
+                                <p>L'agence Makhlouf Rent Car loue des voitures sur plusieurs villes tunisiennes comme Tunis , Bizetre, Hammamet, Nabeul, Enfidha, Zaghouan, Sousse, Monastir, Sfax, Djerba, Tozeur... . Réservation simple et rapide, un devis
+                                    immédiat et surtout pas de publicité mensongère confirmation au bout de cinq minutes, une voiture sera à votre disposition en arrivant à l'aéroport en Tunisie ou Habib bourguiba .</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class=single-footer-widget>
+                            <p class=single-footer-widget1>Articles récents</p>
+                            <div class=widget-body>
+                                <ul class=recent-post>
+                                    <li>
+                                        <a href=https://www.tunisia-rent-car.tn/la-location-de-voitures-68-entreprises-menacees-de-faillite/> la location de voitures : 68 entreprises menacées de faillite
+                                        <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=https://www.tunisia-rent-car.tn/location-de-vehicule-la-reglementation-applicable/> Location de véhicule : la réglementation applicable
+                                        <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=https://www.tunisia-rent-car.tn/pour-quoi-choisir-makhlouf-rent-car/> Pour Quoi choisir Makhlouf rent car
+                                        <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=https://www.tunisia-rent-car.tn/location-voiture-chez-makhlouf-rent-car/> Location voiture chez makhlouf rent car <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class=single-footer-widget>
+                            <p class=single-footer-widget1>Nos coordonnées</p>
+                            <div class=widget-body>
+                                <ul class=get-touch>
+                                    <li><i class="fa fa-map-marker"></i> complexe ribat N°14 monastir</li>
+                                    <li><i class="fa fa-mobile"></i> +216 24239634</li>
+                                    <li><i class="fa fa-whatsapp"></i> +216 24239634</li>
+                                    <li><i class="fa fa-envelope"></i> rentcarmakhlouf@gmail.com</li>
+                                </ul>
+                                <a style="color:#000 !important;" href=https://goo.gl/maps/SrtxFgpUSUUcZhnm6 class=map-show target=_blank>Voir l'emplacement</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=footer-bottom-area>
+            <div class=container>
+                <div class=row>
+                    <div class="col-lg-12 text-center">
+                        <p>
+                            Tous les droits sont réservés-2024 par <a href="https://github.com/haythemalj/portfolio-haythem-"
+                            target="_blank" class="link">haythemalj</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class=scroll-top>
+        <noscript><img
+src=wp-content/themes/montheme/img/scroll-top.png alt=JSOFT></noscript><img src=wp-content/themes/montheme/img/scroll-top.png alt=JSOFT></div>
+    <div id=pum-180 class="pum pum-overlay pum-theme-172 pum-theme-theme-par-defaut popmake-overlay click_open"
+        data-popmake="{&quot;id&quot;:180,&quot;slug&quot;:&quot;reservation&quot;,&quot;theme_id&quot;:172,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}"
+        role=dialog aria-hidden=true>
+        <div id=popmake-180 class="pum-container popmake theme-172 pum-responsive pum-responsive-medium responsive size-medium">
+            <div class="pum-content popmake-content" tabindex=0>
+                <div role=form class=wpcf7 id=wpcf7-f8-o1 lang=fr-FR dir=ltr>
+                    <div class=screen-reader-response></div>
+                    <form action=/#wpcf7-f8-o1 method=post class=wpcf7-form novalidate=novalidate>
+                        <div style="display: none;">
+                            <input type=hidden name=_wpcf7 value=8>
+                            <input type=hidden name=_wpcf7_version value=4.9.2>
+                            <input type=hidden name=_wpcf7_locale value=fr_FR>
+                            <input type=hidden name=_wpcf7_unit_tag value=wpcf7-f8-o1>
+                            <input type=hidden name=_wpcf7_container_post value=0></div>
+                        <p>
+                            <div class=book-a-car>
+                                <div class="pickup-location book-item">
+                                    <div class=row>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                            <p>Nom:</p>
+                                            <input type=text name=nom class="custom-select form-control" id=nom placeholder=nom></div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                            <p>Prénom:</p>
+                                            <input type=text name=prenom class="custom-select form-control" id=prenom placeholder=Prénom></div>
+                                    </div>
+                                </div>
+                                <div class="pickup-location book-item">
+                                    <p>Téléphone:</p>
+                                    <input type=text class="custom-select form-control" name=telephone id=telephone placeholder=telephone></div>
+                                <div class="choose-car-type book-item">
+                                    <p>Choisir voiture:</p>
+                                    <select id=type_voiture class=custom-select name=type_voiture><option
+selected value="Transfert aéroport Monastir">Transfert aéroport Monastir</option><option
+value="Voiture Avec Chauffeur à Monastir">Voiture Avec Chauffeur à Monastir</option><option
+value="Location voiture à Monastir  &#8211; Renault Clio 4">Location voiture à Monastir  &#8211; Renault Clio 4</option><option
+value="Location voiture à Monastir  &#8211; SKODA FABIA">Location voiture à Monastir  &#8211; SKODA FABIA</option><option
+value="Kia &#8211; Picanto Boite Auto">Kia &#8211; Picanto Boite Auto</option><option
+value="Kia Rio">Kia Rio</option><option
+value=Dacia>Dacia</option><option
+value="seat ibiza">seat ibiza</option><option
+value="Toyota Yaris 2019">Toyota Yaris 2019</option><option
+value="hyundai i20">hyundai i20</option><option
+value="seat leon">seat leon</option>
+</select></div>
+                                <div class="pick-up-date book-item">
+                                    <p>Date de prise:</p>
+                                    <div class=row>
+                                        <div class="form-group col-md-8 col-sm-8 col-7">
+                                            <input type=text name=startDate id=startDate placeholder=Prise value="19 06 24"></div>
+                                        <div class="col-md-4 col-sm-4 col-5" style="
+margin-left: -18px;">
+                                            <div class=" form-group  clockpicker gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group" style="width: 145%;">
+                                                <input type=text name=heure_prise class="form-control custom-select" value=00:00>
+                                                <span class="input-group-append1 input-group-addon">
+<i
+class="fa fa-clock-o clock" aria-hidden=true></i>
+</span></div>
+                                        </div>
+                                    </div>
+                                    <div class=return-car>
+                                        <p>Date de remise:</p>
+                                        <div class=row>
+                                            <div class="form-group col-md-8 col-sm-8 col-7">
+                                                <input type="text " name=endDate id=endDate placeholder=Remise value="20 06 24"></div>
+                                            <div class=" form-group col-md-4 col-sm-4 col-5" style="margin-left: -18px;">
+                                                <div class=" form-group  clockpicker gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group" style="width: 145%;">
+                                                    <input type=text name=heure_remise class="form-control custom-select" value=00:00>
+                                                    <span class="input-group-append1 input-group-addon">
+<i
+class="fa fa-clock-o clock" aria-hidden=true></i>
+</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </p>
+                        <div class=wpcf7-form-control-wrap>
+                            <div data-sitekey=6Lfwt5IUAAAAAJFaLGv5XYe1vme518dvx4DukvBB class="wpcf7-form-control g-recaptcha wpcf7-recaptcha"></div>
+                            <noscript><div
+style="width: 302px; height: 422px;"><div
+style="width: 302px; height: 422px; position: relative;"><div
+style="width: 302px; height: 422px; position: absolute;">
+<iframe
+src="https://www.google.com/recaptcha/api/fallback?k=6Lfwt5IUAAAAAJFaLGv5XYe1vme518dvx4DukvBB" frameborder=0 scrolling=no style="width: 302px; height:422px; border-style: none;">
+</iframe></div><div
+style="width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;"><textarea id=g-recaptcha-response name=g-recaptcha-response class=g-recaptcha-response style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;">
+				</textarea></div></div></div>
+</noscript></div>
+                        <p>
+                            <div class="book-button text-center">
+                                <button type=submit class=book-now-btn id=envoyer> <i
+class="fa fa-refresh fa-spin refresh"></i> Envoyer</button></div>
+                            </div>
+                        </p>
+                        <input type=hidden class=wpcf7-pum value='{"closepopup":true,"closedelay":0,"openpopup":false,"openpopup_id":0}'>
+                        <div class="wpcf7-response-output wpcf7-display-none"></div>
+                    </form>
+                </div>
+            </div><button type=button class="pum-close popmake-close" aria-label=Fermer>
+FERMER </button></div>
+    </div>
+    <noscript><style>.lazyload{display:none}</style></noscript>
+    <script data-noptimize=1>
+        window.lazySizesConfig = window.lazySizesConfig || {};
+        window.lazySizesConfig.loadMode = 1;
+    </script>
+    <script src=wp-content/cache/minify/f9fb9.js></script>
+    <script data-noptimize=1>
+        function c_webp(A) {
+            var n = new Image;
+            n.onload = function() {
+                var e = 0 < n.width && 0 < n.height;
+                A(e)
+            }, n.onerror = function() {
+                A(!1)
+            }, n.src = 'data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA=='
+        }
+
+        function s_webp(e) {
+            window.supportsWebP = e
+        }
+        c_webp(s_webp);
+        document.addEventListener('lazybeforeunveil', function({
+            target: c
+        }) {
+            supportsWebP && ['data-src', 'data-srcset'].forEach(function(a) {
+                attr = c.getAttribute(a), null !== attr && c.setAttribute(a, attr.replace(/\/client\//, '/client/to_webp,'))
+            })
+        });
+    </script>
+    <script>
+        var recaptchaWidgets = [];
+        var recaptchaCallback = function() {
+            var forms = document.getElementsByTagName('form');
+            var pattern = /(^|\s)g-recaptcha(\s|$)/;
+            for (var i = 0; i < forms.length; i++) {
+                var divs = forms[i].getElementsByTagName('div');
+                for (var j = 0; j < divs.length; j++) {
+                    var sitekey = divs[j].getAttribute('data-sitekey');
+                    if (divs[j].className && divs[j].className.match(pattern) && sitekey) {
+                        var params = {
+                            'sitekey': sitekey,
+                            'type': divs[j].getAttribute('data-type'),
+                            'size': divs[j].getAttribute('data-size'),
+                            'theme': divs[j].getAttribute('data-theme'),
+                            'badge': divs[j].getAttribute('data-badge'),
+                            'tabindex': divs[j].getAttribute('data-tabindex')
+                        };
+                        var callback = divs[j].getAttribute('data-callback');
+                        if (callback && 'function' == typeof window[callback]) {
+                            params['callback'] = window[callback];
+                        }
+                        var expired_callback = divs[j].getAttribute('data-expired-callback');
+                        if (expired_callback && 'function' == typeof window[expired_callback]) {
+                            params['expired-callback'] = window[expired_callback];
+                        }
+                        var widget_id = grecaptcha.render(divs[j], params);
+                        recaptchaWidgets.push(widget_id);
+                        break;
+                    }
+                }
+            }
+        };
+        document.addEventListener('wpcf7submit', function(event) {
+            switch (event.detail.status) {
+                case 'spam':
+                case 'mail_sent':
+                case 'mail_failed':
+                    for (var i = 0; i < recaptchaWidgets.length; i++) {
+                        grecaptcha.reset(recaptchaWidgets[i]);
+                    }
+            }
+        }, false);
+    </script>
+    <div id=qlwapp class="qlwapp-free qlwapp-button qlwapp-bottom-right qlwapp-all qlwapp-rounded">
+        <div class=qlwapp-container>
+            <a class=qlwapp-toggle data-action=open data-phone=21624239634 data-message="bonjour je besoin de louer une voiture chez vous !
+" href=javascript:void(0); target=_blank>
+<i
+class="qlwapp-icon qlwapp-whatsapp-icon"></i>
+<i
+class=qlwapp-close data-action=close>&times;</i>
+<span
+class=qlwapp-text>WhatsApp</span>
+</a></div>
+    </div>
+    <script>
+        var wpcf7 = {
+            "apiSettings": {
+                "root": "https:\/\/www.tunisia-rent-car.tn\/wp-json\/contact-form-7\/v1",
+                "namespace": "contact-form-7\/v1"
+            },
+            "recaptcha": {
+                "messages": {
+                    "empty": "Merci de confirmer que vous n\u2019\u00eates pas un robot."
+                }
+            },
+            "cached": "1"
+        };
+        var wpcf7 = {
+            "apiSettings": {
+                "root": "https:\/\/www.tunisia-rent-car.tn\/wp-json\/contact-form-7\/v1",
+                "namespace": "contact-form-7\/v1"
+            },
+            "recaptcha": {
+                "messages": {
+                    "empty": "Merci de confirmer que vous n\u2019\u00eates pas un robot."
+                }
+            },
+            "cached": "1"
+        };
+    </script>
+    <script>
+        var evcVars = {
+            "global": {
+                "adminAjaxUrl": "https:\/\/www.tunisia-rent-car.tn\/wp-admin\/admin-ajax.php",
+                "sliderNavPrevArrow": "ion-ios-arrow-left",
+                "sliderNavNextArrow": "ion-ios-arrow-right"
+            }
+        };
+    </script>
+    <script src='https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js?ver=1.0.0'></script>
+    <script src='https://unpkg.com/gijgo@1.9.11/js/messages/messages.fr-fr.js?ver=1.0.0'></script>
+    <script src='https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js?ver=1.0.0'></script>
+    <script>
+        var Myajax = {
+            "ajaxurl": "https:\/\/www.tunisia-rent-car.tn\/wp-admin\/admin-ajax.php"
+        };
+    </script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=recaptchaCallback&#038;render=explicit&#038;ver=2.0'></script>
+    <script src=wp-content/cache/minify/07324.js></script>
+    <script>
+        var pum_vars = {
+            "version": "1.16.2",
+            "pm_dir_url": "https:\/\/www.tunisia-rent-car.tn\/wp-content\/plugins\/popup-maker\/",
+            "ajaxurl": "https:\/\/www.tunisia-rent-car.tn\/wp-admin\/admin-ajax.php",
+            "restapi": "https:\/\/www.tunisia-rent-car.tn\/wp-json\/pum\/v1",
+            "rest_nonce": null,
+            "default_theme": "172",
+            "debug_mode": "",
+            "disable_tracking": "",
+            "home_url": "\/",
+            "message_position": "top",
+            "core_sub_forms_enabled": "1",
+            "popups": [],
+            "analytics_route": "analytics",
+            "analytics_api": "https:\/\/www.tunisia-rent-car.tn\/wp-json\/pum\/v1"
+        };
+        var pum_sub_vars = {
+            "ajaxurl": "https:\/\/www.tunisia-rent-car.tn\/wp-admin\/admin-ajax.php",
+            "message_position": "top"
+        };
+        var pum_popups = {
+            "pum-180": {
+                "triggers": [],
+                "cookies": [],
+                "disable_on_mobile": false,
+                "disable_on_tablet": false,
+                "atc_promotion": null,
+                "explain": null,
+                "type_section": null,
+                "theme_id": "172",
+                "size": "medium",
+                "responsive_min_width": "0%",
+                "responsive_max_width": "100%",
+                "custom_width": "640px",
+                "custom_height_auto": false,
+                "custom_height": "380px",
+                "scrollable_content": false,
+                "animation_type": "fade",
+                "animation_speed": "350",
+                "animation_origin": "center top",
+                "open_sound": "none",
+                "custom_sound": "",
+                "location": "center top",
+                "position_top": "100",
+                "position_bottom": "0",
+                "position_left": "0",
+                "position_right": "0",
+                "position_from_trigger": false,
+                "position_fixed": false,
+                "overlay_disabled": false,
+                "stackable": false,
+                "disable_reposition": false,
+                "zindex": "1999999999",
+                "close_button_delay": "0",
+                "fi_promotion": null,
+                "close_on_form_submission": false,
+                "close_on_form_submission_delay": 0,
+                "close_on_overlay_click": false,
+                "close_on_esc_press": false,
+                "close_on_f4_press": false,
+                "disable_form_reopen": false,
+                "disable_accessibility": false,
+                "theme_slug": "theme-par-defaut",
+                "id": 180,
+                "slug": "reservation"
+            }
+        };
+    </script>
+    <script src=wp-content/cache/minify/13d7d.js></script>
+    <script>
+        var popup_enabled_form = ["8"];
+        var appendthis = ("<div class='modal-overlay js-modal-close'></div>");
+        var popHtml = '<div id=pfcf-popup style="width:auto; height: auto; background: #fff url() no-repeat right top; background-size:cover; color: #000000 !important;" class=modal-box><a href=# class="js-modal-close close">×</a><div class=modal-body><span style=color:#000000>Form has been submitted successfully.</span></div></div>';
+        jQuery("body").append(popHtml);
+        jQuery(".wpcf7-submit").click(function(event) {
+            var this_id = jQuery(this).closest('form').find('input[name=_wpcf7]').val();
+            var need_popup = jQuery.inArray(this_id, popup_enabled_form);
+            if (jQuery.inArray(this_id, popup_enabled_form) > -1) {
+                jQuery(document).ajaxComplete(function(event, xhr, settings) {
+                    var data = xhr.responseText;
+                    var jsonResponse = JSON.parse(data);
+                    if (jsonResponse["status"] === 'mail_sent') {
+                        event.preventDefault();
+                        jQuery("body").append(appendthis);
+                        jQuery(".modal-overlay").fadeTo(500, 0.7);
+                        jQuery('#pfcf-popup').fadeIn("pfcf-popup");
+                        jQuery(".wpcf7-response-output").css("display", "none");
+                        setTimeout(function() {
+                            jQuery(".js-modal-close").trigger("click");
+                        }, 100000000000);
+                    }
+                });
+            }
+        });
+    </script>
+    <div id=cookie-notice role=banner class="cn-bottom bootstrap" style="color: #fff; background-color: #000;">
+        <div class=cookie-notice-container><span id=cn-notice-text>Nous utilisons des cookies pour vous garantir la meilleure expérience sur notre site web. Si vous continuez à utiliser ce site, nous supposerons que vous en êtes satisfait.</span><a href=# id=cn-accept-cookie data-cookie-set=accept
+                class="cn-set-cookie cn-button bootstrap button">Ok</a></div>
+    </div>
+    <script src=wp-content/cache/minify/49935.js></script>
 </body>
+
 </html>
