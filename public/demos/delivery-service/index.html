@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swift Delivery — Order Tracking Demo</title>
+<meta name="description" content="Demo of a delivery service website with a quote calculator and live order tracking UI.">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b1220;--card:#121c30;--line:#1f2b45;--acc:#ffc233;--acc2:#2ee6a6;--text:#e8edf7;--muted:#8a97b3}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+.demo-bar{background:#050913;color:#9fb0d0;font-size:13px;padding:8px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.demo-bar a{color:var(--acc);text-decoration:none}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 6vw;border-bottom:1px solid var(--line)}
+.logo{font-weight:800;font-size:22px}.logo i{display:inline-block;width:12px;height:12px;background:var(--acc);border-radius:3px;margin-right:8px;transform:rotate(45deg)}
+nav ul{display:flex;gap:24px;list-style:none}nav a{color:var(--text);text-decoration:none;font-weight:600;font-size:15px}
+.hero{padding:70px 6vw 50px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+h1{font-size:clamp(38px,5.5vw,70px);line-height:1.02;font-weight:800}h1 span{color:var(--acc)}
+.hero p{color:var(--muted);font-size:18px;margin:20px 0 28px;max-width:520px}
+.stats{display:flex;gap:30px;flex-wrap:wrap}.stats b{font-size:28px;display:block}.stats small{color:var(--muted)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
+.panel h3{font-size:18px;margin-bottom:16px}
+label{font-size:13px;color:var(--muted);display:block;margin:12px 0 6px}
+input,select{width:100%;padding:13px 14px;border-radius:10px;border:1px solid var(--line);background:#0e1627;color:var(--text);font:15px Manrope}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btn{margin-top:18px;width:100%;padding:15px;border:0;border-radius:12px;background:var(--acc);color:#1a1200;font:800 15px Manrope;cursor:pointer}
+.price{margin-top:18px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed var(--line);padding-top:16px}
+.price b{font-size:34px;color:var(--acc2)}
+section{padding:60px 6vw}
+h2{font-size:clamp(26px,3.5vw,40px);margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}.svc .ic{font-size:30px}.svc h3{margin:12px 0 6px}.svc p{color:var(--muted);font-size:14px}
+.track{display:grid;grid-template-columns:1fr 1.4fr;gap:28px;align-items:start}
+.steps{list-style:none;position:relative}
+.steps li{display:flex;gap:16px;padding:14px 0;opacity:.45;transition:.4s}
+.steps li.done,.steps li.now{opacity:1}
+.dot{width:30px;height:30px;border-radius:50%;background:#1a2540;border:2px solid var(--line);display:grid;place-items:center;flex-shrink:0;font-size:13px}
+.done .dot{background:var(--acc2);border-color:var(--acc2);color:#042}.now .dot{border-color:var(--acc);color:var(--acc);animation:pulse 1.2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(255,194,51,.15)}}
+.steps b{display:block}.steps small{color:var(--muted)}
+.map{background:#0e1627;border:1px solid var(--line);border-radius:16px;height:300px;position:relative;overflow:hidden;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:40px 40px}
+.route{position:absolute;inset:0}
+.truck{position:absolute;width:34px;height:34px;background:var(--acc);border-radius:8px;display:grid;place-items:center;font-size:18px;offset-path:path('M40 240 C 140 230, 160 90, 280 110 S 420 200, 560 70');offset-distance:0%;transition:offset-distance 1.2s ease}
+footer{padding:28px 6vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:860px){.hero,.track{grid-template-columns:1fr}nav ul{display:none}}
+</style>
+</head>
+<body>
+<div class="demo-bar"><span>Portfolio demo · Swift Delivery — concept site. Prices and tracking are simulated in your browser.</span><a href="/#projects">← Back to portfolio</a></div>
+<nav><div class="logo"><i></i>Swift</div><ul><li><a href="#services">Services</a></li><li><a href="#track">Track order</a></li><li><a href="#quote">Get a quote</a></li></ul></nav>
+<div class="hero">
+  <div><h1>Same-day delivery, <span>anywhere</span> in the city.</h1><p>Food, parcels and documents delivered by verified couriers in under 60 minutes. Transparent pricing, real-time tracking.</p>
+    <div class="stats"><div><b>45 min</b><small>Average delivery</small></div><div><b>12k+</b><small>Orders completed</small></div><div><b>4.9★</b><small>Customer rating</small></div></div></div>
+  <div class="panel" id="quote"><h3>Instant quote</h3>
+    <label>Pickup address</label><input id="from" placeholder="Avenue Habib Bourguiba, Tunis">
+    <label>Drop-off address</label><input id="to" placeholder="La Marsa">
+    <div class="row"><div><label>Distance (km)</label><input id="km" type="number" min="1" max="60" value="8"></div><div><label>Package size</label><select id="size"><option value="0">Small (docs)</option><option value="3">Medium (bag)</option><option value="7">Large (box)</option></select></div></div>
+    <label>Speed</label><select id="speed"><option value="1">Standard · 60 min</option><option value="1.5">Express · 30 min</option></select>
+    <div class="price"><span style="color:var(--muted)">Estimated price</span><b id="price">—</b></div>
+    <button class="btn" id="go">Calculate &amp; book</button>
+  </div>
+</div>
+<section id="services"><h2>What we deliver</h2><div class="grid">
+  <div class="svc"><div class="ic">🍔</div><h3>Food</h3><p>Hot meals from 300+ partner restaurants, insulated bags on every bike.</p></div>
+  <div class="svc"><div class="ic">📦</div><h3>Parcels</h3><p>E-commerce orders and personal shipments up to 20 kg with proof of delivery.</p></div>
+  <div class="svc"><div class="ic">📄</div><h3>Documents</h3><p>Contracts and legal papers, signed handover and photo confirmation.</p></div>
+  <div class="svc"><div class="ic">🛒</div><h3>Groceries</h3><p>Shop-and-drop from supermarkets with substitution approval by chat.</p></div>
+</div></section>
+<section id="track"><h2>Track your order <span style="color:var(--muted);font-size:16px;font-weight:400">— click "Calculate &amp; book" above to start a simulated delivery</span></h2>
+  <div class="track">
+    <ul class="steps" id="steps">
+      <li><div class="dot">1</div><div><b>Order confirmed</b><small>Courier assigned nearby</small></div></li>
+      <li><div class="dot">2</div><div><b>Picked up</b><small>Package collected from sender</small></div></li>
+      <li><div class="dot">3</div><div><b>On the way</b><small>Live route to drop-off</small></div></li>
+      <li><div class="dot">4</div><div><b>Delivered</b><small>Photo proof sent to your phone</small></div></li>
+    </ul>
+    <div class="map"><svg class="route" viewBox="0 0 600 300" preserveAspectRatio="none"><path d="M40 240 C 140 230, 160 90, 280 110 S 420 200, 560 70" fill="none" stroke="#2ee6a6" stroke-width="3" stroke-dasharray="8 8"/><circle cx="40" cy="240" r="8" fill="#ffc233"/><circle cx="560" cy="70" r="8" fill="#2ee6a6"/></svg><div class="truck" id="truck">🛵</div></div>
+  </div>
+</section>
+<footer><span>© Swift Delivery — concept demo</span><span>Designed &amp; built by Haythem Aljane</span></footer>
+<script>
+const $=s=>document.querySelector(s);
+function calc(){const km=+$('#km').value||0,size=+$('#size').value,sp=+$('#speed').value;const p=(4+km*0.9+size)*sp;$('#price').textContent=p.toFixed(2)+' TND';return p}
+['#km','#size','#speed'].forEach(s=>$(s).addEventListener('input',calc));calc();
+let timer;$('#go').onclick=()=>{calc();clearInterval(timer);const li=[...document.querySelectorAll('#steps li')];li.forEach(l=>l.className='');let i=0;const pos=[0,30,70,100];const tick=()=>{li.forEach((l,j)=>l.className=j<i?'done':j===i?'now':'');$('#truck').style.offsetDistance=pos[i]+'%';if(i===3){li[3].className='done';clearInterval(timer)}i++};tick();timer=setInterval(tick,1800);document.getElementById('track').scrollIntoView({behavior:'smooth'})};
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="t">
+  <title id="t">Graphic Design Portfolio</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#15121f"/><stop offset="1" stop-color="#2a1a3d"/></linearGradient>
+    <linearGradient id="p1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff4d6d"/><stop offset="1" stop-color="#ff9a3c"/></linearGradient>
+    <linearGradient id="p2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4dd4ff"/><stop offset="1" stop-color="#6a5cff"/></linearGradient>
+    <linearGradient id="p3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c8ff4d"/><stop offset="1" stop-color="#2bd98a"/></linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <text x="80" y="110" font-family="Arial,sans-serif" font-size="20" fill="#ff9a3c" letter-spacing="6">SELECTED WORK · 2021 — 2025</text>
+  <text x="80" y="190" font-family="Arial,sans-serif" font-size="66" font-weight="700" fill="#fff">Graphic Design</text>
+  <text x="80" y="262" font-family="Arial,sans-serif" font-size="66" font-weight="700" fill="#ff4d6d">Portfolio</text>
+  <text x="80" y="320" font-family="Arial,sans-serif" font-size="22" fill="#bfb3d6">Posters · Social campaigns · Event visuals · Motion-ready assets</text>
+  <g font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#fff">
+    <rect x="80" y="370" width="150" height="40" rx="20" fill="#fff" fill-opacity=".1"/><text x="107" y="396">Photoshop</text>
+    <rect x="245" y="370" width="150" height="40" rx="20" fill="#fff" fill-opacity=".1"/><text x="275" y="396">Illustrator</text>
+    <rect x="410" y="370" width="170" height="40" rx="20" fill="#fff" fill-opacity=".1"/><text x="442" y="396">After Effects</text>
+  </g>
+  <g transform="rotate(-8 900 360)">
+    <rect x="760" y="130" width="260" height="360" rx="18" fill="url(#p1)"/>
+    <text x="790" y="430" font-family="Arial,sans-serif" font-size="46" font-weight="900" fill="#fff" opacity=".9">EVENT</text>
+    <text x="790" y="470" font-family="Arial,sans-serif" font-size="20" fill="#fff" opacity=".8">NIGHT · VOL. 03</text>
+  </g>
+  <g transform="rotate(6 980 420)">
+    <rect x="880" y="220" width="240" height="330" rx="18" fill="url(#p2)"/>
+    <circle cx="1000" cy="330" r="60" fill="#fff" fill-opacity=".25"/>
+    <text x="905" y="500" font-family="Arial,sans-serif" font-size="40" font-weight="900" fill="#fff">CLUB</text>
+    <text x="905" y="530" font-family="Arial,sans-serif" font-size="18" fill="#fff" opacity=".85">RECRUITMENT 2024</text>
+  </g>
+  <rect x="640" y="400" width="180" height="180" rx="18" fill="url(#p3)"/>
+  <text x="662" y="505" font-family="Arial,sans-serif" font-size="56" font-weight="900" fill="#15121f">-30%</text>
+  <text x="80" y="640" font-family="Arial,sans-serif" font-size="16" fill="#8b7fa6">3+ years designing for student clubs, brands and digital campaigns</text>
+</svg>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Store — E-Commerce Storefront Demo</title>
+<meta name="description" content="Interactive storefront demo: product grid, filters, cart drawer and checkout summary, built with a component-style state/render loop.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fafafa;--ink:#141414;--line:#e6e6e6;--acc:#5b3df5;--muted:#777}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+.demo-bar{background:#141414;color:#bbb;font-size:13px;padding:8px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.demo-bar a{color:#c9b8ff;text-decoration:none}
+nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:16px 5vw}
+.logo{font-weight:700;font-size:22px}.logo b{color:var(--acc)}
+.cartbtn{position:relative;border:1px solid var(--line);background:#fff;padding:10px 16px;border-radius:999px;cursor:pointer;font:500 14px 'DM Sans'}
+.cartbtn i{position:absolute;top:-8px;right:-8px;background:var(--acc);color:#fff;font-style:normal;font-size:11px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center}
+.hero{padding:50px 5vw 20px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px}
+h1{font-size:clamp(30px,4.5vw,52px);line-height:1.05}h1 span{color:var(--acc)}
+.hero p{color:var(--muted);margin-top:8px}
+.tools{padding:10px 5vw 20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.tools button{border:1px solid var(--line);background:#fff;padding:8px 16px;border-radius:999px;cursor:pointer;font:500 13px 'DM Sans'}
+.tools button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tools input,.tools select{padding:9px 14px;border-radius:999px;border:1px solid var(--line);font:14px 'DM Sans';background:#fff}
+.tools input{flex:1;min-width:160px}
+.grid{padding:0 5vw 70px;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+.p{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.p:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(0,0,0,.08)}
+.img{aspect-ratio:1;display:grid;place-items:center;font-size:64px}
+.pb{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pb small{color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-size:11px}
+.pb h3{font-size:16px;font-weight:600}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+.price{font-weight:700}.price s{color:var(--muted);font-weight:400;margin-left:6px;font-size:13px}
+.add{border:0;background:var(--acc);color:#fff;padding:9px 14px;border-radius:999px;cursor:pointer;font:600 13px 'DM Sans'}
+.add.done{background:#1cb56a}
+.stars{color:#f5a623;font-size:12px}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:.3s;z-index:30}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:#fff;transform:translateX(100%);transition:.35s;z-index:31;display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.1)}
+.open .overlay{opacity:1;pointer-events:auto}.open .drawer{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:20px;border-bottom:1px solid var(--line)}
+.dh button{border:0;background:none;font-size:22px;cursor:pointer}
+.items{flex:1;overflow:auto;padding:10px 20px}
+.it{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.it .img{width:60px;font-size:32px;background:#f3f1ff;border-radius:12px}
+.it .q{margin-left:auto;display:flex;align-items:center;gap:8px}
+.it .q button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer}
+.sum{padding:20px;border-top:1px solid var(--line);font-size:14px}
+.sum div{display:flex;justify-content:space-between;margin-bottom:6px}.sum .t{font-weight:700;font-size:18px;margin-top:8px}
+.co{width:100%;margin-top:14px;padding:15px;border:0;border-radius:12px;background:var(--acc);color:#fff;font:600 15px 'DM Sans';cursor:pointer}
+.empty{text-align:center;color:var(--muted);padding:60px 0}
+.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);background:#141414;color:#fff;padding:14px 20px;border-radius:12px;opacity:0;transition:.3s;z-index:40;font-size:14px}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+footer{padding:24px 5vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
+</head>
+<body>
+<div class="demo-bar"><span>Portfolio demo · Nova Store — concept storefront with a React-style state → render architecture (dependency-free build for this portfolio). No payments are processed; the cart is stored in your browser only.</span><a href="/#projects">← Back to portfolio</a></div>
+<div id="root"></div>
+<footer><span>Component state → render loop · localStorage · Responsive CSS Grid</span><span>Built by Haythem Aljane</span></footer>
+<script>
+const PRODUCTS=[{id:1,n:'Aurora Headphones',c:'audio',p:129,o:169,e:'🎧',r:5},{id:2,n:'Pulse Smartwatch',c:'wearables',p:199,e:'⌚',r:4},{id:3,n:'Drift Mechanical Keyboard',c:'desk',p:89,e:'⌨️',r:5},{id:4,n:'Orbit Wireless Mouse',c:'desk',p:39,o:49,e:'🖱️',r:4},{id:5,n:'Beam Portable Speaker',c:'audio',p:79,e:'🔊',r:4},{id:6,n:'Halo Fitness Band',c:'wearables',p:59,e:'📿',r:3},{id:7,n:'Lumen Desk Lamp',c:'desk',p:45,e:'💡',r:5},{id:8,n:'Echo Earbuds',c:'audio',p:69,o:89,e:'🎵',r:4},{id:9,n:'Nimbus Webcam 4K',c:'desk',p:109,e:'📷',r:4}];
+const CATS=['all','audio','wearables','desk'];
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let state={cart:(()=>{try{return JSON.parse(localStorage.getItem('nova-cart')||'[]')}catch(e){return[]}})(),open:false,cat:'all',q:'',sort:'pop',toast:'',added:null};
+let toastT;
+function set(patch){Object.assign(state,patch);try{localStorage.setItem('nova-cart',JSON.stringify(state.cart))}catch(e){}render()}
+function toast(msg){clearTimeout(toastT);set({toast:msg});toastT=setTimeout(()=>set({toast:''}),1800)}
+function add(id){const p=PRODUCTS.find(x=>x.id===id);const f=state.cart.find(i=>i.id===id);const cart=f?state.cart.map(i=>i.id===id?{...i,qty:i.qty+1}:i):[...state.cart,{...p,qty:1}];set({cart,added:id});setTimeout(()=>set({added:null}),900);toast(p.n+' added to cart')}
+function chg(id,d){set({cart:state.cart.map(i=>i.id===id?{...i,qty:i.qty+d}:i).filter(i=>i.qty>0)})}
+const root=document.getElementById('root');
+function render(){
+ const s=state;let list=PRODUCTS.filter(p=>(s.cat==='all'||p.c===s.cat)&&p.n.toLowerCase().includes(s.q.toLowerCase()));
+ if(s.sort==='lo')list.sort((a,b)=>a.p-b.p);if(s.sort==='hi')list.sort((a,b)=>b.p-a.p);
+ const count=s.cart.reduce((a,i)=>a+i.qty,0),sub=s.cart.reduce((a,i)=>a+i.qty*i.p,0),ship=sub>100||sub===0?0:7.9;
+ const focus=document.activeElement&&document.activeElement.id==='q';const selStart=focus?document.activeElement.selectionStart:0;
+ root.className=s.open?'open':'';
+ root.innerHTML=`
+  <nav><div class="logo">nova<b>.</b></div><button class="cartbtn" data-a="open">Cart${count?`<i>${count}</i>`:''}</button></nav>
+  <div class="hero"><div><h1>Tech that <span>feels good</span> to own.</h1><p>Curated audio, wearables and desk gear. Free shipping over $100.</p></div></div>
+  <div class="tools">${CATS.map(c=>`<button class="${s.cat===c?'on':''}" data-a="cat" data-v="${c}">${c[0].toUpperCase()+c.slice(1)}</button>`).join('')}<input id="q" placeholder="Search products…" value="${esc(s.q)}"><select id="sort"><option value="pop"${s.sort==='pop'?' selected':''}>Most popular</option><option value="lo"${s.sort==='lo'?' selected':''}>Price: low to high</option><option value="hi"${s.sort==='hi'?' selected':''}>Price: high to low</option></select></div>
+  <div class="grid">${list.length?list.map(p=>`<div class="p"><div class="img" style="background:${['#f3f1ff','#fff4e8','#e9f8f1'][p.id%3]}">${p.e}</div><div class="pb"><small>${p.c}</small><h3>${esc(p.n)}</h3><div class="stars">${'★'.repeat(p.r)}${'☆'.repeat(5-p.r)}</div><div class="row"><span class="price">$${p.p}${p.o?`<s>$${p.o}</s>`:''}</span><button class="add${s.added===p.id?' done':''}" data-a="add" data-v="${p.id}">${s.added===p.id?'Added ✓':'Add'}</button></div></div></div>`).join(''):'<p class="empty">No products match your search.</p>'}</div>
+  <div class="overlay" data-a="close"></div>
+  <aside class="drawer"><div class="dh"><strong>Your cart (${count})</strong><button data-a="close">×</button></div>
+   <div class="items">${s.cart.length?s.cart.map(i=>`<div class="it"><div class="img">${i.e}</div><div><div>${esc(i.n)}</div><small style="color:#777">$${i.p}</small></div><div class="q"><button data-a="dec" data-v="${i.id}">−</button>${i.qty}<button data-a="inc" data-v="${i.id}">+</button></div></div>`).join(''):'<p class="empty">Your cart is empty.</p>'}</div>
+   <div class="sum"><div><span>Subtotal</span><span>$${sub.toFixed(2)}</span></div><div><span>Shipping</span><span>${ship?'$'+ship.toFixed(2):'Free'}</span></div><div class="t"><span>Total</span><span>$${(sub+ship).toFixed(2)}</span></div><button class="co" data-a="checkout" ${s.cart.length?'':'disabled'}>Checkout</button></div></aside>
+  <div class="toast${s.toast?' on':''}">${esc(s.toast)}</div>`;
+ if(focus){const q=document.getElementById('q');q.focus();q.setSelectionRange(selStart,selStart)}
+}
+root.addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(!b)return;const v=b.dataset.v;({open:()=>set({open:true}),close:()=>set({open:false}),cat:()=>set({cat:v}),add:()=>add(+v),inc:()=>chg(+v,1),dec:()=>chg(+v,-1),checkout:()=>toast('Demo only — checkout is not connected to a payment provider.')})[b.dataset.a]()});
+root.addEventListener('input',e=>{if(e.target.id==='q')set({q:e.target.value});if(e.target.id==='sort')set({sort:e.target.value})});
+render();
+</script>
+</body>
+</html>

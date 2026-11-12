@@ -16,9 +16,15 @@ if ! php -r '$key = getenv("APP_KEY"); if (strncmp($key, "base64:", 7) === 0) { 
     export APP_KEY="base64:$(php -r 'echo base64_encode(random_bytes(32));')"
 fi
 
+# Prefer a managed Postgres database when Render provides DATABASE_URL
+# (see render.yaml). Data then survives redeploys and restarts.
+if [ -n "${DATABASE_URL:-}" ] && [ "${DB_CONNECTION:-}" != "mysql" ]; then
+    export DB_CONNECTION=pgsql
+fi
+
 # Keep the free Render demo usable even if the old placeholder MySQL
 # variables are still present in the service environment.
-if [ "${DB_HOST:-}" = "your-database-host" ]; then
+if [ "${DB_HOST:-}" = "your-database-host" ] && [ -z "${DATABASE_URL:-}" ]; then
     export DB_CONNECTION=sqlite
     export DB_DATABASE=/app/database/database.sqlite
 fi

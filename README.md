@@ -21,41 +21,29 @@ A professional portfolio website built with **HTML, CSS, JavaScript, PHP, MySQL,
 
 ## 📋 Setup Instructions
 
-### Database Setup
-- Database: `portfolio`
-- Username: `root`
-- Password: (empty)
-- Host: `127.0.0.1`
-
-### Installation
+### Local development
 
 ```bash
-# 1. Clone and navigate
-cd C:\laragon\www\Portfolio
-
-# 2. Install dependencies
 composer install
-npm install
-
-# 3. Setup database
-php artisan migrate
-php artisan db:seed
-
-# 4. Build assets
-npm run dev
-
-# 5. Start server
-php artisan serve
+cp .env.example .env
+php artisan key:generate
+# SQLite is the simplest local database:
+#   set DB_CONNECTION=sqlite and DB_DATABASE=<absolute path>/database/database.sqlite in .env
+touch database/database.sqlite
+php artisan migrate --seed
+php artisan serve        # http://localhost:8000
 ```
 
-Visit: `http://localhost:8000`
+Admin panel: `http://localhost:8000/login`. The admin account is created by the seeder from
+`ADMIN_EMAIL` / `ADMIN_PASSWORD` in `.env` (if `ADMIN_PASSWORD` is unset, a random password is
+printed once in the seed output). Never commit real credentials.
 
-## 📞 Contact
+### Production
 
-**Email:** aljanehaythem23@gmail.com  
-**Phone:** +216 20832737  
-**Location:** Tataouine, Tunisia  
+Deployment on Render with a custom domain is documented in [HOSTING.md](HOSTING.md).
+A template of the required environment variables is in `.env.production.example`.
 
-## 📄 License
+## 🗂 Project demos
 
-Licensed under the MIT license.
+Interactive demos for projects without a public live site live in `public/demos/*` and are
+linked from each project card. They run entirely in the browser (no backend, no payments).
