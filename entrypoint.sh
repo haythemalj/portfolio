@@ -6,7 +6,9 @@ PORT=${PORT:-8000}
 # Send container errors to Render's log stream instead of the ephemeral
 # application log file.
 export LOG_CHANNEL=stderr
-if [ -n "${RENDER_EXTERNAL_URL:-}" ]; then
+# Use the Render URL only when APP_URL is not set, so a custom domain
+# configured through APP_URL is respected.
+if [ -z "${APP_URL:-}" ] && [ -n "${RENDER_EXTERNAL_URL:-}" ]; then
     export APP_URL="$RENDER_EXTERNAL_URL"
 fi
 

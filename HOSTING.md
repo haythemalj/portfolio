@@ -6,7 +6,7 @@ to your own domain with HTTPS, and keeping data persistent.
 
 ## 1. Buy a domain (≈ $10–15 / year)
 
-Suggested names: `haythemaljane.com`, `haythem.dev`, `aljane.dev`.
+Suggested names: `haythemdev.site`, `haythem.dev`, `aljane.dev`.
 Registrars: Cloudflare Registrar (cheapest renewals), Porkbun, Namecheap.
 For a `.tn` domain use a local Tunisian registrar.
 
@@ -37,7 +37,7 @@ For a `.tn` domain use a local Tunisian registrar.
 ## 3. Connect the domain
 
 1. Web service → **Settings → Custom Domains → Add**: add both
-   `haythemaljane.com` and `www.haythemaljane.com`.
+   `haythemdev.site` and `www.haythemdev.site`.
 2. Render shows the DNS records. At your registrar add:
 
    | Type | Name | Value |
@@ -47,7 +47,7 @@ For a `.tn` domain use a local Tunisian registrar.
 
 3. Wait for the status to turn **Verified** (minutes to ~1 hour).
    Render issues the HTTPS certificate automatically.
-4. Set `APP_URL=https://haythemaljane.com` in the service environment
+4. Set `APP_URL=https://haythemdev.site` in the service environment
    (the entrypoint otherwise uses `RENDER_EXTERNAL_URL`).
 
 ## 4. Free-tier limitations and fixes
