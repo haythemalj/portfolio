@@ -406,6 +406,16 @@ h2.section-title span{color:var(--red)}
 .lead-desc{font-size:.81rem;color:var(--muted);line-height:1.7}
 
 /* ===== CONTACT ===== */
+.hire{margin:26px 0 30px;padding:22px;background:var(--card);border:1px solid var(--border);border-radius:10px}
+.hire-head{display:flex;align-items:center;gap:10px;margin-bottom:6px;font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.04em}
+.hire-head .dot{width:9px;height:9px;border-radius:50%;background:#2ecc71;box-shadow:0 0 0 4px rgba(46,204,113,.18)}
+.hire p{color:var(--muted);font-size:.86rem;margin-bottom:16px}
+.hire-links{display:flex;flex-wrap:wrap;gap:10px}
+.hire-link{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;border-radius:6px;background:var(--card2);border:1px solid rgba(255,255,255,.08);color:var(--white);font-size:.84rem;font-weight:500;transition:.25s}
+.hire-link i{color:var(--red);font-size:1rem}
+.hire-link:hover{border-color:var(--red);transform:translateY(-2px);box-shadow:0 10px 24px rgba(229,0,0,.18)}
+.hire-link.primary{background:linear-gradient(135deg,var(--red),#ff2d2d);border-color:transparent}
+.hire-link.primary i{color:var(--white)}
 .contact{background:var(--black)}
 .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px}
 .contact-intro{font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:36px}
@@ -592,7 +602,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
       <div class="hero-typed-wrap">I am a <span id="typed-text"></span><span class="cursor-blink">|</span></div>
       <p class="hero-desc">Web UI/UX Designer and E-commerce Developer based in Tunis, Tunisia. I combine interface design, web development, and marketing skills to create useful digital experiences.</p>
       <div class="hero-btns">
-        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i>Get in Touch</a>
+        <a href="#hire" class="btn btn-primary"><i class="fas fa-paper-plane"></i>Hire Me</a>
         <a href="/CV_Haythem_Aljane.pdf" download class="btn btn-outline"><i class="fas fa-download"></i>Download CV</a>
       </div>
       <div class="hero-stats">
@@ -772,6 +782,18 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   <div class="contact-grid">
     <div class="reveal">
       <p class="contact-intro">Open to opportunities in web UI/UX design, e-commerce development, and digital projects. Let’s create useful experiences together.</p>
+      @php $hireLinks = array_values(array_filter(config('portfolio.freelance', []), fn ($l) => !empty($l['url']))); @endphp
+      @if(count($hireLinks))
+      <div class="hire" id="hire">
+        <div class="hire-head"><span class="dot"></span>Available for freelance work</div>
+        <p>Web UI/UX design, WordPress and e-commerce development. Hire me through a platform with payment protection, or message me directly below.</p>
+        <div class="hire-links">
+          @foreach($hireLinks as $i => $link)
+            <a href="{{ $link['url'] }}" class="hire-link {{ $i === 0 ? 'primary' : '' }}" target="_blank" rel="noopener"><i class="{{ $link['icon'] }}"></i>{{ $i === 0 ? 'Hire me on ' : '' }}{{ $link['label'] }}</a>
+          @endforeach
+        </div>
+      </div>
+      @endif
       <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-phone"></i></div><div><div class="contact-item-label">Phone / WhatsApp</div><div class="contact-item-value"><a href="https://wa.me/21620832439" style="color:inherit">+216 20 832 439</a></div></div></div>
       <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-envelope"></i></div><div><div class="contact-item-label">Email</div><div class="contact-item-value"><a href="mailto:haythemaljane1@outlook.fr" style="color:inherit">haythemaljane1@outlook.fr</a></div></div></div>
       <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-location-dot"></i></div><div><div class="contact-item-label">Location</div><div class="contact-item-value">El Omrane Supérieur, Tunis, Tunisia</div></div></div>
@@ -781,6 +803,9 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
         <a href="https://www.instagram.com/haythem_alj" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/aljane-haythem-077713193/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://wa.me/21620832439" class="social-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+        @foreach($hireLinks as $link)
+        <a href="{{ $link['url'] }}" class="social-link" target="_blank" rel="noopener" title="{{ $link['label'] }}"><i class="{{ $link['icon'] }}"></i></a>
+        @endforeach
       </div>
     </div>
     <div class="reveal">
