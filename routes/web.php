@@ -23,6 +23,15 @@ Route::get('/blog', function () {
     return redirect()->route('landing');
 })->name('blog.index');
 
+// Visinova promo video. Served through Laravel (not as a static file) so the
+// response supports HTTP range requests, which Safari and iOS require for video.
+Route::get('/media/visinova-video', function () {
+    return response()->file(resource_path('media/visinova-video.mp4'), [
+        'Content-Type' => 'video/mp4',
+        'Cache-Control' => 'public, max-age=604800',
+    ]);
+})->name('media.visinova-video');
+
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
 Route::redirect('/about', '/#about');
