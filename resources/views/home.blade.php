@@ -6,6 +6,14 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="description" content="Haythem Aljane is a Web UI/UX Designer and E-commerce Developer based in Tunis, Tunisia. Explore selected web, design, and e-commerce work.">
 <title>Haythem Aljane | Web UI/UX Designer & E-commerce Developer</title>
+<link rel="canonical" href="{{ rtrim(config('app.url'), '/') }}/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Haythem Aljane">
+<meta property="og:title" content="Haythem Aljane | Web UI/UX Designer &amp; E-commerce Developer">
+<meta property="og:description" content="Web UI/UX Designer and E-commerce Developer based in Tunis, Tunisia. Explore selected web, design, and e-commerce work.">
+<meta property="og:url" content="{{ rtrim(config('app.url'), '/') }}/">
+<meta property="og:image" content="{{ rtrim(config('app.url'), '/') }}/images/profile.jpg">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
