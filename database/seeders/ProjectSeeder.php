@@ -56,9 +56,9 @@ class ProjectSeeder extends Seeder
                 'order' => 3,
             ],
             [
-                'title' => 'Makhlouf Car Rental Website',
-                'description' => 'Team project: contributed to the WordPress website of Makhlouf Rent Car, a car-rental agency in Monastir.',
-                'details' => 'Worked as part of a team on the agency website, which offers a booking request form, a vehicle catalogue by brand, pricing, airport transfer and chauffeur services, and a blog. My contribution covered assigned tasks on the WordPress site rather than the whole build. The link opens the live site.',
+                'title' => 'Makhlouf Rent Car Website Maintenance',
+                'description' => 'Maintenance and updates on the existing WordPress website of Makhlouf Rent Car, a car-rental agency in Monastir.',
+                'details' => 'The site was already built when I took it over. My work was fixing issues and making content and layout modifications on the WordPress site, which offers a booking request form, a vehicle catalogue by brand, pricing, airport transfer and chauffeur services, and a blog. The link opens the live site.',
                 'image' => '/images/projects/makhlouf-home.png',
                 'url' => 'https://www.tunisia-rent-car.tn/',
                 'github_url' => null,
@@ -93,8 +93,8 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'title' => 'MBS Recruitment & HR Website',
-                'description' => 'Team project: contributed to the corporate website of a recruitment and HR services company serving Egypt and the GCC region.',
-                'details' => 'Worked as part of a team on assigned tasks for this site, a WordPress platform for Multi Business Services, a licensed recruitment firm established in 2007. It presents talent acquisition, visa processing, workspace solutions, and outsourcing services for petroleum, construction, healthcare, technology, and retail clients.',
+                'description' => 'Corporate WordPress website for a recruitment and HR services company serving Egypt and the GCC region, built solo.',
+                'details' => 'I built this site on my own in WordPress for Multi Business Services, a licensed recruitment firm established in 2007. It presents talent acquisition, visa processing, workspace solutions, and outsourcing services for petroleum, construction, healthcare, technology, and retail clients.',
                 'image' => '/images/projects/mbs-recruitment.svg',
                 'url' => 'https://mbs.com.eg/',
                 'github_url' => null,
