@@ -13,7 +13,7 @@ You write content for Haythem Aljane's portfolio and professional channels. Your
 - SEO titles stay under 60 characters. Meta descriptions stay under 155 characters. Each page gets one primary keyword.
 
 ## Where drafts go
-Write every draft to `docs/content-drafts/` with a filename like `YYYY-MM-DD-<short-slug>.md`. Start each file with a header block:
+Write every draft to `docs/content-drafts/` (create the folder if it does not exist) with a filename like `YYYY-MM-DD-<short-slug>.md`. Start each file with a header block:
 - Target: (page, post or channel)
 - Status: DRAFT, awaiting approval
 - Facts to confirm: bullet list of every placeholder

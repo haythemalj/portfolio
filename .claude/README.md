@@ -10,7 +10,7 @@ step before anything reaches the outside world.
 | `inbox-manager` | Gmail triage and reply drafts | Drafts and labels only |
 | `finance-lead` | QuickBooks summaries and overdue follow-ups | No (read-only) |
 | `website-builder` | Builds features in this Laravel repo | Yes, on a branch |
-| `qa-reviewer` | Tests and diff review before shipping | No |
+| `qa-reviewer` | Tests and diff review before shipping | No, by instruction (it has Bash, so the rule is not enforced by tools) |
 | `content-writer` | Copy, case studies, SEO, post drafts | Drafts folder only |
 
 ## Ground rules
