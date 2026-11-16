@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="google-site-verification" content="7rU4mvL7O9VyGljf8gxO3VGD92mVBhu-vEwdT6fckGE" />
-@php($siteUrl = rtrim(config('app.url'), '/'))
+@php $siteUrl = rtrim(config('app.url'), '/'); @endphp
 <meta name="description" content="Haythem Aljane is a Web UI/UX Designer and E-commerce Developer in Tunis, Tunisia. Websites, online stores, WordPress, UI/UX design and AI projects for clients.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Haythem Aljane">
