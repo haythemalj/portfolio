@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title">
+  <title id="title">AI Operations Desk: a control desk for a team of AI agents</title>
+  <rect width="1200" height="700" fill="#0f1720"/>
+  <rect x="0" y="0" width="230" height="700" fill="#141f2b"/>
+  <text x="34" y="66" fill="#e8eef5" font-family="Arial,sans-serif" font-size="28" font-weight="700">Agent Desk</text>
+  <rect x="22" y="104" width="186" height="44" rx="8" fill="#1f3a52"/>
+  <text x="42" y="133" fill="#7cc4ff" font-family="Arial,sans-serif" font-size="18" font-weight="700">Desk</text>
+  <text x="42" y="188" fill="#8a9bb0" font-family="Arial,sans-serif" font-size="18">Agents</text>
+  <text x="42" y="232" fill="#8a9bb0" font-family="Arial,sans-serif" font-size="18">Meetings</text>
+  <text x="42" y="276" fill="#8a9bb0" font-family="Arial,sans-serif" font-size="18">Activity</text>
+  <text x="42" y="320" fill="#8a9bb0" font-family="Arial,sans-serif" font-size="18">Settings</text>
+
+  <text x="270" y="72" fill="#e8eef5" font-family="Arial,sans-serif" font-size="30" font-weight="700">Good morning. 4 agents on duty.</text>
+  <text x="270" y="106" fill="#8a9bb0" font-family="Arial,sans-serif" font-size="18">Nothing leaves the business without your yes.</text>
+
+  <g font-family="Arial,sans-serif">
+    <rect x="270" y="140" width="210" height="150" rx="12" fill="#18263a"/>
+    <circle cx="300" cy="175" r="9" fill="#4ade80"/>
+    <text x="320" y="182" fill="#e8eef5" font-size="18" font-weight="700">Chief of staff</text>
+    <text x="294" y="225" fill="#8a9bb0" font-size="15">Daily briefing</text>
+    <text x="294" y="252" fill="#8a9bb0" font-size="15">and approvals</text>
+
+    <rect x="500" y="140" width="210" height="150" rx="12" fill="#18263a"/>
+    <circle cx="530" cy="175" r="9" fill="#4ade80"/>
+    <text x="550" y="182" fill="#e8eef5" font-size="18" font-weight="700">Inbox manager</text>
+    <text x="524" y="225" fill="#8a9bb0" font-size="15">Triage and drafts.</text>
+    <text x="524" y="252" fill="#8a9bb0" font-size="15">Never sends.</text>
+
+    <rect x="730" y="140" width="210" height="150" rx="12" fill="#18263a"/>
+    <circle cx="760" cy="175" r="9" fill="#4ade80"/>
+    <text x="780" y="182" fill="#e8eef5" font-size="18" font-weight="700">Finance lead</text>
+    <text x="754" y="225" fill="#8a9bb0" font-size="15">Profit and invoices.</text>
+    <text x="754" y="252" fill="#8a9bb0" font-size="15">Read-only.</text>
+
+    <rect x="960" y="140" width="210" height="150" rx="12" fill="#18263a"/>
+    <circle cx="990" cy="175" r="9" fill="#4ade80"/>
+    <text x="1010" y="182" fill="#e8eef5" font-size="18" font-weight="700">Site manager</text>
+    <text x="984" y="225" fill="#8a9bb0" font-size="15">Uptime, deploys</text>
+    <text x="984" y="252" fill="#8a9bb0" font-size="15">and pull requests.</text>
+
+    <rect x="270" y="320" width="900" height="340" rx="12" fill="#18263a"/>
+    <text x="300" y="362" fill="#e8eef5" font-size="20" font-weight="700">Activity</text>
+    <rect x="300" y="390" width="840" height="60" rx="8" fill="#1f2f45"/>
+    <text x="324" y="427" fill="#7cc4ff" font-size="16" font-weight="700">chief-of-staff</text>
+    <text x="470" y="427" fill="#c9d4e1" font-size="16">Briefing ready: 2 decisions, 1 draft waiting.</text>
+    <rect x="300" y="466" width="840" height="60" rx="8" fill="#1f2f45"/>
+    <text x="324" y="503" fill="#7cc4ff" font-size="16" font-weight="700">site-manager</text>
+    <text x="470" y="503" fill="#c9d4e1" font-size="16">Site up, latest deploy live.</text>
+    <rect x="300" y="542" width="840" height="60" rx="8" fill="#1f2f45"/>
+    <text x="324" y="579" fill="#fbbf24" font-size="16" font-weight="700">needs approval</text>
+    <text x="470" y="579" fill="#c9d4e1" font-size="16">Reply draft to a client is ready for your yes.</text>
+  </g>
+</svg>
