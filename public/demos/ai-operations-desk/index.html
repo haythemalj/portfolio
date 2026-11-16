@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f1720">
+  <title>AI Operations Desk | Demo</title>
+  <meta name="description" content="Interactive demo of a control desk for a team of AI agents. Sample data only.">
+  <style>
+    :root{--bg:#0f1720;--side:#141f2b;--card:#18263a;--card2:#1f2f45;--line:#2a3c55;--ink:#e8eef5;--muted:#8a9bb0;--blue:#7cc4ff;--green:#4ade80;--amber:#fbbf24;--red:#f87171}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+    button,input,select,textarea{font:inherit}
+    .app{min-height:100vh;display:grid;grid-template-columns:230px 1fr}
+    aside{background:var(--side);padding:24px 16px;border-right:1px solid var(--line)}
+    .logo{font-size:1.25rem;font-weight:800;margin:0 10px 26px}
+    .logo span{color:var(--blue)}
+    nav a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;color:var(--muted);text-decoration:none;margin-bottom:4px;cursor:pointer}
+    nav a.active,nav a:hover{background:#1f3a52;color:var(--blue);font-weight:700}
+    nav a b{margin-left:auto;font-size:.7rem;background:var(--amber);color:#1a1300;border-radius:99px;padding:1px 7px}
+    .rule{margin-top:26px;padding:14px;border-radius:10px;background:#1a2838;color:var(--muted);font-size:.78rem}
+    .rule strong{display:block;color:var(--ink);margin-bottom:4px}
+    main{padding:28px clamp(16px,4vw,56px);max-width:1200px;width:100%}
+    .banner{background:#1f3a52;border:1px solid #2c5373;color:#cfe7ff;border-radius:10px;padding:10px 14px;font-size:.8rem;margin-bottom:22px}
+    h1{font-size:clamp(1.5rem,3vw,2.1rem);margin:0 0 4px;letter-spacing:-.02em}
+    .sub{color:var(--muted);margin:0 0 22px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+    .stat{background:var(--card);border-radius:12px;padding:14px 16px}
+    .stat small{color:var(--muted)}
+    .stat strong{display:block;font-size:1.6rem}
+    h2{font-size:1rem;margin:26px 0 12px}
+    .agents{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+    .agent{background:var(--card);border-radius:12px;padding:14px;border:1px solid transparent}
+    .agent.off{opacity:.55}
+    .agent-head{display:flex;align-items:center;gap:8px;font-weight:700}
+    .dot{width:9px;height:9px;border-radius:50%;background:var(--green);flex:none}
+    .agent.off .dot{background:#5b6b80}
+    .agent.busy .dot{background:var(--amber);animation:pulse 1s infinite}
+    @keyframes pulse{50%{opacity:.3}}
+    .agent p{color:var(--muted);font-size:.8rem;margin:6px 0 10px;min-height:2.4em}
+    .agent .tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px}
+    .tag{font-size:.65rem;background:var(--card2);color:#c9d4e1;border-radius:99px;padding:2px 8px}
+    .row{display:flex;gap:8px;align-items:center}
+    .btn{border:0;border-radius:8px;background:var(--blue);color:#06233a;font-weight:700;padding:8px 12px;cursor:pointer}
+    .btn:hover{filter:brightness(1.1)}
+    .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+    .btn.green{background:var(--green);color:#052e16}
+    .btn.red{background:transparent;border:1px solid var(--red);color:var(--red)}
+    .btn:disabled{opacity:.4;cursor:not-allowed}
+    .quick{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+    form.ask{display:grid;grid-template-columns:180px 1fr auto;gap:8px;background:var(--card);padding:12px;border-radius:12px}
+    form.ask select,form.ask input{background:var(--card2);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:9px 10px}
+    .feed{display:grid;gap:8px}
+    .item{background:var(--card);border-radius:10px;padding:12px 14px;border-left:3px solid var(--blue)}
+    .item.need{border-left-color:var(--amber)}
+    .item.ok{border-left-color:var(--green)}
+    .item.no{border-left-color:var(--red)}
+    .meta{display:flex;gap:10px;font-size:.72rem;color:var(--muted);margin-bottom:4px}
+    .meta b{color:var(--blue)}
+    .item .actions{margin-top:10px}
+    .empty{color:var(--muted);font-size:.85rem;padding:14px;background:var(--card);border-radius:10px}
+    .page{display:none}.page.show{display:block}
+    footer{color:#5f7189;font-size:.72rem;margin-top:32px}
+    @media(max-width:860px){.app{grid-template-columns:1fr}aside{position:sticky;top:0;z-index:3;padding:8px 12px;display:flex;align-items:center;justify-content:space-between;gap:8px}.logo{margin:0;font-size:1rem}nav{display:flex;gap:2px}nav a{padding:8px;margin:0;font-size:.8rem}.rule{display:none}.stats{grid-template-columns:repeat(2,1fr)}form.ask{grid-template-columns:1fr}}
+    @media(max-width:420px){nav a span.lbl{display:none}}
+    @media(prefers-reduced-motion:reduce){.agent.busy .dot{animation:none}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <div class="logo">Agent<span>Desk</span></div>
+    <nav>
+      <a data-page="desk" class="active">▦ <span class="lbl">Desk</span></a>
+      <a data-page="agents">◎ <span class="lbl">Agents</span></a>
+      <a data-page="approvals">✓ <span class="lbl">Approvals</span> <b id="navNeed">0</b></a>
+      <a data-page="activity">≡ <span class="lbl">Activity</span></a>
+    </nav>
+    <div class="rule"><strong>Owner rule</strong>Agents read, summarise and draft. Anything that sends, publishes, deploys or moves money waits for your yes.</div>
+  </aside>
+
+  <main>
+    <div class="banner">Demo with sample data. No real email, accounts or money are connected. Your changes stay in this browser.</div>
+
+    <section class="page show" id="p-desk">
+      <h1>Good morning. <span id="onCount">0</span> agents on duty.</h1>
+      <p class="sub">Send a request to any agent. Results come back here; anything outward-facing goes to Approvals.</p>
+      <div class="stats">
+        <div class="stat"><small>Requests today</small><strong id="sReq">0</strong></div>
+        <div class="stat"><small>Done</small><strong id="sDone">0</strong></div>
+        <div class="stat"><small>Waiting for you</small><strong id="sNeed">0</strong></div>
+        <div class="stat"><small>Hours saved (est.)</small><strong id="sSaved">0</strong></div>
+      </div>
+      <h2>Quick requests</h2>
+      <div class="quick" id="quick"></div>
+      <form class="ask" id="askForm">
+        <select id="askAgent" aria-label="Agent"></select>
+        <input id="askText" maxlength="160" required placeholder="What should the agent do?" aria-label="Request">
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <h2>Latest results</h2>
+      <div class="feed" id="deskFeed"></div>
+    </section>
+
+    <section class="page" id="p-agents">
+      <h1>Agents</h1>
+      <p class="sub">Switch agents on or off. Paused agents keep their requests queued.</p>
+      <div class="agents" id="agentGrid"></div>
+    </section>
+
+    <section class="page" id="p-approvals">
+      <h1>Approvals</h1>
+      <p class="sub">Nothing below happens until you approve it.</p>
+      <div class="feed" id="approvalFeed"></div>
+    </section>
+
+    <section class="page" id="p-activity">
+      <h1>Activity</h1>
+      <p class="sub">Everything the team did, newest first.</p>
+      <div class="row" style="margin-bottom:12px"><button class="btn ghost" id="reset" type="button">Reset demo</button></div>
+      <div class="feed" id="activityFeed"></div>
+    </section>
+
+    <footer>AI Operations Desk · portfolio demo by Haythem Aljane. The real desk runs on Claude Code agents with Gmail, QuickBooks, GitHub and Render connectors.</footer>
+  </main>
+</div>
+
+<script>
+(function(){
+  var AGENTS=[
+    {id:"chief-of-staff",name:"Chief of staff",skill:"Daily briefing, routing and approvals.",tags:["Gmail","Calendar"],on:true},
+    {id:"inbox-manager",name:"Inbox manager",skill:"Triage and reply drafts. Never sends.",tags:["Gmail"],on:true},
+    {id:"finance-lead",name:"Finance lead",skill:"Profit, cash and overdue invoices. Read-only.",tags:["QuickBooks"],on:true},
+    {id:"site-manager",name:"Site manager",skill:"Uptime, deploys and pull requests.",tags:["Website","GitHub","Render"],on:true},
+    {id:"website-builder",name:"Website builder",skill:"Site changes on a branch.",tags:["GitHub"],on:false},
+    {id:"content-writer",name:"Content writer",skill:"Posts, case studies and SEO drafts.",tags:["Drive"],on:false}
+  ];
+  var QUICK=[
+    ["Brief me for today","chief-of-staff","Brief me for today."],
+    ["Check my inbox","inbox-manager","Triage unread email, urgent first."],
+    ["Money snapshot","finance-lead","Cash, overdue invoices and biggest costs."],
+    ["Check my site","site-manager","Is the site up? Latest deploy and open PRs."]
+  ];
+  // Canned sample answers. need=true means it is outward-facing and waits for approval.
+  var ANSWERS={
+    "chief-of-staff":[{t:"Briefing: 2 decisions today (client quote, new hosting plan), 1 reply draft waiting, site healthy, cash steady.",need:false}],
+    "inbox-manager":[
+      {t:"12 unread sorted: 2 urgent, 4 to reply, 6 newsletters. Drafted a reply to the client asking for a quote.",need:false},
+      {t:"Reply draft ready to Sample Client Co: \"Thanks for your message, the quote is attached and valid for 30 days.\" Send it?",need:true}],
+    "finance-lead":[
+      {t:"Cash on hand 4,250 (sample). 2 invoices overdue, total 1,180. Biggest cost this month: hosting.",need:false},
+      {t:"Reminder email drafted for overdue invoice #1042 (sample). Send it?",need:true}],
+    "site-manager":[
+      {t:"Site up (200, 0.7s). Latest deploy live. No broken pages found. 0 open pull requests.",need:false},
+      {t:"Small fix ready on a branch: compress hero image (-180 KB). Merge and deploy?",need:true}],
+    "website-builder":[{t:"Contact form validation added on branch feature/contact. Open a pull request?",need:true}],
+    "content-writer":[{t:"Draft post: \"How I run a one-person company with AI agents\" (420 words). Publish to LinkedIn?",need:true}]
+  };
+  var KEY="aiopsdesk-demo-v1";
+  var state=load()||fresh();
+
+  function fresh(){
+    var now=Date.now();
+    return {agents:AGENTS.map(function(a){return {id:a.id,on:a.on};}),items:[
+      {id:"s1",agent:"site-manager",q:"Check my site",t:"Site up (200, 0.7s). Latest deploy live.",status:"done",at:now-3600e3},
+      {id:"s2",agent:"inbox-manager",q:"Draft reply to quote request",t:"Reply draft ready to Sample Client Co. Send it?",status:"need",at:now-1800e3},
+      {id:"s3",agent:"chief-of-staff",q:"Brief me for today",t:"2 decisions, 1 draft waiting, finance steady.",status:"done",at:now-900e3}
+    ],n:0};
+  }
+  function load(){try{var s=localStorage.getItem(KEY);return s?JSON.parse(s):null;}catch(e){return null;}}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+  function $(id){return document.getElementById(id);}
+  function el(tag,cls,text){var n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;}
+  function info(id){for(var i=0;i<AGENTS.length;i++)if(AGENTS[i].id===id)return AGENTS[i];}
+  function isOn(id){for(var i=0;i<state.agents.length;i++)if(state.agents[i].id===id)return state.agents[i].on;return false;}
+  function time(ms){return new Date(ms).toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});}
+  var busy={};
+
+  function itemNode(it,withActions){
+    var cls={need:"need",approved:"ok",declined:"no",done:"ok",queued:"",working:""}[it.status]||"";
+    var n=el("div","item "+cls);
+    var m=el("div","meta");var b=el("b",null,info(it.agent).name);m.appendChild(b);
+    m.appendChild(el("span",null,time(it.at)));
+    var label={need:"needs your yes",approved:"approved",declined:"declined",done:"done",queued:"queued (agent paused)",working:"working…"}[it.status];
+    m.appendChild(el("span",null,label));
+    n.appendChild(m);
+    n.appendChild(el("div",null,"“"+it.q+"”"));
+    if(it.t)n.appendChild(el("div",null,"→ "+it.t));
+    if(withActions&&it.status==="need"){
+      var a=el("div","row actions");
+      var y=el("button","btn green","Approve");y.type="button";
+      y.onclick=function(){it.status="approved";it.t+=" (Demo: approved. In the real desk this would now be sent.)";save();render();};
+      var no=el("button","btn red","Decline");no.type="button";
+      no.onclick=function(){it.status="declined";save();render();};
+      a.appendChild(y);a.appendChild(no);n.appendChild(a);
+    }
+    return n;
+  }
+
+  function render(){
+    var on=state.agents.filter(function(a){return a.on;}).length;
+    $("onCount").textContent=on;
+    var items=state.items.slice().sort(function(a,b){return b.at-a.at;});
+    var need=items.filter(function(i){return i.status==="need";});
+    var done=items.filter(function(i){return i.status==="done"||i.status==="approved";});
+    $("sReq").textContent=items.length;$("sDone").textContent=done.length;
+    $("sNeed").textContent=need.length;$("navNeed").textContent=need.length;
+    $("sSaved").textContent=(done.length*0.4).toFixed(1);
+
+    var df=$("deskFeed");df.textContent="";
+    items.slice(0,5).forEach(function(i){df.appendChild(itemNode(i,true));});
+
+    var af=$("approvalFeed");af.textContent="";
+    if(!need.length)af.appendChild(el("div","empty","Nothing waiting. Agents only bring you things that leave the business."));
+    need.forEach(function(i){af.appendChild(itemNode(i,true));});
+
+    var act=$("activityFeed");act.textContent="";
+    items.forEach(function(i){act.appendChild(itemNode(i,false));});
+
+    var g=$("agentGrid");g.textContent="";
+    AGENTS.forEach(function(a){
+      var c=el("div","agent"+(isOn(a.id)?"":" off")+(busy[a.id]?" busy":""));
+      var h=el("div","agent-head");h.appendChild(el("span","dot"));h.appendChild(el("span",null,a.name));c.appendChild(h);
+      c.appendChild(el("p",null,a.skill));
+      var t=el("div","tags");a.tags.forEach(function(x){t.appendChild(el("span","tag",x));});c.appendChild(t);
+      var b=el("button","btn ghost",isOn(a.id)?"Pause":"Turn on");b.type="button";
+      b.onclick=function(){state.agents.forEach(function(s){if(s.id===a.id)s.on=!s.on;});
+        if(isOn(a.id))state.items.forEach(function(i){if(i.agent===a.id&&i.status==="queued")work(i);});
+        save();render();};
+      c.appendChild(b);g.appendChild(c);
+    });
+
+    var sel=$("askAgent");var cur=sel.value;sel.textContent="";
+    AGENTS.forEach(function(a){var o=el("option",null,a.name+(isOn(a.id)?"":" (paused)"));o.value=a.id;sel.appendChild(o);});
+    if(cur)sel.value=cur;
+  }
+
+  function work(it){
+    it.status="working";busy[it.agent]=true;render();
+    setTimeout(function(){
+      var list=ANSWERS[it.agent];var ans=list[state.n++%list.length];
+      it.t=ans.t;it.status=ans.need?"need":"done";it.at=Date.now();busy[it.agent]=false;save();render();
+    },900+Math.random()*900);
+  }
+
+  function send(agent,q){
+    var it={id:"r"+Date.now(),agent:agent,q:q,t:"",status:"queued",at:Date.now()};
+    state.items.push(it);
+    if(isOn(agent))work(it);else{save();render();}
+  }
+
+  QUICK.forEach(function(q){var b=el("button","btn ghost",q[0]);b.type="button";b.onclick=function(){send(q[1],q[2]);};$("quick").appendChild(b);});
+  $("askForm").addEventListener("submit",function(e){e.preventDefault();var t=$("askText").value.trim();if(!t)return;send($("askAgent").value,t);$("askText").value="";});
+  $("reset").onclick=function(){state=fresh();save();render();};
+  Array.prototype.forEach.call(document.querySelectorAll("nav a"),function(a){
+    a.addEventListener("click",function(){
+      Array.prototype.forEach.call(document.querySelectorAll("nav a"),function(x){x.classList.toggle("active",x===a);});
+      Array.prototype.forEach.call(document.querySelectorAll(".page"),function(p){p.classList.toggle("show",p.id==="p-"+a.dataset.page);});
+    });
+  });
+  render();
+})();
+</script>
+</body>
+</html>

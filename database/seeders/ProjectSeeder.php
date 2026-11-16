@@ -228,7 +228,7 @@ class ProjectSeeder extends Seeder
                 'description' => 'A one-person company run by a team of 24 AI agents, with a live control desk to assign work, follow results, and talk with each agent.',
                 'details' => 'Designed and built a control desk where requests go to specialised agents (email triage, finance summaries, website builds, QA review, content drafts), results come back in one place, and every action that leaves the business waits for the owner\'s approval. Includes a shared live database, a chat with each agent, meeting summaries, and a laptop app that shows the same data.',
                 'image' => '/images/projects/agent-desk.svg',
-                'url' => null,
+                'url' => '/demos/ai-operations-desk/',
                 'github_url' => 'https://github.com/haythemalj/portfolio/tree/master/.claude/agents',
                 'technologies' => ['Claude Code', 'AI Agents', 'Laravel', 'JavaScript', 'Gmail API', 'QuickBooks API'],
                 'category' => 'ai',
