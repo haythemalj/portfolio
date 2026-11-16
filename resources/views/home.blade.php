@@ -5,20 +5,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="google-site-verification" content="7rU4mvL7O9VyGljf8gxO3VGD92mVBhu-vEwdT6fckGE" />
-<meta name="description" content="Haythem Aljane is a Web UI/UX Designer and E-commerce Developer based in Tunis, Tunisia. Explore selected web, design, and e-commerce work.">
-<title>Haythem Aljane | Web UI/UX Designer & E-commerce Developer</title>
-<link rel="canonical" href="{{ rtrim(config('app.url'), '/') }}/">
+@php($siteUrl = rtrim(config('app.url'), '/'))
+<meta name="description" content="Haythem Aljane is a Web UI/UX Designer and E-commerce Developer in Tunis, Tunisia. Websites, online stores, WordPress, UI/UX design and AI projects for clients.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Haythem Aljane">
+<title>Haythem Aljane | Web UI/UX Designer & E-commerce Developer in Tunis</title>
+<link rel="canonical" href="{{ $siteUrl }}/">
+<link rel="icon" href="{{ $siteUrl }}/favicon.ico">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Haythem Aljane">
-<meta property="og:title" content="Haythem Aljane | Web UI/UX Designer &amp; E-commerce Developer">
-<meta property="og:description" content="Web UI/UX Designer and E-commerce Developer based in Tunis, Tunisia. Explore selected web, design, and e-commerce work.">
-<meta property="og:url" content="{{ rtrim(config('app.url'), '/') }}/">
-<meta property="og:image" content="{{ rtrim(config('app.url'), '/') }}/images/profile.jpg">
+<meta property="og:title" content="Haythem Aljane | Web UI/UX Designer &amp; E-commerce Developer in Tunis">
+<meta property="og:description" content="Web UI/UX Designer and E-commerce Developer in Tunis, Tunisia. Websites, online stores, WordPress, UI/UX design and AI projects.">
+<meta property="og:url" content="{{ $siteUrl }}/">
+<meta property="og:image" content="{{ $siteUrl }}/images/profile.jpg">
+<meta property="og:image:alt" content="Haythem Aljane, Web UI/UX Designer and E-commerce Developer">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Haythem Aljane | Web UI/UX Designer &amp; E-commerce Developer in Tunis">
+<meta name="twitter:description" content="Websites, online stores, WordPress, UI/UX design and AI projects by Haythem Aljane, based in Tunis, Tunisia.">
+<meta name="twitter:image" content="{{ $siteUrl }}/images/profile.jpg">
+<script type="application/ld+json">
+{!! json_encode([
+  '@context' => 'https://schema.org',
+  '@graph' => [
+    [
+      '@type' => 'Person',
+      '@id' => $siteUrl.'/#person',
+      'name' => 'Haythem Aljane',
+      'url' => $siteUrl.'/',
+      'image' => $siteUrl.'/images/profile.jpg',
+      'jobTitle' => 'Web UI/UX Designer and E-commerce Developer',
+      'description' => 'Web UI/UX Designer and E-commerce Developer based in Tunis, Tunisia.',
+      'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Tunis', 'addressCountry' => 'TN'],
+      'knowsAbout' => ['Web design', 'UI/UX design', 'E-commerce development', 'WordPress', 'Laravel', 'Digital marketing', 'SEO', 'AI agents'],
+      'sameAs' => [
+        'https://github.com/haythemalj',
+        'https://www.linkedin.com/in/aljane-haythem-077713193/',
+        'https://www.instagram.com/haythem_alj',
+        'https://www.facebook.com/haythem.aljane',
+      ],
+    ],
+    [
+      '@type' => 'WebSite',
+      '@id' => $siteUrl.'/#website',
+      'url' => $siteUrl.'/',
+      'name' => 'Haythem Aljane',
+      'inLanguage' => 'en',
+      'publisher' => ['@id' => $siteUrl.'/#person'],
+    ],
+    [
+      '@type' => 'ProfilePage',
+      '@id' => $siteUrl.'/#profile',
+      'url' => $siteUrl.'/',
+      'name' => 'Haythem Aljane | Web UI/UX Designer & E-commerce Developer in Tunis',
+      'mainEntity' => ['@id' => $siteUrl.'/#person'],
+      'isPartOf' => ['@id' => $siteUrl.'/#website'],
+    ],
+  ],
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) !!}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 :root{--red:#e50000;--red-dark:#b30000;--black:#080808;--dark:#111;--card:#161616;--card2:#1c1c1c;--border:rgba(229,0,0,0.18);--text:#ddd;--muted:#666;--white:#fff;--nav-w:80px;--nav-w-exp:260px}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -599,7 +649,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-tag"><span class="hero-dot"></span>Open to Web & UI/UX Opportunities</div>
-      <h1>HAYTHEM<br><span class="red">ALJANE</span></h1>
+      <h1>HAYTHEM<br> <span class="red">ALJANE</span><span class="sr-only"> – Web UI/UX Designer and E-commerce Developer in Tunis</span></h1>
       <div class="hero-typed-wrap">I am a <span id="typed-text"></span><span class="cursor-blink">|</span></div>
       <p class="hero-desc">Web UI/UX Designer and E-commerce Developer based in Tunis, Tunisia. I combine interface design, web development, and marketing skills to create useful digital experiences.</p>
       <div class="hero-btns">
@@ -739,13 +789,13 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   <p class="cert-intro">Verified certificates and professional training documents. Each credential appears once with its supporting document, issuer, and date where available.</p>
   <div class="cert-gallery reveal">
     <a class="cert-gallery-card" href="/images/certificates/english-b2.jpeg" target="_blank" rel="noopener">
-      <img src="/images/certificates/english-b2.jpeg" alt="General English B2 certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">General English – Intermediate (CEFR B2)</div><span class="cert-gallery-link">Imperial English UK · 2025 · View</span></div>
+      <img loading="lazy" decoding="async" src="/images/certificates/english-b2.jpeg" alt="General English B2 certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">General English – Intermediate (CEFR B2)</div><span class="cert-gallery-link">Imperial English UK · 2025 · View</span></div>
     </a>
     <a class="cert-gallery-card" href="/images/certificates/ux-ui.jpeg" target="_blank" rel="noopener">
-      <img src="/images/certificates/ux-ui.jpeg" alt="UI/UX Design certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">UI/UX Design Professional Training</div><span class="cert-gallery-link">Media Training · 2026 · View</span></div>
+      <img loading="lazy" decoding="async" src="/images/certificates/ux-ui.jpeg" alt="UI/UX Design certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">UI/UX Design Professional Training</div><span class="cert-gallery-link">Media Training · 2026 · View</span></div>
     </a>
     <a class="cert-gallery-card" href="/images/certificates/wordpress.jpeg" target="_blank" rel="noopener">
-      <img src="/images/certificates/wordpress.jpeg" alt="WordPress certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">WordPress Professional Training</div><span class="cert-gallery-link">Media Training · 2026 · View</span></div>
+      <img loading="lazy" decoding="async" src="/images/certificates/wordpress.jpeg" alt="WordPress certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">WordPress Professional Training</div><span class="cert-gallery-link">Media Training · 2026 · View</span></div>
     </a>
     <a class="cert-gallery-card document" href="/images/certificates/artificial-intelligence.pdf" target="_blank" rel="noopener">
       <div class="cert-gallery-body"><div class="cert-gallery-title">Artificial Intelligence</div><span class="cert-gallery-link">Media Training · Open PDF</span></div>

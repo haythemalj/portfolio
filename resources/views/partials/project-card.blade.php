@@ -14,7 +14,7 @@
      data-github="{{ $project->github_url ?? '' }}">
     <div class="project-thumb">
         @if($project->image)
-            <img src="{{ $project->image }}" alt="{{ $project->title }}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
+            <img src="{{ $project->image }}" alt="{{ $project->title }} project screenshot" loading="lazy" decoding="async" width="1200" height="750" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
         @else
             <div class="project-visual {{ $category }}">
                 <span class="project-visual-label">{{ $project->title }}</span>
