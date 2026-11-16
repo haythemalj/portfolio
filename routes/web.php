@@ -14,10 +14,8 @@ Route::get('/', function () {
     return view('home', ['projects' => $projects]);
 })->name('landing');
 
-Route::get('/portfolio', function () {
-    $projects = \App\Models\Project::active()->get();
-    return view('home', ['projects' => $projects]);
-})->name('portfolio.index');
+// One URL for the home page: /portfolio duplicated it, which splits ranking.
+Route::permanentRedirect('/portfolio', '/#projects')->name('portfolio.index');
 
 Route::get('/blog', function () {
     return redirect()->route('landing');
