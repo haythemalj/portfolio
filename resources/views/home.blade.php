@@ -685,7 +685,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
         <div class="about-info-item"><div class="label">Location</div><div class="value">El Omrane Supérieur, Tunis</div></div>
         <div class="about-info-item"><div class="label">Status</div><div class="value" style="color:var(--red)">Open to Opportunities</div></div>
         <div class="about-info-item"><div class="label">Languages</div><div class="value">AR · EN · FR</div></div>
-        <div class="about-info-item"><div class="label">Email</div><div class="value" style="font-size:.76rem">haythemaljane1@outlook.fr</div></div>
+        <div class="about-info-item"><div class="label">Email</div><div class="value" style="font-size:.76rem">haythem@haythemdev.site</div></div>
       </div>
     </div>
     <div class="about-right reveal">
@@ -846,7 +846,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
       </div>
       @endif
       <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-phone"></i></div><div><div class="contact-item-label">Phone / WhatsApp</div><div class="contact-item-value"><a href="https://wa.me/21620832439" style="color:inherit">+216 20 832 439</a></div></div></div>
-      <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-envelope"></i></div><div><div class="contact-item-label">Email</div><div class="contact-item-value"><a href="mailto:haythemaljane1@outlook.fr" style="color:inherit">haythemaljane1@outlook.fr</a></div></div></div>
+      <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-envelope"></i></div><div><div class="contact-item-label">Email</div><div class="contact-item-value"><a href="mailto:haythem@haythemdev.site" style="color:inherit">haythem@haythemdev.site</a></div></div></div>
       <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-location-dot"></i></div><div><div class="contact-item-label">Location</div><div class="contact-item-value">El Omrane Supérieur, Tunis, Tunisia</div></div></div>
       <div class="contact-socials">
         <a href="https://www.facebook.com/haythem.aljane" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
