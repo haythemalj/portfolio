@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0E6E8C">
+<title>Tidekeep | Mobile Game UI Kit by Haythem Aljane</title>
+<meta name="description" content="Original mobile game UI kit: lobby, level map, shop and victory screens with interactive buttons. Designed and built by Haythem Aljane.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lagoon:#0E6E8C; --lagoon-d:#0A4F66; --foam:#7FE7D6; --mango:#FFB02E; --mango-d:#D9831A;
+  --berry:#E8336E; --berry-d:#B21E50; --leaf:#4CC85A; --leaf-d:#2E9A3D; --ink:#16243F;
+  --cloud:#F4FBFF; --sand:#FFE7B8; --sky:#BDEBFF;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font-family:"Nunito",system-ui,sans-serif; font-weight:800; color:var(--cloud);
+  background:
+    radial-gradient(1200px 500px at 15% -10%, #1C8FB2 0%, transparent 60%),
+    radial-gradient(900px 600px at 110% 20%, #0B5A74 0%, transparent 55%),
+    var(--lagoon-d);
+  min-height:100vh;
+}
+.intro{max-width:1240px;margin:0 auto;padding:48px 24px 8px}
+.logo{font-family:"Lilita One",sans-serif;font-size:clamp(44px,7vw,84px);line-height:.95;margin:0;letter-spacing:.5px;
+  color:var(--sand);-webkit-text-stroke:3px var(--ink);paint-order:stroke fill;text-shadow:0 6px 0 var(--ink)}
+.intro p{max-width:62ch;font-weight:600;font-size:17px;line-height:1.55;color:#D8F3FF;margin:18px 0 0}
+.intro .meta{font-weight:800;color:var(--foam);margin-top:10px;font-size:14px}
+.screens{max-width:1240px;margin:0 auto;padding:32px 24px 16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+figure{margin:0}
+figcaption{margin-top:14px;font-weight:600;font-size:14px;line-height:1.5;color:#CBEFFF;max-width:34ch}
+figcaption b{display:block;font-family:"Lilita One";font-weight:400;font-size:19px;color:var(--cloud);margin-bottom:2px}
+
+/* phone */
+.phone{position:relative;aspect-ratio:9/19;border-radius:34px;background:var(--ink);padding:9px;box-shadow:0 18px 40px rgba(4,26,40,.45)}
+.screen{position:relative;height:100%;border-radius:26px;overflow:hidden;background:linear-gradient(#8FDCFF,#BDEBFF 45%,#7FE7D6 46%,#3BBFC1);display:flex;flex-direction:column}
+.notch{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:34%;height:18px;background:var(--ink);border-radius:0 0 12px 12px;z-index:5}
+
+/* HUD */
+.hud{display:flex;gap:5px;padding:30px 8px 6px;justify-content:space-between}
+.pill{flex:1;display:flex;align-items:center;gap:3px;height:28px;background:rgba(22,36,63,.78);border:2px solid var(--ink);border-radius:14px;padding:0 6px 0 2px;font-size:12px;color:#fff;min-width:0}
+.pill svg{flex:none}
+.pill span{flex:1;text-align:center;white-space:nowrap}
+.plus{flex:none;width:18px;height:18px;border-radius:6px;background:var(--leaf);border:2px solid var(--ink);display:grid;place-items:center;font-size:13px;line-height:1;color:#fff}
+
+/* 3D button: the signature element */
+.btn{--c:var(--leaf);--d:var(--leaf-d);font-family:"Lilita One",sans-serif;font-size:20px;letter-spacing:.3px;color:#fff;
+  border:3px solid var(--ink);border-radius:16px;background:linear-gradient(var(--c) 0 55%, color-mix(in srgb,var(--c) 82%, #000) 55%);
+  box-shadow:inset 0 3px 0 rgba(255,255,255,.45),0 6px 0 var(--ink);padding:10px 18px 12px;cursor:pointer;
+  text-shadow:0 2px 0 rgba(22,36,63,.55);transform:translateY(0);transition:transform .06s,box-shadow .06s}
+.btn:active,.btn.is-pressed{transform:translateY(5px);box-shadow:inset 0 3px 0 rgba(255,255,255,.35),0 1px 0 var(--ink)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.btn.mango{--c:var(--mango);--d:var(--mango-d)} .btn.berry{--c:var(--berry);--d:var(--berry-d)}
+.btn[disabled],.btn.is-disabled{--c:#9AA9B8;cursor:not-allowed;transform:none;box-shadow:inset 0 3px 0 rgba(255,255,255,.3),0 6px 0 var(--ink);opacity:.9}
+.btn.sm{font-size:15px;padding:6px 10px 8px;border-radius:12px;box-shadow:inset 0 2px 0 rgba(255,255,255,.45),0 4px 0 var(--ink)}
+.btn.sm:active{transform:translateY(3px);box-shadow:inset 0 2px 0 rgba(255,255,255,.35),0 1px 0 var(--ink)}
+
+/* bottom nav */
+.nav{margin-top:auto;display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:6px 6px 10px;background:var(--ink)}
+.nav button{all:unset;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0 4px;border-radius:12px;font-size:10px;color:#9DB3C9}
+.nav button svg{width:24px;height:24px}
+.nav button[aria-current="page"]{background:var(--lagoon);color:#fff;transform:translateY(-8px);box-shadow:0 0 0 3px var(--ink),inset 0 3px 0 rgba(255,255,255,.25)}
+.nav button:focus-visible{outline:2px solid #fff}
+
+/* lobby */
+.lobby-stage{flex:1;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:16px}
+.island{width:92%;margin-bottom:-6px}
+.level-badge{font-family:"Lilita One";color:var(--ink);font-size:13px;background:var(--sand);border:3px solid var(--ink);border-radius:10px;padding:2px 10px;margin-bottom:10px}
+.lobby-stage .btn{width:78%;font-size:24px}
+.side{position:absolute;top:10px;display:flex;flex-direction:column;gap:10px}
+.side.l{left:8px} .side.r{right:8px}
+.chip{width:42px;height:42px;border-radius:12px;border:3px solid var(--ink);display:grid;place-items:center;background:var(--cloud);position:relative;box-shadow:0 3px 0 var(--ink)}
+.chip i{position:absolute;top:-6px;right:-6px;min-width:18px;height:18px;border-radius:9px;background:var(--berry);border:2px solid var(--ink);font-style:normal;font-size:10px;display:grid;place-items:center;color:#fff}
+.chip small{position:absolute;bottom:-14px;font-size:9px;color:var(--ink);white-space:nowrap}
+
+/* map */
+.map{flex:1;position:relative;background:linear-gradient(#5FD0E8,#2FA9C4)}
+.map svg.path{position:absolute;inset:0;width:100%;height:100%}
+.node{position:absolute;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;border:3px solid var(--ink);display:grid;place-items:center;font-family:"Lilita One";font-size:15px;color:#fff;box-shadow:0 4px 0 var(--ink)}
+.node.done{background:var(--leaf)} .node.locked{background:#8EA2B5;color:#DCE6EF}
+.node.now{background:var(--mango);width:48px;height:48px;font-size:19px}
+.node .stars{position:absolute;top:-14px;display:flex;gap:1px}
+.ring{position:absolute;inset:-9px;border-radius:50%;border:3px solid #fff;animation:pulse 1.6s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.8);opacity:1}100%{transform:scale(1.35);opacity:0}}
+.map-title{position:absolute;left:50%;top:8px;transform:translateX(-50%);font-family:"Lilita One";font-size:16px;color:var(--ink);background:var(--sand);border:3px solid var(--ink);border-radius:12px;padding:3px 12px;white-space:nowrap}
+
+/* shop */
+.shop{flex:1;display:flex;flex-direction:column;gap:10px;padding:6px 10px 10px;background:linear-gradient(#FFF4DA,#FFE2A8)}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.tabs button{all:unset;cursor:pointer;text-align:center;font-family:"Lilita One";font-size:15px;color:var(--ink);padding:6px 0;border:3px solid var(--ink);border-radius:12px;background:#F2D597}
+.tabs button[aria-selected="true"]{background:var(--lagoon);color:#fff;box-shadow:inset 0 3px 0 rgba(255,255,255,.3)}
+.tabs button:focus-visible{outline:2px solid var(--berry)}
+.offer{position:relative;border:3px solid var(--ink);border-radius:16px;background:linear-gradient(135deg,var(--berry),#FF6A8E);padding:12px 10px 10px;color:#fff;display:flex;align-items:center;gap:8px;box-shadow:0 4px 0 var(--ink)}
+.ribbon{position:absolute;top:-11px;left:10px;background:var(--mango);color:var(--ink);border:2px solid var(--ink);border-radius:8px;font-size:10px;padding:1px 7px}
+.offer h3{font-family:"Lilita One";font-weight:400;margin:0;font-size:17px}
+.offer p{margin:2px 0 0;font-size:11px;opacity:.95}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.item{border:3px solid var(--ink);border-radius:14px;background:var(--cloud);padding:8px 6px 8px;display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--ink);font-size:12px}
+.item .btn{width:100%}
+.panel[hidden]{display:none}
+
+/* victory */
+.board{flex:1;position:relative;background:
+  repeating-conic-gradient(#3BBFC1 0 25%, #35AEB0 0 50%) 0 0/40px 40px}
+.dim{position:absolute;inset:0;background:rgba(10,30,50,.62);display:grid;place-items:center}
+.popup{width:86%;position:relative;border:4px solid var(--ink);border-radius:22px;background:var(--cloud);padding:34px 12px 14px;text-align:center;color:var(--ink);box-shadow:0 8px 0 var(--ink)}
+.banner{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-family:"Lilita One";font-size:22px;color:#fff;background:var(--leaf);border:4px solid var(--ink);border-radius:14px;padding:4px 18px;white-space:nowrap;text-shadow:0 2px 0 rgba(22,36,63,.5)}
+.stars3{display:flex;justify-content:center;align-items:flex-end;gap:2px;margin:4px 0 8px}
+.stars3 svg{width:54px;height:54px;transform:scale(0);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.stars3 svg:nth-child(2){width:66px;height:66px}
+.stars3.show svg{transform:scale(1)}
+.stars3.show svg:nth-child(2){transition-delay:.18s}
+.stars3.show svg:nth-child(3){transition-delay:.36s}
+.score{font-size:12px;color:#4D6680}
+.score strong{display:block;font-family:"Lilita One";font-weight:400;font-size:28px;color:var(--ink)}
+.rewards{display:flex;justify-content:center;gap:8px;margin:10px 0 14px}
+.reward{border:3px solid var(--ink);border-radius:12px;background:var(--sand);padding:6px 8px;display:flex;flex-direction:column;align-items:center;font-size:12px;min-width:62px}
+.popup .actions{display:flex;gap:8px;justify-content:center}
+.popup .actions .btn{flex:1;white-space:nowrap;font-size:14px;padding-left:6px;padding-right:6px}
+
+/* component sheet */
+.sheet{max-width:1240px;margin:0 auto;padding:24px 24px 56px}
+.sheet h2{font-family:"Lilita One";font-weight:400;font-size:28px;margin:0 0 6px;color:var(--sand)}
+.sheet > p{font-weight:600;color:#CBEFFF;margin:0 0 18px;max-width:62ch;line-height:1.5}
+.rows{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:start}
+.card{background:rgba(22,36,63,.55);border:2px solid rgba(127,231,214,.25);border-radius:20px;padding:20px}
+.card h3{margin:0 0 14px;font-size:15px;color:var(--foam)}
+.states{display:flex;flex-wrap:wrap;gap:22px;align-items:flex-end}
+.state{display:flex;flex-direction:column;align-items:center;gap:12px;font-size:12px;color:#BFE3F5;font-weight:600}
+.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.sw{border-radius:12px;border:3px solid var(--ink);height:64px;display:flex;align-items:flex-end;padding:6px;font-size:11px;color:var(--ink)}
+.sw.dark{color:#fff}
+.type-demo{margin-top:18px;display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+.type-demo .d{font-family:"Lilita One";font-size:34px;color:var(--sand)}
+.type-demo .b{font-size:16px;color:#D8F3FF}
+footer{max-width:1240px;margin:0 auto;padding:0 24px 40px;font-weight:600;font-size:14px;color:#A9D8EA}
+footer a{color:var(--foam)}
+
+@media (max-width:1080px){.screens{grid-template-columns:repeat(2,minmax(0,1fr))}.rows{grid-template-columns:1fr}}
+@media (max-width:560px){
+  .screens{grid-template-columns:minmax(0,320px);justify-content:center}
+  .intro{padding-top:32px}
+  .swatches{grid-template-columns:repeat(2,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+  .ring{animation:none;opacity:.6}
+  .stars3 svg{transition:none}
+  .btn,.btn:active{transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- reusable icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#FFB02E" stroke="#16243F" stroke-width="2.5"/><circle cx="12" cy="12" r="6" fill="none" stroke="#D9831A" stroke-width="2"/><path d="M9 8.5h6" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".7"/></symbol>
+    <symbol id="gem" viewBox="0 0 24 24"><path d="M5 9l3-5h8l3 5-7 11z" fill="#7FE7D6" stroke="#16243F" stroke-width="2.5" stroke-linejoin="round"/><path d="M5 9h14M9 9l3 11 3-11" fill="none" stroke="#16243F" stroke-width="1.5"/></symbol>
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z" fill="#E8336E" stroke="#16243F" stroke-width="2.5" stroke-linejoin="round"/></symbol>
+    <symbol id="star" viewBox="0 0 24 24"><path d="M12 2.8l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1L3.2 9.2l6.1-.8z" fill="#FFB02E" stroke="#16243F" stroke-width="2" stroke-linejoin="round"/><path d="M9.5 8.8l1.5-.2" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="star-off" viewBox="0 0 24 24"><path d="M12 2.8l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1L3.2 9.2l6.1-.8z" fill="#7C8FA3" stroke="#16243F" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2.5" fill="#DCE6EF" stroke="#16243F" stroke-width="2.2"/><path d="M8 10V7.5a4 4 0 0 1 8 0V10" fill="none" stroke="#16243F" stroke-width="2.2"/></symbol>
+    <symbol id="i-shop" viewBox="0 0 24 24"><path d="M4 9h16l-1.5 11h-13z" fill="currentColor"/><path d="M8 9a4 4 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z" fill="currentColor"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9h-6v-6H9v6H3z" fill="currentColor"/></symbol>
+    <symbol id="i-team" viewBox="0 0 24 24"><circle cx="8" cy="9" r="3.5" fill="currentColor"/><circle cx="16" cy="9" r="3.5" fill="currentColor"/><path d="M2 20c0-4 3-6 6-6s6 2 6 6zM10 20c.4-3.6 3-6 6-6 3 0 6 2 6 6z" fill="currentColor"/></symbol>
+    <symbol id="i-event" viewBox="0 0 24 24"><path d="M12 2l2 6h6l-5 4 2 7-5-4-5 4 2-7-5-4h6z" fill="currentColor"/></symbol>
+    <symbol id="booster" viewBox="0 0 24 24"><path d="M12 3c4 3 6 7 4 12h-8C6 10 8 6 12 3z" fill="#E8336E" stroke="#16243F" stroke-width="2.2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2" fill="#F4FBFF" stroke="#16243F" stroke-width="1.6"/><path d="M8 15l-3 4h4M16 15l3 4h-4" fill="#FFB02E" stroke="#16243F" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="chest" viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="10" rx="2" fill="#D9831A" stroke="#16243F" stroke-width="2.2"/><path d="M3 11a9 6 0 0 1 18 0" fill="#FFB02E" stroke="#16243F" stroke-width="2.2"/><rect x="10" y="11" width="4" height="5" rx="1" fill="#FFE7B8" stroke="#16243F" stroke-width="1.8"/></symbol>
+  </defs>
+</svg>
+
+<header class="intro">
+  <h1 class="logo">Tidekeep</h1>
+  <p>A mobile game UI kit for an original island puzzle game. Four core screens and the button system behind them, designed and coded as working HTML and CSS. Tap the buttons, tabs and the replay control to see the interaction states.</p>
+  <div class="meta">Game UI concept by Haythem Aljane, 2026</div>
+</header>
+
+<main class="screens">
+
+  <!-- 1. Lobby -->
+  <figure>
+    <div class="phone"><div class="notch"></div><div class="screen">
+      <div class="hud" aria-label="Player resources">
+        <div class="pill"><svg width="22" height="22"><use href="#heart"/></svg><span>5</span></div>
+        <div class="pill"><svg width="22" height="22"><use href="#coin"/></svg><span>2,480</span><b class="plus">+</b></div>
+        <div class="pill"><svg width="22" height="22"><use href="#gem"/></svg><span>36</span><b class="plus">+</b></div>
+      </div>
+      <div class="lobby-stage">
+        <div class="side l">
+          <div class="chip"><svg width="26" height="26"><use href="#chest"/></svg><i>1</i><small>Daily gift</small></div>
+        </div>
+        <div class="side r">
+          <div class="chip"><svg width="26" height="26"><use href="#booster"/></svg><small>Boosters</small></div>
+        </div>
+        <svg class="island" viewBox="0 0 260 150" aria-hidden="true">
+          <ellipse cx="130" cy="130" rx="125" ry="18" fill="#2FA9C4" opacity=".6"/>
+          <path d="M20 120c20-30 60-40 110-40s90 10 110 40z" fill="#FFE7B8" stroke="#16243F" stroke-width="4"/>
+          <path d="M60 92c10-22 40-30 70-30s58 8 70 30z" fill="#4CC85A" stroke="#16243F" stroke-width="4"/>
+          <rect x="108" y="30" width="44" height="52" rx="6" fill="#F4FBFF" stroke="#16243F" stroke-width="4"/>
+          <path d="M100 34l30-24 30 24z" fill="#E8336E" stroke="#16243F" stroke-width="4" stroke-linejoin="round"/>
+          <rect x="122" y="56" width="16" height="26" rx="3" fill="#0E6E8C" stroke="#16243F" stroke-width="3"/>
+          <circle cx="130" cy="44" r="5" fill="#FFB02E" stroke="#16243F" stroke-width="2.5"/>
+          <path d="M196 92c0-20 4-34 8-44" stroke="#16243F" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M204 50c-14-6-26 0-30 8 10-4 20-2 30-8zM204 50c12-8 26-6 30 2-10-2-20 0-30-2zM204 50c-4 12-14 18-22 20 6-8 12-14 22-20z" fill="#4CC85A" stroke="#16243F" stroke-width="3" stroke-linejoin="round"/>
+        </svg>
+        <div class="level-badge">Level 42</div>
+        <button class="btn" type="button">Play</button>
+      </div>
+      <nav class="nav" aria-label="Main">
+        <button type="button"><svg><use href="#i-shop"/></svg>Shop</button>
+        <button type="button"><svg><use href="#i-map"/></svg>Map</button>
+        <button type="button" aria-current="page"><svg><use href="#i-home"/></svg>Home</button>
+        <button type="button"><svg><use href="#i-team"/></svg>Team</button>
+        <button type="button"><svg><use href="#i-event"/></svg>Events</button>
+      </nav>
+    </div></div>
+    <figcaption><b>Lobby</b>One clear call to action. Resources sit in the HUD with a buy shortcut, and the active tab lifts out of the bar so players always know where they are.</figcaption>
+  </figure>
+
+  <!-- 2. Map -->
+  <figure>
+    <div class="phone"><div class="notch"></div><div class="screen">
+      <div class="hud" aria-label="Player resources">
+        <div class="pill"><svg width="22" height="22"><use href="#heart"/></svg><span>5</span></div>
+        <div class="pill"><svg width="22" height="22"><use href="#coin"/></svg><span>2,480</span><b class="plus">+</b></div>
+        <div class="pill"><svg width="22" height="22"><use href="#star"/></svg><span>112</span></div>
+      </div>
+      <div class="map">
+        <div class="map-title">Coral Cove</div>
+        <svg class="path" viewBox="0 0 100 200" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M32 188 C 50 186, 72 178, 70 164 S 46 150, 44 140 S 26 124, 30 116 S 64 102, 66 90 S 44 72, 44 62 S 54 44, 56 38" fill="none" stroke="#FFE7B8" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 7"/>
+        </svg>
+        <div class="node done" style="left:32%;top:94%"><span class="stars"><svg width="12" height="12"><use href="#star"/></svg><svg width="12" height="12"><use href="#star"/></svg><svg width="12" height="12"><use href="#star"/></svg></span>38</div>
+        <div class="node done" style="left:70%;top:82%"><span class="stars"><svg width="12" height="12"><use href="#star"/></svg><svg width="12" height="12"><use href="#star"/></svg><svg width="12" height="12"><use href="#star-off"/></svg></span>39</div>
+        <div class="node done" style="left:44%;top:70%"><span class="stars"><svg width="12" height="12"><use href="#star"/></svg><svg width="12" height="12"><use href="#star-off"/></svg><svg width="12" height="12"><use href="#star-off"/></svg></span>40</div>
+        <div class="node done" style="left:30%;top:58%"><span class="stars"><svg width="12" height="12"><use href="#star"/></svg><svg width="12" height="12"><use href="#star"/></svg><svg width="12" height="12"><use href="#star"/></svg></span>41</div>
+        <div class="node now" style="left:66%;top:45%"><span class="ring"></span>42</div>
+        <div class="node locked" style="left:44%;top:31%"><svg width="18" height="18"><use href="#lock"/></svg></div>
+        <div class="node locked" style="left:56%;top:19%"><svg width="18" height="18"><use href="#chest"/></svg></div>
+      </div>
+      <nav class="nav" aria-label="Main">
+        <button type="button"><svg><use href="#i-shop"/></svg>Shop</button>
+        <button type="button" aria-current="page"><svg><use href="#i-map"/></svg>Map</button>
+        <button type="button"><svg><use href="#i-home"/></svg>Home</button>
+        <button type="button"><svg><use href="#i-team"/></svg>Team</button>
+        <button type="button"><svg><use href="#i-event"/></svg>Events</button>
+      </nav>
+    </div></div>
+    <figcaption><b>Level map</b>Three node states read at a glance: done with earned stars, the current level with a pulse, and locked. A chest at the end of the path gives the next goal.</figcaption>
+  </figure>
+
+  <!-- 3. Shop -->
+  <figure>
+    <div class="phone"><div class="notch"></div><div class="screen">
+      <div class="hud" aria-label="Player resources" style="background:linear-gradient(#8FDCFF,#BDEBFF)">
+        <div class="pill"><svg width="22" height="22"><use href="#coin"/></svg><span>2,480</span></div>
+        <div class="pill"><svg width="22" height="22"><use href="#gem"/></svg><span>36</span></div>
+      </div>
+      <div class="shop">
+        <div class="tabs" role="tablist" aria-label="Shop sections">
+          <button type="button" role="tab" aria-selected="true" aria-controls="p-coins" id="t-coins">Coins</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="p-boost" id="t-boost">Boosters</button>
+        </div>
+        <div class="offer">
+          <span class="ribbon">Best value</span>
+          <svg width="46" height="46"><use href="#chest"/></svg>
+          <div style="flex:1"><h3>Explorer chest</h3><p>3,000 coins, 3 boosters, 2 h unlimited lives</p></div>
+          <button class="btn mango sm" type="button">$4.99</button>
+        </div>
+        <div class="panel grid" id="p-coins" role="tabpanel" aria-labelledby="t-coins">
+          <div class="item"><svg width="34" height="34"><use href="#coin"/></svg>500<button class="btn sm" type="button">$0.99</button></div>
+          <div class="item"><svg width="34" height="34"><use href="#coin"/></svg>1,400<button class="btn sm" type="button">$2.49</button></div>
+          <div class="item"><svg width="34" height="34"><use href="#coin"/></svg>3,200<button class="btn sm" type="button">$4.99</button></div>
+          <div class="item"><svg width="34" height="34"><use href="#coin"/></svg>7,500<button class="btn sm" type="button">$9.99</button></div>
+        </div>
+        <div class="panel grid" id="p-boost" role="tabpanel" aria-labelledby="t-boost" hidden>
+          <div class="item"><svg width="34" height="34"><use href="#booster"/></svg>Rocket ×3<button class="btn sm" type="button">900 <svg width="14" height="14" style="vertical-align:-2px"><use href="#coin"/></svg></button></div>
+          <div class="item"><svg width="34" height="34"><use href="#gem"/></svg>Shuffle ×3<button class="btn sm" type="button">12 <svg width="14" height="14" style="vertical-align:-2px"><use href="#gem"/></svg></button></div>
+          <div class="item"><svg width="34" height="34"><use href="#heart"/></svg>Lives refill<button class="btn sm" type="button">8 <svg width="14" height="14" style="vertical-align:-2px"><use href="#gem"/></svg></button></div>
+          <div class="item"><svg width="34" height="34"><use href="#star"/></svg>Star boost<button class="btn sm is-disabled" type="button" disabled>Level 50</button></div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Main">
+        <button type="button" aria-current="page"><svg><use href="#i-shop"/></svg>Shop</button>
+        <button type="button"><svg><use href="#i-map"/></svg>Map</button>
+        <button type="button"><svg><use href="#i-home"/></svg>Home</button>
+        <button type="button"><svg><use href="#i-team"/></svg>Team</button>
+        <button type="button"><svg><use href="#i-event"/></svg>Events</button>
+      </nav>
+    </div></div>
+    <figcaption><b>Shop</b>The featured offer leads in a warm colour, and each price sits on its own button. Locked items show what unlocks them instead of a dead state.</figcaption>
+  </figure>
+
+  <!-- 4. Victory -->
+  <figure>
+    <div class="phone"><div class="notch"></div><div class="screen">
+      <div class="board">
+        <div class="dim">
+          <div class="popup" role="dialog" aria-labelledby="win-title">
+            <div class="banner" id="win-title">Level 42 cleared</div>
+            <div class="stars3 show" id="stars" aria-label="3 of 3 stars">
+              <svg viewBox="0 0 24 24"><use href="#star"/></svg>
+              <svg viewBox="0 0 24 24"><use href="#star"/></svg>
+              <svg viewBox="0 0 24 24"><use href="#star"/></svg>
+            </div>
+            <div class="score">Score<strong>18,640</strong>New best on Coral Cove</div>
+            <div class="rewards">
+              <div class="reward"><svg width="28" height="28"><use href="#coin"/></svg>+120</div>
+              <div class="reward"><svg width="28" height="28"><use href="#booster"/></svg>Rocket</div>
+              <div class="reward"><svg width="28" height="28"><use href="#star"/></svg>+3</div>
+            </div>
+            <div class="actions">
+              <button class="btn berry sm" type="button" id="replay">Replay</button>
+              <button class="btn sm" type="button">Next level</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    <figcaption><b>Victory</b>Stars land one after another for a small moment of celebration, then rewards and the next step. Press Replay to see the star sequence again.</figcaption>
+  </figure>
+
+</main>
+
+<section class="sheet" aria-labelledby="sys">
+  <h2 id="sys">Button system</h2>
+  <p>Every action uses the same chunky button: a thick outline, a highlight on top and a solid base underneath. Pressing it drops the button onto its base, so the player feels the tap.</p>
+  <div class="rows">
+    <div class="card">
+      <h3>States and colours</h3>
+      <div class="states">
+        <div class="state"><button class="btn" type="button">Play</button>Default</div>
+        <div class="state"><button class="btn is-pressed" type="button" tabindex="-1" aria-hidden="true">Play</button>Pressed</div>
+        <div class="state"><button class="btn" type="button" disabled>Play</button>Disabled</div>
+        <div class="state"><button class="btn mango" type="button">Buy</button>Purchase</div>
+        <div class="state"><button class="btn berry" type="button">Replay</button>Secondary</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Palette and type</h3>
+      <div class="swatches">
+        <div class="sw dark" style="background:#0E6E8C">Lagoon</div>
+        <div class="sw" style="background:#7FE7D6">Foam</div>
+        <div class="sw" style="background:#FFB02E">Mango</div>
+        <div class="sw dark" style="background:#E8336E">Berry</div>
+        <div class="sw" style="background:#4CC85A">Leaf</div>
+        <div class="sw" style="background:#FFE7B8">Sand</div>
+        <div class="sw" style="background:#F4FBFF">Cloud</div>
+        <div class="sw dark" style="background:#16243F">Ink</div>
+      </div>
+      <div class="type-demo"><span class="d">Lilita One</span><span class="b">Nunito ExtraBold for labels and numbers</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>Original concept, art and code by Haythem Aljane. Not affiliated with any game studio. <a href="/">Back to portfolio</a></footer>
+
+<script>
+(function(){
+  // bottom nav: move the active tab within each phone
+  document.querySelectorAll('.nav').forEach(function(nav){
+    nav.addEventListener('click',function(e){
+      var b=e.target.closest('button'); if(!b) return;
+      nav.querySelectorAll('button').forEach(function(x){x.removeAttribute('aria-current')});
+      b.setAttribute('aria-current','page');
+    });
+  });
+  // shop tabs
+  var tabs=document.querySelectorAll('[role="tab"]');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){
+        var on=x===t; x.setAttribute('aria-selected',on);
+        document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+      });
+    });
+  });
+  // replay the star reveal
+  var stars=document.getElementById('stars');
+  document.getElementById('replay').addEventListener('click',function(){
+    stars.classList.remove('show'); void stars.offsetWidth;
+    setTimeout(function(){stars.classList.add('show')},120);
+  });
+})();
+</script>
+</body>
+</html>
