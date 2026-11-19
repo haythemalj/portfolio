@@ -7,6 +7,7 @@ use App\Models\ContactMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 
 class ContactController extends Controller
 {
@@ -26,7 +27,16 @@ class ContactController extends Controller
             throw $e;
         }
 
-        ContactMessage::create($validated);
+        $message = ContactMessage::create($validated);
+
+        // One line per message in the server log, so the owner's monitoring
+        // agent can report new contact messages without database access.
+        // Only the id, name and subject are logged: no email address or body.
+        Log::info('New contact message received.', [
+            'id' => $message->id,
+            'name' => Str::limit($validated['name'], 60),
+            'subject' => Str::limit($validated['subject'], 120),
+        ]);
 
         $mailSent = true;
 
