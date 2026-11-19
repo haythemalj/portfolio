@@ -235,6 +235,18 @@ class ProjectSeeder extends Seeder
                 'featured' => true,
                 'order' => 20,
             ],
+            [
+                'title' => 'Tidekeep: Mobile Game UI Kit',
+                'description' => 'Original mobile game UI kit: lobby with HUD, level map, shop and victory screens, plus a tactile button system with pressed and disabled states.',
+                'details' => 'Concept, UI art and front-end build for an original island puzzle game. Four core screens designed for clarity at a glance: one call to action in the lobby, readable level states on the map, a featured offer and per-item price buttons in the shop, and a staged star reveal on victory. All art is inline SVG and every screen is interactive HTML and CSS.',
+                'image' => '/images/projects/tidekeep-game-ui.webp',
+                'url' => '/demos/tidekeep-game-ui/',
+                'github_url' => null,
+                'technologies' => ['Game UI', 'UI/UX', 'SVG Illustration', 'HTML', 'CSS', 'JavaScript'],
+                'category' => 'design',
+                'featured' => true,
+                'order' => 21,
+            ],
         ];
 
         $titles = array_column($projects, 'title');
