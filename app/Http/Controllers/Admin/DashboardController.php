@@ -34,6 +34,22 @@ class DashboardController extends Controller
         ]);
     }
 
+    /** Unread count and the newest unread message, for the app badge and alerts. */
+    public function unread()
+    {
+        $latest = ContactMessage::whereNull('read_at')->latest()->first();
+
+        return response()->json([
+            'unread' => ContactMessage::whereNull('read_at')->count(),
+            'latest' => $latest ? [
+                'id' => $latest->id,
+                'name' => $latest->name,
+                'subject' => $latest->subject,
+                'url' => route('admin.messages.show', $latest),
+            ] : null,
+        ])->header('Cache-Control', 'no-store');
+    }
+
     public function stats(Request $request)
     {
         $days = in_array((int) $request->query('days'), [7, 30, 90], true) ? (int) $request->query('days') : 30;
