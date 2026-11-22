@@ -4,7 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f6f3">
-  <title>Daylight | A little more focus</title>
+  <title>Daylight Task Board | Demo by Haythem Aljane</title>
+<!-- SEO (data-ha-seo) -->
+<meta name="description" content="Responsive task dashboard with task creation, status filters, completion controls, and browser-local saving. Built by Haythem Aljane, web UI/UX designer in…">
+<link rel="canonical" href="https://haythemdev.site/demos/daylight-board/">
+<meta name="author" content="Haythem Aljane">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Haythem Aljane">
+<meta property="og:title" content="Daylight Task Board | Demo by Haythem Aljane">
+<meta property="og:description" content="Responsive task dashboard with task creation, status filters, completion controls, and browser-local saving. Built by Haythem Aljane, web UI/UX designer in…">
+<meta property="og:url" content="https://haythemdev.site/demos/daylight-board/">
+<meta property="og:image" content="https://haythemdev.site/images/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daylight Task Board | Demo by Haythem Aljane">
+<meta name="twitter:description" content="Responsive task dashboard with task creation, status filters, completion controls, and browser-local saving. Built by Haythem Aljane, web UI/UX designer in…">
+<meta name="twitter:image" content="https://haythemdev.site/images/og-cover.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Daylight Task Board", "description": "Responsive task dashboard with task creation, status filters, completion controls, and browser-local saving. Built by Haythem Aljane, web UI/UX designer in…", "url": "https://haythemdev.site/demos/daylight-board/", "image": "https://haythemdev.site/images/og-cover.jpg", "author": {"@type": "Person", "@id": "https://haythemdev.site/#person", "name": "Haythem Aljane", "url": "https://haythemdev.site/"}, "isPartOf": {"@id": "https://haythemdev.site/#website"}, "keywords": "HTML, CSS, JavaScript, localStorage"}</script>
+
   <style>
     :root{--ink:#27302a;--muted:#7b847e;--paper:#f5f6f3;--white:#fff;--green:#5d8065;--pale:#e7eee6;--line:#e5e9e3;--amber:#f1dfb2;--rose:#f3e1dc;--blue:#e1eaf1}
     *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.5 Arial,sans-serif}.app{min-height:100vh;display:grid;grid-template-columns:230px 1fr}.sidebar{background:#fff;border-right:1px solid var(--line);padding:26px 18px}.logo{font-size:1.35rem;font-weight:800;letter-spacing:-.06em;margin:0 10px 34px}.logo span{color:var(--green)}.workspace{font-size:.65rem;text-transform:uppercase;letter-spacing:.14em;color:#a0a8a2;padding:0 10px;margin-bottom:9px}.navlink{display:flex;align-items:center;gap:11px;padding:10px;border-radius:8px;color:#69736c;text-decoration:none;margin-bottom:4px}.navlink.active,.navlink:hover{background:var(--pale);color:var(--green);font-weight:bold}.navlink b{margin-left:auto;font-size:.7rem;background:#fff;padding:1px 7px;border-radius:99px}.side-note{margin-top:30px;padding:14px;border-radius:10px;background:#f7f8f5;color:var(--muted);font-size:.76rem}.side-note strong{display:block;color:var(--ink);margin-bottom:5px}
@@ -72,5 +89,7 @@
     document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(item=>item.classList.remove('active'));button.classList.add('active');filter=button.dataset.filter;render();}));
     render();
   </script>
+
+<a data-ha-seo href="https://haythemdev.site/#projects" title="More work by Haythem Aljane, web UI/UX designer in Istanbul" style="position:fixed;left:12px;bottom:12px;z-index:2147483647;font:500 12px/1.2 system-ui,-apple-system,Segoe UI,sans-serif;color:#fff;background:rgba(8,8,8,.85);border:1px solid rgba(229,0,0,.65);padding:7px 12px;border-radius:999px;text-decoration:none;letter-spacing:.2px;box-shadow:0 4px 14px rgba(0,0,0,.35)">Demo by Haythem Aljane ↗</a>
 </body>
 </html>
