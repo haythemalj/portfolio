@@ -12,6 +12,8 @@
 <title>Haythem Aljane | Remote Web UI/UX Designer & E-commerce Developer</title>
 <link rel="canonical" href="{{ $siteUrl }}/">
 <link rel="alternate" hreflang="en" href="{{ $siteUrl }}/">
+<link rel="alternate" hreflang="fr" href="{{ $siteUrl }}/fr">
+<link rel="alternate" hreflang="ar" href="{{ $siteUrl }}/ar">
 <link rel="alternate" hreflang="tr" href="{{ $siteUrl }}/tr">
 <link rel="alternate" hreflang="x-default" href="{{ $siteUrl }}/">
 <link rel="icon" href="{{ $siteUrl }}/favicon.ico">
@@ -931,7 +933,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
 <footer>
   <div class="footer-copy">© {{ date('Y') }} <span>Haythem Aljane</span> · All rights reserved · Built with ❤️ for clients worldwide</div>
   <div class="footer-links">
-    <a href="#hero">Home</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="/case-studies">Case studies</a><a href="/tr" hreflang="tr" lang="tr">Türkçe</a>
+    <a href="#hero">Home</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="/case-studies">Case studies</a><a href="/fr" hreflang="fr" lang="fr">Français</a><a href="/ar" hreflang="ar" lang="ar">العربية</a><a href="/tr" hreflang="tr" lang="tr">Türkçe</a>
   </div>
 </footer>
 

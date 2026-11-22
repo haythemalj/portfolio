@@ -3,9 +3,17 @@
   $lang = $lang ?? 'en';
   $ogImage = $ogImage ?? '/images/og-cover.jpg';
   if (\Illuminate\Support\Str::endsWith($ogImage, '.svg')) { $ogImage = '/images/og-cover.jpg'; }
+  $rtl = $lang === 'ar';
+  $home = $lang === 'en' ? '/' : '/'.$lang;
+  $ui = [
+    'en' => ['menu' => 'Main menu', 'services' => 'Services', 'projects' => 'Projects', 'contact' => 'Contact', 'home' => 'Home', 'cases' => 'Case studies', 'tagline' => 'Remote web UI/UX designer · clients worldwide'],
+    'tr' => ['menu' => 'Ana menü', 'services' => 'Hizmetler', 'projects' => 'Projeler', 'contact' => 'İletişim', 'home' => 'Ana sayfa', 'cases' => 'Vaka çalışmaları (EN)', 'tagline' => 'Uzaktan web UI/UX tasarım ve e-ticaret geliştirme'],
+    'fr' => ['menu' => 'Menu principal', 'services' => 'Services', 'projects' => 'Projets', 'contact' => 'Contact', 'home' => 'Accueil', 'cases' => 'Études de cas (EN)', 'tagline' => 'Design UI/UX web et développement e-commerce à distance'],
+    'ar' => ['menu' => 'القائمة الرئيسية', 'services' => 'الخدمات', 'projects' => 'المشاريع', 'contact' => 'تواصل', 'home' => 'الرئيسية', 'cases' => 'دراسات الحالة (EN)', 'tagline' => 'تصميم واجهات المستخدم وتطوير المتاجر الإلكترونية عن بُعد'],
+  ][$lang] ?? null;
 @endphp
 <!DOCTYPE html>
-<html lang="{{ $lang }}">
+<html lang="{{ $lang }}" dir="{{ $rtl ? 'rtl' : 'ltr' }}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +27,7 @@
 @endforeach
 <link rel="icon" href="{{ $siteUrl }}/favicon.ico">
 <meta property="og:type" content="{{ $ogType ?? 'website' }}">
-<meta property="og:locale" content="{{ $lang === 'tr' ? 'tr_TR' : 'en_US' }}">
+<meta property="og:locale" content="{{ $ogLocale ?? 'en_US' }}">
 <meta property="og:site_name" content="Haythem Aljane">
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $description }}">
@@ -34,7 +42,7 @@
 @endif
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700{{ $rtl ? '&family=Cairo:wght@400;600;700;800' : '' }}&display=swap" rel="stylesheet">
 <style>
 :root{--red:#e50000;--red-dark:#b30000;--black:#080808;--card:#141414;--border:rgba(229,0,0,.2);--text:#d8d8d8;--muted:#8a8a8a;--white:#fff}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -95,24 +103,33 @@ footer{border-top:1px solid var(--border);padding:26px 0;font-size:.82rem;color:
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px 22px;justify-content:space-between}
 footer nav{display:flex;flex-wrap:wrap;gap:16px}
 footer a:hover{color:#fff}
+.card-links{display:flex;flex-wrap:wrap;gap:4px 16px}
+/* Right-to-left (Arabic) */
+[dir="rtl"] body{font-family:'Cairo','Outfit',sans-serif}
+[dir="rtl"] h1,[dir="rtl"] h2{font-family:'Cairo',sans-serif;font-weight:800;letter-spacing:0;line-height:1.3}
+[dir="rtl"] h1{font-size:clamp(2rem,5.4vw,3.4rem)}
+[dir="rtl"] h2{font-size:clamp(1.6rem,3.6vw,2.2rem)}
+[dir="rtl"] .kicker{letter-spacing:.04em}
+[dir="rtl"] ul.list li{padding-left:0;padding-right:26px}
+[dir="rtl"] ul.list li::before{left:auto;right:4px}
+[dir="rtl"] .brand{direction:ltr}
 @media(max-width:640px){.top nav a:not(.lang):not(.keep){display:none}.form .row{grid-template-columns:1fr}.hero{padding:48px 0 24px}body{font-size:16px}}
 </style>
 </head>
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="{{ $lang === 'tr' ? '/tr' : '/' }}">HAYTHEM <span>ALJANE</span></a>
-    <nav aria-label="{{ $lang === 'tr' ? 'Ana menü' : 'Main menu' }}">
-      @if($lang === 'tr')
-        <a href="/tr#hizmetler">Hizmetler</a>
-        <a href="/tr#projeler">Projeler</a>
-        <a href="/tr#iletisim" class="keep">İletişim</a>
-        <a href="{{ $switchUrl ?? '/' }}" class="lang" hreflang="en" lang="en">EN</a>
-      @else
+    <a class="brand notranslate" translate="no" href="{{ $home }}">HAYTHEM <span>ALJANE</span></a>
+    <nav aria-label="{{ $ui['menu'] }}">
+      @if($lang === 'en')
         <a href="/#projects">Projects</a>
         <a href="/case-studies" @if(request()->is('case-studies')) aria-current="page" @endif>Case studies</a>
         <a href="/#contact" class="keep">Contact</a>
-        <a href="{{ $switchUrl ?? '/tr' }}" class="lang" hreflang="tr" lang="tr">TR</a>
+      @else
+        <a href="{{ $home }}#services">{{ $ui['services'] }}</a>
+        <a href="{{ $home }}#projects">{{ $ui['projects'] }}</a>
+        <a href="{{ $home }}#contact" class="keep">{{ $ui['contact'] }}</a>
+        <a href="/" class="lang notranslate" translate="no" hreflang="en" lang="en">EN</a>
       @endif
     </nav>
   </div>
@@ -124,13 +141,12 @@ footer a:hover{color:#fff}
 
 <footer>
   <div class="wrap">
-    <div>© {{ date('Y') }} Haythem Aljane · {{ $lang === 'tr' ? 'Uzaktan çalışan web UI/UX tasarımcı' : 'Remote web UI/UX designer · clients worldwide' }}</div>
-    <nav>
-      @if($lang === 'tr')
-        <a href="/tr">Ana sayfa</a><a href="/case-studies">Vaka çalışmaları (EN)</a><a href="/">English</a>
-      @else
-        <a href="/">Home</a><a href="/case-studies">Case studies</a><a href="/tr">Türkçe</a>
-      @endif
+    <div>© {{ date('Y') }} Haythem Aljane · {{ $ui['tagline'] }}</div>
+    <nav class="notranslate" translate="no">
+      <a href="{{ $home }}">{{ $ui['home'] }}</a><a href="/case-studies">{{ $ui['cases'] }}</a>
+      @foreach(['en' => 'English', 'fr' => 'Français', 'ar' => 'العربية', 'tr' => 'Türkçe'] as $code => $name)
+        @if($code !== $lang)<a href="{{ $code === 'en' ? '/' : '/'.$code }}" hreflang="{{ $code }}" lang="{{ $code }}">{{ $name }}</a>@endif
+      @endforeach
     </nav>
   </div>
 </footer>

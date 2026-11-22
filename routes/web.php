@@ -32,10 +32,14 @@ Route::get('/media/visinova-video', function () {
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
-// Turkish landing page for clients searching in Turkish.
-Route::get('/tr', function () {
-    return view('tr', ['studies' => config('case_studies')]);
-})->name('tr');
+// Localized landing pages (French, Arabic, Turkish). Text lives in config/landing.php.
+Route::get('/{locale}', function (string $locale) {
+    return view('landing', [
+        'locale' => $locale,
+        'copy' => config('landing.'.$locale),
+        'studies' => config('case_studies'),
+    ]);
+})->where('locale', 'fr|ar|tr')->name('landing.locale');
 
 // Case studies: one page per selected project, content in config/case_studies.php.
 Route::get('/case-studies', function () {

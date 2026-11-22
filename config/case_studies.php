@@ -18,8 +18,11 @@ return [
         'role' => 'Concept, UI/UX design, UI art and front-end build',
         'type' => 'Game UI / mobile',
         'tools' => ['Game UI', 'UI/UX', 'SVG illustration', 'HTML', 'CSS', 'JavaScript'],
-        'tr_title' => 'Tidekeep: Mobil Oyun Arayüz Kiti',
-        'tr_summary' => 'Özgün bir ada bulmaca oyunu için lobi, seviye haritası, mağaza ve zafer ekranları: konsept, arayüz çizimleri ve etkileşimli ön yüz.',
+        'i18n' => [
+            'tr' => ['title' => 'Tidekeep: Mobil Oyun Arayüz Kiti', 'summary' => 'Özgün bir ada bulmaca oyunu için lobi, seviye haritası, mağaza ve zafer ekranları: konsept, arayüz çizimleri ve etkileşimli ön yüz.'],
+            'fr' => ['title' => 'Tidekeep : kit d\'interface pour jeu mobile', 'summary' => 'Lobby, carte des niveaux, boutique et écran de victoire pour un jeu de puzzle insulaire original : concept, illustrations d\'interface et front-end interactif.'],
+            'ar' => ['title' => 'Tidekeep: مجموعة واجهات للعبة جوال', 'summary' => 'شاشات اللوبي وخريطة المراحل والمتجر وشاشة الفوز للعبة ألغاز أصلية: الفكرة ورسومات الواجهة والواجهة الأمامية التفاعلية.'],
+        ],
         'challenge' => 'Mobile game screens have to be readable in a second, on a small screen, while the player is moving fast. The goal was a set of core screens for an original island puzzle game where the next action is always obvious, plus a button system that feels tactile.',
         'approach' => [
             'One clear call to action in the lobby, with the HUD kept out of the way.',
@@ -46,8 +49,11 @@ return [
         'role' => 'UI/UX design and full-stack development',
         'type' => 'Product website / web app / AI',
         'tools' => ['Laravel', 'Inertia.js', 'React', 'Tailwind CSS', 'YOLO v8', 'OpenCV'],
-        'tr_title' => 'Visinova: Akıllı Gözlük ve Görüntü İşleme Platformu',
-        'tr_summary' => 'Görme engelli kullanıcılar için akıllı gözlük: ürün sitesi, uygulama indirme, kullanıcı hesapları ve canlı yapay zekâ kamera ekranı.',
+        'i18n' => [
+            'tr' => ['title' => 'Visinova: Akıllı Gözlük ve Görüntü İşleme Platformu', 'summary' => 'Görme engelli kullanıcılar için akıllı gözlük: ürün sitesi, uygulama indirme, kullanıcı hesapları ve canlı yapay zekâ kamera ekranı.'],
+            'fr' => ['title' => 'Visinova : lunettes connectées et plateforme de vision IA', 'summary' => 'Lunettes intelligentes pour personnes malvoyantes : site produit, téléchargement de l\'application, comptes utilisateurs et écran caméra IA en direct.'],
+            'ar' => ['title' => 'Visinova: نظارات ذكية ومنصة رؤية بالذكاء الاصطناعي', 'summary' => 'نظارات ذكية لضعاف البصر: موقع تعريفي بالمنتج، وتحميل التطبيق، وحسابات المستخدمين، وشاشة كاميرا مباشرة بالذكاء الاصطناعي.'],
+        ],
         'challenge' => 'Visinova needed one place to present the glasses, let people buy them and download the companion app, and show what the device sees in real time, for users with very different levels of vision.',
         'approach' => [
             'A product landing page that explains the device simply, with clear paths to buy and download.',
@@ -74,8 +80,11 @@ return [
         'role' => 'Product design, UI/UX and development',
         'type' => 'Dashboard / AI agents',
         'tools' => ['Claude Code', 'AI agents', 'Laravel', 'JavaScript', 'Gmail API', 'QuickBooks API'],
-        'tr_title' => 'AI Operasyon Masası: 24 Yapay Zekâ Ajanından Oluşan Ekip',
-        'tr_summary' => 'Tek kişilik bir işletmenin işleri yapay zekâ ajanlarına verip sonuçları tek ekranda takip ettiği ve dışarıya giden her işlemi onayladığı kontrol paneli.',
+        'i18n' => [
+            'tr' => ['title' => 'AI Operasyon Masası: 24 Yapay Zekâ Ajanından Oluşan Ekip', 'summary' => 'Tek kişilik bir işletmenin işleri yapay zekâ ajanlarına verip sonuçları tek ekranda takip ettiği ve dışarıya giden her işlemi onayladığı kontrol paneli.'],
+            'fr' => ['title' => 'AI Operations Desk : une équipe de 24 agents IA', 'summary' => 'Tableau de bord où une entreprise individuelle confie le travail à des agents IA, suit les résultats au même endroit et valide chaque action externe.'],
+            'ar' => ['title' => 'AI Operations Desk: فريق من 24 وكيل ذكاء اصطناعي', 'summary' => 'لوحة تحكم يوزّع فيها صاحب مشروع فردي المهام على وكلاء ذكاء اصطناعي، ويتابع النتائج في مكان واحد، ويوافق على كل إجراء خارجي.'],
+        ],
         'challenge' => 'Running a business alone means email, finance, the website and content all compete for the same time. The idea: hand routine work to specialised AI agents, but keep the owner in control of anything that leaves the business.',
         'approach' => [
             'Every request goes to a specialised agent: email triage, finance summaries, website builds, QA review or content drafts.',
@@ -100,8 +109,11 @@ return [
         'role' => 'E-commerce UI/UX design and front-end development',
         'type' => 'E-commerce / storefront concept',
         'tools' => ['JavaScript', 'HTML', 'CSS', 'localStorage'],
-        'tr_title' => 'Nova Store: E-ticaret Mağaza Arayüzü',
-        'tr_summary' => 'Ürün filtreleri, arama, sıralama, sepet çekmecesi ve sipariş özeti olan hızlı bir e-ticaret mağaza konsepti.',
+        'i18n' => [
+            'tr' => ['title' => 'Nova Store: E-ticaret Mağaza Arayüzü', 'summary' => 'Ürün filtreleri, arama, sıralama, sepet çekmecesi ve sipariş özeti olan hızlı bir e-ticaret mağaza konsepti.'],
+            'fr' => ['title' => 'Nova Store : interface de boutique e-commerce', 'summary' => 'Concept de boutique rapide avec filtres produits, recherche, tri, panier latéral et récapitulatif de commande.'],
+            'ar' => ['title' => 'Nova Store: واجهة متجر إلكتروني', 'summary' => 'تصوّر لمتجر سريع مع فلاتر للمنتجات وبحث وترتيب وسلة جانبية وملخّص للطلب.'],
+        ],
         'challenge' => 'Online stores lose buyers between "I like this" and "I paid". The goal was a storefront where finding a product and checking the cart take as few steps as possible.',
         'approach' => [
             'Filters, search and sorting that update the product grid instantly.',
