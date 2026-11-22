@@ -23,6 +23,7 @@ class AdminUserSeeder extends Seeder
 
         $admin = User::firstOrNew(['email' => $email]);
         $admin->name = config('portfolio.admin_name', 'useradmin');
+        $admin->role = 'owner';
 
         if (filled($configuredPassword)) {
             $admin->password = Hash::make($configuredPassword);

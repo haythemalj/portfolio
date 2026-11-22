@@ -21,11 +21,15 @@ class Project extends Model
         'category',
         'order',
         'featured',
+        'active',
+        'seeded',
     ];
 
     protected $casts = [
         'technologies' => 'array',
         'featured' => 'boolean',
+        'active' => 'boolean',
+        'seeded' => 'boolean',
     ];
 
     public function user()
@@ -38,8 +42,9 @@ class Project extends Model
         return $query->where('featured', true)->orderBy('order');
     }
 
+    /** Projects shown on the website, in dashboard order. */
     public function scopeActive($query)
     {
-        return $query->orderBy('order');
+        return $query->where('active', true)->orderBy('order')->orderBy('id');
     }
 }

@@ -1,0 +1,1 @@
+@if(!is_null($value))<span class="{{ $value >= 0 ? 'up' : 'down' }}"><i class="fa-solid fa-arrow-{{ $value >= 0 ? 'up' : 'down' }}"></i> {{ abs($value) }}%</span> vs previous {{ $days }} days @else <span>No earlier data yet</span> @endif
