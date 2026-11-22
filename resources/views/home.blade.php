@@ -6,7 +6,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="google-site-verification" content="7rU4mvL7O9VyGljf8gxO3VGD92mVBhu-vEwdT6fckGE" />
 @php $siteUrl = rtrim(config('app.url'), '/'); @endphp
-<meta name="description" content="Haythem Aljane is a Web UI/UX Designer and E-commerce Developer based in Istanbul, Türkiye, open to remote work and roles across Europe. Websites, online stores, WordPress, UI/UX design and AI projects.">
+<meta name="description" content="Haythem Aljane, Web UI/UX Designer &amp; E-commerce Developer in Istanbul. Websites, online stores, WordPress and UI/UX design. Open to remote and Europe.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Haythem Aljane">
 <title>Haythem Aljane | Web UI/UX Designer & E-commerce Developer in Istanbul</title>
@@ -18,12 +18,14 @@
 <meta property="og:title" content="Haythem Aljane | Web UI/UX Designer &amp; E-commerce Developer in Istanbul">
 <meta property="og:description" content="Web UI/UX Designer and E-commerce Developer based in Istanbul, open to remote and Europe. Websites, online stores, WordPress, UI/UX design and AI projects.">
 <meta property="og:url" content="{{ $siteUrl }}/">
-<meta property="og:image" content="{{ $siteUrl }}/images/profile.jpg">
+<meta property="og:image" content="{{ $siteUrl }}/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Haythem Aljane, Web UI/UX Designer and E-commerce Developer">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Haythem Aljane | Web UI/UX Designer &amp; E-commerce Developer in Istanbul">
 <meta name="twitter:description" content="Websites, online stores, WordPress, UI/UX design and AI projects by Haythem Aljane, based in Istanbul, Türkiye. Open to remote and Europe.">
-<meta name="twitter:image" content="{{ $siteUrl }}/images/profile.jpg">
+<meta name="twitter:image" content="{{ $siteUrl }}/images/og-cover.jpg">
 <script type="application/ld+json">
 {!! json_encode([
   '@context' => 'https://schema.org',
@@ -37,6 +39,12 @@
       'jobTitle' => 'Web UI/UX Designer and E-commerce Developer',
       'description' => 'Web UI/UX Designer and E-commerce Developer based in Istanbul, Türkiye, open to remote work and roles across Europe.',
       'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Istanbul', 'addressCountry' => 'TR'],
+      'hasOccupation' => [
+        '@type' => 'Occupation',
+        'name' => 'Web UI/UX Designer and E-commerce Developer',
+        'occupationLocation' => ['@type' => 'City', 'name' => 'Istanbul'],
+        'skills' => 'UI/UX design, web design, e-commerce development, WordPress, Laravel, game UI, digital marketing',
+      ],
       'knowsAbout' => ['Web design', 'UI/UX design', 'E-commerce development', 'WordPress', 'Laravel', 'Digital marketing', 'SEO', 'AI agents'],
       'sameAs' => [
         'https://github.com/haythemalj',
@@ -60,6 +68,26 @@
       'name' => 'Haythem Aljane | Web UI/UX Designer & E-commerce Developer in Istanbul',
       'mainEntity' => ['@id' => $siteUrl.'/#person'],
       'isPartOf' => ['@id' => $siteUrl.'/#website'],
+    ],
+    [
+      '@type' => 'ItemList',
+      '@id' => $siteUrl.'/#projects',
+      'name' => 'Projects by Haythem Aljane',
+      'itemListElement' => $projects->values()->map(function ($project, $i) use ($siteUrl) {
+          $url = $project->url ?: $siteUrl.'/#projects';
+          if (\Illuminate\Support\Str::startsWith($url, '/')) { $url = $siteUrl.$url; }
+          $item = [
+              '@type' => 'CreativeWork',
+              'name' => $project->title,
+              'description' => \Illuminate\Support\Str::limit(strip_tags((string) $project->description), 300),
+              'url' => $url,
+              'creator' => ['@id' => $siteUrl.'/#person'],
+          ];
+          if ($project->image) {
+              $item['image'] = \Illuminate\Support\Str::startsWith($project->image, 'http') ? $project->image : $siteUrl.'/'.ltrim($project->image, '/');
+          }
+          return ['@type' => 'ListItem', 'position' => $i + 1, 'item' => $item];
+      })->all(),
     ],
   ],
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) !!}
@@ -789,13 +817,13 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   <p class="cert-intro">Verified certificates and professional training documents. Each credential appears once with its supporting document, issuer, and date where available.</p>
   <div class="cert-gallery reveal">
     <a class="cert-gallery-card" href="/images/certificates/english-b2.jpeg" target="_blank" rel="noopener">
-      <img loading="lazy" decoding="async" src="/images/certificates/english-b2.jpeg" alt="General English B2 certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">General English – Intermediate (CEFR B2)</div><span class="cert-gallery-link">Imperial English UK · 2025 · View</span></div>
+      <img loading="lazy" decoding="async" width="700" height="986" src="/images/certificates/english-b2.webp" alt="General English B2 certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">General English – Intermediate (CEFR B2)</div><span class="cert-gallery-link">Imperial English UK · 2025 · View</span></div>
     </a>
     <a class="cert-gallery-card" href="/images/certificates/ux-ui.jpeg" target="_blank" rel="noopener">
-      <img loading="lazy" decoding="async" src="/images/certificates/ux-ui.jpeg" alt="UI/UX Design certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">UI/UX Design Professional Training</div><span class="cert-gallery-link">Media Training · 2026 · View</span></div>
+      <img loading="lazy" decoding="async" width="700" height="986" src="/images/certificates/ux-ui.webp" alt="UI/UX Design certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">UI/UX Design Professional Training</div><span class="cert-gallery-link">Media Training · 2026 · View</span></div>
     </a>
     <a class="cert-gallery-card" href="/images/certificates/wordpress.jpeg" target="_blank" rel="noopener">
-      <img loading="lazy" decoding="async" src="/images/certificates/wordpress.jpeg" alt="WordPress certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">WordPress Professional Training</div><span class="cert-gallery-link">Media Training · 2026 · View</span></div>
+      <img loading="lazy" decoding="async" width="700" height="986" src="/images/certificates/wordpress.webp" alt="WordPress certificate"><div class="cert-gallery-body"><div class="cert-gallery-title">WordPress Professional Training</div><span class="cert-gallery-link">Media Training · 2026 · View</span></div>
     </a>
     <a class="cert-gallery-card document" href="/images/certificates/artificial-intelligence.pdf" target="_blank" rel="noopener">
       <div class="cert-gallery-body"><div class="cert-gallery-title">Artificial Intelligence</div><span class="cert-gallery-link">Media Training · Open PDF</span></div>

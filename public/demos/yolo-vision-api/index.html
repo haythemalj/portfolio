@@ -3,7 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YOLO Vision Detection API — Interactive Demo</title>
+<title>YOLO Vision Detection API | Demo by Haythem Aljane</title>
+<!-- SEO (data-ha-seo) -->
+<link rel="canonical" href="https://haythemdev.site/demos/yolo-vision-api/">
+<meta name="author" content="Haythem Aljane">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Haythem Aljane">
+<meta property="og:title" content="YOLO Vision Detection API | Demo by Haythem Aljane">
+<meta property="og:description" content="Simulated demo of a YOLO object-detection REST API: send a sample scene, receive bounding boxes and JSON.">
+<meta property="og:url" content="https://haythemdev.site/demos/yolo-vision-api/">
+<meta property="og:image" content="https://haythemdev.site/images/projects/yolo-api.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="YOLO Vision Detection API | Demo by Haythem Aljane">
+<meta name="twitter:description" content="Simulated demo of a YOLO object-detection REST API: send a sample scene, receive bounding boxes and JSON.">
+<meta name="twitter:image" content="https://haythemdev.site/images/projects/yolo-api.webp">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "YOLO Vision Detection API", "description": "Simulated demo of a YOLO object-detection REST API: send a sample scene, receive bounding boxes and JSON.", "url": "https://haythemdev.site/demos/yolo-vision-api/", "image": "https://haythemdev.site/images/projects/yolo-api.webp", "author": {"@type": "Person", "@id": "https://haythemdev.site/#person", "name": "Haythem Aljane", "url": "https://haythemdev.site/"}, "isPartOf": {"@id": "https://haythemdev.site/#website"}, "keywords": "Python, FastAPI, YOLOv8, OpenCV, REST API"}</script>
+
 <meta name="description" content="Simulated demo of a YOLO object-detection REST API: send a sample scene, receive bounding boxes and JSON.">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -85,5 +101,7 @@ $('#run').onclick=()=>{const th=+$('#th').value,btn=$('#run');btn.disabled=true;
   $('#m1').textContent=dets.length;$('#m2').textContent=ms;$('#m3').textContent='yolov8n';$('#lat').textContent='200 OK · '+Math.round(performance.now()-t0)+' ms round-trip';btn.disabled=false},1400)};
 draw();addEventListener('resize',()=>{if($('#boxes').children.length)$('#run').click()});
 </script>
+
+<a data-ha-seo href="https://haythemdev.site/#projects" title="More work by Haythem Aljane, web UI/UX designer in Istanbul" style="position:fixed;left:12px;bottom:12px;z-index:2147483647;font:500 12px/1.2 system-ui,-apple-system,Segoe UI,sans-serif;color:#fff;background:rgba(8,8,8,.85);border:1px solid rgba(229,0,0,.65);padding:7px 12px;border-radius:999px;text-decoration:none;letter-spacing:.2px;box-shadow:0 4px 14px rgba(0,0,0,.35)">Demo by Haythem Aljane ↗</a>
 </body>
 </html>

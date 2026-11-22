@@ -4,7 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8f6f1">
-  <title>Marketday | Good things, made well</title>
+  <title>Marketday Storefront | Demo by Haythem Aljane</title>
+<!-- SEO (data-ha-seo) -->
+<meta name="description" content="Responsive product storefront concept with category filters, product cards, and an interactive shopping bag counter.">
+<link rel="canonical" href="https://haythemdev.site/demos/marketday/">
+<meta name="author" content="Haythem Aljane">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Haythem Aljane">
+<meta property="og:title" content="Marketday Storefront | Demo by Haythem Aljane">
+<meta property="og:description" content="Responsive product storefront concept with category filters, product cards, and an interactive shopping bag counter.">
+<meta property="og:url" content="https://haythemdev.site/demos/marketday/">
+<meta property="og:image" content="https://haythemdev.site/images/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Marketday Storefront | Demo by Haythem Aljane">
+<meta name="twitter:description" content="Responsive product storefront concept with category filters, product cards, and an interactive shopping bag counter.">
+<meta name="twitter:image" content="https://haythemdev.site/images/og-cover.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Marketday Storefront", "description": "Responsive product storefront concept with category filters, product cards, and an interactive shopping bag counter.", "url": "https://haythemdev.site/demos/marketday/", "image": "https://haythemdev.site/images/og-cover.jpg", "author": {"@type": "Person", "@id": "https://haythemdev.site/#person", "name": "Haythem Aljane", "url": "https://haythemdev.site/"}, "isPartOf": {"@id": "https://haythemdev.site/#website"}, "keywords": "HTML, CSS, JavaScript, E-commerce UI"}</script>
+
   <style>
     :root{--ink:#252c26;--muted:#777d74;--paper:#f8f6f1;--green:#536c47;--lime:#d8e6a4;--line:#e6e2d9;--orange:#ca6c3d}
     *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 Arial,sans-serif}button{font:inherit;cursor:pointer}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
@@ -37,5 +54,7 @@
     document.querySelectorAll('.add').forEach(button=>button.addEventListener('click',()=>{bag+=1;count.textContent=String(bag);toast.textContent=button.dataset.name+' added to your bag';toast.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>toast.classList.remove('show'),1900);}));
     document.getElementById('cart').addEventListener('click',()=>{toast.textContent=bag?bag+' item'+(bag===1?'':'s')+' in your bag':'Your bag is empty';toast.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>toast.classList.remove('show'),1900);});
   </script>
+
+<a data-ha-seo href="https://haythemdev.site/#projects" title="More work by Haythem Aljane, web UI/UX designer in Istanbul" style="position:fixed;left:12px;bottom:12px;z-index:2147483647;font:500 12px/1.2 system-ui,-apple-system,Segoe UI,sans-serif;color:#fff;background:rgba(8,8,8,.85);border:1px solid rgba(229,0,0,.65);padding:7px 12px;border-radius:999px;text-decoration:none;letter-spacing:.2px;box-shadow:0 4px 14px rgba(0,0,0,.35)">Demo by Haythem Aljane ↗</a>
 </body>
 </html>

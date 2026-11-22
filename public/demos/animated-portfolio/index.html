@@ -3,7 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Animated Developer Portfolio — Demo</title>
+<title>Animated Developer Portfolio | Demo by Haythem Aljane</title>
+<!-- SEO (data-ha-seo) -->
+<link rel="canonical" href="https://haythemdev.site/demos/animated-portfolio/">
+<meta name="author" content="Haythem Aljane">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Haythem Aljane">
+<meta property="og:title" content="Animated Developer Portfolio | Demo by Haythem Aljane">
+<meta property="og:description" content="Motion-driven developer portfolio demo: typewriter hero, scroll reveals, animated skill bars and a magnetic cursor.">
+<meta property="og:url" content="https://haythemdev.site/demos/animated-portfolio/">
+<meta property="og:image" content="https://haythemdev.site/images/projects/animated-portfolio.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Animated Developer Portfolio | Demo by Haythem Aljane">
+<meta name="twitter:description" content="Motion-driven developer portfolio demo: typewriter hero, scroll reveals, animated skill bars and a magnetic cursor.">
+<meta name="twitter:image" content="https://haythemdev.site/images/projects/animated-portfolio.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Animated Developer Portfolio", "description": "Motion-driven developer portfolio demo: typewriter hero, scroll reveals, animated skill bars and a magnetic cursor.", "url": "https://haythemdev.site/demos/animated-portfolio/", "image": "https://haythemdev.site/images/projects/animated-portfolio.png", "author": {"@type": "Person", "@id": "https://haythemdev.site/#person", "name": "Haythem Aljane", "url": "https://haythemdev.site/"}, "isPartOf": {"@id": "https://haythemdev.site/#website"}, "keywords": "HTML, CSS, JavaScript, Swiper, Responsive Design"}</script>
+
 <meta name="description" content="Motion-driven developer portfolio demo: typewriter hero, scroll reveals, animated skill bars and a magnetic cursor.">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -91,5 +107,7 @@ const words=['fast, animated interfaces.','Laravel back-ends.','pixel-perfect UI
 const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.15});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 const cur=document.getElementById('cur');addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});document.querySelectorAll('a,button').forEach(a=>{a.onmouseenter=()=>cur.classList.add('big');a.onmouseleave=()=>cur.classList.remove('big')});
 </script>
+
+<a data-ha-seo href="https://haythemdev.site/#projects" title="More work by Haythem Aljane, web UI/UX designer in Istanbul" style="position:fixed;left:12px;bottom:12px;z-index:2147483647;font:500 12px/1.2 system-ui,-apple-system,Segoe UI,sans-serif;color:#fff;background:rgba(8,8,8,.85);border:1px solid rgba(229,0,0,.65);padding:7px 12px;border-radius:999px;text-decoration:none;letter-spacing:.2px;box-shadow:0 4px 14px rgba(0,0,0,.35)">Demo by Haythem Aljane ↗</a>
 </body>
 </html>
