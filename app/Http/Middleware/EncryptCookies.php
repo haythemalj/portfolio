@@ -12,6 +12,6 @@ class EncryptCookies extends Middleware
      * @var array
      */
     protected $except = [
-        //
+        'googtrans', // set in the browser by the language switcher
     ];
 }

@@ -253,12 +253,19 @@ class ProjectSeeder extends Seeder
 
         foreach ($projects as $project) {
             $project['user_id'] = $user->id;
-            Project::updateOrCreate(
-                ['title' => $project['title']],
-                $project
-            );
+            $project['seeded'] = true;
+
+            $existing = Project::where('title', $project['title'])->first();
+            if ($existing) {
+                // Keep what the owner chose in the dashboard: order, featured and show/hide.
+                unset($project['order'], $project['featured'], $project['active']);
+                $existing->update($project);
+            } else {
+                Project::create($project);
+            }
         }
 
-        Project::whereNotIn('title', $titles)->delete();
+        // Only remove projects this seeder created; projects added in the dashboard stay.
+        Project::where('seeded', true)->whereNotIn('title', $titles)->delete();
     }
 }

@@ -3,66 +3,53 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Project;
 use App\Models\ContactMessage;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
+use App\Models\Project;
+use App\Support\SiteStats;
+use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware(function ($request, $next) {
-            if (auth()->user()->name !== config('portfolio.admin_name')) {
-                abort(403, 'Unauthorized');
-            }
-            return $next($request);
-        });
-    }
-
     public function index()
     {
-        $stats = [
-            'total_projects' => Project::count(),
-            'featured_projects' => Project::where('featured', true)->count(),
-            'active_projects' => Project::where('active', true)->count(),
-            'inactive_projects' => Project::where('active', false)->count(),
-            'unread_messages' => ContactMessage::whereNull('read_at')->count(),
-        ];
+        $stats = new SiteStats(7);
+        $month = new SiteStats(30);
 
-        // Get projects by technology
-        $projects = Project::all();
-        $technologies = [];
-        foreach ($projects as $project) {
-            if ($project->technologies) {
-                foreach ($project->technologies as $tech) {
-                    $technologies[$tech] = ($technologies[$tech] ?? 0) + 1;
-                }
-            }
-        }
-        arsort($technologies);
-        $topTechnologies = array_slice($technologies, 0, 5);
+        return view('admin.dashboard', [
+            'totals' => $stats->totals(),
+            'daily' => $month->daily(),
+            'topPages' => $month->topPages(5),
+            'sources' => $month->sources(),
+            'performance' => $month->performance(),
+            'hasData' => $stats->hasData(),
+            'projectCounts' => [
+                'total' => Project::count(),
+                'visible' => Project::where('active', true)->count(),
+                'hidden' => Project::where('active', false)->count(),
+                'featured' => Project::where('featured', true)->count(),
+            ],
+            'unread' => ContactMessage::whereNull('read_at')->count(),
+            'recentMessages' => ContactMessage::latest()->take(5)->get(),
+            'recentProjects' => Project::latest('updated_at')->take(4)->get(),
+        ]);
+    }
 
-        // Get projects by status
-        $projectsByStatus = [
-            'Featured' => Project::where('featured', true)->count(),
-            'Active' => Project::where('active', true)->count(),
-            'Archived' => Project::where('active', false)->count(),
-        ];
+    public function stats(Request $request)
+    {
+        $days = in_array((int) $request->query('days'), [7, 30, 90], true) ? (int) $request->query('days') : 30;
+        $stats = new SiteStats($days);
 
-        // Recent projects
-        $recentProjects = Project::latest('updated_at')->take(5)->get();
-
-        // Admin user info
-        $admin = Auth::user();
-
-        return view('admin.dashboard', compact(
-            'stats',
-            'topTechnologies',
-            'projectsByStatus',
-            'recentProjects',
-            'admin'
-        ));
+        return view('admin.stats', [
+            'days' => $days,
+            'totals' => $stats->totals(),
+            'daily' => $stats->daily(),
+            'topPages' => $stats->topPages(12),
+            'languages' => $stats->languages(),
+            'sources' => $stats->sources(),
+            'devices' => $stats->devices(),
+            'performance' => $stats->performance(),
+            'hasData' => $stats->hasData(),
+            'sitemapUrls' => SiteStats::sitemapUrls(),
+        ]);
     }
 }

@@ -9,17 +9,6 @@ use Illuminate\Support\Facades\Storage;
 
 class ProjectAdminController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware(function ($request, $next) {
-            if (auth()->user()->name !== config('portfolio.admin_name')) {
-                abort(403, 'Unauthorized');
-            }
-            return $next($request);
-        });
-    }
-
     public function index()
     {
         $projects = Project::orderBy('order')->orderBy('id')->get();
@@ -37,6 +26,9 @@ class ProjectAdminController extends Controller
         $data['user_id'] = auth()->id();
         $data['technologies'] = $this->parseTechnologies($request->input('technologies'));
         $data['image'] = $this->storeImage($request);
+        if (! $request->filled('order')) {
+            $data['order'] = (int) Project::max('order') + 1;
+        }
 
         Project::create($data);
 
@@ -62,6 +54,35 @@ class ProjectAdminController extends Controller
         return redirect()->route('admin.projects.index')->with('success', 'Project updated.');
     }
 
+    public function toggleVisibility(Project $project)
+    {
+        $project->update(['active' => ! $project->active]);
+
+        return back()->with('success', $project->active
+            ? "\"{$project->title}\" is now shown on the website."
+            : "\"{$project->title}\" is now hidden from the website.");
+    }
+
+    /** Move a project one place up or down; orders are renumbered 1, 2, 3... */
+    public function move(Project $project, string $direction)
+    {
+        $ordered = Project::orderBy('order')->orderBy('id')->get()->values();
+        $index = $ordered->search(fn ($p) => $p->id === $project->id);
+        $swap = $direction === 'up' ? $index - 1 : $index + 1;
+
+        if ($index !== false && isset($ordered[$swap])) {
+            $items = $ordered->all();
+            [$items[$index], $items[$swap]] = [$items[$swap], $items[$index]];
+            foreach ($items as $position => $item) {
+                if ((int) $item->order !== $position + 1) {
+                    $item->update(['order' => $position + 1]);
+                }
+            }
+        }
+
+        return back();
+    }
+
     public function destroy(Project $project)
     {
         $project->delete();
@@ -79,10 +100,16 @@ class ProjectAdminController extends Controller
             'category' => 'nullable|in:web,design,ai,wordpress',
             'order' => 'nullable|integer|min:0',
             'featured' => 'nullable|boolean',
+            'active' => 'nullable|boolean',
         ]);
 
-        $data['order'] = (int) ($data['order'] ?? 0);
+        if ($request->filled('order')) {
+            $data['order'] = (int) $data['order'];
+        } else {
+            unset($data['order']); // new projects go last; edits keep their position
+        }
         $data['featured'] = $request->boolean('featured');
+        $data['active'] = $request->boolean('active');
 
         return $data;
     }
