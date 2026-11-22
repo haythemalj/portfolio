@@ -14,11 +14,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>@yield('title', 'Dashboard') · Haythem Admin</title>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/admin.webmanifest">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Dashboard">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -51,6 +57,11 @@ a{color:inherit;text-decoration:none}
 .me-links a,.me-links button{flex:1;text-align:center;font:inherit;font-size:.8rem;color:#bbb;background:#161616;border:1px solid var(--line);border-radius:8px;padding:7px;cursor:pointer}
 .me-links a:hover,.me-links button:hover{color:#fff;border-color:var(--line-red)}
 .main{min-width:0;padding:28px 32px 60px}
+.app-tools{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+.app-tools button,.app-tools .ios-tip{display:none;width:100%;text-align:left;font:inherit;font-size:.82rem;color:#ddd;background:rgba(229,0,0,.1);border:1px solid var(--line-red);border-radius:8px;padding:8px 10px;cursor:pointer}
+.app-tools .ios-tip{cursor:default;color:#bbb;line-height:1.4}
+.app-tools button:hover{background:rgba(229,0,0,.18)}
+@media(display-mode:standalone){.side{padding-top:max(20px,env(safe-area-inset-top))}}
 .topbar{display:none}
 .scrim{display:none}
 /* Page header */
@@ -136,7 +147,8 @@ a{color:inherit;text-decoration:none}
   body.menu-open .side{transform:none}
   body.menu-open .scrim{display:block}
   .scrim{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:50}
-  .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:40;background:rgba(10,10,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 16px}
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:40;background:rgba(10,10,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 16px;padding-top:max(10px,env(safe-area-inset-top))}
+  .main{padding-bottom:max(50px,env(safe-area-inset-bottom))}
   .topbar .brand{padding:0}
   .main{padding:18px 16px 50px}
   .g-3,.g-2{grid-template-columns:minmax(0,1fr)}
@@ -161,9 +173,14 @@ a{color:inherit;text-decoration:none}
     <a href="{{ route('admin.dashboard') }}" class="brand"><img src="/icon-192.png" alt=""><span>Haythem<small>Dashboard</small></span></a>
     <nav class="nav">
       @foreach($nav as [$route, $label, $icon, $pattern, $count])
-        <a href="{{ route($route) }}" class="{{ request()->is($pattern) ? 'on' : '' }}"><i class="fa-solid {{ $icon }}"></i>{{ $label }}@if($count)<span class="count">{{ $count }}</span>@endif</a>
+        <a href="{{ route($route) }}" class="{{ request()->is($pattern) ? 'on' : '' }}"><i class="fa-solid {{ $icon }}"></i>{{ $label }}@if($route === 'admin.messages.index')<span class="count" id="unreadBadge" @if(!$count) hidden @endif>{{ $count }}</span>@elseif($count)<span class="count">{{ $count }}</span>@endif</a>
       @endforeach
     </nav>
+    <div class="app-tools">
+      <button type="button" id="installApp"><i class="fa-solid fa-download"></i> Install app</button>
+      <div class="ios-tip" id="iosTip"><i class="fa-solid fa-mobile-screen"></i> Install on iPhone: tap <i class="fa-solid fa-arrow-up-from-bracket"></i> Share, then <strong>Add to Home Screen</strong>.</div>
+      <button type="button" id="enableAlerts"><i class="fa-solid fa-bell"></i> Turn on message alerts</button>
+    </div>
     <div class="me">
       <div class="me-row">
         <div class="avatar">{{ mb_strtoupper(mb_substr($me->name, 0, 1)) }}</div>
@@ -191,6 +208,57 @@ a{color:inherit;text-decoration:none}
 document.querySelectorAll('[data-menu-open]').forEach(b=>b.addEventListener('click',()=>document.body.classList.add('menu-open')));
 document.querySelectorAll('[data-menu-close]').forEach(b=>b.addEventListener('click',()=>document.body.classList.remove('menu-open')));
 document.querySelectorAll('[data-confirm]').forEach(f=>f.addEventListener('submit',e=>{if(!confirm(f.dataset.confirm))e.preventDefault();}));
+
+/* Installable app: service worker, install button, unread badge and message alerts. */
+(function () {
+  var standalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  var reg = null;
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/admin-sw.js', { scope: '/admin' }).then(function (r) { reg = r; }).catch(function () {});
+  }
+
+  // Install button (Chrome, Edge, Android) and iPhone tip (Safari has no install prompt).
+  var installBtn = document.getElementById('installApp'), deferred = null;
+  window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); deferred = e; installBtn.style.display = 'block'; });
+  installBtn.addEventListener('click', function () {
+    if (!deferred) return;
+    deferred.prompt();
+    deferred.userChoice.finally(function () { deferred = null; installBtn.style.display = 'none'; });
+  });
+  window.addEventListener('appinstalled', function () { installBtn.style.display = 'none'; });
+  if (!standalone && /iphone|ipad|ipod/i.test(navigator.userAgent)) { document.getElementById('iosTip').style.display = 'block'; }
+
+  // Message alerts: the browser asks permission once, after a click.
+  var alertsBtn = document.getElementById('enableAlerts');
+  if ('Notification' in window && Notification.permission === 'default') { alertsBtn.style.display = 'block'; }
+  alertsBtn.addEventListener('click', function () {
+    Notification.requestPermission().then(function (p) { if (p !== 'default') alertsBtn.style.display = 'none'; });
+  });
+
+  // Unread badge: checks every minute while the dashboard is open (also minimised).
+  var badge = document.getElementById('unreadBadge'), baseTitle = document.title;
+  var last = parseInt(badge.textContent, 10) || 0, lastId = null;
+  function show(count) {
+    badge.textContent = count; badge.hidden = !count;
+    document.title = (count ? '(' + count + ') ' : '') + baseTitle;
+    if ('setAppBadge' in navigator) { (count ? navigator.setAppBadge(count) : navigator.clearAppBadge()).catch(function () {}); }
+  }
+  function check() {
+    fetch('/admin/api/unread', { headers: { 'Accept': 'application/json' }, credentials: 'same-origin' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d) return;
+        var latest = d.latest;
+        if (lastId !== null && latest && latest.id !== lastId && d.unread > last && 'Notification' in window && Notification.permission === 'granted') {
+          var opts = { body: latest.name + ': ' + latest.subject, icon: '/icon-192.png', badge: '/icon-192.png', tag: 'msg-' + latest.id, data: { url: latest.url } };
+          if (reg && reg.showNotification) { reg.showNotification('New message', opts); } else { new Notification('New message', opts); }
+        }
+        last = d.unread; lastId = latest ? latest.id : 0; show(d.unread);
+      }).catch(function () {});
+  }
+  show(last); check(); setInterval(check, 60000);
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) check(); });
+})();
 </script>
 @stack('scripts')
 </body>

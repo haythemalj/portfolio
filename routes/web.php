@@ -88,6 +88,7 @@ Route::get('/contact', function () {
 Route::middleware(['auth', 'admin:viewer'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/stats', [DashboardController::class, 'stats'])->name('stats');
+    Route::get('/api/unread', [DashboardController::class, 'unread'])->name('api.unread'); // polled by the app for its badge
 
     Route::get('/messages', [ContactMessageAdminController::class, 'index'])->name('messages.index');
     Route::get('/messages/{message}', [ContactMessageAdminController::class, 'show'])->name('messages.show');
