@@ -28,7 +28,7 @@
 @endphp
 @extends('layouts.site', [
   'title' => 'Case Studies | UI/UX, Game UI & E-commerce by Haythem Aljane',
-  'description' => 'How I design and build: case studies in game UI, product UI/UX, AI dashboards and e-commerce by Haythem Aljane, web UI/UX designer in Istanbul.',
+  'description' => 'How I design and build: case studies in game UI, product UI/UX, AI dashboards and e-commerce by Haythem Aljane, remote web UI/UX designer.',
   'canonical' => $siteUrl.'/case-studies',
   'schema' => $schema,
 ])
@@ -58,7 +58,7 @@
 
   <div class="cta">
     <h2>Have a project <span>in mind?</span></h2>
-    <p>I'm based in Istanbul and open to remote work and roles across Europe: UI/UX, game UI, web and e-commerce.</p>
+    <p>I work remotely with clients and teams in Europe, the USA and worldwide: UI/UX, game UI, web and e-commerce.</p>
     <div class="btns"><a class="btn btn-primary" href="/#contact">Contact me</a><a class="btn btn-ghost" href="/#projects">See all projects</a></div>
   </div>
 </div>

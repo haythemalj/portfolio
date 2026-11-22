@@ -124,7 +124,7 @@ footer a:hover{color:#fff}
 
 <footer>
   <div class="wrap">
-    <div>© {{ date('Y') }} Haythem Aljane · {{ $lang === 'tr' ? 'İstanbul merkezli web UI/UX tasarımcısı' : 'Web UI/UX designer based in Istanbul' }}</div>
+    <div>© {{ date('Y') }} Haythem Aljane · {{ $lang === 'tr' ? 'Uzaktan çalışan web UI/UX tasarımcı' : 'Remote web UI/UX designer · clients worldwide' }}</div>
     <nav>
       @if($lang === 'tr')
         <a href="/tr">Ana sayfa</a><a href="/case-studies">Vaka çalışmaları (EN)</a><a href="/">English</a>

@@ -101,7 +101,7 @@
 
   <div class="cta">
     <h2>Need something <span>similar?</span></h2>
-    <p>I'm Haythem Aljane, a web UI/UX designer and e-commerce developer based in Istanbul, open to remote work and roles across Europe.</p>
+    <p>I'm Haythem Aljane, a remote web UI/UX designer and e-commerce developer working with clients in Europe, the USA and worldwide.</p>
     <div class="btns"><a class="btn btn-primary" href="/#contact">Contact me</a><a class="btn btn-ghost" href="/case-studies">All case studies</a></div>
   </div>
 </div>

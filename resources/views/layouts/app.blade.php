@@ -7,8 +7,8 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="description" content="Haythem Aljane - Web Developer, UI/UX Designer & Community Leader based in Istanbul">
-    <meta name="keywords" content="web development, UI/UX, portfolio, freelance, Laravel, React, Istanbul, remote">
+    <meta name="description" content="Haythem Aljane - Web Developer, UI/UX Designer & Community Leader working remotely worldwide">
+    <meta name="keywords" content="web development, UI/UX, portfolio, freelance, Laravel, React, remote, Europe, USA">
     <meta name="author" content="Haythem Aljane">
     <title>@yield('title', config('app.name', 'Haythem Aljane'))</title>
 

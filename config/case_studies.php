@@ -11,7 +11,7 @@ return [
     'tidekeep-game-ui' => [
         'title' => 'Tidekeep: Mobile Game UI Kit',
         'seo_title' => 'Tidekeep Mobile Game UI Kit | Game UI Case Study by Haythem Aljane',
-        'seo_description' => 'Game UI case study: lobby with HUD, level map, shop and victory screens for an original mobile puzzle game, designed and built by Haythem Aljane in Istanbul.',
+        'seo_description' => 'Game UI case study: lobby with HUD, level map, shop and victory screens for an original mobile puzzle game, designed and built by Haythem Aljane.',
         'tagline' => 'An original mobile game UI kit, from concept and UI art to an interactive front-end build.',
         'image' => '/images/projects/tidekeep-game-ui.webp',
         'demo' => '/demos/tidekeep-game-ui/',
@@ -93,7 +93,7 @@ return [
     'react-store' => [
         'title' => 'Nova Store: E-commerce Storefront',
         'seo_title' => 'Nova Store E-commerce Storefront | UI/UX Case Study by Haythem Aljane',
-        'seo_description' => 'E-commerce UI case study: filters, search, sorting, cart drawer and order summary in a fast storefront concept by Haythem Aljane, Istanbul.',
+        'seo_description' => 'E-commerce UI case study: filters, search, sorting, cart drawer and order summary in a fast storefront concept by Haythem Aljane.',
         'tagline' => 'An interactive storefront concept focused on the parts of shopping that decide a sale.',
         'image' => '/images/projects/react-store.png',
         'demo' => '/demos/react-store/',

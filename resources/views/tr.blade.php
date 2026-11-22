@@ -8,7 +8,7 @@
         '@type' => 'WebPage',
         '@id' => $siteUrl.'/tr#page',
         'url' => $siteUrl.'/tr',
-        'name' => 'Haythem Aljane | İstanbul Web UI/UX Tasarımcı ve E-ticaret Geliştirici',
+        'name' => 'Haythem Aljane | Web UI/UX Tasarımcı ve E-ticaret Geliştirici (Uzaktan)',
         'inLanguage' => 'tr',
         'about' => ['@id' => $siteUrl.'/#person'],
         'isPartOf' => ['@id' => $siteUrl.'/#website'],
@@ -20,8 +20,7 @@
         'url' => $siteUrl.'/tr',
         'image' => $siteUrl.'/images/og-cover.jpg',
         'founder' => ['@id' => $siteUrl.'/#person'],
-        'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'İstanbul', 'addressCountry' => 'TR'],
-        'areaServed' => [['@type' => 'City', 'name' => 'İstanbul'], ['@type' => 'Country', 'name' => 'Türkiye'], 'Europe'],
+        'areaServed' => 'Worldwide',
         'availableLanguage' => ['English', 'French', 'Arabic'],
         'knowsAbout' => ['UI/UX tasarım', 'Web tasarım', 'E-ticaret', 'WordPress', 'Laravel', 'Oyun arayüzü tasarımı', 'Dijital pazarlama'],
       ],
@@ -38,8 +37,8 @@
 @endphp
 @extends('layouts.site', [
   'lang' => 'tr',
-  'title' => 'Haythem Aljane | İstanbul Web UI/UX Tasarımcı ve E-ticaret Geliştirici',
-  'description' => 'İstanbul\'da web UI/UX tasarımcı ve e-ticaret geliştirici. Web sitesi, online mağaza, WordPress, oyun arayüzü ve UI/UX tasarım. Uzaktan çalışmaya açığım.',
+  'title' => 'Haythem Aljane | Web UI/UX Tasarımcı ve E-ticaret Geliştirici (Uzaktan)',
+  'description' => 'Uzaktan çalışan web UI/UX tasarımcı ve e-ticaret geliştirici. Türkiye, Avrupa, ABD ve dünya genelindeki markalar için web sitesi, online mağaza ve arayüz.',
   'canonical' => $siteUrl.'/tr',
   'alternates' => ['en' => $siteUrl.'/', 'tr' => $siteUrl.'/tr', 'x-default' => $siteUrl.'/'],
   'switchUrl' => '/',
@@ -49,9 +48,9 @@
 @section('content')
 <div class="wrap">
   <section class="hero" id="giris">
-    <span class="kicker">İstanbul · Uzaktan · Avrupa</span>
+    <span class="kicker">Uzaktan · Avrupa · ABD · Dünya geneli</span>
     <h1>Web UI/UX Tasarımcı ve <span>E-ticaret Geliştirici</span></h1>
-    <p class="lead" style="margin-top:18px">Merhaba, ben Haythem Aljane. İstanbul'da yaşıyorum ve markalar için kullanımı kolay web siteleri, online mağazalar ve arayüzler tasarlayıp geliştiriyorum. Arayüz tasarımı, web geliştirme ve pazarlama bilgisini bir araya getiriyorum.</p>
+    <p class="lead" style="margin-top:18px">Merhaba, ben Haythem Aljane. Türkiye, Avrupa, ABD ve dünyanın her yerindeki markalar için uzaktan çalışarak kullanımı kolay web siteleri, online mağazalar ve arayüzler tasarlayıp geliştiriyorum. Arayüz tasarımı, web geliştirme ve pazarlama bilgisini bir araya getiriyorum.</p>
     <div class="btns">
       <a class="btn btn-primary" href="#iletisim">Proje teklifi alın</a>
       <a class="btn btn-ghost" href="#projeler">Çalışmalarımı görün</a>
@@ -95,7 +94,7 @@
       <li>Tasarımı ve kodu aynı kişi yapar: tasarladığım ekranlar gerçekten çalışan sayfalara dönüşür.</li>
       <li>Web, e-ticaret, WordPress ve oyun arayüzü alanlarında gerçek projeler ve canlı demolar.</li>
       <li>Mobil uyumlu, hızlı ve Google'da bulunabilir (SEO'ya hazır) siteler.</li>
-      <li>İstanbul'dayım; yüz yüze görüşmeye, uzaktan çalışmaya ve Avrupa'daki projelere açığım.</li>
+      <li>Uzaktan çalışıyorum; Türkiye, Avrupa, ABD ve dünyanın her yerinden projelere açığım.</li>
     </ul>
   </section>
 

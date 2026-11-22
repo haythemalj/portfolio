@@ -32,7 +32,7 @@ Route::get('/media/visinova-video', function () {
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
-// Turkish landing page for local search in Istanbul.
+// Turkish landing page for clients searching in Turkish.
 Route::get('/tr', function () {
     return view('tr', ['studies' => config('case_studies')]);
 })->name('tr');
