@@ -2,6 +2,10 @@
 
 return [
     'contact_email' => env('CONTACT_EMAIL', 'haythem@haythemdev.site'),
+
+    // WhatsApp number in international format, digits only. It is never printed
+    // on the site: buttons link to /whatsapp, which redirects to the chat.
+    'whatsapp' => env('WHATSAPP_NUMBER', '21620832439'),
     'admin_name' => env('ADMIN_NAME', 'useradmin'),
     'admin_email' => env('ADMIN_EMAIL', 'admin@portfolio.local'),
     'admin_password' => env('ADMIN_PASSWORD'),
