@@ -32,6 +32,26 @@ Route::get('/media/visinova-video', function () {
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
+// Turkish landing page for clients searching in Turkish.
+Route::get('/tr', function () {
+    return view('tr', ['studies' => config('case_studies')]);
+})->name('tr');
+
+// Case studies: one page per selected project, content in config/case_studies.php.
+Route::get('/case-studies', function () {
+    return view('case-studies.index', ['studies' => config('case_studies')]);
+})->name('case-studies.index');
+
+Route::get('/case-studies/{slug}', function (string $slug) {
+    $studies = config('case_studies');
+    abort_unless(isset($studies[$slug]), 404);
+    return view('case-studies.show', [
+        'slug' => $slug,
+        'study' => $studies[$slug],
+        'others' => array_slice(array_diff_key($studies, [$slug => true]), 0, 3, true),
+    ]);
+})->where('slug', '[a-z0-9-]+')->name('case-studies.show');
+
 Route::redirect('/about', '/#about');
 Route::get('/contact', function () {
     return redirect('/#contact');

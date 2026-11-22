@@ -3,7 +3,7 @@
             <div class="footer-box">
                 <h3><span>C</span>ontact</h3>
                 <ul class="social-link1">
-                    <li><a href="#"><i class="fa fa-location-arrow"><p>Istanbul, Türkiye</p></i></a></li>
+                    <li><a href="#"><i class="fa fa-location-arrow"><p>Remote · Worldwide</p></i></a></li>
                     <li><a href="https://wa.me/21620832737" class="new_Window"><i class="fa fa-phone-square"><p>+216 20 832 737</p></i></a></li>
                     <li><a href="mailto:aljanehaythem23@gmail.com"><i class="fa fa-envelope"><p>aljanehaythem23@gmail.com</p></i></a></li>
                 </ul>

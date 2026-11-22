@@ -1,0 +1,119 @@
+<?php
+
+/*
+| Case studies shown at /case-studies/{slug}.
+| Everything here is based on the project descriptions already on the site:
+| no client results or numbers are invented. Edit freely.
+*/
+
+return [
+
+    'tidekeep-game-ui' => [
+        'title' => 'Tidekeep: Mobile Game UI Kit',
+        'seo_title' => 'Tidekeep Mobile Game UI Kit | Game UI Case Study by Haythem Aljane',
+        'seo_description' => 'Game UI case study: lobby with HUD, level map, shop and victory screens for an original mobile puzzle game, designed and built by Haythem Aljane.',
+        'tagline' => 'An original mobile game UI kit, from concept and UI art to an interactive front-end build.',
+        'image' => '/images/projects/tidekeep-game-ui.webp',
+        'demo' => '/demos/tidekeep-game-ui/',
+        'role' => 'Concept, UI/UX design, UI art and front-end build',
+        'type' => 'Game UI / mobile',
+        'tools' => ['Game UI', 'UI/UX', 'SVG illustration', 'HTML', 'CSS', 'JavaScript'],
+        'tr_title' => 'Tidekeep: Mobil Oyun Arayüz Kiti',
+        'tr_summary' => 'Özgün bir ada bulmaca oyunu için lobi, seviye haritası, mağaza ve zafer ekranları: konsept, arayüz çizimleri ve etkileşimli ön yüz.',
+        'challenge' => 'Mobile game screens have to be readable in a second, on a small screen, while the player is moving fast. The goal was a set of core screens for an original island puzzle game where the next action is always obvious, plus a button system that feels tactile.',
+        'approach' => [
+            'One clear call to action in the lobby, with the HUD kept out of the way.',
+            'Level states on the map that can be read at a glance: done, current and locked.',
+            'A shop with one featured offer and a price button on every item, so buying never needs a second step.',
+            'A staged star reveal on the victory screen to reward the player.',
+            'A button system with normal, pressed and disabled states, reused on every screen.',
+        ],
+        'built' => [
+            'Four core screens: lobby with HUD, level map, shop and victory.',
+            'All UI art drawn as inline SVG, so it stays sharp at any size.',
+            'Every screen built as interactive HTML, CSS and JavaScript, not static mockups.',
+        ],
+        'shows' => 'Game UI thinking (hierarchy, feedback, states), illustration, and the ability to hand over screens that already work in code.',
+    ],
+
+    'visinova-smart-glasses' => [
+        'title' => 'Visinova: Smart Glasses & Vision AI Platform',
+        'seo_title' => 'Visinova Smart Glasses Web Platform | UI/UX & Laravel Case Study',
+        'seo_description' => 'Case study: product site, app download, accounts and a live AI camera screen for Visinova assistive smart glasses. Laravel, React, YOLO v8.',
+        'tagline' => 'A full-stack web platform for assistive smart glasses that help visually impaired users.',
+        'image' => '/images/projects/visinova-home.webp',
+        'demo' => '/demos/visinova-smart-glasses/',
+        'role' => 'UI/UX design and full-stack development',
+        'type' => 'Product website / web app / AI',
+        'tools' => ['Laravel', 'Inertia.js', 'React', 'Tailwind CSS', 'YOLO v8', 'OpenCV'],
+        'tr_title' => 'Visinova: Akıllı Gözlük ve Görüntü İşleme Platformu',
+        'tr_summary' => 'Görme engelli kullanıcılar için akıllı gözlük: ürün sitesi, uygulama indirme, kullanıcı hesapları ve canlı yapay zekâ kamera ekranı.',
+        'challenge' => 'Visinova needed one place to present the glasses, let people buy them and download the companion app, and show what the device sees in real time, for users with very different levels of vision.',
+        'approach' => [
+            'A product landing page that explains the device simply, with clear paths to buy and download.',
+            'Separate buy and download pages instead of one long page.',
+            'A contact form that feeds an admin inbox, and user accounts for owners of the device.',
+            'A camera-stream screen that shows the live view from the vision server.',
+        ],
+        'built' => [
+            'Laravel back end with Inertia.js and React on the front end, styled with Tailwind CSS.',
+            'Landing, buy, download, contact (with admin inbox) and account pages.',
+            'A live camera screen fed by a Python YOLO v8 / OpenCV vision server.',
+        ],
+        'shows' => 'Product UI/UX for an accessibility use case, plus the full-stack skills to connect a web app to an AI vision service.',
+        'note' => 'The live link is an online preview of the real interface. Accounts, forms and the live camera stream need the full back end and the device.',
+    ],
+
+    'ai-operations-desk' => [
+        'title' => 'AI Operations Desk: a 24-Agent Team',
+        'seo_title' => 'AI Operations Desk | AI Agent Dashboard Case Study by Haythem Aljane',
+        'seo_description' => 'Case study: a control desk where a one-person business assigns work to 24 AI agents, follows results and approves every outside action.',
+        'tagline' => 'A control desk for a one-person company run with a team of specialised AI agents.',
+        'image' => '/images/projects/agent-desk.svg',
+        'demo' => '/demos/ai-operations-desk/',
+        'role' => 'Product design, UI/UX and development',
+        'type' => 'Dashboard / AI agents',
+        'tools' => ['Claude Code', 'AI agents', 'Laravel', 'JavaScript', 'Gmail API', 'QuickBooks API'],
+        'tr_title' => 'AI Operasyon Masası: 24 Yapay Zekâ Ajanından Oluşan Ekip',
+        'tr_summary' => 'Tek kişilik bir işletmenin işleri yapay zekâ ajanlarına verip sonuçları tek ekranda takip ettiği ve dışarıya giden her işlemi onayladığı kontrol paneli.',
+        'challenge' => 'Running a business alone means email, finance, the website and content all compete for the same time. The idea: hand routine work to specialised AI agents, but keep the owner in control of anything that leaves the business.',
+        'approach' => [
+            'Every request goes to a specialised agent: email triage, finance summaries, website builds, QA review or content drafts.',
+            'All results come back to one desk instead of many tools.',
+            'Any action that leaves the business (sending, publishing, paying) waits for the owner\'s approval.',
+        ],
+        'built' => [
+            'A shared live database for requests, results and activity.',
+            'A chat with each agent and meeting summaries.',
+            'A laptop app that shows the same data as the web desk.',
+        ],
+        'shows' => 'Designing dashboards for complex workflows, and practical, safe use of AI agents in a real business.',
+    ],
+
+    'react-store' => [
+        'title' => 'Nova Store: E-commerce Storefront',
+        'seo_title' => 'Nova Store E-commerce Storefront | UI/UX Case Study by Haythem Aljane',
+        'seo_description' => 'E-commerce UI case study: filters, search, sorting, cart drawer and order summary in a fast storefront concept by Haythem Aljane.',
+        'tagline' => 'An interactive storefront concept focused on the parts of shopping that decide a sale.',
+        'image' => '/images/projects/react-store.png',
+        'demo' => '/demos/react-store/',
+        'role' => 'E-commerce UI/UX design and front-end development',
+        'type' => 'E-commerce / storefront concept',
+        'tools' => ['JavaScript', 'HTML', 'CSS', 'localStorage'],
+        'tr_title' => 'Nova Store: E-ticaret Mağaza Arayüzü',
+        'tr_summary' => 'Ürün filtreleri, arama, sıralama, sepet çekmecesi ve sipariş özeti olan hızlı bir e-ticaret mağaza konsepti.',
+        'challenge' => 'Online stores lose buyers between "I like this" and "I paid". The goal was a storefront where finding a product and checking the cart take as few steps as possible.',
+        'approach' => [
+            'Filters, search and sorting that update the product grid instantly.',
+            'A cart drawer that opens over the page, so shoppers never lose their place.',
+            'A clear order summary before checkout.',
+        ],
+        'built' => [
+            'A component-style state and render loop in vanilla JavaScript, with no framework.',
+            'A cart saved in the browser with localStorage, so it survives a refresh.',
+        ],
+        'shows' => 'E-commerce UX patterns and clean front-end code that is easy to move to Shopify, WooCommerce or React.',
+        'note' => 'This is a concept project: no payments or real orders are processed.',
+    ],
+
+];
