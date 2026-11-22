@@ -683,7 +683,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-tag"><span class="hero-dot"></span>Open to Web & UI/UX Opportunities</div>
-      <h1>HAYTHEM<br> <span class="red">ALJANE</span><span class="sr-only"> – Remote Web UI/UX Designer and E-commerce Developer</span></h1>
+      <h1><span class="notranslate" translate="no">HAYTHEM<br> <span class="red">ALJANE</span></span><span class="sr-only"> – Remote Web UI/UX Designer and E-commerce Developer</span></h1>
       <div class="hero-typed-wrap">I am a <span id="typed-text"></span><span class="cursor-blink">|</span></div>
       <p class="hero-desc">Remote Web UI/UX Designer and E-commerce Developer working with clients in Europe, the USA and worldwide. I combine interface design, web development, and marketing skills to create useful digital experiences.</p>
       <div class="hero-btns">
@@ -1088,5 +1088,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 </script>
+@include('partials.language-switcher', ['pageLang' => 'en'])
 </body>
 </html>

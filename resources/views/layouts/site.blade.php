@@ -134,6 +134,7 @@ footer a:hover{color:#fff}
     </nav>
   </div>
 </footer>
+@include('partials.language-switcher', ['pageLang' => $lang])
 @stack('scripts')
 </body>
 </html>
