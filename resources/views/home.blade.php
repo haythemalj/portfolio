@@ -6,23 +6,23 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="google-site-verification" content="7rU4mvL7O9VyGljf8gxO3VGD92mVBhu-vEwdT6fckGE" />
 @php $siteUrl = rtrim(config('app.url'), '/'); @endphp
-<meta name="description" content="Haythem Aljane is a Web UI/UX Designer and E-commerce Developer in Tunis, Tunisia. Websites, online stores, WordPress, UI/UX design and AI projects for clients.">
+<meta name="description" content="Haythem Aljane is a Web UI/UX Designer and E-commerce Developer based in Istanbul, Türkiye, open to remote work and roles across Europe. Websites, online stores, WordPress, UI/UX design and AI projects.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Haythem Aljane">
-<title>Haythem Aljane | Web UI/UX Designer & E-commerce Developer in Tunis</title>
+<title>Haythem Aljane | Web UI/UX Designer & E-commerce Developer in Istanbul</title>
 <link rel="canonical" href="{{ $siteUrl }}/">
 <link rel="icon" href="{{ $siteUrl }}/favicon.ico">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Haythem Aljane">
-<meta property="og:title" content="Haythem Aljane | Web UI/UX Designer &amp; E-commerce Developer in Tunis">
-<meta property="og:description" content="Web UI/UX Designer and E-commerce Developer in Tunis, Tunisia. Websites, online stores, WordPress, UI/UX design and AI projects.">
+<meta property="og:title" content="Haythem Aljane | Web UI/UX Designer &amp; E-commerce Developer in Istanbul">
+<meta property="og:description" content="Web UI/UX Designer and E-commerce Developer based in Istanbul, open to remote and Europe. Websites, online stores, WordPress, UI/UX design and AI projects.">
 <meta property="og:url" content="{{ $siteUrl }}/">
 <meta property="og:image" content="{{ $siteUrl }}/images/profile.jpg">
 <meta property="og:image:alt" content="Haythem Aljane, Web UI/UX Designer and E-commerce Developer">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Haythem Aljane | Web UI/UX Designer &amp; E-commerce Developer in Tunis">
-<meta name="twitter:description" content="Websites, online stores, WordPress, UI/UX design and AI projects by Haythem Aljane, based in Tunis, Tunisia.">
+<meta name="twitter:title" content="Haythem Aljane | Web UI/UX Designer &amp; E-commerce Developer in Istanbul">
+<meta name="twitter:description" content="Websites, online stores, WordPress, UI/UX design and AI projects by Haythem Aljane, based in Istanbul, Türkiye. Open to remote and Europe.">
 <meta name="twitter:image" content="{{ $siteUrl }}/images/profile.jpg">
 <script type="application/ld+json">
 {!! json_encode([
@@ -35,8 +35,8 @@
       'url' => $siteUrl.'/',
       'image' => $siteUrl.'/images/profile.jpg',
       'jobTitle' => 'Web UI/UX Designer and E-commerce Developer',
-      'description' => 'Web UI/UX Designer and E-commerce Developer based in Tunis, Tunisia.',
-      'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Tunis', 'addressCountry' => 'TN'],
+      'description' => 'Web UI/UX Designer and E-commerce Developer based in Istanbul, Türkiye, open to remote work and roles across Europe.',
+      'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Istanbul', 'addressCountry' => 'TR'],
       'knowsAbout' => ['Web design', 'UI/UX design', 'E-commerce development', 'WordPress', 'Laravel', 'Digital marketing', 'SEO', 'AI agents'],
       'sameAs' => [
         'https://github.com/haythemalj',
@@ -57,7 +57,7 @@
       '@type' => 'ProfilePage',
       '@id' => $siteUrl.'/#profile',
       'url' => $siteUrl.'/',
-      'name' => 'Haythem Aljane | Web UI/UX Designer & E-commerce Developer in Tunis',
+      'name' => 'Haythem Aljane | Web UI/UX Designer & E-commerce Developer in Istanbul',
       'mainEntity' => ['@id' => $siteUrl.'/#person'],
       'isPartOf' => ['@id' => $siteUrl.'/#website'],
     ],
@@ -649,9 +649,9 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-tag"><span class="hero-dot"></span>Open to Web & UI/UX Opportunities</div>
-      <h1>HAYTHEM<br> <span class="red">ALJANE</span><span class="sr-only"> – Web UI/UX Designer and E-commerce Developer in Tunis</span></h1>
+      <h1>HAYTHEM<br> <span class="red">ALJANE</span><span class="sr-only"> – Web UI/UX Designer and E-commerce Developer in Istanbul</span></h1>
       <div class="hero-typed-wrap">I am a <span id="typed-text"></span><span class="cursor-blink">|</span></div>
-      <p class="hero-desc">Web UI/UX Designer and E-commerce Developer based in Tunis, Tunisia. I combine interface design, web development, and marketing skills to create useful digital experiences.</p>
+      <p class="hero-desc">Web UI/UX Designer and E-commerce Developer based in Istanbul, open to remote work and roles across Europe. I combine interface design, web development, and marketing skills to create useful digital experiences.</p>
       <div class="hero-btns">
         <a href="#hire" class="btn btn-primary"><i class="fas fa-paper-plane"></i>Hire Me</a>
         <a href="/CV_Haythem_Aljane.pdf" download class="btn btn-outline"><i class="fas fa-download"></i>Download CV</a>
@@ -682,7 +682,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
       <p>I enjoy working with design and marketing teams to turn user needs into clear digital experiences. I bring a collaborative approach, problem-solving skills, and a strong interest in building practical products.</p>
       <div class="about-info-grid">
         <div class="about-info-item"><div class="label">Name</div><div class="value">Haythem Aljane</div></div>
-        <div class="about-info-item"><div class="label">Location</div><div class="value">El Omrane Supérieur, Tunis</div></div>
+        <div class="about-info-item"><div class="label">Location</div><div class="value">Istanbul, Türkiye · Remote / Europe</div></div>
         <div class="about-info-item"><div class="label">Status</div><div class="value" style="color:var(--red)">Open to Opportunities</div></div>
         <div class="about-info-item"><div class="label">Languages</div><div class="value">AR · EN · FR</div></div>
         <div class="about-info-item"><div class="label">Email</div><div class="value" style="font-size:.76rem">haythem@haythemdev.site</div></div>
@@ -847,7 +847,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
       @endif
       <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-phone"></i></div><div><div class="contact-item-label">Phone / WhatsApp</div><div class="contact-item-value"><a href="https://wa.me/21620832439" style="color:inherit">+216 20 832 439</a></div></div></div>
       <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-envelope"></i></div><div><div class="contact-item-label">Email</div><div class="contact-item-value"><a href="mailto:haythem@haythemdev.site" style="color:inherit">haythem@haythemdev.site</a></div></div></div>
-      <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-location-dot"></i></div><div><div class="contact-item-label">Location</div><div class="contact-item-value">El Omrane Supérieur, Tunis, Tunisia</div></div></div>
+      <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-location-dot"></i></div><div><div class="contact-item-label">Location</div><div class="contact-item-value">Istanbul, Türkiye · Open to remote and Europe</div></div></div>
       <div class="contact-socials">
         <a href="https://www.facebook.com/haythem.aljane" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://github.com/haythemalj" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
@@ -891,7 +891,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <div class="footer-copy">© {{ date('Y') }} <span>Haythem Aljane</span> · All rights reserved · Built with ❤️ in Tunisia</div>
+  <div class="footer-copy">© {{ date('Y') }} <span>Haythem Aljane</span> · All rights reserved · Built with ❤️ in Istanbul</div>
   <div class="footer-links">
     <a href="#hero">Home</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
   </div>
