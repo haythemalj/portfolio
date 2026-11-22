@@ -1,5 +1,5 @@
 {{--
-  Language switcher: English and Turkish are real pages (/ and /tr). Every other
+  Language switcher: English, French, Arabic and Turkish are real pages (/, /fr, /ar, /tr). Every other
   language uses Google's automatic page translation. The Google script is only
   loaded after a visitor picks a language, so normal visits load nothing extra.
   The choice is kept in the "googtrans" cookie, so it follows the visitor across pages.
@@ -7,7 +7,7 @@
 @php
   $pageLang = $pageLang ?? 'en';
   $autoLangs = [
-    'fr' => 'Français', 'ar' => 'العربية', 'de' => 'Deutsch', 'es' => 'Español', 'it' => 'Italiano',
+    'de' => 'Deutsch', 'es' => 'Español', 'it' => 'Italiano',
     'pt' => 'Português', 'nl' => 'Nederlands', 'pl' => 'Polski', 'ru' => 'Русский', 'uk' => 'Українська',
     'ro' => 'Română', 'sv' => 'Svenska', 'el' => 'Ελληνικά', 'zh-CN' => '中文', 'ja' => '日本語',
     'ko' => '한국어', 'hi' => 'हिन्दी', 'id' => 'Bahasa Indonesia', 'fa' => 'فارسی', 'ur' => 'اردو',
@@ -21,6 +21,8 @@
   <div class="lsw-menu" id="lswMenu" role="menu" hidden>
     <div class="lsw-head">Language</div>
     <a role="menuitem" href="/" data-lsw-native="en" hreflang="en" lang="en">English</a>
+    <a role="menuitem" href="/fr" data-lsw-native="fr" hreflang="fr" lang="fr">Français</a>
+    <a role="menuitem" href="/ar" data-lsw-native="ar" hreflang="ar" lang="ar">العربية</a>
     <a role="menuitem" href="/tr" data-lsw-native="tr" hreflang="tr" lang="tr">Türkçe</a>
     <div class="lsw-head">Automatic translation</div>
     <div class="lsw-grid">
@@ -39,7 +41,7 @@
 .lsw-menu{position:absolute;right:0;bottom:calc(100% + 10px);width:290px;max-height:min(70vh,520px);overflow:auto;background:#121212;border:1px solid rgba(229,0,0,.35);border-radius:14px;padding:10px;box-shadow:0 18px 50px rgba(0,0,0,.6)}
 .lsw-menu[hidden]{display:none}
 .lsw-head{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#e50000;font-weight:700;padding:8px 8px 6px}
-.lsw-menu a,.lsw-menu button{display:block;width:100%;text-align:left;background:none;border:0;color:#ddd;font:500 .9rem/1.2 inherit;padding:8px;border-radius:8px;cursor:pointer;text-decoration:none}
+.lsw-menu a,.lsw-menu button{display:block;width:100%;text-align:start;background:none;border:0;color:#ddd;font:500 .9rem/1.2 inherit;padding:8px;border-radius:8px;cursor:pointer;text-decoration:none}
 .lsw-menu a:hover,.lsw-menu button:hover,.lsw-menu .on{background:rgba(229,0,0,.16);color:#fff}
 .lsw-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .lsw-note{font-size:.7rem;color:#777;padding:8px 8px 2px}
