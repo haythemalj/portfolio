@@ -11,6 +11,9 @@
 <meta name="author" content="Haythem Aljane">
 <title>Haythem Aljane | Web UI/UX Designer & E-commerce Developer in Istanbul</title>
 <link rel="canonical" href="{{ $siteUrl }}/">
+<link rel="alternate" hreflang="en" href="{{ $siteUrl }}/">
+<link rel="alternate" hreflang="tr" href="{{ $siteUrl }}/tr">
+<link rel="alternate" hreflang="x-default" href="{{ $siteUrl }}/">
 <link rel="icon" href="{{ $siteUrl }}/favicon.ico">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
@@ -547,6 +550,10 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
 .footer-copy{font-size:.76rem;color:var(--muted);text-align:center}
 .footer-copy span{color:var(--red)}
 .footer-links{display:flex;gap:22px}
+.case-links{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:-6px 0 22px;font-size:.85rem;color:var(--muted)}
+.case-links a{border:1px solid var(--border);border-radius:999px;padding:4px 12px;color:#ddd;transition:border-color .2s,color .2s}
+.case-links a:hover{border-color:var(--red);color:#fff}
+.case-links a.all{border-color:var(--red);color:#fff}
 .footer-links a{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:color .3s}
 .footer-links a:hover{color:var(--red)}
 
@@ -769,6 +776,10 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
 <section class="projects" id="projects">
   <div class="section-label">Portfolio</div>
   <h2 class="section-title">My <span>Projects</span></h2>
+  <p class="case-links">Case studies:
+    @foreach(config('case_studies') as $csSlug => $cs)<a href="/case-studies/{{ $csSlug }}">{{ \Illuminate\Support\Str::before($cs['title'], ':') }}</a>@endforeach
+    <a href="/case-studies" class="all">All case studies →</a>
+  </p>
   <div class="projects-filter">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="web">Web Dev</button>
@@ -921,7 +932,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
 <footer>
   <div class="footer-copy">© {{ date('Y') }} <span>Haythem Aljane</span> · All rights reserved · Built with ❤️ in Istanbul</div>
   <div class="footer-links">
-    <a href="#hero">Home</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    <a href="#hero">Home</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="/case-studies">Case studies</a><a href="/tr" hreflang="tr" lang="tr">Türkçe</a>
   </div>
 </footer>
 
