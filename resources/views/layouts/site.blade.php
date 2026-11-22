@@ -25,7 +25,12 @@
 @foreach(($alternates ?? []) as $hreflang => $href)
 <link rel="alternate" hreflang="{{ $hreflang }}" href="{{ $href }}">
 @endforeach
-<link rel="icon" href="{{ $siteUrl }}/favicon.ico">
+<link rel="icon" href="{{ $siteUrl }}/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ $siteUrl }}/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ $siteUrl }}/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ $siteUrl }}/apple-touch-icon.png">
+<link rel="manifest" href="{{ $siteUrl }}/site.webmanifest">
+<meta name="theme-color" content="#080808">
 <meta property="og:type" content="{{ $ogType ?? 'website' }}">
 <meta property="og:locale" content="{{ $ogLocale ?? 'en_US' }}">
 <meta property="og:site_name" content="Haythem Aljane">
