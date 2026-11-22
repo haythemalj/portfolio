@@ -155,6 +155,7 @@ footer a:hover{color:#fff}
     </nav>
   </div>
 </footer>
+@include('partials.whatsapp-button', ['pageLang' => $lang])
 @include('partials.language-switcher', ['pageLang' => $lang])
 @stack('scripts')
 </body>

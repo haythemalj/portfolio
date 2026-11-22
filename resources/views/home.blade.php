@@ -673,7 +673,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
     <a href="https://github.com/haythemalj" target="_blank" class="nav-social" title="GitHub" aria-label="GitHub">
       <i class="fab fa-github"></i><span class="nav-social-label">GitHub</span>
     </a>
-    <a href="https://wa.me/21620832439" target="_blank" rel="noopener" class="nav-social" title="WhatsApp" aria-label="WhatsApp">
+    <a href="/whatsapp" target="_blank" rel="noopener nofollow" class="nav-social" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
       <i class="fab fa-whatsapp"></i><span class="nav-social-label">WhatsApp</span>
     </a>
     <a href="/CV_Haythem_Aljane.pdf" download class="nav-social" style="color:var(--red)" aria-label="Download CV">
@@ -890,7 +890,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
         </div>
       </div>
       @endif
-      <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-phone"></i></div><div><div class="contact-item-label">Phone / WhatsApp</div><div class="contact-item-value"><a href="https://wa.me/21620832439" style="color:inherit">+216 20 832 439</a></div></div></div>
+      <div class="contact-item"><div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div><div><div class="contact-item-label">WhatsApp</div><div class="contact-item-value"><a href="/whatsapp" target="_blank" rel="noopener nofollow" style="color:inherit">Chat with me on WhatsApp →</a></div></div></div>
       <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-envelope"></i></div><div><div class="contact-item-label">Email</div><div class="contact-item-value"><a href="mailto:haythem@haythemdev.site" style="color:inherit">haythem@haythemdev.site</a></div></div></div>
       <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-location-dot"></i></div><div><div class="contact-item-label">Location</div><div class="contact-item-value">Remote · Europe, USA &amp; worldwide</div></div></div>
       <div class="contact-socials">
@@ -898,7 +898,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
         <a href="https://github.com/haythemalj" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://www.instagram.com/haythem_alj" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/aljane-haythem-077713193/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://wa.me/21620832439" class="social-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+        <a href="/whatsapp" class="social-link" target="_blank" rel="noopener nofollow" title="Chat on WhatsApp" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
         @foreach($hireLinks as $link)
         <a href="{{ $link['url'] }}" class="social-link" target="_blank" rel="noopener" title="{{ $link['label'] }}"><i class="{{ $link['icon'] }}"></i></a>
         @endforeach
@@ -1095,6 +1095,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 </script>
+@include('partials.whatsapp-button', ['pageLang' => 'en'])
 @include('partials.language-switcher', ['pageLang' => 'en'])
 </body>
 </html>

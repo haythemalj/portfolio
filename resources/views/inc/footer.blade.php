@@ -4,7 +4,7 @@
                 <h3><span>C</span>ontact</h3>
                 <ul class="social-link1">
                     <li><a href="#"><i class="fa fa-location-arrow"><p>Remote · Worldwide</p></i></a></li>
-                    <li><a href="https://wa.me/21620832737" class="new_Window"><i class="fa fa-phone-square"><p>+216 20 832 737</p></i></a></li>
+                    <li><a href="/whatsapp" class="new_Window" rel="nofollow"><i class="fab fa-whatsapp"><p>Chat on WhatsApp</p></i></a></li>
                     <li><a href="mailto:aljanehaythem23@gmail.com"><i class="fa fa-envelope"><p>aljanehaythem23@gmail.com</p></i></a></li>
                 </ul>
             </div>
@@ -23,7 +23,7 @@
                     <li><a href="https://github.com/haythemalj" class="new_Window"><i class="fab fa-github"></i></a></li>
                     <li><a href="https://www.facebook.com/haythem.aljane" class="new_Window"><i class="fab fa-facebook"></i></a></li>
                     <li><a href="https://www.instagram.com/haythem_alj" class="new_Window"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://wa.me/21620832737" class="new_Window"><i class="fab fa-whatsapp"></i></a></li>
+                    <li><a href="/whatsapp" class="new_Window" rel="nofollow" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
                 </ul>
             </div>
         </div>

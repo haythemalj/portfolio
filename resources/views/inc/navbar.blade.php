@@ -10,7 +10,7 @@
         <li><a href="https://github.com/haythemalj" class="new_Window"><i class="fab fa-github"></i></a></li>
         <li><a href="https://www.instagram.com/haythem_alj" class="new_Window"><i class="fab fa-instagram"></i></a></li>
         <li><a href="https://www.linkedin.com/in/aljane-haythem-077713193/" class="new_Window"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="https://wa.me/21620832737" class="new_Window"><i class="fab fa-whatsapp"></i></a></li>
+        <li><a href="/whatsapp" class="new_Window" rel="nofollow" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
     </ul>
     <ul class="navigation">
         <li><a href="{{ route('landing') }}" onclick="toggleMenu();">Home</a></li>

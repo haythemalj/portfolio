@@ -32,6 +32,22 @@ Route::get('/media/visinova-video', function () {
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
+// WhatsApp chat: redirects to wa.me so the phone number never appears in the
+// page HTML. ?lang= picks the language of the prefilled greeting.
+Route::get('/whatsapp', function (\Illuminate\Http\Request $request) {
+    $greetings = [
+        'en' => 'Hi Haythem, I found your portfolio and would like to talk about a project.',
+        'fr' => 'Bonjour Haythem, j\'ai vu votre portfolio et j\'aimerais parler d\'un projet.',
+        'ar' => 'مرحبًا Haythem، اطّلعت على أعمالك وأودّ التحدث معك عن مشروع.',
+        'tr' => 'Merhaba Haythem, portfolyonuzu gördüm ve bir proje hakkında konuşmak istiyorum.',
+    ];
+    $text = $greetings[$request->query('lang')] ?? $greetings['en'];
+    $number = preg_replace('/\D/', '', (string) config('portfolio.whatsapp'));
+    abort_if($number === '', 404);
+    return redirect()->away('https://wa.me/'.$number.'?text='.rawurlencode($text))
+        ->header('X-Robots-Tag', 'noindex, nofollow');
+})->name('whatsapp');
+
 // Localized landing pages (French, Arabic, Turkish). Text lives in config/landing.php.
 Route::get('/{locale}', function (string $locale) {
     return view('landing', [

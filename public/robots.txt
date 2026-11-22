@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /admin
 Disallow: /login
+Disallow: /whatsapp
 
 Sitemap: https://haythemdev.site/sitemap.xml
