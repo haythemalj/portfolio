@@ -11,93 +11,120 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Haythem Aljane">
 <meta property="og:title" content="Graphic Design Portfolio | Demo by Haythem Aljane">
-<meta property="og:description" content="Event posters for the Tunivisions student club and StudoZone, a surreal photo manipulation, and interface layouts.">
+<meta property="og:description" content="Posters, social media posts, ads and photo manipulations designed in Photoshop for student clubs, local pages and products, plus early web layouts in Adobe XD.">
 <meta property="og:url" content="https://haythemdev.site/demos/graphic-design/">
-<meta property="og:image" content="https://haythemdev.site/images/projects/graphic-design-real.jpg">
+<meta property="og:image" content="https://haythemdev.site/images/projects/graphic-design-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Graphic Design Portfolio | Demo by Haythem Aljane">
-<meta name="twitter:description" content="Event posters for the Tunivisions student club and StudoZone, a surreal photo manipulation, and interface layouts.">
-<meta name="twitter:image" content="https://haythemdev.site/images/projects/graphic-design-real.jpg">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Graphic Design Portfolio", "description": "Event posters for the Tunivisions student club and StudoZone, a surreal photo manipulation, and interface layouts.", "url": "https://haythemdev.site/demos/graphic-design/", "image": "https://haythemdev.site/images/projects/graphic-design-real.jpg", "author": {"@type": "Person", "@id": "https://haythemdev.site/#person", "name": "Haythem Aljane", "url": "https://haythemdev.site/"}, "isPartOf": {"@id": "https://haythemdev.site/#website"}, "keywords": "Photoshop, Adobe XD, Compositing, UI Design"}</script>
+<meta name="twitter:description" content="Posters, social media posts, ads and photo manipulations designed in Photoshop for student clubs, local pages and products, plus early web layouts in Adobe XD.">
+<meta name="twitter:image" content="https://haythemdev.site/images/projects/graphic-design-cover.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Graphic Design Portfolio", "description": "Posters, social media posts, ads and photo manipulations designed in Photoshop for student clubs, local pages and products, plus early web layouts in Adobe XD.", "url": "https://haythemdev.site/demos/graphic-design/", "image": "https://haythemdev.site/images/projects/graphic-design-cover.jpg", "author": {"@type": "Person", "@id": "https://haythemdev.site/#person", "name": "Haythem Aljane", "url": "https://haythemdev.site/"}, "isPartOf": {"@id": "https://haythemdev.site/#website"}, "keywords": "Photoshop, Adobe XD, Compositing, UI Design"}</script>
 
-<meta name="description" content="Event posters for the Tunivisions student club and StudoZone, a surreal photo manipulation, and interface layouts.">
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Posters, social media posts, ads and photo manipulations designed in Photoshop for student clubs, local pages and products, plus early web layouts in Adobe XD.">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0f0d14;--text:#f4f1fa;--muted:#8f88a3;--acc:#ff4d6d;--line:#1d1a27}
+:root{--bg:#0f0d14;--text:#f4f1fa;--muted:#9a93ae;--acc:#ff4d6d;--line:#221e2d;--card:#16131f}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
-h1,h2{font-family:'Archivo Black',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;padding-bottom:56px}
+h1,h2{font-family:'Archivo Black',sans-serif;font-weight:400}
 .bar{background:#070610;color:#9c95b3;font-size:13px;padding:8px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .bar a{color:var(--acc);text-decoration:none}
-header{padding:70px 6vw 40px}
+header{padding:64px 6vw 28px;max-width:1300px}
 .eyebrow{color:var(--acc);letter-spacing:.3em;text-transform:uppercase;font-size:12px}
 h1{font-size:clamp(38px,7vw,92px);line-height:.95;margin:14px 0 18px}
-header p{color:var(--muted);max-width:640px;font-size:17px}
-.piece{padding:30px 6vw 60px;display:grid;grid-template-columns:1.7fr 1fr;gap:36px;align-items:center;border-top:1px solid var(--line)}
-.piece img{width:100%;display:block;border-radius:16px;cursor:zoom-in;transition:transform .3s}
-.piece img:hover{transform:scale(1.01)}
-.piece small{color:var(--acc);letter-spacing:.2em;text-transform:uppercase;font-size:12px}
-.piece h2{font-size:clamp(24px,3vw,36px);margin:10px 0 14px}
-.piece p{color:var(--muted);font-size:15px;margin-bottom:14px}
-.tags{display:flex;gap:8px;flex-wrap:wrap}
-.tags span{border:1px solid #2a2636;padding:6px 14px;border-radius:999px;font-size:12px}
-.posters{padding:40px 6vw 70px;border-top:1px solid var(--line)}
-.posters h2{font-size:clamp(26px,3.4vw,42px);margin:10px 0 8px}
-.posters>p{color:var(--muted);max-width:640px;margin-bottom:28px}
+header p{color:var(--muted);max-width:660px;font-size:17px}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:26px}
+.stats div{font-size:13px;color:var(--muted)}
+.stats b{display:block;font-family:'Archivo Black',sans-serif;font-weight:400;color:var(--text);font-size:28px;line-height:1.1}
+.chips{position:sticky;top:0;z-index:5;background:rgba(15,13,20,.92);backdrop-filter:blur(10px);padding:14px 6vw;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.chips button{font:500 13px Inter,sans-serif;color:var(--muted);background:transparent;border:1px solid #2e2a3b;border-radius:999px;padding:7px 15px;cursor:pointer}
+.chips button[aria-pressed="true"],.chips button:hover{color:#fff;border-color:var(--acc);background:rgba(255,77,109,.12)}
+.group{padding:44px 6vw 20px}
+.group[hidden]{display:none}
+.ghead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.ghead h2{font-size:clamp(24px,3.2vw,38px)}
+.ghead span{color:var(--acc);font-size:13px;letter-spacing:.08em}
+.group>p{color:var(--muted);max-width:680px;margin:8px 0 26px}
 .wall{columns:3;column-gap:18px}
-.wall figure{break-inside:avoid;margin:0 0 18px;background:#16131f;border-radius:14px;overflow:hidden}
-.wall img{width:100%;display:block;cursor:zoom-in}
-.wall figcaption{padding:12px 16px 16px;font-size:13px;color:var(--muted)}
-.wall figcaption b{display:block;color:var(--text);font-size:15px;margin-bottom:2px}
-@media(max-width:900px){.wall{columns:2}}@media(max-width:560px){.wall{columns:1}}
-.lb{position:fixed;inset:0;background:rgba(5,4,10,.94);display:none;place-items:center;z-index:50;padding:20px;cursor:zoom-out}
-.lb.on{display:grid}.lb img{max-width:94vw;max-height:90vh;border-radius:12px}
-footer{padding:26px 6vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-@media(max-width:860px){.piece{grid-template-columns:1fr}}
+.wall.wide{columns:2}
+.wall figure{break-inside:avoid;margin:0 0 18px;background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.zoom{display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in}
+.zoom img{width:100%;height:auto;display:block;transition:transform .35s ease}
+.zoom:hover img{transform:scale(1.025)}
+.zoom:focus-visible{outline:2px solid var(--acc);outline-offset:-2px}
+.wall figcaption{padding:12px 16px 15px;font-size:13px;color:var(--muted)}
+.wall figcaption b{display:block;color:var(--text);font-size:15px;font-weight:600;margin-bottom:2px}
+.cta{margin:40px 6vw 10px;padding:32px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,rgba(255,77,109,.14),rgba(22,19,31,.6));display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta h2{font-size:clamp(20px,2.6vw,30px)}
+.cta p{color:var(--muted);margin-top:6px}
+.cta a{background:var(--acc);color:#fff;text-decoration:none;font-weight:600;padding:12px 22px;border-radius:12px;white-space:nowrap}
+.lb{position:fixed;inset:0;background:rgba(5,4,10,.95);display:none;z-index:60;padding:56px 64px 70px;align-items:center;justify-content:center;flex-direction:column}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:calc(100vh - 150px);border-radius:10px;object-fit:contain}
+.lb .cap{color:#d8d3e6;font-size:14px;margin-top:14px;text-align:center}
+.lb .cap b{color:#fff}
+.lb button{position:absolute;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:999px;width:46px;height:46px;font-size:22px;cursor:pointer;display:grid;place-items:center}
+.lb button:hover{background:rgba(255,77,109,.35)}
+.lb .x{top:14px;right:14px}.lb .prev{left:12px;top:50%;transform:translateY(-50%)}.lb .next{right:12px;top:50%;transform:translateY(-50%)}
+.lb .count{position:absolute;top:24px;left:20px;color:#9a93ae;font-size:13px}
+footer{padding:26px 6vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:40px}
+@media(max-width:980px){.wall{columns:2}}
+@media(max-width:600px){.wall,.wall.wide{columns:1}.lb{padding:56px 10px 70px}.lb .prev,.lb .next{top:auto;bottom:12px;transform:none}.cta{padding:22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.zoom img{transition:none}}
 </style>
 </head>
 <body>
 <div class="bar"><span>Graphic design work by Haythem Aljane</span><a href="/#projects">← Back to portfolio</a></div>
-<header><p class="eyebrow">Graphic design</p><h1>Images &amp; interfaces.</h1><p>Photo manipulation, event posters and interface layouts made in Photoshop and Adobe XD. Click an image to view it larger.</p></header>
-
-<section class="piece">
-  <img src="img/shoe-house.jpg" alt="Photo manipulation: a child walking along a boardwalk towards a giant red sneaker turned into a house, in a mountain meadow at sunset" data-zoom>
-  <div><small>Photo manipulation</small><h2>Shoe House</h2>
-    <p>A surreal composite built in Photoshop: a sneaker turned into a house, set in an alpine meadow at sunset, with a child walking the boardwalk towards its door.</p>
-    <p>The work is in the blending: matching light direction and colour temperature across the source photos, painting the cast shadow, and adding depth haze so the pieces read as one scene.</p>
-    <div class="tags"><span>Photoshop</span><span>Compositing</span><span>Colour grading</span></div></div>
-</section>
-
-<section class="piece">
-  <img src="img/portfolio-ui.jpg" alt="Interface design for a personal portfolio website with a purple hero section, navigation bar and profile photo" data-zoom>
-  <div><small>Interface design</small><h2>Personal portfolio UI</h2>
-    <p>An early layout for a personal portfolio site, designed in Adobe XD: hero section with a call to action, navigation, and a profile block on a curved purple background.</p>
-    <div class="tags"><span>Adobe XD</span><span>UI design</span><span>Web layout</span></div></div>
-</section>
-
-<section class="posters">
-  <small class="eyebrow">Event posters</small>
-  <h2>Posters &amp; social visuals</h2>
-  <p>Promotional visuals designed in Photoshop for the Tunivisions ISIMM student club and StudoZone: parties, camps, trainings and study events.</p>
-  <div class="wall">
-    <figure><img src="img/alfa-party.jpg" alt="Alfa Party poster: DJ and performers in neon colours on a purple background, with date, prices and venue" data-zoom><figcaption><b>Alfa Party</b>Party poster · Tunivisions ISIMM</figcaption></figure>
-    <figure><img src="img/beni-mtir-camp.jpg" alt="Beni Mtir Camp poster: tents under a night sky with dates, price and what is included" data-zoom><figcaption><b>Beni Mtir Camp</b>Camping trip announcement · Tunivisions ISIMM</figcaption></figure>
-    <figure><img src="img/salon-revision.jpg" alt="Salon de Révision poster: an open book floating in a dark library, with pricing by duration" data-zoom><figcaption><b>Salon de Révision</b>Study-space poster · Tunivisions</figcaption></figure>
-    <figure><img src="img/uiux-formation.jpg" alt="UI/UX Design Formation poster in red and grey with the trainer's portrait, date, place and price" data-zoom><figcaption><b>UI/UX Design Formation</b>Training poster · StudoZone</figcaption></figure>
-    <figure><img src="img/be-perfect.jpg" alt="Be Perfect event banner with a two-day programme of conferences, trainings and workshops" data-zoom><figcaption><b>Be Perfect</b>Two-day event programme · Tunivisions ISMM × ISIMM</figcaption></figure>
-    <figure><img src="img/torei-gnewi.jpg" alt="Torei Gnewi poster: performers over red and teal mandala patterns with gold lettering" data-zoom><figcaption><b>Torei Gnewi</b>Music night poster · Tunivisions</figcaption></figure>
-    <figure><img src="img/camping-layout.jpg" alt="Website layout for a camping destinations site with hero image, feature cards and destination grid" data-zoom><figcaption><b>Camping website layout</b>Web page design · Adobe XD</figcaption></figure>
-  </div>
-</section>
-
-<div class="lb" id="lb"><img id="lbi" alt=""></div>
+<header>
+  <p class="eyebrow">Graphic design</p>
+  <h1>Posters, posts &amp; photo edits.</h1>
+  <p>Posters, social media posts, ads and photo manipulations designed in Photoshop for student clubs, local pages and products, plus early web layouts in Adobe XD. Click any image to see it full size.</p>
+  <div class="stats"><div><b>24</b>pieces</div><div><b>4</b>clubs &amp; pages</div><div><b>Ps · Ai · Xd</b>Photoshop, Illustrator, Adobe XD</div></div>
+</header>
+<nav class="chips" aria-label="Filter work">
+  <button type="button" data-f="all" aria-pressed="true">All work</button>
+  <button type="button" data-f="photo" aria-pressed="false">Photo manipulation</button>
+  <button type="button" data-f="social" aria-pressed="false">Social media &amp; ads</button>
+  <button type="button" data-f="posters" aria-pressed="false">Event posters</button>
+  <button type="button" data-f="layouts" aria-pressed="false">Web layouts</button>
+</nav>
+<main>
+<section class="group" data-group="photo"><div class="ghead"><h2>Photo manipulation</h2><span>3 pieces</span></div><p>Composites and photo effects where the work is in the blending: light, colour and shadows matched so separate photos read as one image.</p><div class="wall"><figure data-cat="photo"><button type="button" class="zoom" aria-label="Open Shoe House larger"><img src="img/shoe-house.jpg" width="2000" height="1114" loading="lazy" decoding="async" alt="Surreal composite: a child walks a boardwalk toward a giant red sneaker turned into a house, in a mountain meadow at sunset"></button><figcaption><b>Shoe House</b>Photo manipulation · Photoshop</figcaption></figure><figure data-cat="photo"><button type="button" class="zoom" aria-label="Open Une image vaut mieux que mille mots larger"><img src="img/typography-portrait.jpg" width="912" height="1206" loading="lazy" decoding="async" alt="Black and white portrait half hidden by a black shape, with the words Une image vaut mieux que mille mots cut out to reveal the face"></button><figcaption><b>Une image vaut mieux que mille mots</b>Typography portrait · Photoshop</figcaption></figure><figure data-cat="photo"><button type="button" class="zoom" aria-label="Open Double exposure portrait larger"><img src="img/double-exposure.jpg" width="746" height="1006" loading="lazy" decoding="async" alt="Portrait of a woman layered twice, one copy lit teal and one lit red, overlapping into a double exposure"></button><figcaption><b>Double exposure portrait</b>Photo effect · Photoshop</figcaption></figure></div></section>
+<section class="group" data-group="social"><div class="ghead"><h2>Social media &amp; ads</h2><span>5 pieces</span></div><p>Square posts and a product promo made for Instagram and Facebook feeds, where the message has to land in a second of scrolling.</p><div class="wall"><figure data-cat="social"><button type="button" class="zoom" aria-label="Open Love Nature hair oil larger"><img src="img/oriflame-ad.jpg" width="1080" height="1080" loading="lazy" decoding="async" alt="Promotional visual for a coconut hair oil bottle on an orange background with palm leaves, coconuts, a water splash and a price drop from 100 to 70 DT"></button><figcaption><b>Love Nature hair oil</b>Product promo · social media ad</figcaption></figure><figure data-cat="social"><button type="button" class="zoom" aria-label="Open Faouzi Benzarti larger"><img src="img/wam-benzarti.jpg" width="1080" height="1080" loading="lazy" decoding="async" alt="Social post about football coach Faouzi Benzarti with three cut-out photos and a short biography over a blended portrait"></button><figcaption><b>Faouzi Benzarti</b>Profile post · We Are Monastir</figcaption></figure><figure data-cat="social"><button type="button" class="zoom" aria-label="Open Event “Le bonheur” larger"><img src="img/wam-le-bonheur.jpg" width="1080" height="1080" loading="lazy" decoding="async" alt="Event post with date, location, sponsor logos and the day plan over a soft dandelion photo"></button><figcaption><b>Event “Le bonheur”</b>Event post · We Are Monastir</figcaption></figure><figure data-cat="social"><button type="button" class="zoom" aria-label="Open Restaurant universitaire Moknine larger"><img src="img/wam-moknine.jpg" width="1080" height="1080" loading="lazy" decoding="async" alt="Post presenting a university restaurant with circular food photos, opening hours and a plate icon on a dark wood background"></button><figcaption><b>Restaurant universitaire Moknine</b>Place feature · We Are Monastir</figcaption></figure><figure data-cat="social"><button type="button" class="zoom" aria-label="Open Restaurant universitaire Ksar Hellel larger"><img src="img/wam-ksar-hellel.jpg" width="1080" height="1080" loading="lazy" decoding="async" alt="Post with a column of food photos beside the restaurant building and a short review text"></button><figcaption><b>Restaurant universitaire Ksar Hellel</b>Place feature · We Are Monastir</figcaption></figure></div></section>
+<section class="group" data-group="posters"><div class="ghead"><h2>Event posters</h2><span>14 pieces</span></div><p>Posters, tickets and reminders for student clubs at ISIMM: Tunivisions, the GNR robotics club and StudoZone. Each one carries a lot of information (date, place, price, contacts) without losing the headline.</p><div class="wall"><figure data-cat="posters"><button type="button" class="zoom" aria-label="Open Artificial Intelligence training larger"><img src="img/gnr-ai.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Dark circuit-board poster for a two-day artificial intelligence training with programme, dates, venues and price"></button><figcaption><b>Artificial Intelligence training</b>Training poster · GNR ISIMM robotics club</figcaption></figure><figure data-cat="posters"><button type="button" class="zoom" aria-label="Open STM32 certified training larger"><img src="img/gnr-stm32.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Poster for an STM32 microcontroller training with the trainer portrait, the board, dates, time and price"></button><figcaption><b>STM32 certified training</b>Training poster · GNR ISIMM robotics club</figcaption></figure><figure data-cat="posters"><button type="button" class="zoom" aria-label="Open Web development training larger"><img src="img/gnr-webdev.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Poster for a two-step web development training, HTML and CSS then JavaScript and PHP, with the trainer portrait and dates"></button><figcaption><b>Web development training</b>Training poster · GNR ISIMM × Hamdaoui Academy</figcaption></figure><figure data-cat="posters"><button type="button" class="zoom" aria-label="Open Web development, step 2 larger"><img src="img/gnr-webdev-step2.jpg" width="1400" height="1000" loading="lazy" decoding="async" alt="Reminder post for step two of the web development training with a QR code, dates and prices"></button><figcaption><b>Web development, step 2</b>Reminder post · GNR ISIMM robotics club</figcaption></figure><figure data-cat="posters"><button type="button" class="zoom" aria-label="Open Arduino workshop larger"><img src="img/gnr-arduino.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Teal and grey poster for an Arduino workshop with the board, a robot car, programme, date and place"></button><figcaption><b>Arduino workshop</b>Training poster · GNR ISIMM robotics club</figcaption></figure><figure data-cat="posters"><button type="button" class="zoom" aria-label="Open Alfa Party larger"><img src="img/alfa-party.jpg" width="1080" height="1500" loading="lazy" decoding="async" alt="Alfa Party poster: DJ and performers in neon colours on a purple background, with date, prices and venue"></button><figcaption><b>Alfa Party</b>Party poster · Tunivisions ISIMM</figcaption></figure><figure data-cat="posters"><button type="button" class="zoom" aria-label="Open Torei Gnewi larger"><img src="img/torei-gnewi.jpg" width="1080" height="1629" loading="lazy" decoding="async" alt="Torei Gnewi poster: performers over red and teal mandala patterns with gold lettering"></button><figcaption><b>Torei Gnewi</b>Music night poster · Tunivisions</figcaption></figure><figure data-cat="posters"><button type="button" class="zoom" aria-label="Open Beni Mtir Camp larger"><img src="img/beni-mtir-camp.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="Beni Mtir Camp poster: tents under a night sky with dates, price and what is included"></button><figcaption><b>Beni Mtir Camp</b>Camping trip announcement · Tunivisions ISIMM</figcaption></figure><figure data-cat="posters"><button type="button" class="zoom" aria-label="Open Be Perfect larger"><img src="img/be-perfect.jpg" width="1080" height="623" loading="lazy" decoding="async" alt="Be Perfect event banner with a two-day programme of conferences, trainings and workshops"></button><figcaption><b>Be Perfect</b>Two-day event programme · Tunivisions ISMM × ISIMM</figcaption></figure><figure data-cat="posters"><button type="button" class="zoom" aria-label="Open Be Perfect: thank you, sponsors larger"><img src="img/be-perfect-sponsors.jpg" width="1080" height="1080" loading="lazy" decoding="async" alt="Thank-you post for the sponsors of the Be Perfect conference, with four sponsor logos"></button><figcaption><b>Be Perfect: thank you, sponsors</b>Sponsor post · Tunivisions</figcaption></figure><figure data-cat="posters"><button type="button" class="zoom" aria-label="Open Salon de Révision larger"><img src="img/salon-revision.jpg" width="1400" height="1867" loading="lazy" decoding="async" alt="Salon de Révision poster: an open book floating in a dark library, with pricing by duration"></button><figcaption><b>Salon de Révision</b>Study-space poster · Tunivisions</figcaption></figure><figure data-cat="posters"><button type="button" class="zoom" aria-label="Open UI/UX Design Formation larger"><img src="img/uiux-formation.jpg" width="1080" height="1528" loading="lazy" decoding="async" alt="UI/UX Design Formation poster in red and grey with the trainer portrait, date, place and price"></button><figcaption><b>UI/UX Design Formation</b>Training poster · StudoZone</figcaption></figure><figure data-cat="posters"><button type="button" class="zoom" aria-label="Open UI/UX Design Formation ticket larger"><img src="img/uiux-ticket.jpg" width="1600" height="518" loading="lazy" decoding="async" alt="Wide ticket banner in purple and pink for a UI/UX design training with trainer photo, date, price and a QR code"></button><figcaption><b>UI/UX Design Formation ticket</b>Ticket banner · ISIM Monastir</figcaption></figure><figure data-cat="posters"><button type="button" class="zoom" aria-label="Open Emotional Intelligence larger"><img src="img/emotional-intelligence.jpg" width="1587" height="2245" loading="lazy" decoding="async" alt="Teal poster for a free online emotional intelligence training with the speaker portrait, date and a colourful brain illustration"></button><figcaption><b>Emotional Intelligence</b>Free online training poster</figcaption></figure></div></section>
+<section class="group" data-group="layouts"><div class="ghead"><h2>Interface layouts</h2><span>2 pieces</span></div><p>Early web page layouts designed in Adobe XD.</p><div class="wall wide"><figure data-cat="layouts"><button type="button" class="zoom" aria-label="Open Personal portfolio UI larger"><img src="img/portfolio-ui-full.jpg" width="1010" height="2400" loading="lazy" decoding="async" alt="Full portfolio page design in purple: hero with photo and call to action, about section with details and skill percentages, and six service cards"></button><figcaption><b>Personal portfolio UI</b>Full page layout · Adobe XD</figcaption></figure><figure data-cat="layouts"><button type="button" class="zoom" aria-label="Open Camping website layout larger"><img src="img/camping-layout.jpg" width="1152" height="2200" loading="lazy" decoding="async" alt="Website layout for a camping destinations site with hero image, feature cards and destination grid"></button><figcaption><b>Camping website layout</b>Web page design · Adobe XD</figcaption></figure></div></section>
+</main>
+<div class="cta"><div><h2>Need posters, social posts or an ad?</h2><p>I design visuals for events, shops and brands, ready for print and social media.</p></div><a href="/#contact">Start a project</a></div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <span class="count" id="lbn"></span>
+  <button type="button" class="x" id="lbx" aria-label="Close">×</button>
+  <button type="button" class="prev" id="lbp" aria-label="Previous image">‹</button>
+  <img id="lbi" alt="">
+  <div class="cap" id="lbc"></div>
+  <button type="button" class="next" id="lbnx" aria-label="Next image">›</button>
+</div>
 <footer><span>Photoshop · Illustrator · Adobe XD</span><span>Haythem Aljane</span></footer>
 <script>
-const lb=document.getElementById('lb'),lbi=document.getElementById('lbi');
-document.querySelectorAll('[data-zoom]').forEach(i=>i.onclick=()=>{lbi.src=i.src;lbi.alt=i.alt;lb.classList.add('on')});
-lb.onclick=()=>lb.classList.remove('on');
+(function(){
+  var chips=document.querySelectorAll('.chips button'),groups=document.querySelectorAll('.group');
+  chips.forEach(function(b){b.addEventListener('click',function(){
+    var f=b.dataset.f;chips.forEach(function(c){c.setAttribute('aria-pressed',c===b?'true':'false')});
+    groups.forEach(function(g){g.hidden=!(f==='all'||g.dataset.group===f)});
+    window.scrollTo({top:document.querySelector('.chips').offsetTop,behavior:'smooth'});
+  })});
+  var lb=document.getElementById('lb'),img=document.getElementById('lbi'),cap=document.getElementById('lbc'),num=document.getElementById('lbn'),list=[],i=0,opener=null;
+  function visible(){return Array.prototype.filter.call(document.querySelectorAll('.wall figure'),function(f){return !f.closest('.group').hidden})}
+  function show(n){i=(n+list.length)%list.length;var f=list[i],im=f.querySelector('img');img.src=im.src;img.alt=im.alt;cap.innerHTML=f.querySelector('figcaption').innerHTML.replace('</b>','</b> · ');num.textContent=(i+1)+' / '+list.length}
+  document.querySelectorAll('.zoom').forEach(function(z){z.addEventListener('click',function(){list=visible();opener=z;show(list.indexOf(z.closest('figure')));lb.classList.add('on');document.body.style.overflow='hidden';document.getElementById('lbx').focus()})});
+  function close(){lb.classList.remove('on');document.body.style.overflow='';if(opener)opener.focus()}
+  document.getElementById('lbx').onclick=close;
+  document.getElementById('lbp').onclick=function(e){e.stopPropagation();show(i-1)};
+  document.getElementById('lbnx').onclick=function(e){e.stopPropagation();show(i+1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1)});
+})();
 </script>
-
 <a data-ha-seo href="https://haythemdev.site/#projects" title="More work by Haythem Aljane, remote web UI/UX designer" style="position:fixed;left:12px;bottom:12px;z-index:2147483647;font:500 12px/1.2 system-ui,-apple-system,Segoe UI,sans-serif;color:#fff;background:rgba(8,8,8,.85);border:1px solid rgba(229,0,0,.65);padding:7px 12px;border-radius:999px;text-decoration:none;letter-spacing:.2px;box-shadow:0 4px 14px rgba(0,0,0,.35)">Demo by Haythem Aljane ↗</a>
 </body>
 </html>
