@@ -79,6 +79,31 @@
     @if(!empty($study['note']))<p class="note" style="margin-top:20px">{{ $study['note'] }}</p>@endif
   </section>
 
+  @if(!empty($study['gallery']))
+  <section>
+    <h2>The <span>screens</span></h2>
+    <div class="cs-gallery">
+      @foreach($study['gallery'] as $shot)
+        <figure class="{{ !empty($shot['wide']) ? 'wide' : '' }}{{ !empty($shot['tall']) ? 'tall' : '' }}">
+          <a href="{{ $shot['src'] }}" target="_blank" rel="noopener"><img src="{{ $shot['src'] }}" alt="{{ $shot['alt'] }}" loading="lazy" decoding="async" width="{{ $shot['w'] }}" height="{{ $shot['h'] }}"></a>
+          <figcaption><b>{{ $shot['title'] }}</b>{{ $shot['caption'] }}</figcaption>
+        </figure>
+      @endforeach
+    </div>
+    <style>
+      .cs-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:8px}
+      .cs-gallery figure{margin:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;overflow:hidden}
+      .cs-gallery figure.wide{grid-column:1/-1}
+      .cs-gallery img{display:block;width:100%;height:auto}
+      .cs-gallery figure.tall a{display:block;padding:20px 0;background:#08080c}
+      .cs-gallery figure.tall img{max-width:280px;margin:0 auto}
+      .cs-gallery figcaption{padding:12px 16px 15px;font-size:.88rem;color:#a3a3a3;line-height:1.55}
+      .cs-gallery figcaption b{display:block;color:#fff;font-size:.98rem;margin-bottom:2px}
+      @media(max-width:700px){.cs-gallery{grid-template-columns:minmax(0,1fr)}}
+    </style>
+  </section>
+  @endif
+
   <section>
     <h2>What it <span>shows</span></h2>
     <p>{{ $study['shows'] }}</p>
