@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI/UX Practice in Figma | Haythem Aljane</title>
+<!-- SEO (data-ha-seo) -->
+<link rel="canonical" href="https://haythemdev.site/demos/uiux-practice/">
+<meta name="author" content="Haythem Aljane">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Haythem Aljane">
+<meta property="og:title" content="UI/UX Practice in Figma | Haythem Aljane">
+<meta property="og:description" content="UI design practice in Figma by Haythem Aljane: Visinova screens and practice screens, each started from a Figma Community file and labelled as such.">
+<meta property="og:url" content="https://haythemdev.site/demos/uiux-practice/">
+<meta property="og:image" content="https://haythemdev.site/images/projects/uiux-practice-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="UI/UX Practice in Figma | Haythem Aljane">
+<meta name="twitter:description" content="UI design practice in Figma by Haythem Aljane: Visinova screens and practice screens, each started from a Figma Community file and labelled as such.">
+<meta name="twitter:image" content="https://haythemdev.site/images/projects/uiux-practice-cover.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "UI/UX Practice in Figma", "description": "UI design practice in Figma by Haythem Aljane: Visinova screens and practice screens, each started from a Figma Community file and labelled as such.", "url": "https://haythemdev.site/demos/uiux-practice/", "image": "https://haythemdev.site/images/projects/uiux-practice-cover.jpg", "author": {"@type": "Person", "@id": "https://haythemdev.site/#person", "name": "Haythem Aljane", "url": "https://haythemdev.site/"}, "isPartOf": {"@id": "https://haythemdev.site/#website"}, "keywords": "Figma, UI design, Practice"}</script>
+<meta name="description" content="UI design practice in Figma by Haythem Aljane: Visinova screens and practice screens, each started from a Figma Community file and labelled as such.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0f;--text:#f3f3f6;--muted:#9a9aa8;--acc:#e50000;--line:#1f1f27;--card:#14141b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;padding-bottom:56px}
+h1,h2{font-family:'Space Grotesk',sans-serif;font-weight:700}
+.bar{background:#050507;color:#9a9aa8;font-size:13px;padding:8px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.bar a{color:#ff4d4d;text-decoration:none}
+header{padding:64px 6vw 24px;max-width:1200px}
+.eyebrow{color:#ff4d4d;letter-spacing:.3em;text-transform:uppercase;font-size:12px;font-weight:600}
+h1{font-size:clamp(36px,6.4vw,84px);line-height:1;margin:14px 0 18px}
+header p{color:var(--muted);max-width:700px;font-size:17px;margin-bottom:12px}
+.honest{margin-top:18px;max-width:700px;border-left:3px solid var(--acc);background:rgba(229,0,0,.07);padding:14px 18px;border-radius:0 12px 12px 0;font-size:14.5px;color:#d9d9e0}
+.group{padding:44px 6vw 10px}
+.ghead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.ghead h2{font-size:clamp(24px,3.2vw,38px)}
+.ghead span{color:#ff4d4d;font-size:13px}
+.group>p{color:var(--muted);max-width:700px;margin:8px 0 24px}
+.wall{columns:2;column-gap:20px}
+.wall figure{break-inside:avoid;margin:0 0 20px;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.zoom{display:block;width:100%;border:0;padding:0;background:#000;cursor:zoom-in}
+.zoom img{width:100%;height:auto;display:block;transition:transform .35s ease}
+.zoom:hover img{transform:scale(1.02)}
+.tall .zoom{padding:22px 0;background:#08080c}
+.tall .zoom img{max-width:300px;margin:0 auto}
+.zoom:focus-visible{outline:2px solid var(--acc);outline-offset:-2px}
+figcaption{padding:14px 18px 18px;font-size:14px;color:var(--muted)}
+figcaption b{display:block;color:var(--text);font-size:16px;font-weight:600;margin:6px 0 3px}
+.src{display:inline-block;font-size:11px;letter-spacing:.04em;color:#ffb3b3;border:1px solid rgba(229,0,0,.45);border-radius:999px;padding:3px 10px}
+.next{margin:40px 6vw 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.next a{display:block;padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--text);text-decoration:none}
+.next a:hover{border-color:var(--acc)}
+.next small{color:#ff4d4d;letter-spacing:.15em;text-transform:uppercase;font-size:11px;font-weight:600}
+.next b{display:block;font-family:'Space Grotesk',sans-serif;font-size:21px;margin:6px 0 4px}
+.next span{color:var(--muted);font-size:14px}
+.lb{position:fixed;inset:0;background:rgba(3,3,6,.95);display:none;z-index:60;padding:56px 64px 70px;align-items:center;justify-content:center;flex-direction:column}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:calc(100vh - 150px);border-radius:10px;object-fit:contain}
+.lb .cap{color:#d8d8e0;font-size:14px;margin-top:14px;text-align:center;max-width:800px}
+.lb button{position:absolute;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:999px;width:46px;height:46px;font-size:22px;cursor:pointer;display:grid;place-items:center}
+.lb button:hover{background:rgba(229,0,0,.4)}
+.lb .x{top:14px;right:14px}.lb .prev{left:12px;top:50%;transform:translateY(-50%)}.lb .nx{right:12px;top:50%;transform:translateY(-50%)}
+.lb .count{position:absolute;top:24px;left:20px;color:#9a9aa8;font-size:13px}
+footer{padding:26px 6vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:50px}
+@media(max-width:760px){.wall{columns:1}.lb{padding:56px 10px 70px}.lb .prev,.lb .nx{top:auto;bottom:12px;transform:none}}
+@media(prefers-reduced-motion:reduce){.zoom img{transition:none}}
+</style>
+</head>
+<body>
+<div class="bar"><span>UI/UX practice by Haythem Aljane</span><a href="/#projects">← Back to portfolio</a></div>
+<header>
+  <p class="eyebrow">UI/UX practice · Figma</p>
+  <h1>Practice screens in Figma.</h1>
+  <p>Screens I designed for myself in Figma, not for clients: I took templates from Figma Community and modified them to train layout, typography and components, and to explore ideas for my own smart-glasses project, Visinova.</p>
+  <p class="honest"><b>Good to know:</b> every file on this page started from a Figma Community file, a design that another designer shared for others to learn from. I used them as starting points; the base layouts are not my original work. For projects designed fully by me, see the Visinova and Tidekeep case studies below.</p>
+</header>
+<main>
+<section class="group"><div class="ghead"><h2>Visinova explorations</h2><span>3 screens</span></div><p>Community templates I adapted for Visinova, my smart-glasses project: brand, copy and product imagery swapped in to test how the product could look on a contact page, an app-store page and a landing page.</p><div class="wall"><figure><button type="button" class="zoom" aria-label="Open Visinova contact page larger"><img src="img/visinova-contact.jpg" width="1600" height="984" loading="lazy" decoding="async" alt="Visinova contact page: dark blue starfield background, a Get in touch heading and a form card beside an image of a figure made of stars"></button><figcaption><span class="src">Started from a Figma Community file</span><b>Visinova contact page</b>Adapted from a Community contact-form template: Visinova logo, navigation, copy and colours.</figcaption></figure><figure class="tall"><button type="button" class="zoom" aria-label="Open Visinova App Store listing larger"><img src="img/visinova-app-listing.jpg" width="541" height="1011" loading="lazy" decoding="async" alt="Phone mockup of an App Store page for the Visinova smart-glasses app with icon, Get button, ratings and description"></button><figcaption><span class="src">Started from a Figma Community file</span><b>Visinova App Store listing</b>Adapted from a Community app-store listing template: Visinova app icon, name, description and screenshots.</figcaption></figure><figure><button type="button" class="zoom" aria-label="Open Smart-glasses landing hero larger"><img src="img/glasses-landing-hero.jpg" width="936" height="600" loading="lazy" decoding="async" alt="Landing page hero with the headline Let&#x27;s ride the future, smart glasses floating in front of blue light beams, and a row of stat cards"></button><figcaption><span class="src">Started from a Figma Community file</span><b>Smart-glasses landing hero</b>Adapted from a Community landing-page template: hero changed to smart glasses (work in progress).</figcaption></figure></div></section>
+<section class="group"><div class="ghead"><h2>Practice screens</h2><span>5 screens</span></div><p>Templates I took from Figma Community and then modified in Figma, to practise hero sections, dashboards and forms.</p><div class="wall"><figure><button type="button" class="zoom" aria-label="Open “Control your time” hero larger"><img src="img/space-club-watch.jpg" width="1366" height="1024" loading="lazy" decoding="async" alt="Tablet hero screen with the headline Control your time! in a cyan gradient and a smart-glasses product image on a dark purple background"></button><figcaption><span class="src">Started from a Figma Community file</span><b>“Control your time” hero</b>Started from the Userspots Space Club tutorial file, then edited by me in Figma.</figcaption></figure><figure><button type="button" class="zoom" aria-label="Open Metaverse hero section larger"><img src="img/metaverse-hero.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Website hero for Meta with the headline Connection is evolving and so are we over a blue space background with glowing rings"></button><figcaption><span class="src">Started from a Figma Community file</span><b>Metaverse hero section</b>Started from a Community hero-section template, then edited by me in Figma.</figcaption></figure><figure><button type="button" class="zoom" aria-label="Open VR club landing page larger"><img src="img/vr-club-landing.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Landing page hero for a VR club with a person wearing a VR headset in front of blue light and two call-to-action buttons"></button><figcaption><span class="src">Started from a Figma Community file</span><b>VR club landing page</b>Started from a Community landing-page template, then edited by me in Figma.</figcaption></figure><figure><button type="button" class="zoom" aria-label="Open Smart-glass analytics dashboard larger"><img src="img/smart-glass-dashboard.jpg" width="1400" height="1027" loading="lazy" decoding="async" alt="Dark dashboard for smart glasses with watch-time stats, a weekly line chart, app usage rows and a realtime health monitor"></button><figcaption><span class="src">Started from a Figma Community file</span><b>Smart-glass analytics dashboard</b>Started from a Community dashboard template, then edited by me in Figma.</figcaption></figure><figure><button type="button" class="zoom" aria-label="Open Login &amp; sign-up screens larger"><img src="img/login-signup.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Two-panel screen with a blue banner reading Roll the carpet and a sign-up form with username, email, password fields and social login icons"></button><figcaption><span class="src">Started from a Figma Community file</span><b>Login &amp; sign-up screens</b>Started from a Community login-pages template, then edited by me in Figma.</figcaption></figure></div></section>
+</main>
+<div class="next">
+  <a href="/case-studies/visinova-smart-glasses"><small>My own project</small><b>Visinova case study</b><span>Product site and web app for assistive smart glasses, designed and built by me.</span></a>
+  <a href="/case-studies/tidekeep-game-ui"><small>My own project</small><b>Tidekeep game UI</b><span>An original mobile game UI kit, from concept to interactive screens.</span></a>
+  <a href="/#contact"><small>Work with me</small><b>Need a UI designed?</b><span>Landing pages, dashboards and app screens, designed in Figma and built in code.</span></a>
+</div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <span class="count" id="lbn"></span>
+  <button type="button" class="x" id="lbx" aria-label="Close">×</button>
+  <button type="button" class="prev" id="lbp" aria-label="Previous image">‹</button>
+  <img id="lbi" alt="">
+  <div class="cap" id="lbc"></div>
+  <button type="button" class="nx" id="lbnx" aria-label="Next image">›</button>
+</div>
+<footer><span>Figma · Prototyping · UI design</span><span>Haythem Aljane</span></footer>
+<script>
+(function(){
+  var lb=document.getElementById('lb'),img=document.getElementById('lbi'),cap=document.getElementById('lbc'),num=document.getElementById('lbn'),list=[].slice.call(document.querySelectorAll('.wall figure')),i=0,opener=null;
+  function show(n){i=(n+list.length)%list.length;var f=list[i],im=f.querySelector('img'),c=f.querySelector('figcaption');img.src=im.src;img.alt=im.alt;cap.innerHTML='<b>'+c.querySelector('b').textContent+'</b> · '+c.lastChild.textContent;num.textContent=(i+1)+' / '+list.length}
+  document.querySelectorAll('.zoom').forEach(function(z){z.addEventListener('click',function(){opener=z;show(list.indexOf(z.closest('figure')));lb.classList.add('on');document.body.style.overflow='hidden';document.getElementById('lbx').focus()})});
+  function close(){lb.classList.remove('on');document.body.style.overflow='';if(opener)opener.focus()}
+  document.getElementById('lbx').onclick=close;
+  document.getElementById('lbp').onclick=function(e){e.stopPropagation();show(i-1)};
+  document.getElementById('lbnx').onclick=function(e){e.stopPropagation();show(i+1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1)});
+})();
+</script>
+<a data-ha-seo href="https://haythemdev.site/#projects" title="More work by Haythem Aljane, remote web UI/UX designer" style="position:fixed;left:12px;bottom:12px;z-index:2147483647;font:500 12px/1.2 system-ui,-apple-system,Segoe UI,sans-serif;color:#fff;background:rgba(8,8,8,.85);border:1px solid rgba(229,0,0,.65);padding:7px 12px;border-radius:999px;text-decoration:none;letter-spacing:.2px;box-shadow:0 4px 14px rgba(0,0,0,.35)">Demo by Haythem Aljane ↗</a>
+</body>
+</html>

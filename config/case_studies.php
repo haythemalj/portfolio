@@ -68,6 +68,16 @@ return [
         ],
         'shows' => 'Product UI/UX for an accessibility use case, plus the full-stack skills to connect a web app to an AI vision service.',
         'note' => 'The live link is an online preview of the real interface. Accounts, forms and the live camera stream need the full back end and the device.',
+        'gallery' => [
+            ['src' => '/images/case-studies/visinova/features.jpg', 'w' => 1200, 'h' => 533, 'wide' => true, 'title' => 'Features at a glance', 'caption' => 'Six features in equal blue cards, each with one icon, a short title and one sentence.', 'alt' => 'Visinova features section: six blue cards for reading text, recognising faces, identifying products, money notes, colour recognition and obstacle detection'],
+            ['src' => '/images/case-studies/visinova/look-inside.jpg', 'w' => 1200, 'h' => 575, 'wide' => true, 'title' => 'A look inside the device', 'caption' => 'An exploded view of the device beside a plain-language explanation of what it does.', 'alt' => 'Section titled A Look Inside Visinova with text on the left and an exploded view of the device components on the right'],
+            ['src' => '/images/case-studies/visinova/download-app.jpg', 'w' => 1200, 'h' => 730, 'title' => 'Download page', 'caption' => 'One card with the app preview and two clear store buttons, iOS and Android.', 'alt' => 'Download the Visinova app card with a phone preview and buttons for iOS and Android'],
+            ['src' => '/images/case-studies/visinova/contact.jpg', 'w' => 1200, 'h' => 730, 'title' => 'Contact page (built)', 'caption' => 'The contact form as built in React, feeding the admin inbox.', 'alt' => 'Get in touch page with a contact form card on a dark blue circuit background'],
+            ['src' => '/images/case-studies/visinova/login.jpg', 'w' => 1200, 'h' => 730, 'title' => 'Log in', 'caption' => 'A split screen with a large welcome message and a short form for device owners.', 'alt' => 'Login screen with a Welcome Back message on a blue background and an email and password form'],
+            ['src' => '/images/case-studies/visinova/figma-contact.jpg', 'w' => 1200, 'h' => 738, 'title' => 'Contact page in Figma', 'caption' => 'Figma version of the contact page, adapted to Visinova from a Figma Community contact-form template.', 'alt' => 'Figma design of the Visinova contact page with a starfield background and a form card'],
+            ['src' => '/images/case-studies/visinova/mobile-home.jpg', 'w' => 600, 'h' => 1298, 'tall' => true, 'title' => 'Home on a phone', 'caption' => 'The hero on mobile: headline, one sentence and two buttons, all within the first screen.', 'alt' => 'Visinova home page on a phone with the headline A New Way to See and two buttons'],
+            ['src' => '/images/case-studies/visinova/figma-app-listing.jpg', 'w' => 540, 'h' => 1009, 'tall' => true, 'title' => 'App Store listing in Figma', 'caption' => 'Adapted to Visinova in Figma from a Figma Community app-listing template, and used as the app preview on the download page.', 'alt' => 'Phone mockup of an App Store page for the Visinova smart-glasses app'],
+        ],
     ],
 
     'ai-operations-desk' => [
