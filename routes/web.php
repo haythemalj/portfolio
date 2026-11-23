@@ -43,7 +43,12 @@ Route::get('/whatsapp', function (\Illuminate\Http\Request $request) {
         'ar' => 'مرحبًا Haythem، اطّلعت على أعمالك وأودّ التحدث معك عن مشروع.',
         'tr' => 'Merhaba Haythem, portfolyonuzu gördüm ve bir proje hakkında konuşmak istiyorum.',
     ];
-    $text = $greetings[$request->query('lang')] ?? $greetings['en'];
+    $lang = array_key_exists($request->query('lang'), $greetings) ? $request->query('lang') : 'en';
+    $text = $greetings[$lang];
+    // From a price card: mention the package, e.g. "I am interested in the "Online shop" package."
+    if ($plan = \App\Support\Pricing::packageName($request->query('plan'), $lang)) {
+        $text .= ' '.str_replace(':name', $plan, \App\Support\Pricing::text($lang)['wa_interest']);
+    }
     try {
         \App\Http\Middleware\TrackPageView::record($request, 'whatsapp', array_key_exists($request->query('lang'), $greetings) ? $request->query('lang') : 'en');
     } catch (\Throwable $e) {

@@ -28,6 +28,7 @@
         'areaServed' => 'Worldwide',
         'availableLanguage' => ['English', 'French', 'Arabic'],
         'knowsAbout' => ['UI/UX design', 'Web design', 'E-commerce', 'WordPress', 'Laravel', 'Game UI design', 'Digital marketing'],
+        'hasOfferCatalog' => \App\Support\Pricing::offerCatalog($locale, $siteUrl),
       ],
     ],
   ];
@@ -63,6 +64,13 @@
         <div class="card"><h3>{{ $name }}</h3><p>{{ $text }}</p></div>
       @endforeach
     </div>
+  </section>
+
+  @php $pricingText = \App\Support\Pricing::text($locale); @endphp
+  <section id="pricing">
+    <span class="kicker">{{ $pricingText['kicker'] }}</span>
+    <h2>{{ $pricingText['title'][0] }} <span>{{ $pricingText['title'][1] }}</span></h2>
+    @include('partials.pricing', ['pricingLang' => $locale])
   </section>
 
   <section id="projects">
