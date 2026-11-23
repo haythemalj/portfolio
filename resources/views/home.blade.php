@@ -562,6 +562,12 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
 .case-links a.all{border-color:var(--red);color:#fff}
 .footer-links a{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:color .3s}
 .footer-links a:hover{color:var(--red)}
+/* Keep the footer and contact column inside small phone screens */
+.footer-links{flex-wrap:wrap;justify-content:center;gap:10px 22px}
+.footer-copy,.footer-links{max-width:100%}
+.contact-grid>*,.contact-item>*{min-width:0}
+.contact-item-value{overflow-wrap:anywhere}
+.contact-socials{flex-wrap:wrap}
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
