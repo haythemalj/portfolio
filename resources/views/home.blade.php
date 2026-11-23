@@ -63,6 +63,16 @@
       ],
     ],
     [
+      '@type' => 'ProfessionalService',
+      '@id' => $siteUrl.'/#service',
+      'name' => 'Haythem Aljane, Web UI/UX Design & E-commerce Development',
+      'url' => $siteUrl.'/',
+      'image' => $siteUrl.'/images/og-cover.jpg',
+      'founder' => ['@id' => $siteUrl.'/#person'],
+      'areaServed' => 'Worldwide',
+      'hasOfferCatalog' => \App\Support\Pricing::offerCatalog('en', $siteUrl),
+    ],
+    [
       '@type' => 'WebSite',
       '@id' => $siteUrl.'/#website',
       'url' => $siteUrl.'/',
@@ -339,6 +349,8 @@ section{padding:100px 70px;position:relative}
 .portfolio-main>#hero{order:1}
 .portfolio-main>#about{order:2}
 .portfolio-main>#services{order:3}
+.portfolio-main>#pricing{order:3}
+#pricing>.section-title{margin-bottom:22px}
 .portfolio-main>#projects{order:4}
 .portfolio-main>#stats{order:5}
 .portfolio-main>#experience{order:6}
@@ -655,6 +667,9 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
     <a href="#services" class="nav-link" data-section="services" aria-label="Services">
       <i class="fas fa-code"></i><span class="nav-label">Services</span>
     </a>
+    <a href="#pricing" class="nav-link" data-section="pricing" aria-label="Prices">
+      <i class="fas fa-tags"></i><span class="nav-label">Prices</span>
+    </a>
     <a href="#projects" class="nav-link" data-section="projects" aria-label="Projects">
       <i class="fas fa-layer-group"></i><span class="nav-label">Projects</span>
     </a>
@@ -821,6 +836,13 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
   </div>
 </section>
 
+<!-- ===== SERVICES & PRICES ===== -->
+<section class="pricing" id="pricing">
+  <div class="section-label">Pricing</div>
+  <h2 class="section-title">Services &amp; <span>Prices</span></h2>
+  @include('partials.pricing', ['pricingLang' => 'en'])
+</section>
+
 <!-- ===== STATS ===== -->
 <section class="stats-section" id="stats">
   <div class="stats-grid reveal">
@@ -944,7 +966,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:36px 70
 <footer>
   <div class="footer-copy">© {{ date('Y') }} <span>Haythem Aljane</span> · All rights reserved · Built with ❤️ for clients worldwide</div>
   <div class="footer-links">
-    <a href="#hero">Home</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="/case-studies">Case studies</a><a href="/fr" hreflang="fr" lang="fr">Français</a><a href="/ar" hreflang="ar" lang="ar">العربية</a><a href="/tr" hreflang="tr" lang="tr">Türkçe</a>
+    <a href="#hero">Home</a><a href="#projects">Projects</a><a href="#pricing">Prices</a><a href="#contact">Contact</a><a href="/case-studies">Case studies</a><a href="/fr" hreflang="fr" lang="fr">Français</a><a href="/ar" hreflang="ar" lang="ar">العربية</a><a href="/tr" hreflang="tr" lang="tr">Türkçe</a>
   </div>
 </footer>
 
