@@ -65,6 +65,7 @@ class ProjectSeeder extends Seeder
                 'technologies' => ['WordPress', 'PHP', 'WPBakery', 'JavaScript', 'CSS'],
                 'category' => 'wordpress',
                 'featured' => true,
+                'active' => false,
                 'order' => 4,
             ],
             [
